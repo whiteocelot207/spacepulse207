@@ -1,6 +1,7 @@
 """
-Script Formatter Agent
+Script Formatter Agent - FIXED VERSION
 Transforms raw ideas into scene-by-scene video scripts ready for rendering.
+Properly handles idea status to prevent duplicate processing.
 """
 
 import os
@@ -8,6 +9,9 @@ import json
 import requests
 from datetime import datetime
 
+# =============================================================================
+# FILE MANAGEMENT
+# =============================================================================
 def load_ideas(filename="ideas.json"):
     """Load ideas from the JSON file."""
     if not os.path.exists(filename):
@@ -20,11 +24,39 @@ def load_ideas(filename="ideas.json"):
     return ideas
 
 
+def save_ideas(ideas, filename="ideas.json"):
+    """Save ideas back to file."""
+    with open(filename, 'w') as f:
+        json.dump(ideas, f, indent=2)
+
+
 def get_pending_ideas(ideas):
-    """Get ideas that haven't been formatted yet."""
-    return [idea for idea in ideas if idea.get('status') == 'pending']
+    """Get ideas that haven't been formatted yet (status = pending)."""
+    return [(i, idea) for i, idea in enumerate(ideas) if idea.get('status') == 'pending']
 
 
+def get_existing_scripts(scripts_dir="scripts_output"):
+    """Get list of already rendered script topics to avoid duplicates."""
+    if not os.path.exists(scripts_dir):
+        return set()
+    
+    existing = set()
+    for f in os.listdir(scripts_dir):
+        if f.endswith('.json'):
+            try:
+                with open(os.path.join(scripts_dir, f), 'r') as file:
+                    data = json.load(file)
+                    topic = data.get('idea', {}).get('topic', '')
+                    if topic:
+                        existing.add(topic.lower().strip())
+            except:
+                pass
+    return existing
+
+
+# =============================================================================
+# SCRIPT FORMATTING
+# =============================================================================
 def format_script(idea):
     """Use Gemini to create a detailed scene-by-scene script."""
     
@@ -121,24 +153,40 @@ Return ONLY this JSON format, no other text:
         }]
     }
     
-    try:
-        print(f"🎬 Formatting script for: {idea.get('topic')}...")
-        response = requests.post(url, json=payload, headers={"Content-Type": "application/json"})
-        response.raise_for_status()
-        
-        data = response.json()
-        text = data['candidates'][0]['content']['parts'][0]['text']
-        
-        # Clean and parse JSON
-        clean_text = text.replace('```json', '').replace('```', '').strip()
-        script = json.loads(clean_text)
-        
-        print("✅ Script formatted successfully!")
-        return script
-        
-    except Exception as e:
-        print(f"❌ Error formatting script: {e}")
-        return None
+    # Retry logic
+    max_retries = 3
+    for attempt in range(max_retries):
+        try:
+            print(f"🎬 Formatting script for: {idea.get('topic')}...")
+            response = requests.post(url, json=payload, headers={"Content-Type": "application/json"}, timeout=30)
+            
+            if response.status_code == 503:
+                print(f"⚠️ Service unavailable, retry {attempt + 1}/{max_retries}...")
+                import time
+                time.sleep(5)
+                continue
+            
+            response.raise_for_status()
+            
+            data = response.json()
+            text = data['candidates'][0]['content']['parts'][0]['text']
+            
+            # Clean and parse JSON
+            clean_text = text.replace('```json', '').replace('```', '').strip()
+            script = json.loads(clean_text)
+            
+            print("✅ Script formatted successfully!")
+            return script
+            
+        except Exception as e:
+            print(f"❌ Error formatting script (attempt {attempt + 1}): {e}")
+            if attempt < max_retries - 1:
+                import time
+                time.sleep(3)
+            else:
+                return None
+    
+    return None
 
 
 def save_script(idea, script, scripts_dir="scripts_output"):
@@ -148,8 +196,10 @@ def save_script(idea, script, scripts_dir="scripts_output"):
     if not os.path.exists(scripts_dir):
         os.makedirs(scripts_dir)
     
-    # Create filename from topic
-    safe_topic = idea.get('topic', 'untitled').lower().replace(' ', '_')[:30]
+    # Create unique filename from topic + timestamp
+    safe_topic = idea.get('topic', 'untitled').lower()
+    safe_topic = ''.join(c if c.isalnum() or c == ' ' else '' for c in safe_topic)
+    safe_topic = safe_topic.replace(' ', '_')[:30]
     timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
     filename = f"{scripts_dir}/{safe_topic}_{timestamp}.json"
     
@@ -168,19 +218,40 @@ def save_script(idea, script, scripts_dir="scripts_output"):
     return filename
 
 
-def update_idea_status(ideas, idea_index, new_status, ideas_file="ideas.json"):
-    """Update the status of an idea in the JSON file."""
-    ideas[idea_index]['status'] = new_status
-    ideas[idea_index]['formatted_at'] = datetime.now().isoformat()
+# =============================================================================
+# CLEANUP: Remove old scripts to prevent re-rendering
+# =============================================================================
+def cleanup_old_scripts(scripts_dir="scripts_output", keep_latest=1):
+    """Remove old scripts, keeping only the latest N."""
+    if not os.path.exists(scripts_dir):
+        return
     
-    with open(ideas_file, 'w') as f:
-        json.dump(ideas, f, indent=2)
+    scripts = []
+    for f in os.listdir(scripts_dir):
+        if f.endswith('.json'):
+            path = os.path.join(scripts_dir, f)
+            mtime = os.path.getmtime(path)
+            scripts.append((path, mtime))
+    
+    # Sort by modification time (newest first)
+    scripts.sort(key=lambda x: x[1], reverse=True)
+    
+    # Remove old scripts
+    for path, _ in scripts[keep_latest:]:
+        try:
+            os.remove(path)
+            print(f"🗑️ Removed old script: {os.path.basename(path)}")
+        except:
+            pass
 
 
+# =============================================================================
+# MAIN
+# =============================================================================
 def main():
-    print("=" * 50)
+    print("=" * 60)
     print("🎬 ASTRO SHORTS ENGINE - Script Formatter")
-    print("=" * 50)
+    print("=" * 60)
     print()
     
     # Load all ideas
@@ -191,43 +262,59 @@ def main():
     
     print(f"📚 Found {len(ideas)} total ideas")
     
-    # Get pending ideas
+    # Get pending ideas (not yet formatted)
     pending = get_pending_ideas(ideas)
     print(f"⏳ {len(pending)} ideas pending formatting")
     
     if not pending:
         print("✨ All ideas have been formatted!")
+        print("ℹ️ To generate new content, clear ideas.json or wait for new ideas.")
         return
     
-    # Format the first pending idea
-    idea = pending[0]
-    idea_index = ideas.index(idea)
+    # Get the FIRST pending idea only
+    idea_index, idea = pending[0]
+    
+    # Check if this topic was already scripted (safety check)
+    existing = get_existing_scripts()
+    if idea.get('topic', '').lower().strip() in existing:
+        print(f"⚠️ Topic already scripted, marking as formatted: {idea.get('topic')}")
+        ideas[idea_index]['status'] = 'formatted'
+        ideas[idea_index]['formatted_at'] = datetime.now().isoformat()
+        save_ideas(ideas)
+        return
     
     print()
     print(f"📝 Processing: {idea.get('topic')}")
     print("-" * 40)
     
+    # Format the script
     script = format_script(idea)
     
     if script:
-        # Save the script
+        # Clean up old scripts first (keep only 1)
+        cleanup_old_scripts(keep_latest=0)  # Remove all old scripts
+        
+        # Save the new script
         script_file = save_script(idea, script)
         
-        # Update idea status
-        update_idea_status(ideas, idea_index, 'formatted')
+        # Update idea status to 'formatted'
+        ideas[idea_index]['status'] = 'formatted'
+        ideas[idea_index]['formatted_at'] = datetime.now().isoformat()
+        save_ideas(ideas)
         
         print()
-        print("=" * 50)
+        print("=" * 60)
         print(f"✅ Script ready: {script_file}")
         print("🎬 Next step: Video rendering")
-        print("=" * 50)
+        print("=" * 60)
         
         # Print preview
         print()
         print("📋 Script Preview:")
         print("-" * 40)
-        for scene in script.get('scenes', []):
-            print(f"  Scene {scene['scene_number']} ({scene['duration']}s): {scene['text'][:50]}...")
+        for scene in script.get('scenes', [])[:3]:
+            text_preview = scene.get('text', '')[:50]
+            print(f"  Scene {scene.get('scene_number')} ({scene.get('duration')}s): {text_preview}...")
     else:
         print("❌ Failed to format script")
         exit(1)
