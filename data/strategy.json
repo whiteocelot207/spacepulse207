@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-03-16T15:53:02.556490",
+  "generated_at": "2026-03-16T20:02:52.140423",
   "top_performing_topics": [
+    {
+      "topic": "travel_time",
+      "avg_score": 0.594,
+      "videos_count": 5
+    },
     {
       "topic": "general",
       "avg_score": 0.524,
       "videos_count": 17
-    },
-    {
-      "topic": "travel_time",
-      "avg_score": 0.277,
-      "videos_count": 2
     },
     {
       "topic": "scale_comparison",
@@ -17,20 +17,14 @@
       "videos_count": 1
     }
   ],
-  "avoid_topics": [
-    {
-      "topic": "travel_time",
-      "avg_score": 0.277,
-      "reason": "Below average performance"
-    }
-  ],
+  "avoid_topics": [],
   "suggested_next": [
-    "general",
     "travel_time",
+    "general",
     "scale_comparison"
   ],
   "insights": [
-    "'general' is your best performing format (score: 0.524)",
-    "Analyzed 20 videos across 3 topic types"
+    "'travel_time' is your best performing format (score: 0.594)",
+    "Analyzed 23 videos across 3 topic types"
   ]
 }
