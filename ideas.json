@@ -147,7 +147,8 @@
       "#ScienceShorts"
     ],
     "generated_at": "2026-03-16T14:40:45.884443",
-    "status": "pending"
+    "status": "formatted",
+    "formatted_at": "2026-03-16T16:13:17.555276"
   },
   {
     "topic": "Interstellar Travel Time",
@@ -169,5 +170,27 @@
     ],
     "generated_at": "2026-03-16T15:12:10.162024",
     "status": "pending"
+  },
+  {
+    "topic": "Astronaut Weightlessness Myth",
+    "topic_family": "myth_busting",
+    "hook": "Astronauts float in space. So there's NO gravity up there, right?",
+    "facts": [
+      "The International Space Station (ISS) orbits Earth at ~400 km (250 miles) altitude.",
+      "At this height, Earth's gravity is still ~90% as strong as on the surface (8.7 m/s\u00b2 vs 9.8 m/s\u00b2).",
+      "Astronauts and the ISS are in continuous 'freefall' around Earth, constantly falling *towards* it but moving fast enough horizontally to miss."
+    ],
+    "payoff": "Weightlessness isn't from *zero gravity*, it's from constant orbital FREEFALL! They're always falling!",
+    "title": "Astronauts Float: No Gravity?! \ud83e\udd2f",
+    "hashtags": [
+      "#SpaceMyth",
+      "#Astronauts",
+      "#Gravity",
+      "#ISS",
+      "#ScienceFacts"
+    ],
+    "generated_at": "2026-03-16T16:13:05.544416",
+    "status": "pending",
+    "strategy_based": true
   }
 ]
