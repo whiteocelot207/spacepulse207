@@ -124,7 +124,8 @@
       "#ScienceShorts"
     ],
     "generated_at": "2026-03-16T13:20:56.474076",
-    "status": "pending"
+    "status": "formatted",
+    "formatted_at": "2026-03-16T15:12:19.142508"
   },
   {
     "topic": "Speed of Light Travel",
@@ -146,6 +147,27 @@
       "#ScienceShorts"
     ],
     "generated_at": "2026-03-16T14:40:45.884443",
+    "status": "pending"
+  },
+  {
+    "topic": "Interstellar Travel Time",
+    "topic_family": "travel_time",
+    "hook": "Want to visit another star? You'll need *a lot* of time.",
+    "facts": [
+      "Our Sun's nearest star, Proxima Centauri, is 4.24 light-years away.",
+      "That's approximately 40.1 TRILLION kilometers (40,113,000,000,000 km).",
+      "Our fastest spacecraft, Voyager 1, travels at an incredible 61,000 km/h."
+    ],
+    "payoff": "Even our fastest spacecraft would take over 75,000 years just to reach the closest star beyond our Sun.",
+    "title": "How Long To Reach The Nearest Star? \ud83e\udd2f\ud83c\udf0c",
+    "hashtags": [
+      "#Astrophysics",
+      "#SpaceExploration",
+      "#TravelTime",
+      "#ProximaCentauri",
+      "#Voyager1"
+    ],
+    "generated_at": "2026-03-16T15:12:10.162024",
     "status": "pending"
   }
 ]

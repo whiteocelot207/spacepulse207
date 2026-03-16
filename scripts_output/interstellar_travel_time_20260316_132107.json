@@ -79,5 +79,14 @@
     "background_style": "space_stars"
   },
   "formatted_at": "2026-03-16T13:21:07.290854",
-  "status": "ready_to_render"
+  "status": "uploaded",
+  "rendered_at": "2026-03-16T15:13:21.568703",
+  "video_path": "videos_output/interstellar_travel_time_20260316_151219.mp4",
+  "uploaded_at": "2026-03-16T15:13:24.132027",
+  "youtube": {
+    "video_id": "0fA8OPkge2s",
+    "url": "https://youtube.com/shorts/0fA8OPkge2s",
+    "title": "\ud83d\ude80\ud83c\udf0c Reaching the Stars: How LONG Would It REALLY Take?!",
+    "uploaded_at": "2026-03-16T15:13:24.131912"
+  }
 }
