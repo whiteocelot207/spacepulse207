@@ -22,7 +22,6 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y ffmpeg imagemagick
-          # Fix ImageMagick policy for MoviePy text rendering
           sudo sed -i 's/rights="none" pattern="@\*"/rights="read|write" pattern="@*"/' /etc/ImageMagick-6/policy.xml || true
           sudo sed -i '/<policy domain="path" rights="none" pattern="@\*"/d' /etc/ImageMagick-6/policy.xml || true
       
@@ -31,6 +30,7 @@ jobs:
           pip install --upgrade pip
           pip install requests Pillow numpy
           pip install moviepy==1.0.3
+          pip install google-auth google-auth-oauthlib google-api-python-client
       
       - name: Generate idea
         env:
@@ -45,12 +45,18 @@ jobs:
       - name: Render video
         run: python scripts/video_renderer.py
       
+      - name: Upload to YouTube
+        env:
+          YOUTUBE_TOKEN: ${{ secrets.YOUTUBE_TOKEN }}
+          YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+        run: python scripts/youtube_uploader.py
+      
       - name: Save to repository
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add -A
-          git diff --quiet && git diff --staged --quiet || (git commit -m "🎬 Generated new Short + video" && git push)
+          git diff --quiet && git diff --staged --quiet || (git commit -m "🚀 Generated + uploaded new Short" && git push)
       
       - name: Upload video artifact
         uses: actions/upload-artifact@v4
