@@ -78,7 +78,14 @@
     "background_style": "space_stars"
   },
   "formatted_at": "2026-03-16T07:21:04.304355",
-  "status": "rendered",
+  "status": "uploaded",
   "rendered_at": "2026-03-16T07:22:42.359236",
-  "video_path": "videos_output/journey_to_the_nearest_star_20260316_072104.mp4"
+  "video_path": "videos_output/journey_to_the_nearest_star_20260316_072104.mp4",
+  "uploaded_at": "2026-03-16T14:42:00.592948",
+  "youtube": {
+    "video_id": "FLFWTixUFRE",
+    "url": "https://youtube.com/shorts/FLFWTixUFRE",
+    "title": "Journey to the Nearest Star: How Long?! \ud83d\ude80\ud83c\udf0c",
+    "uploaded_at": "2026-03-16T14:42:00.592793"
+  }
 }
