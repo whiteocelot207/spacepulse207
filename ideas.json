@@ -68,5 +68,27 @@
     "status": "formatted",
     "strategy_based": true,
     "formatted_at": "2026-03-17T08:54:39.295800"
+  },
+  {
+    "topic": "The Sun's Incredible Power",
+    "topic_family": "general",
+    "hook": "Think humanity's energy use is immense?",
+    "facts": [
+      "All 8 billion humans, all industries, consume ~5.95 x 10^20 Joules of primary energy *per year* (2021 data).",
+      "The Sun produces an astounding 3.8 x 10^26 Joules of energy *every single second*."
+    ],
+    "payoff": "The Sun generates ALL of Earth's yearly primary energy needs in less than 2 microseconds (0.000002 seconds)!",
+    "title": "The Sun's Power Is UNBELIEVABLE! \ud83e\udd2f",
+    "hashtags": [
+      "#SpaceFacts",
+      "#SunPower",
+      "#Energy",
+      "#Astrophysics",
+      "#MindBlown"
+    ],
+    "generated_at": "2026-03-17T15:16:53.554892",
+    "status": "formatted",
+    "strategy_based": true,
+    "formatted_at": "2026-03-17T15:17:13.893123"
   }
 ]
