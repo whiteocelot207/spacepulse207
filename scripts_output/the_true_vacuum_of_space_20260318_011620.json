@@ -1,0 +1,93 @@
+{
+  "idea": {
+    "topic": "The True Vacuum of Space",
+    "topic_family": "general",
+    "hook": "Is 'empty space' *really* empty?",
+    "facts": [
+      "A single cubic centimeter (cm\u00b3) of Earth's atmosphere holds ~2.5 x 10\u00b9\u2079 molecules.",
+      "The best vacuum labs on Earth can achieve contains ~10,000 molecules per cubic centimeter.",
+      "In the 'empty' void between stars, the average density drops to just ~1 hydrogen atom per cubic centimeter.",
+      "But in the vast intergalactic voids, it's a staggering ~1 atom per *cubic meter*."
+    ],
+    "payoff": "The average intergalactic void is 1,000,000 times emptier than interstellar space and far beyond any vacuum we can create!",
+    "title": "Space isn't just empty, it's INCREDIBLY empty! \ud83e\udd2f",
+    "hashtags": [
+      "SpaceFacts",
+      "Astrophysics",
+      "CosmicVoid",
+      "EmptySpace",
+      "ScienceShorts"
+    ],
+    "generated_at": "2026-03-18T01:16:10.682674",
+    "status": "pending",
+    "strategy_based": true
+  },
+  "script": {
+    "total_duration": 20,
+    "scenes": [
+      {
+        "scene_number": 1,
+        "start_time": 0,
+        "duration": 3,
+        "text": "Is 'empty space' *really* empty?",
+        "text_position": "center",
+        "text_size": "large",
+        "visual": "Vast, dark cosmos with faint, distant stars.",
+        "animation": "fade_in"
+      },
+      {
+        "scene_number": 2,
+        "start_time": 3,
+        "duration": 4,
+        "text": "Earth's atmosphere: ~2.5x10\u00b9\u2079 molecules/cm\u00b3\nBest lab vacuum: ~10,000 molecules/cm\u00b3",
+        "text_position": "center",
+        "text_size": "medium",
+        "visual": "Starts with Earth's atmosphere, then zooms into a lab setting with a tiny glowing cubic centimeter.",
+        "animation": "zoom_in"
+      },
+      {
+        "scene_number": 3,
+        "start_time": 7,
+        "duration": 4,
+        "text": "In INTERSTELLAR void: ~1 hydrogen atom/cm\u00b3",
+        "text_position": "center",
+        "text_size": "medium",
+        "visual": "A serene, distant nebula background with a single, barely visible dot representing an atom in a cubic centimeter outline.",
+        "animation": "slide_left"
+      },
+      {
+        "scene_number": 4,
+        "start_time": 11,
+        "duration": 4,
+        "text": "INTERGALACTIC voids: ~1 atom per CUBIC METER",
+        "text_position": "center",
+        "text_size": "medium",
+        "visual": "Expansive, dark void with extremely distant, tiny galaxies. A large, translucent cubic meter outline appears with a single, tiny dot inside.",
+        "animation": "slide_right"
+      },
+      {
+        "scene_number": 5,
+        "start_time": 15,
+        "duration": 5,
+        "text": "Intergalactic voids are 1,000,000x emptier than interstellar space!\nFar beyond any vacuum we can create!",
+        "text_position": "center",
+        "text_size": "large",
+        "animation": "pulse",
+        "visual": "A visually striking comparison of two cubes: one tiny and dense, the other vast and almost empty, set against the deepest, darkest cosmic background."
+      }
+    ],
+    "thumbnail_text": "The True Vacuum of Space",
+    "background_style": "space_dark"
+  },
+  "formatted_at": "2026-03-18T01:16:20.173432",
+  "status": "uploaded",
+  "rendered_at": "2026-03-18T01:17:56.489795",
+  "video_path": "videos_output/the_true_vacuum_of_space_20260318_011620.mp4",
+  "uploaded_at": "2026-03-18T01:17:58.626554",
+  "youtube": {
+    "video_id": "IFY4hH6sDNY",
+    "url": "https://youtube.com/shorts/IFY4hH6sDNY",
+    "title": "Space isn't just empty, it's INCREDIBLY empty! \ud83e\udd2f",
+    "uploaded_at": "2026-03-18T01:17:58.626448"
+  }
+}
