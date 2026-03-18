@@ -45,5 +45,28 @@
     "status": "formatted",
     "strategy_based": true,
     "formatted_at": "2026-03-18T01:16:20.173631"
+  },
+  {
+    "topic": "The Speed of Light and Time",
+    "topic_family": "general",
+    "hook": "You never see anything in the present moment.",
+    "facts": [
+      "Light travels at a finite speed: exactly 299,792,458 meters per second.",
+      "Sunlight takes 8 minutes and 20 seconds to reach Earth. You see the Sun as it was 8 minutes ago.",
+      "Light from the Andromeda Galaxy takes 2.5 million years to reach us. You see it as it was 2.5 MYA!"
+    ],
+    "payoff": "Every time you look up, you're looking into the universe's past.",
+    "title": "You're ALWAYS looking into the past! \ud83e\udd2f\ud83c\udf0c",
+    "hashtags": [
+      "SpaceFacts",
+      "LightSpeed",
+      "Astrophysics",
+      "Universe",
+      "TimeDilation"
+    ],
+    "generated_at": "2026-03-18T08:37:23.392718",
+    "status": "formatted",
+    "strategy_based": true,
+    "formatted_at": "2026-03-18T08:37:31.763410"
   }
 ]

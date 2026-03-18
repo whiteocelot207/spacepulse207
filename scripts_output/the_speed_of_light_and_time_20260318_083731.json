@@ -1,0 +1,92 @@
+{
+  "idea": {
+    "topic": "The Speed of Light and Time",
+    "topic_family": "general",
+    "hook": "You never see anything in the present moment.",
+    "facts": [
+      "Light travels at a finite speed: exactly 299,792,458 meters per second.",
+      "Sunlight takes 8 minutes and 20 seconds to reach Earth. You see the Sun as it was 8 minutes ago.",
+      "Light from the Andromeda Galaxy takes 2.5 million years to reach us. You see it as it was 2.5 MYA!"
+    ],
+    "payoff": "Every time you look up, you're looking into the universe's past.",
+    "title": "You're ALWAYS looking into the past! \ud83e\udd2f\ud83c\udf0c",
+    "hashtags": [
+      "SpaceFacts",
+      "LightSpeed",
+      "Astrophysics",
+      "Universe",
+      "TimeDilation"
+    ],
+    "generated_at": "2026-03-18T08:37:23.392718",
+    "status": "pending",
+    "strategy_based": true
+  },
+  "script": {
+    "total_duration": 20,
+    "scenes": [
+      {
+        "scene_number": 1,
+        "start_time": 0,
+        "duration": 3,
+        "text": "You never see anything in the present moment.",
+        "text_position": "center",
+        "text_size": "large",
+        "visual": "A clock face subtly rippling or blurring, abstractly representing time passing.",
+        "animation": "fade_in"
+      },
+      {
+        "scene_number": 2,
+        "start_time": 3,
+        "duration": 4,
+        "text": "Light speed: 299,792,458 m/s. It's not instant.",
+        "text_position": "center",
+        "text_size": "medium",
+        "visual": "A swift beam of light crossing the screen, with the speed number appearing dynamically alongside it.",
+        "animation": "zoom_in"
+      },
+      {
+        "scene_number": 3,
+        "start_time": 7,
+        "duration": 4,
+        "text": "Sunlight takes 8m 20s. You see the Sun 8 min ago.",
+        "text_position": "center",
+        "text_size": "medium",
+        "visual": "A clear visual of the Sun with an arc of light extending to Earth. A timer overlay shows '8:20'.",
+        "animation": "slide_left"
+      },
+      {
+        "scene_number": 4,
+        "start_time": 11,
+        "duration": 4,
+        "text": "Andromeda's light: 2.5 Million Yrs. You see it 2.5 MYA!",
+        "text_position": "center",
+        "text_size": "medium",
+        "visual": "A stunning, detailed image of the Andromeda Galaxy, with a subtle '2.5 MYA' timeline indicator.",
+        "animation": "slide_right"
+      },
+      {
+        "scene_number": 5,
+        "start_time": 15,
+        "duration": 5,
+        "text": "Every time you look up, you're looking into the universe's past.",
+        "text_position": "center",
+        "text_size": "large",
+        "animation": "pulse",
+        "visual": "A vast, breathtaking view of a star field and distant galaxies, slowly panning upwards as if from a human perspective."
+      }
+    ],
+    "thumbnail_text": "Your Gaze Into The Past",
+    "background_style": "space_dark"
+  },
+  "formatted_at": "2026-03-18T08:37:31.763211",
+  "status": "uploaded",
+  "rendered_at": "2026-03-18T08:39:18.192988",
+  "video_path": "videos_output/the_speed_of_light_and_time_20260318_083732.mp4",
+  "uploaded_at": "2026-03-18T08:39:20.581183",
+  "youtube": {
+    "video_id": "_ddtJh0kodY",
+    "url": "https://youtube.com/shorts/_ddtJh0kodY",
+    "title": "You're ALWAYS looking into the past! \ud83e\udd2f\ud83c\udf0c",
+    "uploaded_at": "2026-03-18T08:39:20.581068"
+  }
+}
