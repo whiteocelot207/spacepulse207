@@ -1,0 +1,93 @@
+{
+  "idea": {
+    "topic": "Hubble Tension",
+    "topic_family": "cosmic_mystery",
+    "hook": "Is the Universe Expanding... Too Fast? \ud83c\udf0c",
+    "facts": [
+      "The universe's expansion rate (Hubble Constant) is crucial for understanding its age & future.",
+      "Calculations from the early universe (Cosmic Microwave Background) predict a rate of ~67.4 km/s/Mpc.",
+      "But recent observations from the nearby universe (supernovae) consistently measure it as ~73.0 km/s/Mpc."
+    ],
+    "payoff": "This ~8% discrepancy is NOT a measurement error. It's a profound cosmic crisis pointing to NEW, unknown physics!",
+    "title": "Universe's Speed Problem?! \ud83e\udd2f #HubbleTension",
+    "hashtags": [
+      "CosmicMystery",
+      "HubbleConstant",
+      "DarkEnergy",
+      "UniverseExpansion",
+      "Astrophysics"
+    ],
+    "generated_at": "2026-03-18T16:50:46.556916",
+    "status": "pending",
+    "strategy_based": true
+  },
+  "script": {
+    "total_duration": 20,
+    "scenes": [
+      {
+        "scene_number": 1,
+        "start_time": 0,
+        "duration": 3,
+        "text": "Is the Universe Expanding... Too Fast? \ud83c\udf0c",
+        "text_position": "center",
+        "text_size": "large",
+        "visual": "A vast, beautiful nebula with subtle, slow outward expansion animation. Stars twinkle.",
+        "animation": "fade_in"
+      },
+      {
+        "scene_number": 2,
+        "start_time": 3,
+        "duration": 4,
+        "text": "Hubble Constant: Key to Universe's Age & Future.",
+        "text_position": "center",
+        "text_size": "medium",
+        "visual": "Stylized graphic of galaxies moving apart, illustrating cosmic expansion. Text appears over this animation.",
+        "animation": "zoom_in"
+      },
+      {
+        "scene_number": 3,
+        "start_time": 7,
+        "duration": 4,
+        "text": "Early Universe (CMB) Predicts: ~67.4 km/s/Mpc",
+        "text_position": "center",
+        "text_size": "medium",
+        "visual": "A swirling, colorful map of the Cosmic Microwave Background (CMB) with the number '67.4' subtly highlighted.",
+        "animation": "slide_left"
+      },
+      {
+        "scene_number": 4,
+        "start_time": 11,
+        "duration": 4,
+        "text": "Nearby Universe (Supernovae) Measures: ~73.0 km/s/Mpc",
+        "text_position": "center",
+        "text_size": "medium",
+        "visual": "A distant galaxy cluster, with a bright, brief flash of a supernova explosion. The number '73.0' is subtly highlighted.",
+        "animation": "slide_right"
+      },
+      {
+        "scene_number": 5,
+        "start_time": 15,
+        "duration": 5,
+        "text": "This ~8% gap ISN'T ERROR.\nIt's NEW, UNKNOWN PHYSICS!",
+        "text_position": "center",
+        "text_size": "large",
+        "animation": "pulse",
+        "visual": "Two distinct lines/waves representing the conflicting measurements diverge, then transition to a dramatic, mysterious cosmic void with swirling dark energy effects and faint, unknown symbols.",
+        "text_color": "#FFD700"
+      }
+    ],
+    "thumbnail_text": "Hubble Tension: Cosmic Crisis!",
+    "background_style": "space_nebula"
+  },
+  "formatted_at": "2026-03-18T16:50:55.044230",
+  "status": "uploaded",
+  "rendered_at": "2026-03-18T16:51:56.235051",
+  "video_path": "videos_output/hubble_tension_20260318_165055.mp4",
+  "uploaded_at": "2026-03-18T16:51:59.257332",
+  "youtube": {
+    "video_id": "TzTKHCSyCLQ",
+    "url": "https://youtube.com/shorts/TzTKHCSyCLQ",
+    "title": "Universe's Speed Problem?! \ud83e\udd2f #HubbleTension",
+    "uploaded_at": "2026-03-18T16:51:59.257221"
+  }
+}

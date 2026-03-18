@@ -68,5 +68,28 @@
     "status": "formatted",
     "strategy_based": true,
     "formatted_at": "2026-03-18T08:37:31.763410"
+  },
+  {
+    "topic": "Hubble Tension",
+    "topic_family": "cosmic_mystery",
+    "hook": "Is the Universe Expanding... Too Fast? \ud83c\udf0c",
+    "facts": [
+      "The universe's expansion rate (Hubble Constant) is crucial for understanding its age & future.",
+      "Calculations from the early universe (Cosmic Microwave Background) predict a rate of ~67.4 km/s/Mpc.",
+      "But recent observations from the nearby universe (supernovae) consistently measure it as ~73.0 km/s/Mpc."
+    ],
+    "payoff": "This ~8% discrepancy is NOT a measurement error. It's a profound cosmic crisis pointing to NEW, unknown physics!",
+    "title": "Universe's Speed Problem?! \ud83e\udd2f #HubbleTension",
+    "hashtags": [
+      "CosmicMystery",
+      "HubbleConstant",
+      "DarkEnergy",
+      "UniverseExpansion",
+      "Astrophysics"
+    ],
+    "generated_at": "2026-03-18T16:50:46.556916",
+    "status": "formatted",
+    "strategy_based": true,
+    "formatted_at": "2026-03-18T16:50:55.044441"
   }
 ]
