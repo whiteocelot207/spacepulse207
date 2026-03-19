@@ -1,0 +1,92 @@
+{
+  "idea": {
+    "topic": "The Invisible Universe",
+    "topic_family": "general",
+    "hook": "What if 95% of everything was MISSING?",
+    "facts": [
+      "Only ~5% of the universe is 'normal matter' (stars, planets, gas) \u2013 everything we can see and touch.",
+      "About 27% is 'Dark Matter.' It has gravity but emits no light, holding galaxies together.",
+      "The remaining ~68% is 'Dark Energy,' a mysterious force accelerating the universe's expansion."
+    ],
+    "payoff": "We understand less than 5% of the universe's composition. The rest is an enduring cosmic mystery.",
+    "title": "The Universe is 95% Invisible! \ud83e\udd2f",
+    "hashtags": [
+      "#DarkMatter",
+      "#DarkEnergy",
+      "#SpaceFacts",
+      "#CosmicMystery",
+      "#Astrophysics"
+    ],
+    "generated_at": "2026-03-19T01:15:52.978356",
+    "status": "pending",
+    "strategy_based": true
+  },
+  "script": {
+    "total_duration": 20,
+    "scenes": [
+      {
+        "scene_number": 1,
+        "start_time": 0,
+        "duration": 3,
+        "text": "What if 95% of everything was MISSING?",
+        "text_position": "center",
+        "text_size": "large",
+        "visual": "Dark, deep space with subtle, twinkling stars. A faint, glowing question mark subtly forms and fades in the background.",
+        "animation": "fade_in"
+      },
+      {
+        "scene_number": 2,
+        "start_time": 3,
+        "duration": 4,
+        "text": "Only ~5% is 'Normal Matter'.",
+        "text_position": "top",
+        "text_size": "medium",
+        "visual": "A vibrant, brightly lit spiral galaxy (like Andromeda) slowly zooms into view, clearly showing stars and nebulae. Text indicates 'Stars, planets, gas. Everything we see.' implicitly.",
+        "animation": "zoom_in"
+      },
+      {
+        "scene_number": 3,
+        "start_time": 7,
+        "duration": 4,
+        "text": "27% is 'Dark Matter'.",
+        "text_position": "center",
+        "text_size": "medium",
+        "visual": "A ghostly, swirling galaxy silhouette. Invisible force lines (subtle white arrows) suggest gravitational pull, holding visible stars in place without emitting light.",
+        "animation": "slide_left"
+      },
+      {
+        "scene_number": 4,
+        "start_time": 11,
+        "duration": 4,
+        "text": "68% is 'Dark Energy'.",
+        "text_position": "center",
+        "text_size": "medium",
+        "visual": "A cosmic web grid of points (representing galaxies) rapidly expands outwards from the center of the screen, emphasizing acceleration. Subtle red arrows reinforce expansion.",
+        "animation": "slide_right"
+      },
+      {
+        "scene_number": 5,
+        "start_time": 15,
+        "duration": 5,
+        "text": "95% of the Universe is a MYSTERY.",
+        "text_position": "center",
+        "text_size": "large",
+        "animation": "pulse",
+        "visual": "A vast, awe-inspiring deep field cosmic image (like Hubble Ultra Deep Field) slowly zooms out, emphasizing the immense, unexplored unknown. A subtle, shimmering overlay hints at the unseen."
+      }
+    ],
+    "thumbnail_text": "The Invisible Universe",
+    "background_style": "space_dark"
+  },
+  "formatted_at": "2026-03-19T01:16:05.341317",
+  "status": "uploaded",
+  "rendered_at": "2026-03-19T01:17:02.360176",
+  "video_path": "videos_output/the_invisible_universe_20260319_011605.mp4",
+  "uploaded_at": "2026-03-19T01:17:04.867346",
+  "youtube": {
+    "video_id": "M3VzTVun-aU",
+    "url": "https://youtube.com/shorts/M3VzTVun-aU",
+    "title": "The Universe is 95% Invisible! \ud83e\udd2f",
+    "uploaded_at": "2026-03-19T01:17:04.867234"
+  }
+}

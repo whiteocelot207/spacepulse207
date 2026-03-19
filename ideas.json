@@ -91,5 +91,28 @@
     "status": "formatted",
     "strategy_based": true,
     "formatted_at": "2026-03-18T16:50:55.044441"
+  },
+  {
+    "topic": "The Invisible Universe",
+    "topic_family": "general",
+    "hook": "What if 95% of everything was MISSING?",
+    "facts": [
+      "Only ~5% of the universe is 'normal matter' (stars, planets, gas) \u2013 everything we can see and touch.",
+      "About 27% is 'Dark Matter.' It has gravity but emits no light, holding galaxies together.",
+      "The remaining ~68% is 'Dark Energy,' a mysterious force accelerating the universe's expansion."
+    ],
+    "payoff": "We understand less than 5% of the universe's composition. The rest is an enduring cosmic mystery.",
+    "title": "The Universe is 95% Invisible! \ud83e\udd2f",
+    "hashtags": [
+      "#DarkMatter",
+      "#DarkEnergy",
+      "#SpaceFacts",
+      "#CosmicMystery",
+      "#Astrophysics"
+    ],
+    "generated_at": "2026-03-19T01:15:52.978356",
+    "status": "formatted",
+    "strategy_based": true,
+    "formatted_at": "2026-03-19T01:16:05.341528"
   }
 ]
