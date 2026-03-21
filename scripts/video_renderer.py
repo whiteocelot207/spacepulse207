@@ -36,12 +36,16 @@ except ImportError as e:
 try:
     from PIL import Image, ImageDraw
     import numpy as np
+
+    # Pillow compatibility shim for older MoviePy
+    if not hasattr(Image, "ANTIALIAS"):
+        Image.ANTIALIAS = Image.Resampling.LANCZOS
+
     PIL_AVAILABLE = True
     print("✅ Pillow loaded successfully")
 except ImportError:
     PIL_AVAILABLE = False
     print("❌ Pillow not installed")
-
 
 # =============================================================================
 # VIDEO SETTINGS
