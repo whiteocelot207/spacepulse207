@@ -301,5 +301,29 @@
     "status": "formatted",
     "strategy_based": true,
     "formatted_at": "2026-03-21T08:21:24.277479"
+  },
+  {
+    "topic": "Rogue Planets",
+    "topic_family": "general",
+    "hook": "Imagine Earth\u2026 with no sun?!",
+    "facts": [
+      "Most planets orbit a star, bathed in its light and warmth.",
+      "But during violent star system formation, billions of planets are ejected.",
+      "These 'rogue planets' drift alone through interstellar space, in endless icy darkness.",
+      "Our Milky Way galaxy could host 100 billion to 1 trillion of them \u2013 potentially more planets than stars!"
+    ],
+    "payoff": "A vast, unseen ocean of dark worlds, silently outnumbering the stars, drifting through the cosmic abyss.",
+    "title": "Billions of DARK Worlds! \ud83e\udd2f\ud83c\udf0c",
+    "hashtags": [
+      "#Space",
+      "#Astrophysics",
+      "#RoguePlanets",
+      "#Cosmos",
+      "#Planets"
+    ],
+    "generated_at": "2026-03-21T16:18:28.195555",
+    "status": "formatted",
+    "strategy_based": true,
+    "formatted_at": "2026-03-21T16:18:47.638466"
   }
 ]
