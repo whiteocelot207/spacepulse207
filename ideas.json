@@ -255,5 +255,28 @@
     "status": "formatted",
     "strategy_based": true,
     "formatted_at": "2026-03-21T01:07:19.149627"
+  },
+  {
+    "topic": "Cosmic Water Abundance",
+    "topic_family": "general",
+    "hook": "Earth: The 'Water Planet'?",
+    "facts": [
+      "Earth's oceans contain roughly 1.35 billion cubic kilometers of water.",
+      "The largest known water reservoir, found around a quasar, holds 140 TRILLION times all of Earth's water.",
+      "Water vapor, ice, and even liquid water are common across the cosmos: on comets, moons like Europa and Enceladus, and in exoplanet atmospheres."
+    ],
+    "payoff": "Water, the essential molecule for life, is one of the most abundant compounds in the entire universe!",
+    "title": "Universe's MEGA-OCEANS?! \ud83c\udf0a\ud83e\udd2f",
+    "hashtags": [
+      "#CosmicWater",
+      "#SpaceFacts",
+      "#Astrophysics",
+      "#Universe",
+      "#ScienceShorts"
+    ],
+    "generated_at": "2026-03-21T04:47:19.426597",
+    "status": "formatted",
+    "strategy_based": true,
+    "formatted_at": "2026-03-21T04:47:28.041057"
   }
 ]

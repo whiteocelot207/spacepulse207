@@ -1,0 +1,92 @@
+{
+  "idea": {
+    "topic": "Cosmic Water Abundance",
+    "topic_family": "general",
+    "hook": "Earth: The 'Water Planet'?",
+    "facts": [
+      "Earth's oceans contain roughly 1.35 billion cubic kilometers of water.",
+      "The largest known water reservoir, found around a quasar, holds 140 TRILLION times all of Earth's water.",
+      "Water vapor, ice, and even liquid water are common across the cosmos: on comets, moons like Europa and Enceladus, and in exoplanet atmospheres."
+    ],
+    "payoff": "Water, the essential molecule for life, is one of the most abundant compounds in the entire universe!",
+    "title": "Universe's MEGA-OCEANS?! \ud83c\udf0a\ud83e\udd2f",
+    "hashtags": [
+      "#CosmicWater",
+      "#SpaceFacts",
+      "#Astrophysics",
+      "#Universe",
+      "#ScienceShorts"
+    ],
+    "generated_at": "2026-03-21T04:47:19.426597",
+    "status": "pending",
+    "strategy_based": true
+  },
+  "script": {
+    "total_duration": 20,
+    "scenes": [
+      {
+        "scene_number": 1,
+        "start_time": 0,
+        "duration": 3,
+        "text": "Earth: The 'Water Planet'?",
+        "text_position": "center",
+        "text_size": "large",
+        "visual": "A vibrant, rotating Earth centered, with a deep blue ocean prominent, against a dark starry background.",
+        "animation": "fade_in"
+      },
+      {
+        "scene_number": 2,
+        "start_time": 3,
+        "duration": 4,
+        "text": "Earth's oceans: 1.35 billion km\u00b3 of water.",
+        "text_position": "bottom",
+        "text_size": "medium",
+        "visual": "Close-up of Earth's oceans, with an animated overlay highlighting the vast volume of water within, perhaps a translucent layer or flowing lines.",
+        "animation": "zoom_in"
+      },
+      {
+        "scene_number": 3,
+        "start_time": 7,
+        "duration": 4,
+        "text": "Largest known: Quasar reservoir. 140 TRILLIONx Earth's water!",
+        "text_position": "center",
+        "text_size": "medium",
+        "visual": "Abstract visualization of a distant, intensely bright quasar, with energy waves emanating. A numerical counter or large '140 TRILLION' graphic appears and expands.",
+        "animation": "slide_left"
+      },
+      {
+        "scene_number": 4,
+        "start_time": 11,
+        "duration": 4,
+        "text": "Water common: Comets, Europa, exoplanets!",
+        "text_position": "top",
+        "text_size": "medium",
+        "visual": "A quick montage: a glowing comet streaking through space, then a close-up of Europa's icy cracked surface, finally a stylized exoplanet with swirling atmospheric bands.",
+        "animation": "slide_right"
+      },
+      {
+        "scene_number": 5,
+        "start_time": 15,
+        "duration": 5,
+        "text": "Water, essential for life, is abundant across the ENTIRE UNIVERSE!",
+        "text_position": "center",
+        "text_size": "large",
+        "animation": "pulse",
+        "visual": "A majestic, wide shot of a swirling galaxy or a vibrant nebula, with countless stars and glowing gas. Subtle H2O molecules could shimmer and drift across the screen."
+      }
+    ],
+    "thumbnail_text": "Cosmic Water Abundance!",
+    "background_style": "space_dark"
+  },
+  "formatted_at": "2026-03-21T04:47:28.040856",
+  "status": "uploaded",
+  "rendered_at": "2026-03-21T04:48:33.134578",
+  "video_path": "videos_output/cosmic_water_abundance_20260321_044728.mp4",
+  "uploaded_at": "2026-03-21T04:48:35.440959",
+  "youtube": {
+    "video_id": "Z-AJDQGpUV4",
+    "url": "https://youtube.com/shorts/Z-AJDQGpUV4",
+    "title": "Universe's MEGA-OCEANS?! \ud83c\udf0a\ud83e\udd2f",
+    "uploaded_at": "2026-03-21T04:48:35.440844"
+  }
+}
