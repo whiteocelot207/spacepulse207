@@ -1,0 +1,93 @@
+{
+  "idea": {
+    "topic": "Travel Time to Virgo Cluster",
+    "topic_family": "travel_time",
+    "hook": "Thinking about a cosmic road trip to an entire galaxy cluster?",
+    "facts": [
+      "The Virgo Cluster, our closest large galaxy cluster, is ~54 million light-years away.",
+      "Even at light speed (299,792 km/s), it would take 54 million years to reach it.",
+      "Our fastest spacecraft, New Horizons, cruises at ~58,536 km/h.",
+      "At this speed, a journey to the Virgo Cluster would last over 995 BILLION years."
+    ],
+    "payoff": "That's ~72x longer than the Universe has existed! Truly intergalactic travel remains a sci-fi dream.",
+    "title": "Visit A Galaxy Cluster?! \ud83e\udd2f\ud83c\udf0c",
+    "hashtags": [
+      "#SpaceTravel",
+      "#Astrophysics",
+      "#VirgoCluster",
+      "#GalaxyCluster",
+      "#CosmicDistances"
+    ],
+    "generated_at": "2026-03-24T17:03:31.649854",
+    "status": "pending",
+    "strategy_based": true
+  },
+  "script": {
+    "total_duration": 20,
+    "scenes": [
+      {
+        "scene_number": 1,
+        "start_time": 0,
+        "duration": 3,
+        "text": "Cosmic Road Trip to the Virgo Cluster?",
+        "text_position": "center",
+        "text_size": "large",
+        "visual": "A swirling galaxy background, distant stars slowly drifting.",
+        "animation": "fade_in"
+      },
+      {
+        "scene_number": 2,
+        "start_time": 3,
+        "duration": 4,
+        "text": "Virgo Cluster: 54 Million Light-Years Away",
+        "text_position": "center",
+        "text_size": "medium",
+        "visual": "Starts with a close-up of our Milky Way (stylized), then zooms out rapidly to show it as a tiny speck, revealing a distant, larger cluster of galaxies (Virgo Cluster representation).",
+        "animation": "zoom_out"
+      },
+      {
+        "scene_number": 3,
+        "start_time": 7,
+        "duration": 4,
+        "text": "Even at LIGHT SPEED: 54 Million Years",
+        "text_position": "center",
+        "text_size": "medium",
+        "visual": "A bright light beam streaks across a starfield. Numbers '1' then '54,000,000' appear with a 'YEARS' label.",
+        "animation": "slide_left"
+      },
+      {
+        "scene_number": 4,
+        "start_time": 11,
+        "duration": 4,
+        "text": "New Horizons (our fastest): >995 BILLION Years!",
+        "text_position": "center",
+        "text_size": "medium",
+        "visual": "An image of the New Horizons spacecraft zooms in briefly, then a massive number '995,000,000,000' appears and morphs into '>995 BILLION YEARS'.",
+        "animation": "zoom_in"
+      },
+      {
+        "scene_number": 5,
+        "start_time": 15,
+        "duration": 5,
+        "text": "72x Older Than The Universe Itself. Intergalactic Travel: Still a Sci-Fi Dream.",
+        "text_position": "center",
+        "text_size": "large",
+        "animation": "pulse",
+        "visual": "A breathtaking view of multiple distant galaxies, swirling gently, with a small, reflective human silhouette gazing out into the vastness. The final text flashes subtly."
+      }
+    ],
+    "thumbnail_text": "Virgo Cluster: How Long?",
+    "background_style": "space_dark"
+  },
+  "formatted_at": "2026-03-24T17:03:40.412019",
+  "status": "uploaded",
+  "rendered_at": "2026-03-24T17:04:48.472099",
+  "video_path": "videos_output/travel_time_to_virgo_cluster_20260324_170340.mp4",
+  "uploaded_at": "2026-03-24T17:04:50.375294",
+  "youtube": {
+    "video_id": "s3rmzotBqto",
+    "url": "https://youtube.com/shorts/s3rmzotBqto",
+    "title": "Visit A Galaxy Cluster?! \ud83e\udd2f\ud83c\udf0c",
+    "uploaded_at": "2026-03-24T17:04:50.375176"
+  }
+}
