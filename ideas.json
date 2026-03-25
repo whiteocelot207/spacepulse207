@@ -572,5 +572,28 @@
     "status": "formatted",
     "strategy_based": true,
     "formatted_at": "2026-03-25T08:39:33.469363"
+  },
+  {
+    "topic": "Galaxies vs. Stars Count",
+    "topic_family": "scale_comparison",
+    "hook": "How many stars are in OUR galaxy?",
+    "facts": [
+      "Our Milky Way galaxy contains an estimated ~200 BILLION stars.",
+      "The Observable Universe is home to an estimated ~2 TRILLION galaxies.",
+      "That means there are TEN TIMES more galaxies in the Universe than stars in our entire home galaxy!"
+    ],
+    "payoff": "Each one a cosmic island, filled with billions of untold stars, making the true number of stars unimaginable.",
+    "title": "Stars in OUR Galaxy vs. Galaxies in Universe?! \ud83e\udd2f\ud83c\udf0c",
+    "hashtags": [
+      "#SpaceScale",
+      "#GalaxyCount",
+      "#UniverseFacts",
+      "#Astrophysics",
+      "#MindBlown"
+    ],
+    "generated_at": "2026-03-25T16:54:57.237434",
+    "status": "formatted",
+    "strategy_based": true,
+    "formatted_at": "2026-03-25T16:55:06.789040"
   }
 ]
