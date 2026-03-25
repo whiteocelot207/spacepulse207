@@ -368,7 +368,7 @@
       "avg_view_duration_seconds": 4
     },
     "performance_score": 0.085,
-    "analyzed_at": "2026-03-24T07:02:54.878693"
+    "analyzed_at": "2026-03-25T07:01:24.728353"
   },
   {
     "video_id": "TzTKHCSyCLQ",
@@ -411,7 +411,7 @@
       "comments": 0
     },
     "performance_score": 0.0,
-    "analyzed_at": "2026-03-24T07:02:54.403469"
+    "analyzed_at": "2026-03-25T07:01:24.330966"
   },
   {
     "video_id": "58Gzc6fDwx8",
@@ -426,7 +426,7 @@
       "avg_view_duration_seconds": 4
     },
     "performance_score": 0.085,
-    "analyzed_at": "2026-03-24T07:02:54.561313"
+    "analyzed_at": "2026-03-25T07:01:24.476407"
   },
   {
     "video_id": "zNuMrd_JSXk",
@@ -439,7 +439,7 @@
       "comments": 0
     },
     "performance_score": 0.0,
-    "analyzed_at": "2026-03-24T07:02:54.705510"
+    "analyzed_at": "2026-03-25T07:01:24.578662"
   },
   {
     "video_id": "Z-AJDQGpUV4",
@@ -454,7 +454,7 @@
       "avg_view_duration_seconds": 10
     },
     "performance_score": 0.97,
-    "analyzed_at": "2026-03-24T07:02:53.759914"
+    "analyzed_at": "2026-03-25T07:01:23.829819"
   },
   {
     "video_id": "wMdnDQ5RqoM",
@@ -469,7 +469,7 @@
       "avg_view_duration_seconds": 24
     },
     "performance_score": 0.512,
-    "analyzed_at": "2026-03-24T07:02:53.909788"
+    "analyzed_at": "2026-03-25T07:01:23.953880"
   },
   {
     "video_id": "G46FS4EP2KE",
@@ -484,7 +484,7 @@
       "avg_view_duration_seconds": 18
     },
     "performance_score": 0.455,
-    "analyzed_at": "2026-03-24T07:02:54.078478"
+    "analyzed_at": "2026-03-25T07:01:24.093904"
   },
   {
     "video_id": "qnE_1LOqTZY",
@@ -499,7 +499,7 @@
       "avg_view_duration_seconds": 21
     },
     "performance_score": 0.427,
-    "analyzed_at": "2026-03-24T07:02:54.242524"
+    "analyzed_at": "2026-03-25T07:01:24.209080"
   },
   {
     "video_id": "WSNxltd2krU",
@@ -509,10 +509,12 @@
     "metrics": {
       "views": 0,
       "likes": 0,
-      "comments": 0
+      "comments": 0,
+      "watch_time_minutes": 0,
+      "avg_view_duration_seconds": 0
     },
     "performance_score": 0.0,
-    "analyzed_at": "2026-03-24T07:02:53.206318"
+    "analyzed_at": "2026-03-25T07:01:23.468604"
   },
   {
     "video_id": "cbpfIVC0pTI",
@@ -522,10 +524,12 @@
     "metrics": {
       "views": 0,
       "likes": 0,
-      "comments": 0
+      "comments": 0,
+      "watch_time_minutes": 0,
+      "avg_view_duration_seconds": 0
     },
     "performance_score": 0.0,
-    "analyzed_at": "2026-03-24T07:02:53.398622"
+    "analyzed_at": "2026-03-25T07:01:23.582028"
   },
   {
     "video_id": "W6VOi2cK4fI",
@@ -540,7 +544,7 @@
       "avg_view_duration_seconds": 0
     },
     "performance_score": 0.003,
-    "analyzed_at": "2026-03-24T07:02:53.584952"
+    "analyzed_at": "2026-03-25T07:01:23.713797"
   },
   {
     "video_id": "LmXyBpkiVjE",
@@ -548,12 +552,14 @@
     "published_at": "2026-03-23T01:18:02Z",
     "topic_family": "travel_time",
     "metrics": {
-      "views": 10,
+      "views": 8,
       "likes": 0,
-      "comments": 0
+      "comments": 0,
+      "watch_time_minutes": 0,
+      "avg_view_duration_seconds": 0
     },
-    "performance_score": 0.025,
-    "analyzed_at": "2026-03-24T07:02:52.720725"
+    "performance_score": 0.02,
+    "analyzed_at": "2026-03-25T07:01:23.101664"
   },
   {
     "video_id": "Bw7Gyez9soU",
@@ -563,10 +569,12 @@
     "metrics": {
       "views": 1,
       "likes": 0,
-      "comments": 0
+      "comments": 0,
+      "watch_time_minutes": 0,
+      "avg_view_duration_seconds": 4
     },
-    "performance_score": 0.003,
-    "analyzed_at": "2026-03-24T07:02:52.869456"
+    "performance_score": 0.083,
+    "analyzed_at": "2026-03-25T07:01:23.229916"
   },
   {
     "video_id": "0VrjJqkjEWo",
@@ -576,10 +584,12 @@
     "metrics": {
       "views": 0,
       "likes": 0,
-      "comments": 0
+      "comments": 0,
+      "watch_time_minutes": 0,
+      "avg_view_duration_seconds": 0
     },
     "performance_score": 0.0,
-    "analyzed_at": "2026-03-24T07:02:53.023590"
+    "analyzed_at": "2026-03-25T07:01:23.342197"
   },
   {
     "video_id": "l_SyzvvlFKo",
@@ -587,12 +597,12 @@
     "published_at": "2026-03-24T01:11:33Z",
     "topic_family": "scale_comparison",
     "metrics": {
-      "views": 169,
+      "views": 181,
       "likes": 1,
       "comments": 0
     },
-    "performance_score": 0.443,
-    "analyzed_at": "2026-03-24T07:02:52.265886"
+    "performance_score": 0.473,
+    "analyzed_at": "2026-03-25T07:01:22.738866"
   },
   {
     "video_id": "2r4M4dzpqn0",
@@ -605,7 +615,7 @@
       "comments": 0
     },
     "performance_score": 0.003,
-    "analyzed_at": "2026-03-24T07:02:52.427199"
+    "analyzed_at": "2026-03-25T07:01:22.865160"
   },
   {
     "video_id": "fTaIqD2xnfo",
@@ -613,11 +623,50 @@
     "published_at": "2026-03-23T08:46:37Z",
     "topic_family": "planetary_facts",
     "metrics": {
+      "views": 3,
+      "likes": 0,
+      "comments": 0
+    },
+    "performance_score": 0.007,
+    "analyzed_at": "2026-03-25T07:01:22.983980"
+  },
+  {
+    "video_id": "OFDDRiT_BGc",
+    "title": "To The Kuiper Belt! \ud83d\ude80\u2744\ufe0f\ud83c\udf0c",
+    "published_at": "2026-03-25T01:16:30Z",
+    "topic_family": "travel_time",
+    "metrics": {
+      "views": 0,
+      "likes": 0,
+      "comments": 0
+    },
+    "performance_score": 0.0,
+    "analyzed_at": "2026-03-25T07:01:22.389019"
+  },
+  {
+    "video_id": "s3rmzotBqto",
+    "title": "Visit A Galaxy Cluster?! \ud83e\udd2f\ud83c\udf0c",
+    "published_at": "2026-03-24T17:05:25Z",
+    "topic_family": "travel_time",
+    "metrics": {
       "views": 2,
       "likes": 0,
       "comments": 0
     },
     "performance_score": 0.005,
-    "analyzed_at": "2026-03-24T07:02:52.567737"
+    "analyzed_at": "2026-03-25T07:01:22.508636"
+  },
+  {
+    "video_id": "9MJB2POT9qo",
+    "title": "Closest Alien World: HOW LONG?! \ud83e\udd2f\ud83d\ude80",
+    "published_at": "2026-03-24T08:42:06Z",
+    "topic_family": "travel_time",
+    "metrics": {
+      "views": 0,
+      "likes": 0,
+      "comments": 0
+    },
+    "performance_score": 0.0,
+    "analyzed_at": "2026-03-25T07:01:22.637604"
   }
 ]
