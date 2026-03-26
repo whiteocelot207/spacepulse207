@@ -406,12 +406,12 @@
     "published_at": "2026-03-20T01:13:36Z",
     "topic_family": "scale_comparison",
     "metrics": {
-      "views": 0,
+      "views": 1,
       "likes": 0,
       "comments": 0
     },
-    "performance_score": 0.0,
-    "analyzed_at": "2026-03-25T07:01:24.330966"
+    "performance_score": 0.003,
+    "analyzed_at": "2026-03-26T07:07:24.606522"
   },
   {
     "video_id": "58Gzc6fDwx8",
@@ -447,14 +447,14 @@
     "published_at": "2026-03-21T04:48:55Z",
     "topic_family": "planetary_facts",
     "metrics": {
-      "views": 200,
-      "likes": 1,
+      "views": 223,
+      "likes": 2,
       "comments": 0,
-      "watch_time_minutes": 10,
+      "watch_time_minutes": 11,
       "avg_view_duration_seconds": 10
     },
-    "performance_score": 0.97,
-    "analyzed_at": "2026-03-25T07:01:23.829819"
+    "performance_score": 1.073,
+    "analyzed_at": "2026-03-26T07:07:23.921774"
   },
   {
     "video_id": "wMdnDQ5RqoM",
@@ -469,7 +469,7 @@
       "avg_view_duration_seconds": 24
     },
     "performance_score": 0.512,
-    "analyzed_at": "2026-03-25T07:01:23.953880"
+    "analyzed_at": "2026-03-26T07:07:24.088024"
   },
   {
     "video_id": "G46FS4EP2KE",
@@ -477,14 +477,14 @@
     "published_at": "2026-03-20T16:33:42Z",
     "topic_family": "travel_time",
     "metrics": {
-      "views": 12,
+      "views": 13,
       "likes": 2,
       "comments": 0,
       "watch_time_minutes": 1,
       "avg_view_duration_seconds": 18
     },
-    "performance_score": 0.455,
-    "analyzed_at": "2026-03-25T07:01:24.093904"
+    "performance_score": 0.458,
+    "analyzed_at": "2026-03-26T07:07:24.257756"
   },
   {
     "video_id": "qnE_1LOqTZY",
@@ -499,7 +499,7 @@
       "avg_view_duration_seconds": 21
     },
     "performance_score": 0.427,
-    "analyzed_at": "2026-03-25T07:01:24.209080"
+    "analyzed_at": "2026-03-26T07:07:24.437658"
   },
   {
     "video_id": "WSNxltd2krU",
@@ -514,7 +514,7 @@
       "avg_view_duration_seconds": 0
     },
     "performance_score": 0.0,
-    "analyzed_at": "2026-03-25T07:01:23.468604"
+    "analyzed_at": "2026-03-26T07:07:23.389248"
   },
   {
     "video_id": "cbpfIVC0pTI",
@@ -529,7 +529,7 @@
       "avg_view_duration_seconds": 0
     },
     "performance_score": 0.0,
-    "analyzed_at": "2026-03-25T07:01:23.582028"
+    "analyzed_at": "2026-03-26T07:07:23.564890"
   },
   {
     "video_id": "W6VOi2cK4fI",
@@ -544,7 +544,7 @@
       "avg_view_duration_seconds": 0
     },
     "performance_score": 0.003,
-    "analyzed_at": "2026-03-25T07:01:23.713797"
+    "analyzed_at": "2026-03-26T07:07:23.743826"
   },
   {
     "video_id": "LmXyBpkiVjE",
@@ -552,14 +552,14 @@
     "published_at": "2026-03-23T01:18:02Z",
     "topic_family": "travel_time",
     "metrics": {
-      "views": 8,
+      "views": 11,
       "likes": 0,
       "comments": 0,
       "watch_time_minutes": 0,
-      "avg_view_duration_seconds": 0
+      "avg_view_duration_seconds": 8
     },
-    "performance_score": 0.02,
-    "analyzed_at": "2026-03-25T07:01:23.101664"
+    "performance_score": 0.188,
+    "analyzed_at": "2026-03-26T07:07:22.836112"
   },
   {
     "video_id": "Bw7Gyez9soU",
@@ -574,7 +574,7 @@
       "avg_view_duration_seconds": 4
     },
     "performance_score": 0.083,
-    "analyzed_at": "2026-03-25T07:01:23.229916"
+    "analyzed_at": "2026-03-26T07:07:23.030519"
   },
   {
     "video_id": "0VrjJqkjEWo",
@@ -589,7 +589,7 @@
       "avg_view_duration_seconds": 0
     },
     "performance_score": 0.0,
-    "analyzed_at": "2026-03-25T07:01:23.342197"
+    "analyzed_at": "2026-03-26T07:07:23.207534"
   },
   {
     "video_id": "l_SyzvvlFKo",
@@ -599,10 +599,12 @@
     "metrics": {
       "views": 181,
       "likes": 1,
-      "comments": 0
+      "comments": 0,
+      "watch_time_minutes": 7,
+      "avg_view_duration_seconds": 10
     },
-    "performance_score": 0.473,
-    "analyzed_at": "2026-03-25T07:01:22.738866"
+    "performance_score": 0.847,
+    "analyzed_at": "2026-03-26T07:07:22.278606"
   },
   {
     "video_id": "2r4M4dzpqn0",
@@ -612,10 +614,12 @@
     "metrics": {
       "views": 1,
       "likes": 0,
-      "comments": 0
+      "comments": 0,
+      "watch_time_minutes": 0,
+      "avg_view_duration_seconds": 4
     },
-    "performance_score": 0.003,
-    "analyzed_at": "2026-03-25T07:01:22.865160"
+    "performance_score": 0.083,
+    "analyzed_at": "2026-03-26T07:07:22.459433"
   },
   {
     "video_id": "fTaIqD2xnfo",
@@ -623,12 +627,14 @@
     "published_at": "2026-03-23T08:46:37Z",
     "topic_family": "planetary_facts",
     "metrics": {
-      "views": 3,
+      "views": 2,
       "likes": 0,
-      "comments": 0
+      "comments": 0,
+      "watch_time_minutes": 0,
+      "avg_view_duration_seconds": 0
     },
-    "performance_score": 0.007,
-    "analyzed_at": "2026-03-25T07:01:22.983980"
+    "performance_score": 0.005,
+    "analyzed_at": "2026-03-26T07:07:22.627212"
   },
   {
     "video_id": "OFDDRiT_BGc",
@@ -636,12 +642,12 @@
     "published_at": "2026-03-25T01:16:30Z",
     "topic_family": "travel_time",
     "metrics": {
-      "views": 0,
+      "views": 2,
       "likes": 0,
       "comments": 0
     },
-    "performance_score": 0.0,
-    "analyzed_at": "2026-03-25T07:01:22.389019"
+    "performance_score": 0.005,
+    "analyzed_at": "2026-03-26T07:07:21.743705"
   },
   {
     "video_id": "s3rmzotBqto",
@@ -649,12 +655,12 @@
     "published_at": "2026-03-24T17:05:25Z",
     "topic_family": "travel_time",
     "metrics": {
-      "views": 2,
+      "views": 5,
       "likes": 0,
       "comments": 0
     },
-    "performance_score": 0.005,
-    "analyzed_at": "2026-03-25T07:01:22.508636"
+    "performance_score": 0.013,
+    "analyzed_at": "2026-03-26T07:07:21.942921"
   },
   {
     "video_id": "9MJB2POT9qo",
@@ -662,11 +668,50 @@
     "published_at": "2026-03-24T08:42:06Z",
     "topic_family": "travel_time",
     "metrics": {
+      "views": 1,
+      "likes": 0,
+      "comments": 0
+    },
+    "performance_score": 0.003,
+    "analyzed_at": "2026-03-26T07:07:22.095051"
+  },
+  {
+    "video_id": "kQsHor0UVfE",
+    "title": "Pluto's Vanishing Atmosphere! \ud83e\udd2f\u2744\ufe0f",
+    "published_at": "2026-03-26T01:22:11Z",
+    "topic_family": "travel_time",
+    "metrics": {
       "views": 0,
       "likes": 0,
       "comments": 0
     },
     "performance_score": 0.0,
-    "analyzed_at": "2026-03-25T07:01:22.637604"
+    "analyzed_at": "2026-03-26T07:07:21.238231"
+  },
+  {
+    "video_id": "IeU8xaBcSFs",
+    "title": "Stars in OUR Galaxy vs. Galaxies in Universe?! \ud83e\udd2f\ud83c\udf0c",
+    "published_at": "2026-03-25T16:56:42Z",
+    "topic_family": "scale_comparison",
+    "metrics": {
+      "views": 8,
+      "likes": 0,
+      "comments": 0
+    },
+    "performance_score": 0.02,
+    "analyzed_at": "2026-03-26T07:07:21.387057"
+  },
+  {
+    "video_id": "TgyGBuUVZnY",
+    "title": "Hidden Oceans: Bigger Than Earth's! \ud83d\udca7\ud83c\udf0d",
+    "published_at": "2026-03-25T08:41:04Z",
+    "topic_family": "scale_comparison",
+    "metrics": {
+      "views": 1896,
+      "likes": 12,
+      "comments": 0
+    },
+    "performance_score": 0.99,
+    "analyzed_at": "2026-03-26T07:07:21.541123"
   }
 ]
