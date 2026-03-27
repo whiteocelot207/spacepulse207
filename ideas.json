@@ -712,5 +712,28 @@
     "status": "formatted",
     "strategy_based": true,
     "formatted_at": "2026-03-27T08:40:54.373384"
+  },
+  {
+    "topic": "Travel to Nearest Star",
+    "topic_family": "travel_time",
+    "hook": "Ever wonder how long it takes to reach our nearest star?",
+    "facts": [
+      "Proxima Centauri, our closest stellar neighbor, is 4.2 light-years away (approx. 40 trillion km).",
+      "At the fastest speed of a modern spacecraft (Parker Solar Probe, ~690,000 km/h): it would take ~6,570 years.",
+      "Using theoretical nuclear pulse propulsion (like Project Orion, ~5% light speed): it would still take ~84 years."
+    ],
+    "payoff": "Even our closest stellar neighbor is an immense journey, highlighting the unimaginable vastness of interstellar space!",
+    "title": "Nearest Star: How Long To Get There? \ud83c\udf1f\ud83d\ude80",
+    "hashtags": [
+      "#ProximaCentauri",
+      "#SpaceTravel",
+      "#Interstellar",
+      "#LightSpeed",
+      "#Astrophysics"
+    ],
+    "generated_at": "2026-03-27T16:43:19.040347",
+    "status": "formatted",
+    "strategy_based": true,
+    "formatted_at": "2026-03-27T16:43:25.426247"
   }
 ]
