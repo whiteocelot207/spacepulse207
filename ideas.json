@@ -781,5 +781,28 @@
     "status": "formatted",
     "strategy_based": true,
     "formatted_at": "2026-03-28T08:28:58.129681"
+  },
+  {
+    "topic": "Ganymede's Magnetic Field",
+    "topic_family": "planetary_facts",
+    "hook": "Only ONE moon in our entire solar system generates its OWN magnetic field!",
+    "facts": [
+      "Jupiter's moon Ganymede is the largest moon, bigger than the planet Mercury, with a diameter of 5,262 km.",
+      "Unlike other moons, Ganymede has a molten iron core, causing a process called a 'dynamo' effect.",
+      "This dynamo creates a mini-magnetosphere *within* Jupiter's massive magnetic field, almost like a protective bubble."
+    ],
+    "payoff": "This unique magnetic shield offers some protection from Jupiter's intense radiation, making Ganymede an even more intriguing place for potential habitability studies!",
+    "title": "Ganymede's Invisible Shield! \ud83d\udee1\ufe0f\ud83c\udf15",
+    "hashtags": [
+      "#Ganymede",
+      "#Jupiter",
+      "#SpaceFacts",
+      "#Moons",
+      "#MagneticField"
+    ],
+    "generated_at": "2026-03-28T16:22:47.544071",
+    "status": "formatted",
+    "strategy_based": true,
+    "formatted_at": "2026-03-28T16:22:55.335097"
   }
 ]

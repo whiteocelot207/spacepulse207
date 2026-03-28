@@ -1,0 +1,92 @@
+{
+  "idea": {
+    "topic": "Ganymede's Magnetic Field",
+    "topic_family": "planetary_facts",
+    "hook": "Only ONE moon in our entire solar system generates its OWN magnetic field!",
+    "facts": [
+      "Jupiter's moon Ganymede is the largest moon, bigger than the planet Mercury, with a diameter of 5,262 km.",
+      "Unlike other moons, Ganymede has a molten iron core, causing a process called a 'dynamo' effect.",
+      "This dynamo creates a mini-magnetosphere *within* Jupiter's massive magnetic field, almost like a protective bubble."
+    ],
+    "payoff": "This unique magnetic shield offers some protection from Jupiter's intense radiation, making Ganymede an even more intriguing place for potential habitability studies!",
+    "title": "Ganymede's Invisible Shield! \ud83d\udee1\ufe0f\ud83c\udf15",
+    "hashtags": [
+      "#Ganymede",
+      "#Jupiter",
+      "#SpaceFacts",
+      "#Moons",
+      "#MagneticField"
+    ],
+    "generated_at": "2026-03-28T16:22:47.544071",
+    "status": "pending",
+    "strategy_based": true
+  },
+  "script": {
+    "total_duration": 20,
+    "scenes": [
+      {
+        "scene_number": 1,
+        "start_time": 0,
+        "duration": 3,
+        "text": "Only ONE moon in our ENTIRE Solar System... \n...Generates its OWN magnetic field!",
+        "text_position": "center",
+        "text_size": "large",
+        "visual": "A dark, starry space background. A faint outline of a large moon (Ganymede) subtly emerges from the darkness, glowing slightly.",
+        "animation": "fade_in"
+      },
+      {
+        "scene_number": 2,
+        "start_time": 3,
+        "duration": 4,
+        "text": "Meet Ganymede: The largest moon! \nBigger than Mercury (5,262 km diameter)",
+        "text_position": "top",
+        "text_size": "medium",
+        "visual": "Ganymede rotates slowly, then Mercury slides in next to it for a clear size comparison. Ganymede is clearly larger.",
+        "animation": "zoom_in"
+      },
+      {
+        "scene_number": 3,
+        "start_time": 7,
+        "duration": 4,
+        "text": "How? A Molten Iron Core! \nCreates a 'Dynamo Effect'",
+        "text_position": "center",
+        "text_size": "medium",
+        "visual": "A cross-section animation of Ganymede appears, highlighting a vibrant, glowing molten iron core with swirling lines representing convection currents.",
+        "animation": "slide_left"
+      },
+      {
+        "scene_number": 4,
+        "start_time": 11,
+        "duration": 4,
+        "text": "A mini-magnetosphere forms... \n...within Jupiter's massive magnetic field!",
+        "text_position": "bottom",
+        "text_size": "medium",
+        "visual": "Jupiter is seen with its vast magnetic field lines. Ganymede then appears near Jupiter, enveloped by its own distinct, smaller magnetic field lines, forming a 'bubble' within Jupiter's larger field.",
+        "animation": "slide_right"
+      },
+      {
+        "scene_number": 5,
+        "start_time": 15,
+        "duration": 5,
+        "text": "This unique shield offers protection... \n...intriguing for habitability studies!",
+        "text_position": "center",
+        "text_size": "large",
+        "animation": "pulse",
+        "visual": "Ganymede prominently displayed with its magnetosphere deflecting incoming radiation particles (represented by small glowing streaks) from Jupiter. The magnetosphere subtly pulsates, reinforcing its protective nature."
+      }
+    ],
+    "thumbnail_text": "Ganymede: The Magnetic Moon!",
+    "background_style": "space_stars"
+  },
+  "formatted_at": "2026-03-28T16:22:55.334897",
+  "status": "uploaded",
+  "rendered_at": "2026-03-28T16:24:30.923810",
+  "video_path": "videos_output/ganymedes_magnetic_field_20260328_162255.mp4",
+  "uploaded_at": "2026-03-28T16:24:34.944980",
+  "youtube": {
+    "video_id": "4I3XUyR-VZg",
+    "url": "https://youtube.com/shorts/4I3XUyR-VZg",
+    "title": "Ganymede's Invisible Shield! \ud83d\udee1\ufe0f\ud83c\udf15",
+    "uploaded_at": "2026-03-28T16:24:34.944873"
+  }
+}
