@@ -894,5 +894,28 @@
     "status": "formatted",
     "strategy_based": true,
     "formatted_at": "2026-03-29T17:54:38.106771"
+  },
+  {
+    "topic": "neutron_star_density",
+    "topic_family": "scale_comparison",
+    "hook": "Ever wondered what a teaspoon of neutron star weighs? \ud83e\udd2f",
+    "facts": [
+      "A neutron star forms from a collapsed massive star, packing immense mass into a tiny space.",
+      "It can have 1.4 times the mass of our Sun (2.8 x 10^30 kg), yet be only ~20-25 km wide.",
+      "This makes it one of the densest objects in the universe, second only to black holes."
+    ],
+    "payoff": "A single TEASPOON of neutron star material would weigh over 5 billion tons \u2013 more than all 8 billion humans on Earth combined!",
+    "title": "A Teaspoon Weighs WHAT?! \ud83e\udd2f\ud83d\udcab",
+    "hashtags": [
+      "neutronstar",
+      "astrophysics",
+      "space",
+      "science",
+      "density"
+    ],
+    "generated_at": "2026-03-30T01:23:49.812826",
+    "status": "formatted",
+    "strategy_based": true,
+    "formatted_at": "2026-03-30T01:24:00.059975"
   }
 ]

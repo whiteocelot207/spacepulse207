@@ -1,0 +1,92 @@
+{
+  "idea": {
+    "topic": "neutron_star_density",
+    "topic_family": "scale_comparison",
+    "hook": "Ever wondered what a teaspoon of neutron star weighs? \ud83e\udd2f",
+    "facts": [
+      "A neutron star forms from a collapsed massive star, packing immense mass into a tiny space.",
+      "It can have 1.4 times the mass of our Sun (2.8 x 10^30 kg), yet be only ~20-25 km wide.",
+      "This makes it one of the densest objects in the universe, second only to black holes."
+    ],
+    "payoff": "A single TEASPOON of neutron star material would weigh over 5 billion tons \u2013 more than all 8 billion humans on Earth combined!",
+    "title": "A Teaspoon Weighs WHAT?! \ud83e\udd2f\ud83d\udcab",
+    "hashtags": [
+      "neutronstar",
+      "astrophysics",
+      "space",
+      "science",
+      "density"
+    ],
+    "generated_at": "2026-03-30T01:23:49.812826",
+    "status": "pending",
+    "strategy_based": true
+  },
+  "script": {
+    "total_duration": 20,
+    "scenes": [
+      {
+        "scene_number": 1,
+        "start_time": 0,
+        "duration": 3,
+        "text": "Ever wondered what a TEASPOON of a neutron star weighs? \ud83e\udd2f",
+        "text_position": "center",
+        "text_size": "large",
+        "visual": "Dynamic, swirling space nebula background. The text appears centrally, with a subtle glow around the exclamation point.",
+        "animation": "fade_in"
+      },
+      {
+        "scene_number": 2,
+        "start_time": 3,
+        "duration": 4,
+        "text": "Formed from collapsed massive stars.",
+        "text_position": "bottom",
+        "text_size": "medium",
+        "visual": "Animation of a large, bright star (supergiant) rapidly collapsing inwards, shrinking to a tiny, incredibly dense glowing point. Nebula background continues.",
+        "animation": "zoom_in"
+      },
+      {
+        "scene_number": 3,
+        "start_time": 7,
+        "duration": 4,
+        "text": "1.4x Sun's mass squeezed into ~20-25 km!",
+        "text_position": "top",
+        "text_size": "medium",
+        "visual": "Split screen: Left shows a large, yellow Sun graphic. Right shows a minuscule, glowing neutron star graphic with a label 'Diameter: ~20-25 km'. An arrow points from Sun to neutron star with '1.4x Mass'.",
+        "animation": "slide_left"
+      },
+      {
+        "scene_number": 4,
+        "start_time": 11,
+        "duration": 4,
+        "text": "One of the DENSEST objects in the universe!",
+        "text_position": "center",
+        "text_size": "large",
+        "visual": "An infographic scale comparing densities: 'Regular Matter' -> 'White Dwarf' -> 'Neutron Star'. The 'Neutron Star' segment glows intensely, emphasizing its extreme density. The text is bold and impactful.",
+        "animation": "slide_right"
+      },
+      {
+        "scene_number": 5,
+        "start_time": 15,
+        "duration": 5,
+        "text": "A single TEASPOON: over 5 BILLION TONS! More than all 8 BILLION HUMANS combined!",
+        "text_position": "center",
+        "text_size": "large",
+        "animation": "pulse",
+        "visual": "A stylized graphic of a teaspoon fills with a tiny, intensely glowing speck. Next to it, an Earth icon with small human silhouettes, and a giant '5 BILLION TONS' text overlay, showing the comparison visually."
+      }
+    ],
+    "thumbnail_text": "Neutron Star: Teaspoon Weight?!",
+    "background_style": "space_nebula"
+  },
+  "formatted_at": "2026-03-30T01:24:00.059760",
+  "status": "uploaded",
+  "rendered_at": "2026-03-30T01:25:00.890692",
+  "video_path": "videos_output/neutronstardensity_20260330_012400.mp4",
+  "uploaded_at": "2026-03-30T01:25:04.834176",
+  "youtube": {
+    "video_id": "I0m-PhrcAqo",
+    "url": "https://youtube.com/shorts/I0m-PhrcAqo",
+    "title": "A Teaspoon Weighs WHAT?! \ud83e\udd2f\ud83d\udcab",
+    "uploaded_at": "2026-03-30T01:25:04.834052"
+  }
+}
