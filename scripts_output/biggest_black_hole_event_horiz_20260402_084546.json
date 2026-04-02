@@ -1,0 +1,92 @@
+{
+  "idea": {
+    "topic": "Biggest Black Hole Event Horizon Scale",
+    "topic_family": "scale_comparison",
+    "hook": "The UNIVERSE'S BIGGEST Black Hole is MONSTROUS. \ud83e\udd2f",
+    "facts": [
+      "Our Solar System's planetary region (out to Neptune's orbit) is ~9 billion km wide.",
+      "The hyper-luminous quasar TON 618 hosts a black hole with an event horizon ~390 BILLION km wide.",
+      "That single black hole's 'point of no return' is over 43 times wider than Neptune's entire orbit!"
+    ],
+    "payoff": "This one object could effortlessly SWALLOW our ENTIRE planetary solar system!",
+    "title": "Biggest Black Hole: SWALLOWS Our Solar System! \ud83d\ude31\ud83c\udf0c",
+    "hashtags": [
+      "#astrophysics",
+      "#blackhole",
+      "#TON618",
+      "#solarsystem",
+      "#cosmicscale"
+    ],
+    "generated_at": "2026-04-02T08:45:37.823017",
+    "status": "pending",
+    "strategy_based": true
+  },
+  "script": {
+    "total_duration": 20,
+    "scenes": [
+      {
+        "scene_number": 1,
+        "start_time": 0,
+        "duration": 3,
+        "text": "The UNIVERSE'S BIGGEST Black Hole is MONSTROUS. \ud83e\udd2f",
+        "text_position": "center",
+        "text_size": "large",
+        "visual": "Dark, swirling cosmic background with faint, distant stars and nebulae. Text appears centrally.",
+        "animation": "fade_in"
+      },
+      {
+        "scene_number": 2,
+        "start_time": 3,
+        "duration": 4,
+        "text": "Our Solar System (out to Neptune) is ~9 Billion km wide.",
+        "text_position": "bottom",
+        "text_size": "medium",
+        "visual": "A visual representation of our Solar System, starting from the Sun and expanding outwards to show Neptune's orbit as a defined circle. The overall view zooms out slightly.",
+        "animation": "zoom_in"
+      },
+      {
+        "scene_number": 3,
+        "start_time": 7,
+        "duration": 4,
+        "text": "TON 618's event horizon: ~390 BILLION km wide.",
+        "text_position": "center",
+        "text_size": "medium",
+        "visual": "Transition to a dark, intimidating visual of a supermassive black hole's event horizon, with a bright, swirling accretion disk around it. The scale is immense and overwhelming.",
+        "animation": "slide_left"
+      },
+      {
+        "scene_number": 4,
+        "start_time": 11,
+        "duration": 4,
+        "text": "That's over 43x wider than Neptune's entire orbit!",
+        "text_position": "top",
+        "text_size": "medium",
+        "visual": "An illustrative comparison: a small, dotted circle representing Neptune's orbit (from Scene 2) is shown repeating 43 times across the vast expanse of the TON 618 event horizon, emphasizing the massive size difference.",
+        "animation": "slide_right"
+      },
+      {
+        "scene_number": 5,
+        "start_time": 15,
+        "duration": 5,
+        "text": "It could effortlessly SWALLOW our ENTIRE planetary Solar System!",
+        "text_position": "center",
+        "text_size": "large",
+        "animation": "pulse",
+        "visual": "A dramatic animation where the Solar System (from Scene 2) is drawn into the swirling, dark maw of the TON 618 black hole, disappearing entirely within its event horizon. High contrast and dramatic effect."
+      }
+    ],
+    "thumbnail_text": "MONSTROUS Black Hole Scale!",
+    "background_style": "space_dark"
+  },
+  "formatted_at": "2026-04-02T08:45:46.954048",
+  "status": "uploaded",
+  "rendered_at": "2026-04-02T08:46:45.038000",
+  "video_path": "videos_output/biggest_black_hole_event_horiz_20260402_084547.mp4",
+  "uploaded_at": "2026-04-02T08:46:48.175131",
+  "youtube": {
+    "video_id": "_NgNAQIzTrg",
+    "url": "https://youtube.com/shorts/_NgNAQIzTrg",
+    "title": "Biggest Black Hole: SWALLOWS Our Solar System! \ud83d\ude31\ud83c\udf0c",
+    "uploaded_at": "2026-04-02T08:46:48.174949"
+  }
+}
