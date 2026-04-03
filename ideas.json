@@ -1172,5 +1172,28 @@
     "status": "formatted",
     "strategy_based": true,
     "formatted_at": "2026-04-02T16:46:12.095586"
+  },
+  {
+    "topic": "Jupiter's Great Red Spot Shrinking",
+    "topic_family": "planetary_facts",
+    "hook": "Jupiter's most famous storm... is SHRINKING?! \ud83e\udd2f",
+    "facts": [
+      "In the 1800s, Jupiter's Great Red Spot was estimated to be over 40,000 km wide.",
+      "At that colossal size, you could have fit *three* Earths (each ~12,742 km wide) inside it!",
+      "Today, this iconic storm has dwindled to only about 15,000 km across."
+    ],
+    "payoff": "This epic, centuries-old monster storm is slowly fading away before our eyes!",
+    "title": "Jupiter's GIANT Spot is DISAPPEARING! \ud83d\ude31\ud83e\ude90",
+    "hashtags": [
+      "#Jupiter",
+      "#GreatRedSpot",
+      "#SpaceFacts",
+      "#Astronomy",
+      "#PlanetFacts"
+    ],
+    "generated_at": "2026-04-03T01:21:15.995215",
+    "status": "formatted",
+    "strategy_based": true,
+    "formatted_at": "2026-04-03T01:21:24.714416"
   }
 ]
