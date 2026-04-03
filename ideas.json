@@ -1218,5 +1218,29 @@
     "status": "formatted",
     "strategy_based": true,
     "formatted_at": "2026-04-03T08:43:47.060268"
+  },
+  {
+    "topic": "Landing on a Neutron Star",
+    "topic_family": "hypothetical",
+    "hook": "What if you tried to land on a Neutron Star? \ud83e\udd2f",
+    "facts": [
+      "It's the crushed core of a massive star, only ~12 miles (20 km) wide!",
+      "Surface gravity is 2 BILLION times Earth's. You'd be instantly squashed flatter than paper.",
+      "It spins up to 700 times per second, creating immense centrifugal force.",
+      "Magnetic field is 1 TRILLION times stronger than Earth's, ripping atoms apart."
+    ],
+    "payoff": "You wouldn't \"land.\" You'd be vaporized into a plasma long before impact!",
+    "title": "Land on a Neutron Star?! \ud83d\ude31\ud83d\udcab",
+    "hashtags": [
+      "#NeutronStar",
+      "#Astrophysics",
+      "#SpaceFacts",
+      "#WhatIf",
+      "#ExtremeSpace"
+    ],
+    "generated_at": "2026-04-03T16:30:47.695945",
+    "status": "formatted",
+    "strategy_based": true,
+    "formatted_at": "2026-04-03T16:31:05.746813"
   }
 ]

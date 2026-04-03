@@ -1,0 +1,93 @@
+{
+  "idea": {
+    "topic": "Landing on a Neutron Star",
+    "topic_family": "hypothetical",
+    "hook": "What if you tried to land on a Neutron Star? \ud83e\udd2f",
+    "facts": [
+      "It's the crushed core of a massive star, only ~12 miles (20 km) wide!",
+      "Surface gravity is 2 BILLION times Earth's. You'd be instantly squashed flatter than paper.",
+      "It spins up to 700 times per second, creating immense centrifugal force.",
+      "Magnetic field is 1 TRILLION times stronger than Earth's, ripping atoms apart."
+    ],
+    "payoff": "You wouldn't \"land.\" You'd be vaporized into a plasma long before impact!",
+    "title": "Land on a Neutron Star?! \ud83d\ude31\ud83d\udcab",
+    "hashtags": [
+      "#NeutronStar",
+      "#Astrophysics",
+      "#SpaceFacts",
+      "#WhatIf",
+      "#ExtremeSpace"
+    ],
+    "generated_at": "2026-04-03T16:30:47.695945",
+    "status": "pending",
+    "strategy_based": true
+  },
+  "script": {
+    "total_duration": 20,
+    "scenes": [
+      {
+        "scene_number": 1,
+        "start_time": 0,
+        "duration": 3,
+        "text": "What if you tried to land on a Neutron Star? \ud83e\udd2f",
+        "text_position": "center",
+        "text_size": "large",
+        "visual": "A distant, ominous neutron star in the deep dark void of space, surrounded by a faint, eerie glow.",
+        "animation": "fade_in"
+      },
+      {
+        "scene_number": 2,
+        "start_time": 3,
+        "duration": 4,
+        "text": "Only ~12 miles (20 km) wide! The crushed core of a massive star.",
+        "text_position": "center",
+        "text_size": "medium",
+        "visual": "A neutron star zooms closer, its surface barely visible. An outline of a small city (e.g., Manhattan) appears next to it for scale comparison.",
+        "animation": "zoom_in"
+      },
+      {
+        "scene_number": 3,
+        "start_time": 7,
+        "duration": 4,
+        "text": "Gravity: 2 BILLION x Earth's! Instantly squashed flatter than paper.",
+        "text_position": "center",
+        "text_size": "medium",
+        "visual": "An abstract visual of immense crushing force. A human-like silhouette approaches the star, then instantly flattens into a 2D disc, perhaps with a red-shift distortion.",
+        "animation": "slide_left"
+      },
+      {
+        "scene_number": 4,
+        "start_time": 11,
+        "duration": 4,
+        "text": "Spins 700x/sec! Mag field 1 TRILLION x Earth's, ripping atoms apart.",
+        "text_position": "center",
+        "text_size": "medium",
+        "visual": "A rapidly spinning neutron star visual, with highly energetic, arcing magnetic field lines visible. Plasma surges and flickers around its poles.",
+        "animation": "slide_right"
+      },
+      {
+        "scene_number": 5,
+        "start_time": 15,
+        "duration": 5,
+        "text": "You wouldn't 'land.' You'd be vaporized into plasma long before impact!",
+        "text_position": "center",
+        "text_size": "large",
+        "animation": "pulse",
+        "visual": "A brilliant, blinding flash of light followed by an expanding cloud of superheated plasma. The neutron star briefly disappears behind the explosion, then reappears, pulsating intensely."
+      }
+    ],
+    "thumbnail_text": "Neutron Star: Don't Land Here!",
+    "background_style": "space_dark"
+  },
+  "formatted_at": "2026-04-03T16:31:05.746609",
+  "status": "uploaded",
+  "rendered_at": "2026-04-03T16:32:43.974787",
+  "video_path": "videos_output/landing_on_a_neutron_star_20260403_163106.mp4",
+  "uploaded_at": "2026-04-03T16:32:47.711898",
+  "youtube": {
+    "video_id": "zBbSwKt3Q-U",
+    "url": "https://youtube.com/shorts/zBbSwKt3Q-U",
+    "title": "Land on a Neutron Star?! \ud83d\ude31\ud83d\udcab",
+    "uploaded_at": "2026-04-03T16:32:47.711798"
+  }
+}
