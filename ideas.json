@@ -1242,5 +1242,28 @@
     "status": "formatted",
     "strategy_based": true,
     "formatted_at": "2026-04-03T16:31:05.746813"
+  },
+  {
+    "topic": "Fast Radio Bursts (FRBs)",
+    "topic_family": "cosmic_mystery",
+    "hook": "Mysterious radio signals are flashing across the universe!",
+    "facts": [
+      "For milliseconds, these 'Fast Radio Bursts' (FRBs) unleash colossal energy.",
+      "A single FRB can emit more power than 500 million Suns in one millisecond.",
+      "Originating billions of light-years away, their source remains unknown to science."
+    ],
+    "payoff": "Are they exotic cosmic events, or something far stranger?",
+    "title": "Universe's MYSTERIOUS Radio Bursts! \ud83d\udce1\ud83c\udf0c",
+    "hashtags": [
+      "#FastRadioBursts",
+      "#CosmicMystery",
+      "#SpaceSignals",
+      "#Astrophysics",
+      "#Unexplained"
+    ],
+    "generated_at": "2026-04-04T01:15:25.448546",
+    "status": "formatted",
+    "strategy_based": true,
+    "formatted_at": "2026-04-04T01:15:33.657501"
   }
 ]
