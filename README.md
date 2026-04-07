@@ -1,19 +1,19 @@
 # PabrikShort
 
-📋 Setup Astro Shorts Engine — Panduan Lengkap & Akurat
+# 📋 Setup Astro Shorts Engine — Panduan Lengkap & Akurat
 Pipeline yang Sebenarnya
 idea_generator.py → script_formatter.py → video_renderer.py → youtube_uploader.py
    (Gemini API)        (Gemini API)          (MoviePy lokal)      (YouTube API)
 Video dibuat fully local — pakai MoviePy dengan animasi starfield, text, planet grafik. Tidak perlu Pexels atau ElevenLabs. Background music sudah ada di folder assets/audio/.
 
-🔐 Secrets yang Dibutuhkan — Hanya 3
+# 🔐 Secrets yang Dibutuhkan — Hanya 3
 Pergi ke repo → Settings → Secrets and variables → Actions → New repository secret
 Secret Name Isi :
 GEMINI_API_KEYAPI -> key Google Gemini (gratis)
 YOUTUBE_TOKENJSON -> token OAuth (lihat cara buat di bawah)
 YOUTUBE_CLIENT_SECRETJSON -> isi file client_secret.json dari Google Cloud
 
-🎫 Step 1 — Dapatkan GEMINI_API_KEY
+# 🎫 Step 1 — Dapatkan GEMINI_API_KEY
 
 Buka aistudio.google.com/apikey
 Klik Create API Key
@@ -21,7 +21,7 @@ Copy key-nya → paste sebagai secret GEMINI_API_KEY
 
 Gratis, tidak perlu kartu kredit.
 
-🎬 Step 2 — Setup YouTube OAuth (bagian terpenting)
+# 🎬 Step 2 — Setup YouTube OAuth (bagian terpenting)
 A. Buat Google Cloud Project & Credentials:
 
 Buka console.cloud.google.com
@@ -46,7 +46,7 @@ flow = InstalledAppFlow.from_client_secrets_file(
 )
 creds = flow.run_local_server(port=0)
 
-# Print YOUTUBE_TOKEN (format yang dibutuhkan script)
+ Print YOUTUBE_TOKEN (format yang dibutuhkan script)
 token_data = {
     "token": creds.token,
     "refresh_token": creds.refresh_token,
@@ -66,7 +66,7 @@ YOUTUBE_TOKEN → paste seluruh JSON dari { "token": ..., "refresh_token": ... }
 C. Isi secret YOUTUBE_CLIENT_SECRET:
 Buka file client_secret_xxx.json yang tadi di-download, copy seluruh isinya sebagai secret YOUTUBE_CLIENT_SECRET.
 
-⚙️ Step 3 — Enable Repository Permissions
+# ⚙️ Step 3 — Enable Repository Permissions
 Workflow ini melakukan git push (commit ideas.json yang diupdate). Perlu di-enable:
 
 Pergi ke repo → Settings → Actions → General
@@ -76,7 +76,7 @@ Centang "Allow GitHub Actions to create and approve pull requests"
 Klik Save
 
 
-🚀 Step 4 — Jalankan Manual untuk Test
+# 🚀 Step 4 — Jalankan Manual untuk Test
 
 Pergi ke tab Actions di repo
 Pilih workflow "Generate Short Idea"
