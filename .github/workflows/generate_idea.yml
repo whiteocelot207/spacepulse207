@@ -1,7 +1,8 @@
-name: Generate Short Idea v3
+name: Generate Short Idea
 
 on:
   schedule:
+    - cron: '*/5 * * * *'
     - cron: '7 12 * * *'  # 08:07 AM EST - morning commute
     - cron: '35 12 * * *'
     - cron: '7 15 * * *'  # 11:07 AM EST - late morning
