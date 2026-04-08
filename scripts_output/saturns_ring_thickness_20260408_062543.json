@@ -1,0 +1,93 @@
+{
+  "idea": {
+    "topic": "Saturn's Ring Thickness",
+    "topic_family": "planetary_facts",
+    "hook": "Saturn's Rings: Vast, Beautiful... and shockingly thin?",
+    "facts": [
+      "Saturn's main ring system spans an incredible ~282,000 kilometers wide!",
+      "Yet, their average vertical thickness is only about 10 meters \u2013 roughly the height of a 3-story building.",
+      "Proportionally, if Earth were the size of a bowling ball, Saturn's rings would be thinner than a single sheet of paper."
+    ],
+    "payoff": "This makes them one of the most astronomically thin, yet immense, structures in our solar system!",
+    "title": "Saturn's Rings: THINNER Than Paper?! \ud83e\udd2f\ud83e\ude90",
+    "hashtags": [
+      "#Saturn",
+      "#SpaceFacts",
+      "#Planets",
+      "#Astrophysics",
+      "#RingSystem"
+    ],
+    "generated_at": "2026-04-08T06:25:33.862699",
+    "status": "pending",
+    "strategy_based": true
+  },
+  "script": {
+    "total_duration": 20,
+    "scenes": [
+      {
+        "scene_number": 1,
+        "start_time": 0,
+        "duration": 3,
+        "text": "Saturn's Rings: Vast, Beautiful... and shockingly THIN?",
+        "text_position": "center",
+        "text_size": "large",
+        "visual": "Stunning wide shot of Saturn with its prominent rings, slowly rotating. Rings initially appear grand and solid.",
+        "animation": "fade_in"
+      },
+      {
+        "scene_number": 2,
+        "start_time": 3,
+        "duration": 4,
+        "text": "282,000 km WIDE!",
+        "text_position": "center",
+        "text_size": "medium",
+        "visual": "Top-down view of Saturn's rings, emphasizing their immense horizontal span. An animated measurement line appears across the rings with the distance.",
+        "animation": "zoom_in"
+      },
+      {
+        "scene_number": 3,
+        "start_time": 7,
+        "duration": 4,
+        "text": "Only ~10 meters THICK!",
+        "text_position": "center",
+        "text_size": "medium",
+        "visual": "Extreme close-up of a small segment of the rings, showing individual ice particles. A transparent, ghostly 3-story building graphic appears next to a highlighted cross-section of the rings for scale.",
+        "animation": "slide_left"
+      },
+      {
+        "scene_number": 4,
+        "start_time": 11,
+        "duration": 4,
+        "text": "Thinner than paper vs. a bowling ball Earth!",
+        "text_position": "center",
+        "text_size": "medium",
+        "visual": "Animated graphic comparing a bowling ball (labeled 'Earth') to a single, thin sheet of paper. The paper represents the proportional thickness of Saturn's rings.",
+        "animation": "slide_right"
+      },
+      {
+        "scene_number": 5,
+        "start_time": 15,
+        "duration": 5,
+        "text": "One of the most astronomically thin, yet IMMENSE structures in our solar system!",
+        "text_position": "center",
+        "text_size": "large",
+        "animation": "pulse",
+        "visual": "A majestic, full shot of Saturn and its rings, slowly rotating, subtly highlighting both the vastness and implied thinness with a soft glow around the ring plane.",
+        "background_style": "space_stars"
+      }
+    ],
+    "thumbnail_text": "Saturn's Rings: Thinner Than PAPER!",
+    "background_style": "space_stars"
+  },
+  "formatted_at": "2026-04-08T06:25:43.952256",
+  "status": "uploaded",
+  "rendered_at": "2026-04-08T06:26:41.358347",
+  "video_path": "videos_output/saturns_ring_thickness_20260408_062544.mp4",
+  "uploaded_at": "2026-04-08T06:26:44.027329",
+  "youtube": {
+    "video_id": "WosBNX5WpXc",
+    "url": "https://youtube.com/shorts/WosBNX5WpXc",
+    "title": "Saturn's Rings: THINNER Than Paper?! \ud83e\udd2f\ud83e\ude90",
+    "uploaded_at": "2026-04-08T06:26:44.027196"
+  }
+}
