@@ -1,0 +1,92 @@
+{
+  "idea": {
+    "topic": "Neutron Star City Size",
+    "topic_family": "scale_comparison",
+    "hook": "Could a STAR fit inside a city?",
+    "facts": [
+      "Our Sun: A GIGANTIC 1.39 MILLION km in diameter.",
+      "But not all stars are giants! Meet the Neutron Star: the ultra-dense core of a collapsed star.",
+      "A typical Neutron Star measures only about 20-25 km across."
+    ],
+    "payoff": "That means a star could be SMALLER than Manhattan (approx. 21.6 km long), fitting entirely within its borders!",
+    "title": "Star Smaller Than Your City?! \ud83e\udd2f\ud83c\udfd9\ufe0f\ud83c\udf0c",
+    "hashtags": [
+      "#NeutronStar",
+      "#SpaceFacts",
+      "#Astrophysics",
+      "#ScaleComparison",
+      "#ScienceShorts"
+    ],
+    "generated_at": "2026-04-09T16:52:02.257266",
+    "status": "pending",
+    "strategy_based": true
+  },
+  "script": {
+    "total_duration": 20,
+    "scenes": [
+      {
+        "scene_number": 1,
+        "start_time": 0,
+        "duration": 3,
+        "text": "Could a STAR fit inside a city?",
+        "text_position": "center",
+        "text_size": "large",
+        "visual": "A stylized illustration of a vibrant cityscape at night, with a faint, shimmering star icon appearing above it, then a question mark animating in.",
+        "animation": "fade_in"
+      },
+      {
+        "scene_number": 2,
+        "start_time": 3,
+        "duration": 4,
+        "text": "Our Sun: 1.39 MILLION km diameter",
+        "text_position": "center",
+        "text_size": "medium",
+        "visual": "A majestic, detailed visual of the Sun, with swirling plasma. A small Earth-like planet orbits in the distance for subtle scale.",
+        "animation": "zoom_in"
+      },
+      {
+        "scene_number": 3,
+        "start_time": 7,
+        "duration": 4,
+        "text": "Not all stars are giants! Meet the Neutron Star.",
+        "text_position": "center",
+        "text_size": "medium",
+        "visual": "Transition from the large Sun to a dramatic animation of a collapsing star, then revealing a tiny, incredibly dense, rapidly spinning neutron star.",
+        "animation": "slide_left"
+      },
+      {
+        "scene_number": 4,
+        "start_time": 11,
+        "duration": 4,
+        "text": "Only 20-25 km across!",
+        "text_position": "center",
+        "text_size": "medium",
+        "visual": "A close-up of the neutron star, its surface extremely smooth and dark, with a measuring tape graphic wrapping around it, highlighting the 20-25km scale.",
+        "animation": "slide_right"
+      },
+      {
+        "scene_number": 5,
+        "start_time": 15,
+        "duration": 5,
+        "text": "A STAR smaller than Manhattan (21.6 km)!",
+        "text_position": "center",
+        "text_size": "large",
+        "animation": "pulse",
+        "visual": "An animated, accurate satellite view of Manhattan Island. A tiny, glowing neutron star smoothly lands and settles within the island's borders, pulsing gently."
+      }
+    ],
+    "thumbnail_text": "Star Smaller Than a City?!",
+    "background_style": "space_stars"
+  },
+  "formatted_at": "2026-04-09T16:52:20.038013",
+  "status": "uploaded",
+  "rendered_at": "2026-04-09T16:53:14.583906",
+  "video_path": "videos_output/neutron_star_city_size_20260409_165220.mp4",
+  "uploaded_at": "2026-04-09T16:53:20.119948",
+  "youtube": {
+    "video_id": "aRv8iDrj2W0",
+    "url": "https://youtube.com/shorts/aRv8iDrj2W0",
+    "title": "Star Smaller Than Your City?! \ud83e\udd2f\ud83c\udfd9\ufe0f\ud83c\udf0c",
+    "uploaded_at": "2026-04-09T16:53:20.119840"
+  }
+}

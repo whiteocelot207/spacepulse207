@@ -1658,5 +1658,28 @@
     "status": "formatted",
     "strategy_based": true,
     "formatted_at": "2026-04-09T06:24:56.862428"
+  },
+  {
+    "topic": "Neutron Star City Size",
+    "topic_family": "scale_comparison",
+    "hook": "Could a STAR fit inside a city?",
+    "facts": [
+      "Our Sun: A GIGANTIC 1.39 MILLION km in diameter.",
+      "But not all stars are giants! Meet the Neutron Star: the ultra-dense core of a collapsed star.",
+      "A typical Neutron Star measures only about 20-25 km across."
+    ],
+    "payoff": "That means a star could be SMALLER than Manhattan (approx. 21.6 km long), fitting entirely within its borders!",
+    "title": "Star Smaller Than Your City?! \ud83e\udd2f\ud83c\udfd9\ufe0f\ud83c\udf0c",
+    "hashtags": [
+      "#NeutronStar",
+      "#SpaceFacts",
+      "#Astrophysics",
+      "#ScaleComparison",
+      "#ScienceShorts"
+    ],
+    "generated_at": "2026-04-09T16:52:02.257266",
+    "status": "formatted",
+    "strategy_based": true,
+    "formatted_at": "2026-04-09T16:52:20.038245"
   }
 ]
