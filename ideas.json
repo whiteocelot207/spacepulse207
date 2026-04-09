@@ -1639,5 +1639,24 @@
     "status": "formatted",
     "strategy_based": true,
     "formatted_at": "2026-04-08T23:57:11.102234"
+  },
+  {
+    "topic": "Andromeda Travel Time",
+    "topic_family": "travel_time",
+    "hook": "How long to reach Andromeda, our galactic neighbor?",
+    "facts": [
+      "Andromeda is 2.537 million light-years away.",
+      "At light speed, the journey would take 2.537 million years.",
+      "Our fastest probe (Parker Solar Probe at ~200 km/s) would take over 3.8 BILLION years."
+    ],
+    "payoff": "That's nearly the entire age of Earth in travel time!",
+    "title": "Andromeda: A 3.8 BILLION Year Trip?! \ud83e\udd2f\ud83c\udf0c",
+    "hashtags": [
+      "#Andromeda #SpaceTravel #Astrophysics #LightYears #CosmicDistances"
+    ],
+    "generated_at": "2026-04-09T06:24:46.971334",
+    "status": "formatted",
+    "strategy_based": true,
+    "formatted_at": "2026-04-09T06:24:56.862428"
   }
 ]

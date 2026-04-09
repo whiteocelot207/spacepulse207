@@ -1,0 +1,88 @@
+{
+  "idea": {
+    "topic": "Andromeda Travel Time",
+    "topic_family": "travel_time",
+    "hook": "How long to reach Andromeda, our galactic neighbor?",
+    "facts": [
+      "Andromeda is 2.537 million light-years away.",
+      "At light speed, the journey would take 2.537 million years.",
+      "Our fastest probe (Parker Solar Probe at ~200 km/s) would take over 3.8 BILLION years."
+    ],
+    "payoff": "That's nearly the entire age of Earth in travel time!",
+    "title": "Andromeda: A 3.8 BILLION Year Trip?! \ud83e\udd2f\ud83c\udf0c",
+    "hashtags": [
+      "#Andromeda #SpaceTravel #Astrophysics #LightYears #CosmicDistances"
+    ],
+    "generated_at": "2026-04-09T06:24:46.971334",
+    "status": "pending",
+    "strategy_based": true
+  },
+  "script": {
+    "total_duration": 20,
+    "scenes": [
+      {
+        "scene_number": 1,
+        "start_time": 0,
+        "duration": 3,
+        "text": "How long to reach Andromeda, our galactic neighbor?",
+        "text_position": "center",
+        "text_size": "large",
+        "visual": "A captivating, slowly rotating visual of the Milky Way and Andromeda galaxies, subtly approaching each other in a vast cosmic void.",
+        "animation": "fade_in"
+      },
+      {
+        "scene_number": 2,
+        "start_time": 3,
+        "duration": 4,
+        "text": "Andromeda is 2.537 MILLION Light-Years away.",
+        "text_position": "center",
+        "text_size": "medium",
+        "visual": "A deep space background with stars. Text appears, then a graphic of the two galaxies appears, with a numerical distance '2.537M LY' visually highlighted between them.",
+        "animation": "zoom_in"
+      },
+      {
+        "scene_number": 3,
+        "start_time": 7,
+        "duration": 4,
+        "text": "At light speed? 2.537 MILLION YEARS.",
+        "text_position": "center",
+        "text_size": "medium",
+        "visual": "The space background from Scene 2. A vibrant beam of light streaks across the screen from left to right, representing light speed. The '2.537 MILLION YEARS' text highlights brightly.",
+        "animation": "slide_left"
+      },
+      {
+        "scene_number": 4,
+        "start_time": 11,
+        "duration": 4,
+        "text": "Our fastest probe (~200 km/s)? Over 3.8 BILLION YEARS.",
+        "text_position": "center",
+        "text_size": "medium",
+        "visual": "A detailed 3D render of a futuristic space probe (like the Parker Solar Probe) slowly traversing a starry field, emphasizing its slowness compared to the vastness. The '3.8 BILLION YEARS' text flashes on screen.",
+        "animation": "slide_right"
+      },
+      {
+        "scene_number": 5,
+        "start_time": 15,
+        "duration": 5,
+        "text": "That's nearly the ENTIRE AGE OF EARTH in travel time!",
+        "text_position": "center",
+        "text_size": "large",
+        "animation": "pulse",
+        "visual": "A visual timeline or infographic comparing the '3.8 BILLION years' to 'Earth's age (4.5 Billion years)'. Perhaps a rotating Earth image alongside the monumental travel time number for emphasis."
+      }
+    ],
+    "thumbnail_text": "Andromeda Travel: The REAL Time!",
+    "background_style": "space_stars"
+  },
+  "formatted_at": "2026-04-09T06:24:56.862203",
+  "status": "uploaded",
+  "rendered_at": "2026-04-09T06:25:51.642181",
+  "video_path": "videos_output/andromeda_travel_time_20260409_062457.mp4",
+  "uploaded_at": "2026-04-09T06:25:54.381603",
+  "youtube": {
+    "video_id": "cYLdfA0i0zo",
+    "url": "https://youtube.com/shorts/cYLdfA0i0zo",
+    "title": "Andromeda: A 3.8 BILLION Year Trip?! \ud83e\udd2f\ud83c\udf0c",
+    "uploaded_at": "2026-04-09T06:25:54.381485"
+  }
+}
