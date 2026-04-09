@@ -1681,5 +1681,29 @@
     "status": "formatted",
     "strategy_based": true,
     "formatted_at": "2026-04-09T16:52:20.038245"
+  },
+  {
+    "topic": "Ganymede's Planet-Sized Stature",
+    "topic_family": "planetary_facts",
+    "hook": "Did you know a *moon* could be bigger than a *planet*?",
+    "facts": [
+      "Jupiter's moon Ganymede is the largest moon in our Solar System.",
+      "It spans 5,262 kilometers (3,269 miles) across.",
+      "That makes it bigger than the planet Mercury, which has a diameter of 4,879 kilometers (3,032 miles).",
+      "It's also the ONLY moon known to generate its own magnetic field, just like Earth!"
+    ],
+    "payoff": "Ganymede: A planetary powerhouse, just not orbiting the Sun!",
+    "title": "Moon BIGGER Than A Planet?! \ud83e\udd2f\ud83e\ude90",
+    "hashtags": [
+      "#Ganymede",
+      "#Jupiter",
+      "#SpaceFacts",
+      "#Astronomy",
+      "#SolarSystem"
+    ],
+    "generated_at": "2026-04-09T18:15:31.733563",
+    "status": "formatted",
+    "strategy_based": true,
+    "formatted_at": "2026-04-09T18:15:41.798740"
   }
 ]

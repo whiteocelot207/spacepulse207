@@ -1,0 +1,93 @@
+{
+  "idea": {
+    "topic": "Ganymede's Planet-Sized Stature",
+    "topic_family": "planetary_facts",
+    "hook": "Did you know a *moon* could be bigger than a *planet*?",
+    "facts": [
+      "Jupiter's moon Ganymede is the largest moon in our Solar System.",
+      "It spans 5,262 kilometers (3,269 miles) across.",
+      "That makes it bigger than the planet Mercury, which has a diameter of 4,879 kilometers (3,032 miles).",
+      "It's also the ONLY moon known to generate its own magnetic field, just like Earth!"
+    ],
+    "payoff": "Ganymede: A planetary powerhouse, just not orbiting the Sun!",
+    "title": "Moon BIGGER Than A Planet?! \ud83e\udd2f\ud83e\ude90",
+    "hashtags": [
+      "#Ganymede",
+      "#Jupiter",
+      "#SpaceFacts",
+      "#Astronomy",
+      "#SolarSystem"
+    ],
+    "generated_at": "2026-04-09T18:15:31.733563",
+    "status": "pending",
+    "strategy_based": true
+  },
+  "script": {
+    "total_duration": 20,
+    "scenes": [
+      {
+        "scene_number": 1,
+        "start_time": 0,
+        "duration": 3,
+        "text": "A MOON bigger than a PLANET?",
+        "text_position": "center",
+        "text_size": "large",
+        "visual": "Striking deep space background with subtle nebulae. A question mark graphic pulses briefly.",
+        "animation": "fade_in"
+      },
+      {
+        "scene_number": 2,
+        "start_time": 3,
+        "duration": 4,
+        "text": "Ganymede: Largest Moon in Our Solar System!\n(5,262 km / 3,269 miles across)",
+        "text_position": "top",
+        "text_size": "medium",
+        "visual": "A detailed, textured image of Ganymede rotating slowly against a backdrop of distant stars. Zoom in slightly on Ganymede.",
+        "animation": "zoom_in"
+      },
+      {
+        "scene_number": 3,
+        "start_time": 7,
+        "duration": 4,
+        "text": "BIGGER than Planet Mercury!\n(Ganymede: 5,262 km > Mercury: 4,879 km)",
+        "text_position": "center",
+        "text_size": "medium",
+        "visual": "Split screen comparison: Ganymede on left, Mercury on right, clearly showing Ganymede as larger. Animated size rings or indicators.",
+        "animation": "slide_left"
+      },
+      {
+        "scene_number": 4,
+        "start_time": 11,
+        "duration": 4,
+        "text": "The ONLY Moon with its own Magnetic Field!",
+        "text_position": "top",
+        "text_size": "medium",
+        "visual": "Ganymede with visible, swirling magnetic field lines illustrated around it, similar to Earth's aurora, glowing subtly.",
+        "animation": "slide_right"
+      },
+      {
+        "scene_number": 5,
+        "start_time": 15,
+        "duration": 5,
+        "text": "Ganymede: A True Planetary Powerhouse!",
+        "text_position": "center",
+        "text_size": "large",
+        "animation": "pulse",
+        "visual": "A majestic, full-screen view of Ganymede, slowly rotating, with subtle light glints emphasizing its surface features. Text pulses with a subtle glow."
+      }
+    ],
+    "thumbnail_text": "Ganymede: Moon or Planet?",
+    "background_style": "space_dark"
+  },
+  "formatted_at": "2026-04-09T18:15:41.798534",
+  "status": "uploaded",
+  "rendered_at": "2026-04-09T18:16:36.102974",
+  "video_path": "videos_output/ganymedes_planetsized_stature_20260409_181542.mp4",
+  "uploaded_at": "2026-04-09T18:16:39.185068",
+  "youtube": {
+    "video_id": "B_IZuE35quM",
+    "url": "https://youtube.com/shorts/B_IZuE35quM",
+    "title": "Moon BIGGER Than A Planet?! \ud83e\udd2f\ud83e\ude90",
+    "uploaded_at": "2026-04-09T18:16:39.184968"
+  }
+}
