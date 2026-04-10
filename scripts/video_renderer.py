@@ -441,7 +441,7 @@ def get_fontsize(text_size):
 
 def get_text_base_y(position):
     if position=="top":    return 180
-    if position=="bottom": return VIDEO_HEIGHT-400
+    if position=="bottom": return VIDEO_HEIGHT-500
     return VIDEO_HEIGHT//2-100
 
 
