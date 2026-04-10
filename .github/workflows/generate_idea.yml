@@ -3,11 +3,11 @@ name: Generate Short Idea
 
 on:
   schedule:
-    - cron: '0 11 * * *'   # 7:00 AM ET  — morning commute
-    - cron: '0 16 * * *'   # 12:00 PM ET — lunch break
-    - cron: '0 21 * * *'   # 5:00 PM ET  — after work
-    - cron: '0 0 * * *'    # 8:00 PM ET  — prime time
-    - cron: '30 2 * * *'   # 10:30 PM ET — late night scroll
+    - cron: '7 11 * * *'   # 7:00 AM ET  — morning commute
+    - cron: '7 16 * * *'   # 12:00 PM ET — lunch break
+    - cron: '7 21 * * *'   # 5:00 PM ET  — after work
+    - cron: '7 0 * * *'    # 8:00 PM ET  — prime time
+    - cron: '37 2 * * *'   # 10:30 PM ET — late night scroll
 
   workflow_dispatch:
     inputs:
