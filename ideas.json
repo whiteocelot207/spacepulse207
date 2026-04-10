@@ -1770,5 +1770,28 @@
     "status": "formatted",
     "strategy_based": true,
     "formatted_at": "2026-04-10T04:38:05.378196"
+  },
+  {
+    "topic": "Sun vs. Red Dwarf Size",
+    "topic_family": "scale_comparison",
+    "hook": "Our Sun: A COSMIC GIANT compared to most stars?!",
+    "facts": [
+      "Our Sun is a G-type star, with a diameter of 1.4 million km (870,000 miles).",
+      "Most stars in our Milky Way are Red Dwarfs, significantly smaller and dimmer.",
+      "A common Red Dwarf, like TRAPPIST-1, is only about 11% the size of our Sun. You could fit over 8 TRAPPIST-1 stars across the Sun's diameter!"
+    ],
+    "payoff": "The 'average' star is much smaller than you imagine \u2013 our Sun is surprisingly substantial!",
+    "title": "Sun: A Cosmic GIANT?! \u2600\ufe0f\ud83e\udd0f",
+    "hashtags": [
+      "#SpaceFacts",
+      "#StarSize",
+      "#RedDwarf",
+      "#OurSun",
+      "#Astrophysics"
+    ],
+    "generated_at": "2026-04-10T05:49:37.729261",
+    "status": "formatted",
+    "strategy_based": true,
+    "formatted_at": "2026-04-10T05:49:48.139102"
   }
 ]
