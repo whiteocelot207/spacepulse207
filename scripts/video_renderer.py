@@ -495,16 +495,16 @@ def create_hook_clip(hook_text, sub_text=""):
     bg       = create_moving_starfield_clip(duration=duration, seed=99)
     layers   = [bg]
 
-    try:
-        badge = TextClip(
-            "SPACE FACT", fontsize=34,
-            color="#8B5CF6", font="DejaVu-Sans-Bold",
-            stroke_color="black", stroke_width=2,
-            method="label",
-        ).set_duration(duration).set_position(("center",160)).crossfadein(0.25)
-        layers.append(badge)
-    except Exception as e:
-        print(f"⚠️ Hook badge: {e}")
+    #try:
+    #    badge = TextClip(
+    #        "SPACE FACT", fontsize=34,
+    #        color="#8B5CF6", font="DejaVu-Sans-Bold",
+    #        stroke_color="black", stroke_width=2,
+    #        method="label",
+    #    ).set_duration(duration).set_position(("center",160)).crossfadein(0.25)
+    #    layers.append(badge)
+    #except Exception as e:
+    #    print(f"⚠️ Hook badge: {e}")
 
     hook_clip = create_animated_text_clip(
         hook_text.upper(), duration,
@@ -515,18 +515,18 @@ def create_hook_clip(hook_text, sub_text=""):
         hook_clip = hook_clip.set_position(("center", VIDEO_HEIGHT//2 - 220))
         layers.append(hook_clip)
 
-    try:
-        div_arr = np.full((4, VIDEO_WIDTH-240, 4), [139,92,246,200], dtype=np.uint8)
-        div_img = Image.fromarray(div_arr, "RGBA")
-        div_clip = (
-            ImageClip(np.array(div_img))
-            .set_duration(duration)
-            .set_position(((VIDEO_WIDTH-(VIDEO_WIDTH-240))//2, VIDEO_HEIGHT//2-55))
-            .crossfadein(0.40)
-        )
-        layers.append(div_clip)
-    except Exception as e:
-        print(f"⚠️ Hook divider: {e}")
+    #try:
+    #    div_arr = np.full((4, VIDEO_WIDTH-240, 4), [139,92,246,200], dtype=np.uint8)
+    #    div_img = Image.fromarray(div_arr, "RGBA")
+    #    div_clip = (
+    #        ImageClip(np.array(div_img))
+    #        .set_duration(duration)
+    #        .set_position(((VIDEO_WIDTH-(VIDEO_WIDTH-240))//2, VIDEO_HEIGHT//2-55))
+    #        .crossfadein(0.40)
+    #    )
+    #    layers.append(div_clip)
+    #except Exception as e:
+    #    print(f"⚠️ Hook divider: {e}")
 
     if sub_text:
         sub = create_animated_text_clip(
