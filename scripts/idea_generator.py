@@ -3,6 +3,7 @@ Idea Generator Agent - SMART VERSION with Robust Retry Logic
 Generates astrophysics YouTube Shorts ideas using Gemini API.
 Uses analytics data to prioritize winning topic types,
 with exponential backoff to handle 429/503 gracefully.
+Target: US Audience 18-34
 """
 
 import os
@@ -38,14 +39,13 @@ TOPIC_DESCRIPTIONS = {
     "extreme_conditions": "extreme environments and conditions in space (hottest planet, coldest place, strongest gravity)"
 }
 
-RECENT_TOPIC_LIMIT = 10
 RECENT_FAMILY_BLOCK = 3
-MAX_GENERATION_ATTEMPTS = 3  # Reduced to avoid hammering API
+MAX_GENERATION_ATTEMPTS = 3
 
-# Gemini retry config
+# Gemini config
 GEMINI_MAX_RETRIES = 4
-GEMINI_BASE_DELAY = 20   # seconds — first retry wait
-GEMINI_MODEL = "gemini-2.5-flash"
+GEMINI_BASE_DELAY  = 20   # seconds — doubles each retry: 20 → 40 → 80 → 160
+GEMINI_MODEL       = "gemini-2.5-flash"
 
 
 # =============================================================================
@@ -75,38 +75,33 @@ def jaccard_similarity(a, b):
 
 
 # =============================================================================
-# ANALYTICS INTEGRATION
+# DATA LOADERS
 # =============================================================================
-def load_strategy():
-    if os.path.exists(STRATEGY_FILE):
+def load_json_file(filepath, default):
+    if os.path.exists(filepath):
         try:
-            with open(STRATEGY_FILE, "r") as f:
+            with open(filepath, "r") as f:
                 return json.load(f)
         except Exception as e:
-            print(f"⚠️  Could not load strategy: {e}")
-    return None
+            print(f"⚠️  Could not load {filepath}: {e}")
+    return default
+
+
+def load_strategy():
+    return load_json_file(STRATEGY_FILE, None)
 
 
 def load_performance_history():
-    if os.path.exists(PERFORMANCE_FILE):
-        try:
-            with open(PERFORMANCE_FILE, "r") as f:
-                return json.load(f)
-        except Exception as e:
-            print(f"⚠️  Could not load performance history: {e}")
-    return []
+    return load_json_file(PERFORMANCE_FILE, [])
 
 
 def load_ideas():
-    if os.path.exists(IDEAS_FILE):
-        try:
-            with open(IDEAS_FILE, "r") as f:
-                return json.load(f)
-        except Exception as e:
-            print(f"⚠️  Could not load ideas: {e}")
-    return []
+    return load_json_file(IDEAS_FILE, [])
 
 
+# =============================================================================
+# TOPIC SELECTION
+# =============================================================================
 def get_recent_topics(history, limit=10):
     recent = sorted(history, key=lambda x: x.get("published_at", ""), reverse=True)[:limit]
     return [v.get("topic_family", "general") for v in recent]
@@ -117,24 +112,24 @@ def get_recent_titles(history, limit=10):
     return [v.get("title", "") for v in recent if v.get("title")]
 
 
-def family_on_cooldown(topic_family, history, cooldown_count=3):
-    recent_families = get_recent_topics(history, limit=cooldown_count)
-    return topic_family in recent_families
-
-
 def select_topic_family(strategy, history):
+    recent_topics = get_recent_topics(history, limit=5)
+
     if not strategy or not strategy.get("top_performing_topics"):
-        print("📊 No analytics data yet, using balanced selection")
-        available = [t for t in DEFAULT_TOPICS if not family_on_cooldown(t, history, cooldown_count=2)]
+        print("📊 No analytics data yet — using balanced selection")
+        available = [
+            t for t in DEFAULT_TOPICS
+            if t not in recent_topics[:RECENT_FAMILY_BLOCK]
+        ]
         return random.choice(available or DEFAULT_TOPICS)
 
     top_topics = strategy.get("top_performing_topics", [])
-    suggested = strategy.get("suggested_next", DEFAULT_TOPICS)
-    avoid = [t["topic"] for t in strategy.get("avoid_topics", [])]
-    recent_topics = get_recent_topics(history, limit=5)
+    suggested  = strategy.get("suggested_next", DEFAULT_TOPICS)
+    avoid      = [t["topic"] for t in strategy.get("avoid_topics", [])]
 
     roll = random.random()
 
+    # 60% — top performers
     if roll < 0.6 and top_topics:
         candidates = [
             t["topic"] for t in top_topics
@@ -146,6 +141,7 @@ def select_topic_family(strategy, history):
             print(f"📊 Selected top performer: {selected}")
             return selected
 
+    # 30% — suggested
     if roll < 0.9 and suggested:
         candidates = [
             t for t in suggested
@@ -157,6 +153,7 @@ def select_topic_family(strategy, history):
             print(f"📊 Selected from suggestions: {selected}")
             return selected
 
+    # 10% — exploration
     all_topics = list(TOPIC_DESCRIPTIONS.keys())
     candidates = [
         t for t in all_topics
@@ -180,61 +177,58 @@ def get_topic_guidance(topic_family):
 # DUPLICATE DETECTION
 # =============================================================================
 def build_used_text_bank(history, existing_ideas):
-    used_entries = []
-    for item in history[-50:]:
-        used_entries.append({
-            "topic": item.get("topic", ""),
-            "hook": item.get("hook", ""),
-            "title": item.get("title", ""),
+    used = []
+    for item in list(history)[-50:] + list(existing_ideas)[-50:]:
+        used.append({
+            "topic":        item.get("topic", ""),
+            "hook":         item.get("hook", ""),
+            "title":        item.get("title", ""),
             "topic_family": item.get("topic_family", "")
         })
-    for item in existing_ideas[-50:]:
-        used_entries.append({
-            "topic": item.get("topic", ""),
-            "hook": item.get("hook", ""),
-            "title": item.get("title", ""),
-            "topic_family": item.get("topic_family", "")
-        })
-    return used_entries
+    return used
 
 
-def is_too_similar(new_idea, used_entries, similarity_threshold=0.65):
-    new_topic = new_idea.get("topic", "")
-    new_hook = new_idea.get("hook", "")
-    new_title = new_idea.get("title", "")
-    new_family = new_idea.get("topic_family", "")
+def is_too_similar(new_idea, used_entries, threshold=0.65):
+    nt = new_idea.get("topic", "")
+    nh = new_idea.get("hook", "")
+    ni = new_idea.get("title", "")
+    nf = new_idea.get("topic_family", "")
 
-    for existing in used_entries:
-        existing_topic = existing.get("topic", "")
-        existing_hook = existing.get("hook", "")
-        existing_title = existing.get("title", "")
-        existing_family = existing.get("topic_family", "")
+    for ex in used_entries:
+        et = ex.get("topic", "")
+        eh = ex.get("hook", "")
+        ei = ex.get("title", "")
+        ef = ex.get("topic_family", "")
 
-        if normalize_text(new_topic) and normalize_text(new_topic) == normalize_text(existing_topic):
-            print(f"⚠️  Duplicate topic: {new_topic}")
+        # Exact match
+        if normalize_text(nt) and normalize_text(nt) == normalize_text(et):
+            print(f"⚠️  Exact duplicate topic: {nt}")
             return True
-        if normalize_text(new_hook) and normalize_text(new_hook) == normalize_text(existing_hook):
-            print(f"⚠️  Duplicate hook: {new_hook}")
+        if normalize_text(nh) and normalize_text(nh) == normalize_text(eh):
+            print(f"⚠️  Exact duplicate hook")
             return True
-        if normalize_text(new_title) and normalize_text(new_title) == normalize_text(existing_title):
-            print(f"⚠️  Duplicate title: {new_title}")
-            return True
-
-        if jaccard_similarity(new_topic, existing_topic) >= similarity_threshold:
-            print(f"⚠️  Near-duplicate topic")
-            return True
-        if jaccard_similarity(new_hook, existing_hook) >= similarity_threshold:
-            print(f"⚠️  Near-duplicate hook")
-            return True
-        if jaccard_similarity(new_title, existing_title) >= similarity_threshold:
-            print(f"⚠️  Near-duplicate title")
+        if normalize_text(ni) and normalize_text(ni) == normalize_text(ei):
+            print(f"⚠️  Exact duplicate title")
             return True
 
-        if new_family == existing_family:
-            if (jaccard_similarity(new_topic, existing_topic) >= 0.45 or
-                    jaccard_similarity(new_hook, existing_hook) >= 0.45):
-                print("⚠️  Same family + too semantically close")
-                return True
+        # Near-duplicate
+        if jaccard_similarity(nt, et) >= threshold:
+            print(f"⚠️  Near-duplicate topic ({jaccard_similarity(nt, et):.2f})")
+            return True
+        if jaccard_similarity(nh, eh) >= threshold:
+            print(f"⚠️  Near-duplicate hook ({jaccard_similarity(nh, eh):.2f})")
+            return True
+        if jaccard_similarity(ni, ei) >= threshold:
+            print(f"⚠️  Near-duplicate title ({jaccard_similarity(ni, ei):.2f})")
+            return True
+
+        # Same family + semantically close
+        if nf == ef and (
+            jaccard_similarity(nt, et) >= 0.45 or
+            jaccard_similarity(nh, eh) >= 0.45
+        ):
+            print("⚠️  Same family and too semantically close")
+            return True
 
     return False
 
@@ -244,9 +238,9 @@ def is_too_similar(new_idea, used_entries, similarity_threshold=0.65):
 # =============================================================================
 def call_gemini(prompt, api_key):
     """
-    Call Gemini API with exponential backoff.
-    Delays: 20s → 40s → 80s → 160s
-    Handles both 429 (rate limit) and 503 (overload).
+    Call Gemini with exponential backoff.
+    Wait times: 20s → 40s → 80s → 160s
+    Handles 429 (rate limit) and 503 (overload).
     """
     url = (
         f"https://generativelanguage.googleapis.com/v1beta/models/"
@@ -259,28 +253,31 @@ def call_gemini(prompt, api_key):
         wait = GEMINI_BASE_DELAY * (2 ** attempt) + random.uniform(1, 6)
 
         try:
-            print(f"  🚀 Gemini call attempt {attempt + 1}/{GEMINI_MAX_RETRIES}...")
-            response = requests.post(url, json=payload, headers=headers, timeout=90)
+            print(f"  🚀 Gemini attempt {attempt + 1}/{GEMINI_MAX_RETRIES}...")
+            response = requests.post(
+                url, json=payload, headers=headers, timeout=90
+            )
 
-            # Rate limit or overload — back off and retry
             if response.status_code in (429, 503):
                 if attempt < GEMINI_MAX_RETRIES - 1:
-                    print(f"  ⏳ HTTP {response.status_code} — waiting {wait:.0f}s...")
+                    print(f"  ⏳ HTTP {response.status_code} — backing off {wait:.0f}s...")
                     time.sleep(wait)
                     continue
                 else:
-                    print(f"  ❌ HTTP {response.status_code} — no retries left")
+                    print(f"  ❌ HTTP {response.status_code} — retries exhausted")
                     return None
 
             response.raise_for_status()
-            data = response.json()
-            text = data["candidates"][0]["content"]["parts"][0]["text"]
+
+            data  = response.json()
+            text  = data["candidates"][0]["content"]["parts"][0]["text"]
             clean = text.replace("```json", "").replace("```", "").strip()
             return json.loads(clean)
 
         except requests.exceptions.Timeout:
             print(f"  ⚠️  Timeout on attempt {attempt + 1}")
             if attempt < GEMINI_MAX_RETRIES - 1:
+                print(f"  ⏳ Waiting {wait:.0f}s...")
                 time.sleep(wait)
 
         except requests.exceptions.RequestException as e:
@@ -290,14 +287,14 @@ def call_gemini(prompt, api_key):
                 time.sleep(wait)
 
         except json.JSONDecodeError as e:
-            print(f"  ❌ JSON parse error: {e}")
-            return None  # Bad response format — no point retrying
-
-        except Exception as e:
-            print(f"  ❌ Unexpected: {e}")
+            print(f"  ❌ JSON parse error — skipping retry: {e}")
             return None
 
-    print("  ❌ Gemini exhausted all retries")
+        except Exception as e:
+            print(f"  ❌ Unexpected error: {e}")
+            return None
+
+    print("  ❌ All Gemini retries failed")
     return None
 
 
@@ -305,7 +302,7 @@ def call_gemini(prompt, api_key):
 # PROMPT BUILDER
 # =============================================================================
 def build_prompt(topic_family, topic_guidance, history, existing_ideas):
-    recent_titles = get_recent_titles(history, limit=10)
+    recent_titles      = get_recent_titles(history, limit=10)
     recent_idea_topics = [
         idea.get("topic", "")
         for idea in existing_ideas[-10:]
@@ -313,105 +310,106 @@ def build_prompt(topic_family, topic_guidance, history, existing_ideas):
     ]
 
     avoid_list = recent_titles + recent_idea_topics
-    avoid_text = "\n".join([f"- {item}" for item in avoid_list if item]) or "- None"
+    avoid_text = "\n".join(f"- {item}" for item in avoid_list if item) or "- None"
 
-    return f"""You are a viral astrophysics YouTube Shorts content strategist targeting US audiences aged 18-34.
+    return f"""You are a viral astrophysics YouTube Shorts strategist targeting US audiences aged 18-34.
 
 Generate ONE idea for a 20-second silent infographic Short about space or astrophysics.
 
 TOPIC TYPE: {topic_family}
 DESCRIPTION: {topic_guidance}
 
-AVOID these recently used topics/titles:
+AVOID these recently used topics/titles (do NOT rephrase them either):
 {avoid_text}
 
-VIRAL HOOKS that work for US audiences:
-- Start with a shocking number or comparison ("The Sun is so big that...")
-- Use relatable US scale references (football fields, NYC, distance to LA)
-- Trigger "wait, what?!" moments
-- End with a fact that makes people want to share
+WHAT MAKES US AUDIENCES SHARE:
+- Opening with a shocking number ("It would take 1.3 million Earths to fill the Sun")
+- Using US-relatable scale (football fields, distance NY to LA, size of Texas)
+- "Wait, WHAT?!" moments that feel unbelievable but are true
+- Facts that make people feel smarter for knowing them
+- A payoff that invites debate or comments ("and we still don't know why")
 
 REQUIREMENTS:
-- Hook: punchy question or jaw-dropping statement (max 15 words)
-- Facts: 3 facts with specific numbers, use US-friendly scale references where possible
-- Payoff: surprising conclusion that invites comments or shares
+- Hook: jaw-dropping question or statement, max 15 words
+- Facts: exactly 3, each with specific numbers, US-scale references where natural
+- Payoff: conclusion that drives shares or comments
 - Title: SEO-friendly with emoji, max 60 chars
-- Hashtags: mix of broad (#space #science) and niche (#astrophysics #spaceisfake)
-- Must feel FRESH — not a rephrasing of the avoid list above
-- Scientifically accurate
+- Hashtags: 5 tags — mix broad (#space #science) and niche (#astrophysics)
+- Scientifically accurate, fresh angle only
 
-Return ONLY valid JSON, no markdown, no preamble:
+Return ONLY valid JSON with no markdown fences, no extra text:
 {{
     "topic": "brief topic name",
     "topic_family": "{topic_family}",
     "hook": "the opening question or statement",
     "facts": [
-        "fact 1 with specific numbers and US-scale reference",
+        "fact 1 with specific numbers",
         "fact 2 with specific numbers",
         "fact 3 with specific numbers"
     ],
-    "payoff": "surprising conclusion that drives shares/comments",
+    "payoff": "surprising conclusion that drives shares or comments",
     "title": "YouTube title with emoji (max 60 chars)",
     "hashtags": ["tag1", "tag2", "tag3", "tag4", "tag5"]
 }}"""
 
 
 # =============================================================================
-# IDEA GENERATION
+# MAIN GENERATION LOOP
 # =============================================================================
 def generate_idea():
     api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key:
-        print("❌ GEMINI_API_KEY not set")
+        print("❌ GEMINI_API_KEY environment variable not set")
         return None
 
-    strategy = load_strategy()
-    history = load_performance_history()
+    strategy       = load_strategy()
+    history        = load_performance_history()
     existing_ideas = load_ideas()
-    used_entries = build_used_text_bank(history, existing_ideas)
+    used_entries   = build_used_text_bank(history, existing_ideas)
 
     for attempt in range(MAX_GENERATION_ATTEMPTS):
-        print(f"\n{'='*50}")
+        print(f"\n{'─' * 50}")
         print(f"🧪 Generation attempt {attempt + 1}/{MAX_GENERATION_ATTEMPTS}")
 
-        # Cooldown between outer attempts to respect rate limits
+        # Cooldown between outer attempts — 0s, 35s, 70s
         if attempt > 0:
-            cooldown = 30 * attempt + random.uniform(5, 15)
-            print(f"⏳ Outer cooldown: {cooldown:.0f}s before next attempt...")
+            cooldown = 35 * attempt + random.uniform(5, 15)
+            print(f"⏳ Cooldown {cooldown:.0f}s before next attempt...")
             time.sleep(cooldown)
 
-        topic_family = select_topic_family(strategy, history)
+        topic_family  = select_topic_family(strategy, history)
         topic_guidance = get_topic_guidance(topic_family)
         print(f"🎯 Topic family: {topic_family}")
 
         prompt = build_prompt(topic_family, topic_guidance, history, existing_ideas)
-        idea = call_gemini(prompt, api_key)
+        idea   = call_gemini(prompt, api_key)
 
         if not idea:
-            print("⚠️  No idea returned from Gemini, trying next attempt...")
+            print("⚠️  No idea returned — moving to next attempt")
             continue
 
-        idea["topic_family"] = topic_family
-        idea["generated_at"] = datetime.now().isoformat()
-        idea["status"] = "pending"
+        # Force correct topic family
+        idea["topic_family"]   = topic_family
+        idea["generated_at"]   = datetime.now().isoformat()
+        idea["status"]         = "pending"
         idea["strategy_based"] = strategy is not None
 
         if is_too_similar(idea, used_entries):
-            print("🔁 Too similar to existing content, retrying...")
+            print("🔁 Too similar to existing content — retrying")
             continue
 
         print("✅ Fresh idea generated!")
-        print(f"   Topic  : {idea.get('topic')}")
-        print(f"   Hook   : {idea.get('hook')}")
-        print(f"   Title  : {idea.get('title')}")
+        print(f"   Topic : {idea.get('topic')}")
+        print(f"   Hook  : {idea.get('hook')}")
+        print(f"   Title : {idea.get('title')}")
         return idea
 
-    print("❌ Failed to generate a fresh idea after all attempts")
+    print("❌ Could not generate a fresh idea after all attempts")
     return None
 
 
 # =============================================================================
-# FILE MANAGEMENT
+# FILE SAVE
 # =============================================================================
 def save_idea(idea):
     ideas = load_ideas()
@@ -422,28 +420,26 @@ def save_idea(idea):
 
 
 # =============================================================================
-# MAIN
+# ENTRY POINT
 # =============================================================================
 def main():
     print("=" * 60)
     print("🌌 ASTRO SHORTS ENGINE — Smart Idea Generator")
-    print("   Target: US Audience | Viral Astrophysics Shorts")
+    print("   Target: US Audience 18-34 | Viral Astrophysics")
     print("=" * 60)
 
-    if os.path.exists(STRATEGY_FILE):
-        print("📊 Analytics data found — using smart selection")
-    else:
-        print("📊 No analytics yet — using balanced selection")
+    status = "smart selection" if os.path.exists(STRATEGY_FILE) else "balanced selection"
+    print(f"📊 Analytics: {status}")
 
     idea = generate_idea()
 
     if idea:
         save_idea(idea)
         print("\n" + "=" * 60)
-        print("🎬 Idea ready — passing to script_formatter.py")
+        print("🎬 Idea saved — ready for script_formatter.py")
         print("=" * 60)
     else:
-        print("\n❌ Idea generation failed. Exiting with error.")
+        print("\n❌ Generation failed — exiting with error code 1")
         exit(1)
 
 
