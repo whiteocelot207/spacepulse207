@@ -71,6 +71,7 @@ https://console.cloud.google.com
 
 ```
 YouTube Data API v3
+YouTube Analytics API
 ```
 
 4. Setup OAuth consent screen
@@ -120,33 +121,104 @@ get_token.py
 Contoh isi file:
 
 ```python
-from google_auth_oauthlib.flow import InstalledAppFlow
 import json
+import os
+import sys
+import subprocess
+
+
+# =============================================================================
+# AUTO-INSTALL DEPENDENCIES
+# =============================================================================
+REQUIRED_PACKAGES = {
+    "google_auth_oauthlib": "google-auth-oauthlib",
+    "google.oauth2":        "google-auth",
+    "googleapiclient":      "google-api-python-client",
+}
+
+def check_and_install_dependencies():
+    missing = []
+    for import_name, package_name in REQUIRED_PACKAGES.items():
+        try:
+            __import__(import_name)
+        except ImportError:
+            missing.append(package_name)
+
+    if not missing:
+        print("✅ Semua dependencies sudah tersedia\n")
+        return
+
+    print(f"📦 Dependencies belum ada: {', '.join(missing)}")
+    print("⏳ Menginstall otomatis...\n")
+
+    try:
+        subprocess.check_call([
+            sys.executable, "-m", "pip", "install", *missing
+        ])
+        print("\n✅ Install berhasil!\n")
+    except subprocess.CalledProcessError:
+        print("\n❌ Install gagal. Jalankan manual:")
+        print(f"   pip install {' '.join(missing)}")
+        sys.exit(1)
+
+check_and_install_dependencies()
+
+
+# =============================================================================
+# MAIN — import setelah dependencies dipastikan ada
+# =============================================================================
+from google_auth_oauthlib.flow import InstalledAppFlow
+from google.oauth2.credentials import Credentials
+
+SCOPES = [
+    "https://www.googleapis.com/auth/youtube.upload",
+    "https://www.googleapis.com/auth/youtube",
+    "https://www.googleapis.com/auth/youtube.readonly",
+    "https://www.googleapis.com/auth/yt-analytics.readonly",
+]
 
 CLIENT_SECRET_FILE = "client_secret.json"
 
-SCOPES = ["https://www.googleapis.com/auth/youtube.upload"]
 
 def main():
-    flow = InstalledAppFlow.from_client_secrets_file(
-        CLIENT_SECRET_FILE,
-        scopes=SCOPES
-    )
+    if not os.path.exists(CLIENT_SECRET_FILE):
+        print(f"❌ File {CLIENT_SECRET_FILE} tidak ditemukan!")
+        print("   Download dari Google Cloud Console:")
+        print("   APIs & Services → Credentials → OAuth 2.0 Client → Download JSON")
+        print("   Letakkan file tersebut di folder yang sama dengan script ini")
+        sys.exit(1)
 
-    # membuka browser untuk login
-    creds = flow.run_local_server(port=0)
+    print("🔐 Membuka browser untuk OAuth login...")
+    print("   Pastikan login dengan akun YouTube channel SpacePulse207\n")
+
+    flow = InstalledAppFlow.from_client_secrets_file(CLIENT_SECRET_FILE, SCOPES)
+    credentials = flow.run_local_server(port=8080, prompt="consent")
 
     token_data = {
-        "token": creds.token,
-        "refresh_token": creds.refresh_token,
-        "token_uri": creds.token_uri,
-        "client_id": creds.client_id,
-        "client_secret": creds.client_secret,
-        "scopes": list(creds.scopes)
+        "token":         credentials.token,
+        "refresh_token": credentials.refresh_token,
+        "token_uri":     credentials.token_uri,
+        "client_id":     credentials.client_id,
+        "client_secret": credentials.client_secret,
+        "scopes":        list(credentials.scopes),
     }
 
-    print("\n=== YOUTUBE_TOKEN ===\n")
+    output_file = "youtube_token_new.json"
+    with open(output_file, "w") as f:
+        json.dump(token_data, f, indent=2)
+
+    print(f"\n✅ Token berhasil disimpan ke: {output_file}")
+    print("\n📋 Isi token untuk GitHub Secret YOUTUBE_TOKEN:")
+    print("─" * 50)
     print(json.dumps(token_data, indent=2))
+    print("─" * 50)
+    print("\n📌 Langkah selanjutnya:")
+    print("   1. Copy seluruh JSON di atas")
+    print("   2. Buka GitHub repo → Settings → Secrets and variables → Actions")
+    print("   3. Klik YOUTUBE_TOKEN → Update secret → Paste → Save")
+    print("\n⚠️  JANGAN commit file-file ini ke repo:")
+    print(f"   - {output_file}")
+    print(f"   - {CLIENT_SECRET_FILE}")
 
 
 if __name__ == "__main__":
@@ -169,6 +241,10 @@ Copy seluruh JSON tersebut dan simpan sebagai secret:
 
 ```
 YOUTUBE_TOKEN
+```
+jika gagal dalam eksekusi file get_token.py (perlu depedanies), lakukan install terlebih dahulu :
+```
+pip install google-auth-oauthlib google-auth google-api-python-client
 ```
 
 ---
