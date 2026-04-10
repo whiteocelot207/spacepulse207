@@ -1793,5 +1793,28 @@
     "status": "formatted",
     "strategy_based": true,
     "formatted_at": "2026-04-10T05:49:48.139102"
+  },
+  {
+    "topic": "Dark Matter",
+    "topic_family": "cosmic_mystery",
+    "hook": "Only 5% of the Universe is made of YOU?",
+    "facts": [
+      "All the stars, planets, and gas we can see make up just 5% of the cosmos.",
+      "A mysterious 27% is Dark Matter: invisible, doesn't interact with light, but has immense gravity.",
+      "Without Dark Matter's gravitational pull, galaxies like ours would spin apart, flinging stars into the void."
+    ],
+    "payoff": "The universe's very structure, including our galaxy, relies on something we still can't detect!",
+    "title": "Dark Matter: Universe's Secret Glue! \ud83c\udf0c\ud83e\udd2b",
+    "hashtags": [
+      "#DarkMatter",
+      "#CosmicMystery",
+      "#Astrophysics",
+      "#Universe",
+      "#Science"
+    ],
+    "generated_at": "2026-04-10T07:36:42.354185",
+    "status": "error",
+    "strategy_based": true,
+    "error_at": "2026-04-10T07:42:33.822017"
   }
 ]

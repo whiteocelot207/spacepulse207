@@ -79,7 +79,14 @@
     "background_style": "space_stars"
   },
   "formatted_at": "2026-04-10T05:49:48.138888",
-  "status": "rendered",
+  "status": "uploaded",
   "rendered_at": "2026-04-10T05:51:37.366685",
-  "video_path": "videos_output/sun_vs_red_dwarf_size_20260410_054948.mp4"
+  "video_path": "videos_output/sun_vs_red_dwarf_size_20260410_054948.mp4",
+  "uploaded_at": "2026-04-10T07:42:39.259032",
+  "youtube": {
+    "video_id": "tG8ewYIUjj4",
+    "url": "https://youtube.com/shorts/tG8ewYIUjj4",
+    "title": "Sun: A Cosmic GIANT?! \u2600\ufe0f\ud83e\udd0f",
+    "uploaded_at": "2026-04-10T07:42:39.258885"
+  }
 }
