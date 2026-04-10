@@ -1,4 +1,4 @@
-# 🚀 PabrikShort
+# 🚀 spacepulse207
 
 Automated **YouTube Shorts generator** menggunakan **Gemini AI + MoviePy + YouTube API**.
 
