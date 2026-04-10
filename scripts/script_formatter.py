@@ -1,55 +1,68 @@
 """
-Script Formatter Agent - FIXED VERSION
+Script Formatter Agent
 Transforms raw ideas into scene-by-scene video scripts ready for rendering.
-Properly handles idea status to prevent duplicate processing.
+
+Changes:
+  - Exponential backoff on 503 / transient errors (5s → 15s → 30s → 60s)
+  - Fallback model list: gemini-2.5-flash → gemini-2.0-flash → gemini-1.5-flash
+  - Graceful skip on failure (no exit(1)) — idea marked as 'error' so the
+    workflow stays green and the next run picks a fresh idea
+  - Per-attempt timeout bump (30s → 45s)
 """
 
-import os
 import json
-import requests
+import os
+import time
 from datetime import datetime
+
+import requests
+
+# =============================================================================
+# CONFIG
+# =============================================================================
+GEMINI_MODELS = [
+    "gemini-2.5-flash",
+    "gemini-2.0-flash",
+    "gemini-1.5-flash",
+]
+
+RETRY_DELAYS = [5, 15, 30, 60]   # seconds between retries (exponential-ish)
+REQUEST_TIMEOUT = 45              # seconds per HTTP request
 
 # =============================================================================
 # FILE MANAGEMENT
 # =============================================================================
 def load_ideas(filename="ideas.json"):
-    """Load ideas from the JSON file."""
     if not os.path.exists(filename):
         print(f"❌ {filename} not found")
         return []
-    
-    with open(filename, 'r') as f:
-        ideas = json.load(f)
-    
-    return ideas
+    with open(filename, "r") as f:
+        return json.load(f)
 
 
 def save_ideas(ideas, filename="ideas.json"):
-    """Save ideas back to file."""
-    with open(filename, 'w') as f:
+    with open(filename, "w") as f:
         json.dump(ideas, f, indent=2)
 
 
 def get_pending_ideas(ideas):
-    """Get ideas that haven't been formatted yet (status = pending)."""
-    return [(i, idea) for i, idea in enumerate(ideas) if idea.get('status') == 'pending']
+    return [(i, idea) for i, idea in enumerate(ideas)
+            if idea.get("status") == "pending"]
 
 
 def get_existing_scripts(scripts_dir="scripts_output"):
-    """Get list of already rendered script topics to avoid duplicates."""
     if not os.path.exists(scripts_dir):
         return set()
-    
     existing = set()
     for f in os.listdir(scripts_dir):
-        if f.endswith('.json'):
+        if f.endswith(".json"):
             try:
-                with open(os.path.join(scripts_dir, f), 'r') as file:
-                    data = json.load(file)
-                    topic = data.get('idea', {}).get('topic', '')
+                with open(os.path.join(scripts_dir, f), "r") as fh:
+                    data = json.load(fh)
+                    topic = data.get("idea", {}).get("topic", "")
                     if topic:
                         existing.add(topic.lower().strip())
-            except:
+            except Exception:
                 pass
     return existing
 
@@ -57,24 +70,16 @@ def get_existing_scripts(scripts_dir="scripts_output"):
 # =============================================================================
 # SCRIPT FORMATTING
 # =============================================================================
-def format_script(idea):
-    """Use Gemini to create a detailed scene-by-scene script."""
-    
-    api_key = os.environ.get('GEMINI_API_KEY')
-    
-    if not api_key:
-        print("❌ Error: GEMINI_API_KEY not found")
-        return None
-    
-    prompt = f"""You are a YouTube Shorts video script director.
+PROMPT_TEMPLATE = """\
+You are a YouTube Shorts video script director.
 
 Take this video idea and create a detailed scene-by-scene script for a 20-second silent infographic Short.
 
 IDEA:
-- Topic: {idea.get('topic')}
-- Hook: {idea.get('hook')}
-- Facts: {json.dumps(idea.get('facts', []))}
-- Payoff: {idea.get('payoff')}
+- Topic: {topic}
+- Hook: {hook}
+- Facts: {facts}
+- Payoff: {payoff}
 
 Create exactly 5 scenes that fit in 20 seconds total.
 
@@ -143,105 +148,116 @@ Return ONLY this JSON format, no other text:
     ],
     "thumbnail_text": "Short punchy text for thumbnail",
     "background_style": "space_dark OR space_nebula OR space_stars OR earth_orbit"
-}}"""
+}}\
+"""
 
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={api_key}"
-    
-    payload = {
-        "contents": [{
-            "parts": [{"text": prompt}]
-        }]
-    }
-    
-    # Retry logic
-    max_retries = 3
-    for attempt in range(max_retries):
-        try:
-            print(f"🎬 Formatting script for: {idea.get('topic')}...")
-            response = requests.post(url, json=payload, headers={"Content-Type": "application/json"}, timeout=30)
-            
-            if response.status_code == 503:
-                print(f"⚠️ Service unavailable, retry {attempt + 1}/{max_retries}...")
-                import time
-                time.sleep(5)
-                continue
-            
-            response.raise_for_status()
-            
-            data = response.json()
-            text = data['candidates'][0]['content']['parts'][0]['text']
-            
-            # Clean and parse JSON
-            clean_text = text.replace('```json', '').replace('```', '').strip()
-            script = json.loads(clean_text)
-            
-            print("✅ Script formatted successfully!")
-            return script
-            
-        except Exception as e:
-            print(f"❌ Error formatting script (attempt {attempt + 1}): {e}")
-            if attempt < max_retries - 1:
-                import time
-                time.sleep(3)
-            else:
-                return None
-    
+
+def _call_gemini(api_key, model, prompt):
+    """
+    Single attempt to call one Gemini model.
+    Returns (script_dict, None) on success or (None, error_str) on failure.
+    """
+    url = (
+        f"https://generativelanguage.googleapis.com/v1beta/models/"
+        f"{model}:generateContent?key={api_key}"
+    )
+    payload = {"contents": [{"parts": [{"text": prompt}]}]}
+    headers = {"Content-Type": "application/json"}
+
+    resp = requests.post(url, json=payload, headers=headers,
+                         timeout=REQUEST_TIMEOUT)
+
+    if resp.status_code in (429, 500, 502, 503, 504):
+        return None, f"HTTP {resp.status_code}"
+
+    resp.raise_for_status()
+
+    data = resp.json()
+    raw = data["candidates"][0]["content"]["parts"][0]["text"]
+    clean = raw.replace("```json", "").replace("```", "").strip()
+    script = json.loads(clean)
+    return script, None
+
+
+def format_script(idea):
+    """
+    Try each model in GEMINI_MODELS with exponential-backoff retries.
+    Returns the parsed script dict, or None on total failure.
+    """
+    api_key = os.environ.get("GEMINI_API_KEY")
+    if not api_key:
+        print("❌ GEMINI_API_KEY not set")
+        return None
+
+    prompt = PROMPT_TEMPLATE.format(
+        topic=idea.get("topic"),
+        hook=idea.get("hook"),
+        facts=json.dumps(idea.get("facts", [])),
+        payoff=idea.get("payoff"),
+    )
+
+    for model in GEMINI_MODELS:
+        print(f"🤖 Trying model: {model}")
+        for attempt, delay in enumerate(RETRY_DELAYS, start=1):
+            print(f"   🎬 Attempt {attempt}/{len(RETRY_DELAYS)} — "
+                  f"topic: {idea.get('topic')}")
+            try:
+                script, err = _call_gemini(api_key, model, prompt)
+                if script is not None:
+                    print(f"   ✅ Success with {model}")
+                    return script
+                # Transient error → wait and retry
+                print(f"   ⚠️ {err} — waiting {delay}s before retry...")
+                time.sleep(delay)
+            except Exception as exc:
+                print(f"   ⚠️ Exception: {exc} — waiting {delay}s...")
+                time.sleep(delay)
+
+        print(f"   ❌ All retries exhausted for {model}, trying next model...")
+
+    print("❌ All models failed.")
     return None
 
 
+# =============================================================================
+# SAVE / CLEANUP
+# =============================================================================
 def save_script(idea, script, scripts_dir="scripts_output"):
-    """Save the formatted script to a file."""
-    
-    # Create output directory if it doesn't exist
-    if not os.path.exists(scripts_dir):
-        os.makedirs(scripts_dir)
-    
-    # Create unique filename from topic + timestamp
-    safe_topic = idea.get('topic', 'untitled').lower()
-    safe_topic = ''.join(c if c.isalnum() or c == ' ' else '' for c in safe_topic)
-    safe_topic = safe_topic.replace(' ', '_')[:30]
-    timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-    filename = f"{scripts_dir}/{safe_topic}_{timestamp}.json"
-    
-    # Combine idea and script data
+    os.makedirs(scripts_dir, exist_ok=True)
+
+    safe_topic = idea.get("topic", "untitled").lower()
+    safe_topic = "".join(c if c.isalnum() or c == " " else "" for c in safe_topic)
+    safe_topic = safe_topic.replace(" ", "_")[:30]
+    ts       = datetime.now().strftime("%Y%m%d_%H%M%S")
+    filename = f"{scripts_dir}/{safe_topic}_{ts}.json"
+
     full_script = {
         "idea": idea,
         "script": script,
         "formatted_at": datetime.now().isoformat(),
-        "status": "ready_to_render"
+        "status": "ready_to_render",
     }
-    
-    with open(filename, 'w') as f:
+    with open(filename, "w") as f:
         json.dump(full_script, f, indent=2)
-    
+
     print(f"💾 Saved script to: {filename}")
     return filename
 
 
-# =============================================================================
-# CLEANUP: Remove old scripts to prevent re-rendering
-# =============================================================================
-def cleanup_old_scripts(scripts_dir="scripts_output", keep_latest=1):
-    """Remove old scripts, keeping only the latest N."""
+def cleanup_old_scripts(scripts_dir="scripts_output", keep_latest=0):
     if not os.path.exists(scripts_dir):
         return
-    
     scripts = []
     for f in os.listdir(scripts_dir):
-        if f.endswith('.json'):
+        if f.endswith(".json"):
             path = os.path.join(scripts_dir, f)
-            mtime = os.path.getmtime(path)
-            scripts.append((path, mtime))
-    
-    # Sort by modification time (newest first)
+            scripts.append((path, os.path.getmtime(path)))
     scripts.sort(key=lambda x: x[1], reverse=True)
-    
-    # Remove old scripts
     for path, _ in scripts[keep_latest:]:
         try:
             os.remove(path)
             print(f"🗑️ Removed old script: {os.path.basename(path)}")
-        except:
+        except Exception:
             pass
 
 
@@ -253,71 +269,69 @@ def main():
     print("🎬 ASTRO SHORTS ENGINE - Script Formatter")
     print("=" * 60)
     print()
-    
-    # Load all ideas
+
     ideas = load_ideas()
     if not ideas:
         print("No ideas found. Run the idea generator first.")
         return
-    
+
     print(f"📚 Found {len(ideas)} total ideas")
-    
-    # Get pending ideas (not yet formatted)
+
     pending = get_pending_ideas(ideas)
     print(f"⏳ {len(pending)} ideas pending formatting")
-    
+
     if not pending:
         print("✨ All ideas have been formatted!")
-        print("ℹ️ To generate new content, clear ideas.json or wait for new ideas.")
         return
-    
-    # Get the FIRST pending idea only
+
     idea_index, idea = pending[-1]
-    
-    # Check if this topic was already scripted (safety check)
+
+    # Safety check: already scripted?
     existing = get_existing_scripts()
-    if idea.get('topic', '').lower().strip() in existing:
-        print(f"⚠️ Topic already scripted, marking as formatted: {idea.get('topic')}")
-        ideas[idea_index]['status'] = 'formatted'
-        ideas[idea_index]['formatted_at'] = datetime.now().isoformat()
+    if idea.get("topic", "").lower().strip() in existing:
+        print(f"⚠️ Already scripted, marking as formatted: {idea.get('topic')}")
+        ideas[idea_index]["status"] = "formatted"
+        ideas[idea_index]["formatted_at"] = datetime.now().isoformat()
         save_ideas(ideas)
         return
-    
+
     print()
     print(f"📝 Processing: {idea.get('topic')}")
     print("-" * 40)
-    
-    # Format the script
+
     script = format_script(idea)
-    
+
     if script:
-        # Clean up old scripts first (keep only 1)
-        cleanup_old_scripts(keep_latest=0)  # Remove all old scripts
-        
-        # Save the new script
+        cleanup_old_scripts(keep_latest=0)
         script_file = save_script(idea, script)
-        
-        # Update idea status to 'formatted'
-        ideas[idea_index]['status'] = 'formatted'
-        ideas[idea_index]['formatted_at'] = datetime.now().isoformat()
+
+        ideas[idea_index]["status"] = "formatted"
+        ideas[idea_index]["formatted_at"] = datetime.now().isoformat()
         save_ideas(ideas)
-        
+
         print()
         print("=" * 60)
         print(f"✅ Script ready: {script_file}")
         print("🎬 Next step: Video rendering")
         print("=" * 60)
-        
-        # Print preview
         print()
         print("📋 Script Preview:")
         print("-" * 40)
-        for scene in script.get('scenes', [])[:3]:
-            text_preview = scene.get('text', '')[:50]
-            print(f"  Scene {scene.get('scene_number')} ({scene.get('duration')}s): {text_preview}...")
+        for scene in script.get("scenes", [])[:3]:
+            preview = scene.get("text", "")[:50]
+            print(f"  Scene {scene.get('scene_number')} "
+                  f"({scene.get('duration')}s): {preview}...")
     else:
-        print("❌ Failed to format script")
-        exit(1)
+        # ── Graceful failure: mark idea as 'error', DON'T exit(1) ──────────
+        # The workflow continues; video_renderer will find no ready scripts
+        # and exit cleanly. Next scheduled run will try a fresh idea.
+        print()
+        print("⚠️ Script formatting failed — marking idea as 'error'.")
+        print("   The workflow will not crash. Next run picks a new idea.")
+        ideas[idea_index]["status"] = "error"
+        ideas[idea_index]["error_at"] = datetime.now().isoformat()
+        save_ideas(ideas)
+        # No exit(1) — let the workflow continue naturally
 
 
 if __name__ == "__main__":
