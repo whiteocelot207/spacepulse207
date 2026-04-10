@@ -1,0 +1,45 @@
+# ============================================================
+# VIDEO & AUDIO — disimpan di GitHub Artifacts, bukan di repo
+# ============================================================
+videos_output/*.mp4
+videos_output/*.avi
+videos_output/*.mov
+videos_output/*.mkv
+videos_output/*.webm
+
+# Audio temp files
+*.mp3
+*.wav
+*.webm
+*.ogg
+
+# ============================================================
+# PYTHON
+# ============================================================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+
+# ============================================================
+# ENVIRONMENT & SECRETS — jangan pernah di-commit
+# ============================================================
+.env
+.env.local
+*.pem
+*.key
+
+# ============================================================
+# OS & EDITOR
+# ============================================================
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
