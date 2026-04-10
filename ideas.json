@@ -1839,5 +1839,28 @@
     "status": "formatted",
     "strategy_based": true,
     "formatted_at": "2026-04-10T11:57:48.914876"
+  },
+  {
+    "topic": "Journey to Pluto",
+    "topic_family": "travel_time",
+    "hook": "Reaching Pluto: Impossible for humans with today's rockets?",
+    "facts": [
+      "Driving at 70 mph, it would take you over 6,000 years to reach Pluto \u2013 that's longer than all recorded human history!",
+      "Our fastest probe, New Horizons, blasted off at 36,000 mph and still took 9.5 years to get there.",
+      "But at light speed, the 3.7 billion-mile journey to Pluto would be a mere 5.5 hours."
+    ],
+    "payoff": "This cosmic scale means true interstellar travel needs physics-defying speed. What do *you* think is possible?",
+    "title": "Pluto Travel Time: How Long Would It REALLY Take? \ud83d\ude80\ud83e\udd2f",
+    "hashtags": [
+      "#space",
+      "#astrophysics",
+      "#Pluto",
+      "#TravelTime",
+      "#ScienceFacts"
+    ],
+    "generated_at": "2026-04-10T16:59:54.076429",
+    "status": "error",
+    "strategy_based": true,
+    "error_at": "2026-04-10T17:05:33.031247"
   }
 ]
