@@ -18,7 +18,7 @@ on:
         type: choice
         options: ["false", "true"]
       tts_enabled:
-        description: "Enable Edge-TTS narration?"
+        description: "Enable Edge-TTS narration for scenes?"
         required: false
         default: "false"
         type: choice
@@ -27,6 +27,16 @@ on:
         description: "TTS voice (e.g. en-US-GuyNeural, en-GB-RyanNeural)"
         required: false
         default: "en-US-GuyNeural"
+      outro_tts_enabled:
+        description: "Enable TTS for the outro card?"
+        required: false
+        default: "false"
+        type: choice
+        options: ["false", "true"]
+      channel_name:
+        description: "Channel name shown on outro (e.g. SpacePulse)"
+        required: false
+        default: "SpacePulse"
 
 jobs:
   generate:
@@ -70,13 +80,15 @@ jobs:
         run: python scripts/script_formatter.py
 
       # ── Render video
-      # Scheduled runs: upload ON, TTS OFF (change TTS_ENABLED to true to enable globally)
-      # Manual runs:    respects the workflow_dispatch inputs above
+      # Scheduled runs : upload ON, scene TTS OFF, outro TTS OFF
+      # Manual runs    : respects the workflow_dispatch inputs above
       - name: Render video
         env:
-          NO_UPLOAD:   ${{ github.event.inputs.no_upload   || 'false' }}
-          TTS_ENABLED: ${{ github.event.inputs.tts_enabled || 'false' }}
-          TTS_VOICE:   ${{ github.event.inputs.tts_voice   || 'en-US-GuyNeural' }}
+          NO_UPLOAD:           ${{ github.event.inputs.no_upload           || 'false' }}
+          TTS_ENABLED:         ${{ github.event.inputs.tts_enabled         || 'false' }}
+          TTS_VOICE:           ${{ github.event.inputs.tts_voice           || 'en-US-GuyNeural' }}
+          OUTRO_TTS_ENABLED:   ${{ github.event.inputs.outro_tts_enabled   || 'false' }}
+          CHANNEL_NAME:        ${{ github.event.inputs.channel_name        || 'SpacePulse' }}
         run: |
           ARGS=""
           if [ "$NO_UPLOAD" = "true" ]; then
@@ -86,6 +98,11 @@ jobs:
             ARGS="$ARGS --tts --voice $TTS_VOICE"
           else
             ARGS="$ARGS --no-tts"
+          fi
+          if [ "$OUTRO_TTS_ENABLED" = "true" ]; then
+            ARGS="$ARGS --outro-tts"
+          else
+            ARGS="$ARGS --no-outro-tts"
           fi
           echo "Running: python scripts/video_renderer.py $ARGS"
           python scripts/video_renderer.py $ARGS
