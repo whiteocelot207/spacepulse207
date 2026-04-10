@@ -20,7 +20,7 @@ on:
       tts_enabled:
         description: "Enable Edge-TTS narration for scenes?"
         required: false
-        default: "false"
+        default: "true"
         type: choice
         options: ["false", "true"]
       tts_voice:
