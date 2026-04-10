@@ -1862,5 +1862,28 @@
     "status": "error",
     "strategy_based": true,
     "error_at": "2026-04-10T17:05:33.031247"
+  },
+  {
+    "topic": "Escape The Solar System Travel Time",
+    "topic_family": "travel_time",
+    "hook": "How long to ESCAPE our Solar System? The answer will shock you.",
+    "facts": [
+      "Walking to the edge of our solar system (where Voyager 1 is) would take over 440,000 years \u2013 longer than ALL of human civilization!",
+      "The fastest spacecraft, like Voyager 1, still took 35 years to exit the Sun's magnetic bubble (the heliosphere).",
+      "But at the speed of light, that same journey is less than 18 hours \u2013 like a flight from LA to Sydney!"
+    ],
+    "payoff": "Are we truly stuck in our cosmic backyard? Share your thoughts below!",
+    "title": "Escape The Solar System: How Long Would It REALLY Take? \ud83e\udd2f\ud83c\udf0c",
+    "hashtags": [
+      "#space",
+      "#astrophysics",
+      "#solarsystem",
+      "#traveltime",
+      "#lightspeed"
+    ],
+    "generated_at": "2026-04-10T21:52:56.664643",
+    "status": "formatted",
+    "strategy_based": true,
+    "formatted_at": "2026-04-10T21:53:57.483912"
   }
 ]
