@@ -96,11 +96,11 @@ Dari workflow yang ada:
 WorkflowJadwalFungsiGenerate Short Ideal (dan sudah dibuat 5x setiap harinya).
 
 Jadwal (target US)    
-   - cron: '0 12 * * *'  # 08:00 AM EST (19:00 WIB) - morning commute
-   - cron: '0 15 * * *'  # 11:00 AM EST (22:00 WIB) - late morning
-   - cron: '0 18 * * *'  # 02:00 PM EST (01:00 WIB) - lunch break
-   - cron: '0 22 * * *'  # 06:00 PM EST (05:00 WIB) - after work
-   - cron: '0 1 * * *'   # 09:00 PM EST (08:00 WIB) - prime evening scroll
+   - cron: '7 11 * * *'  # 08:00 AM EST (18:07 WIB) - morning commute
+   - cron: '7 16 * * *'  # 11:00 AM EST (23:07 WIB) - late morning
+   - cron: '7 21 * * *'  # 02:00 PM EST (04:07 WIB) - lunch break
+   - cron: '7 0 * * *'  # 06:00 PM EST (07:07 WIB) - after work
+   - cron: '37 2 * * *'   # 09:00 PM EST (09:37 WIB) - prime evening scroll
 
 dan upload 1 videoAnalytics & LearningSetiap hari jam 06 UTC (13.00 WIB)Analisa performa, update strategi
 Jadi 3 video/hari otomatis, dan sistem belajar sendiri dari analytics YouTube untuk pilih topik yang perform bagus.
