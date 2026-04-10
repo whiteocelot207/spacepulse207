@@ -570,7 +570,7 @@ def create_outro_clip(channel_name="SpacePulse"):
 
     # ── CTA line 1: "👍 LIKE if this blew your mind!" ──────────────────────
     cta1 = create_animated_text_clip(
-        "👍  LIKE if this blew\nyour mind!",
+        "👍  LIKE\nif this blew your mind!",
         duration, fontsize=68,
         position="center", animation="zoom_in", color="yellow",
     )
@@ -594,7 +594,7 @@ def create_outro_clip(channel_name="SpacePulse"):
 
     # ── CTA line 2: "🔔 SUBSCRIBE for daily shorts" ────────────────────────
     cta2 = create_animated_text_clip(
-        "🔔  SUBSCRIBE for\ndaily space shorts",
+        "🔔  SUBSCRIBE\nfordaily space shorts",
         duration, fontsize=62,
         position="center", animation="fade_in", color="white",
     )
