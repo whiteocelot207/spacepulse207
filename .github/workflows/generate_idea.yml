@@ -3,11 +3,11 @@ name: Generate Short Idea
 
 on:
   schedule:
-    - cron: '7 11 * * *'   # 08:07 AM EST - morning commute
-    - cron: '7 16 * * *'   # 11:07 AM EST - late morning
-    - cron: '7 21 * * *'   # 02:07 PM EST - lunch break
-    - cron: '7 0 * * *'   # 06:07 PM EST - after work
-    - cron: '37 2 * * *'    # 09:07 PM EST - prime evening scroll
+    - cron: '0 11 * * *'   # 7:00 AM ET  — morning commute
+    - cron: '0 16 * * *'   # 12:00 PM ET — lunch break
+    - cron: '0 21 * * *'   # 5:00 PM ET  — after work
+    - cron: '0 0 * * *'    # 8:00 PM ET  — prime time
+    - cron: '30 2 * * *'   # 10:30 PM ET — late night scroll
 
   workflow_dispatch:
     inputs:
@@ -34,7 +34,7 @@ on:
         type: choice
         options: ["false", "true"]
       channel_name:
-        description: "Channel name shown on outro (e.g. spacepulse207)"
+        description: "Channel name shown on outro"
         required: false
         default: "spacepulse207"
 
@@ -69,6 +69,15 @@ jobs:
           pip install edge-tts
           pip install google-auth google-auth-oauthlib google-api-python-client
 
+      # ── Cleanup video folder sebelum render
+      - name: Clean up old video files
+        run: |
+          echo "🧹 Cleaning videos_output/..."
+          mkdir -p videos_output
+          find videos_output/ -type f \( -name "*.mp4" -o -name "*.avi" -o -name "*.mov" -o -name "*.mkv" \) -delete
+          echo "✅ Done. Folder contents:"
+          ls -lah videos_output/ || echo "  (empty)"
+
       - name: Generate idea
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
@@ -79,53 +88,40 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python scripts/script_formatter.py
 
-      # ── Render video
-      # Scheduled runs : upload ON, scene TTS OFF, outro TTS OFF
-      # Manual runs    : respects the workflow_dispatch inputs above
       - name: Render video
         env:
-          NO_UPLOAD:           ${{ github.event.inputs.no_upload           || 'false' }}
-          TTS_ENABLED:         ${{ github.event.inputs.tts_enabled         || 'false' }}
-          TTS_VOICE:           ${{ github.event.inputs.tts_voice           || 'en-US-GuyNeural' }}
-          OUTRO_TTS_ENABLED:   ${{ github.event.inputs.outro_tts_enabled   || 'false' }}
-          CHANNEL_NAME: ${{ secrets.CHANNEL_NAME || github.event.inputs.channel_name || 'spacepulse207' }}
+          NO_UPLOAD:         ${{ github.event.inputs.no_upload         || 'false' }}
+          TTS_ENABLED:       ${{ github.event.inputs.tts_enabled       || 'true' }}
+          TTS_VOICE:         ${{ github.event.inputs.tts_voice         || 'en-US-GuyNeural' }}
+          OUTRO_TTS_ENABLED: ${{ github.event.inputs.outro_tts_enabled || 'false' }}
+          CHANNEL_NAME:      ${{ secrets.CHANNEL_NAME || github.event.inputs.channel_name || 'spacepulse207' }}
         run: |
           ARGS=""
-          if [ "$NO_UPLOAD" = "true" ]; then
-            ARGS="$ARGS --no-upload"
-          fi
-          if [ "$TTS_ENABLED" = "true" ]; then
-            ARGS="$ARGS --tts --voice $TTS_VOICE"
-          else
-            ARGS="$ARGS --no-tts"
-          fi
-          if [ "$OUTRO_TTS_ENABLED" = "true" ]; then
-            ARGS="$ARGS --outro-tts"
-          else
-            ARGS="$ARGS --no-outro-tts"
-          fi
+          [ "$NO_UPLOAD"         = "true" ] && ARGS="$ARGS --no-upload"
+          [ "$TTS_ENABLED"       = "true" ] && ARGS="$ARGS --tts --voice $TTS_VOICE" || ARGS="$ARGS --no-tts"
+          [ "$OUTRO_TTS_ENABLED" = "true" ] && ARGS="$ARGS --outro-tts"              || ARGS="$ARGS --no-outro-tts"
           echo "Running: python scripts/video_renderer.py $ARGS"
           python scripts/video_renderer.py $ARGS
 
-      # ── YouTube upload (skipped when --no-upload was passed to renderer)
       - name: Upload to YouTube
         if: ${{ github.event.inputs.no_upload != 'true' }}
         env:
-          YOUTUBE_TOKEN: ${{ secrets.YOUTUBE_TOKEN }}
+          YOUTUBE_TOKEN:         ${{ secrets.YOUTUBE_TOKEN }}
           YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
         run: python scripts/youtube_uploader.py
 
-      - name: Save to repository
+      # ── Simpan hanya file data, BUKAN video
+      - name: Save data to repository
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add -A
+          git add ideas.json data/ || true
           git diff --quiet && git diff --staged --quiet || \
-            (git commit -m "🚀 Generated + uploaded new Short" && git push)
+            git commit -m "🚀 New Short uploaded [$(date +'%Y-%m-%d %H:%M UTC')]" && git push
 
       - name: Upload video artifact
         uses: actions/upload-artifact@v4
         with:
-          name: rendered-video
+          name: rendered-video-${{ github.run_number }}
           path: videos_output/*.mp4
           retention-days: 30
