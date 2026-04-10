@@ -1816,5 +1816,28 @@
     "status": "error",
     "strategy_based": true,
     "error_at": "2026-04-10T07:42:33.822017"
+  },
+  {
+    "topic": "Cosmic Travel Times",
+    "topic_family": "travel_time",
+    "hook": "Think getting to Mars is a quick trip? Prepare to be shocked by cosmic travel times!",
+    "facts": [
+      "With current rocket tech, a trip to Mars takes about 7 months \u2013 that's like driving from New York to Los Angeles 42 times!",
+      "If you could travel at light speed, that same journey to Mars would take a mere 12.5 minutes. Wait, WHAT?!",
+      "Even reaching the edge of our solar system (where Voyager 1 is) takes nearly 45 years with current probe speeds \u2013 longer than most Americans work before retirement!"
+    ],
+    "payoff": "These mind-bending speeds show just how far we are from true interstellar travel. What tech do YOU think we need?",
+    "title": "Space Travel SHOCKER: Mars & Beyond Takes HOW LONG?! \ud83e\udd2f\ud83d\ude80",
+    "hashtags": [
+      "#SpaceTravel",
+      "#Astrophysics",
+      "#MarsMission",
+      "#LightSpeed",
+      "#ScienceFacts"
+    ],
+    "generated_at": "2026-04-10T11:57:34.842521",
+    "status": "formatted",
+    "strategy_based": true,
+    "formatted_at": "2026-04-10T11:57:48.914876"
   }
 ]
