@@ -1,27 +1,26 @@
 """
-Video Renderer Agent - PATCHED WITH HOOK + TTS + AUDIO DUCKING
-==============================================================
-New features (all additive — original logic unchanged):
+Video Renderer Agent - PATCHED: BUG FIX + OUTRO SUPPORT
+========================================================
+Changes in this version:
 
-  1. HOOK FRAME    3-second title card before the main scenes.
-                   Uses script thumbnail_text or idea hook text.
-                   Doubles as the YouTube Shorts thumbnail.
+  BUG FIX
+  - Fixed TypeError in build_ducked_music / make_frame.
+    MoviePy passes `t` as a numpy array; we now handle both
+    scalar and array cases correctly.
 
-  2. EDGE-TTS      Optional narration (edge-tts, no API key needed).
-                   Scene duration follows TTS length + TTS_TAIL_DELAY.
-                   Toggle: --tts / --no-tts  or  TTS_ENABLED=1 env var.
-
-  3. AUDIO DUCKING When TTS is on, music volume dips while voice plays
-                   and recovers between scenes (per-frame volume array).
-
-  4. TEST MODE     --no-upload or NO_UPLOAD=1 skips YouTube upload.
-                   Video is still fully rendered to videos_output/.
+  NEW: OUTRO FRAME
+  - 3-second "follow / like" end card, mirroring the hook style.
+  - Outro TTS is controlled SEPARATELY from scene TTS:
+      --outro-tts / --no-outro-tts
+      OUTRO_TTS_ENABLED=true env var
+  - This means you can have scene narration ON + outro TTS OFF,
+    or any combination.
 
 CLI examples:
     python scripts/video_renderer.py
     python scripts/video_renderer.py --no-upload
-    python scripts/video_renderer.py --tts
-    python scripts/video_renderer.py --no-tts
+    python scripts/video_renderer.py --tts --no-outro-tts
+    python scripts/video_renderer.py --no-tts --outro-tts
     python scripts/video_renderer.py --no-upload --tts --voice en-GB-RyanNeural
 """
 
@@ -70,7 +69,7 @@ except ImportError:
     EDGE_TTS_AVAILABLE = False
 
 # =============================================================================
-# VIDEO SETTINGS  (original — unchanged)
+# VIDEO SETTINGS
 # =============================================================================
 VIDEO_WIDTH  = 1080
 VIDEO_HEIGHT = 1920
@@ -95,13 +94,19 @@ COLORS_HEX = {
 }
 
 # =============================================================================
-# NEW SETTINGS
+# HOOK / OUTRO / TTS SETTINGS
 # =============================================================================
-HOOK_DURATION     = 3.0              # seconds for the hook title card
-TTS_TAIL_DELAY    = 0.5              # extra silence after each TTS segment
+HOOK_DURATION     = 3.0
+OUTRO_DURATION    = 4.0              # seconds for the outro end card
+TTS_TAIL_DELAY    = 0.5
 TTS_VOICE_DEFAULT = "en-US-GuyNeural"
-DUCK_LEVEL        = 0.25             # music volume fraction while TTS plays
-DUCK_FADE_SEC     = 0.25             # fade duration for duck/unduck ramps
+DUCK_LEVEL        = 0.25
+DUCK_FADE_SEC     = 0.25
+
+# Default outro TTS text  (can be overridden via OUTRO_TTS_TEXT env var)
+OUTRO_TTS_TEXT_DEFAULT = (
+    "Like and subscribe for more mind-blowing space facts every day!"
+)
 
 # =============================================================================
 # CLI
@@ -110,26 +115,45 @@ def parse_args(argv=None):
     p = argparse.ArgumentParser(description="SpacePulse207 Video Renderer")
     p.add_argument("--no-upload", action="store_true",
                    help="Skip YouTube upload (test mode). Also: NO_UPLOAD=1")
+
+    # ── scene TTS ──
     p.add_argument("--tts",    dest="tts", action="store_true",  default=None,
-                   help="Enable Edge-TTS narration")
+                   help="Enable Edge-TTS narration for scenes")
     p.add_argument("--no-tts", dest="tts", action="store_false",
-                   help="Disable Edge-TTS narration")
+                   help="Disable Edge-TTS narration for scenes")
     p.add_argument("--voice", default=None,
                    help=f"Edge-TTS voice (default: {TTS_VOICE_DEFAULT})")
+
+    # ── outro TTS  (independent toggle) ──
+    p.add_argument("--outro-tts",    dest="outro_tts", action="store_true",  default=None,
+                   help="Enable TTS for the outro card")
+    p.add_argument("--no-outro-tts", dest="outro_tts", action="store_false",
+                   help="Disable TTS for the outro card (default)")
+
     return p.parse_args(argv)
 
 
 def resolve_flags(args):
     no_upload = args.no_upload or os.environ.get("NO_UPLOAD","").lower() in ("1","true","yes")
+
+    # scene TTS
     if args.tts is not None:
         tts_enabled = args.tts
     else:
         tts_enabled = os.environ.get("TTS_ENABLED","false").lower() in ("1","true","yes")
+
     voice = args.voice or os.environ.get("TTS_VOICE", TTS_VOICE_DEFAULT)
-    return no_upload, tts_enabled, voice
+
+    # outro TTS (separate flag)
+    if args.outro_tts is not None:
+        outro_tts = args.outro_tts
+    else:
+        outro_tts = os.environ.get("OUTRO_TTS_ENABLED","false").lower() in ("1","true","yes")
+
+    return no_upload, tts_enabled, voice, outro_tts
 
 # =============================================================================
-# AUDIO FUNCTIONS  (original — unchanged)
+# AUDIO HELPERS
 # =============================================================================
 def get_available_music():
     music_files = []
@@ -172,7 +196,7 @@ def add_background_music(video_clip, music_path, volume=MUSIC_VOLUME):
         return video_clip, None
 
 # =============================================================================
-# NEW: TTS HELPERS
+# TTS HELPERS
 # =============================================================================
 async def _tts_save(text, path, voice):
     import edge_tts
@@ -228,12 +252,15 @@ def get_audio_duration(path):
         return 0.0
 
 # =============================================================================
-# NEW: AUDIO DUCKING
+# AUDIO DUCKING  ← BUG FIXED HERE
 # =============================================================================
 def build_ducked_music(music_path, video_duration, tts_segments):
     """
     Return an AudioClip where the music dips to DUCK_LEVEL during TTS segments.
     tts_segments: list of (start_sec, end_sec).
+
+    FIX: MoviePy can call make_frame(t) with t as a numpy array.
+    We handle both scalar and array cases.
     """
     if not music_path or not os.path.exists(music_path):
         return None
@@ -246,32 +273,43 @@ def build_ducked_music(music_path, video_duration, tts_segments):
         music = audio_fadein(music, 0.5)
         music = audio_fadeout(music, 1.0)
 
-        n_frames   = int(video_duration * FPS) + 2
-        vol        = np.ones(n_frames, dtype=np.float32) * MUSIC_VOLUME
-        fade_f     = max(1, int(DUCK_FADE_SEC * FPS))
+        n_frames = int(video_duration * FPS) + 2
+        vol      = np.ones(n_frames, dtype=np.float64) * MUSIC_VOLUME
+        fade_f   = max(1, int(DUCK_FADE_SEC * FPS))
 
         for seg_start, seg_end in tts_segments:
             s = int(seg_start * FPS)
             e = int(seg_end   * FPS)
             vol[s:e] = MUSIC_VOLUME * DUCK_LEVEL
-            # ramp down into duck
             for i in range(fade_f):
                 idx = s - fade_f + i
                 if 0 <= idx < n_frames:
-                    t = i / fade_f
-                    vol[idx] = MUSIC_VOLUME * (1 - t * (1 - DUCK_LEVEL))
-            # ramp back up
+                    t_ratio = i / fade_f
+                    vol[idx] = MUSIC_VOLUME * (1 - t_ratio * (1 - DUCK_LEVEL))
             for i in range(fade_f):
                 idx = e + i
                 if 0 <= idx < n_frames:
-                    t = i / fade_f
-                    vol[idx] = MUSIC_VOLUME * (DUCK_LEVEL + t * (1 - DUCK_LEVEL))
+                    t_ratio = i / fade_f
+                    vol[idx] = MUSIC_VOLUME * (DUCK_LEVEL + t_ratio * (1 - DUCK_LEVEL))
 
         music_fps = music.fps
 
+        # ── FIXED make_frame ──────────────────────────────────────────────
         def make_frame(t):
-            idx = min(int(t * FPS), n_frames - 1)
-            return music.get_frame(t) * float(vol[idx])
+            raw = music.get_frame(t)
+            if isinstance(t, np.ndarray):
+                # t is an array of time values → vectorised lookup
+                idxs = np.clip((t * FPS).astype(int), 0, n_frames - 1)
+                gains = vol[idxs]                    # shape (N,)
+                # raw shape is (N, channels); gains shape (N,) → broadcast
+                if raw.ndim == 2:
+                    return raw * gains[:, np.newaxis]
+                return raw * gains
+            else:
+                # t is a scalar
+                idx = int(min(t * FPS, n_frames - 1))
+                idx = max(0, idx)
+                return raw * float(vol[idx])
 
         ducked = AudioClip(make_frame, duration=video_duration, fps=music_fps)
         return ducked
@@ -280,7 +318,7 @@ def build_ducked_music(music_path, video_duration, tts_segments):
         return None
 
 # =============================================================================
-# STARFIELD BACKGROUND  (original — unchanged)
+# STARFIELD BACKGROUND
 # =============================================================================
 def create_starfield_background(width, height, num_stars=400, seed=None):
     if seed is not None:
@@ -346,7 +384,7 @@ def create_moving_starfield_clip(duration, seed=42):
     )
 
 # =============================================================================
-# PLANET GENERATOR  (original — unchanged)
+# PLANET GENERATOR
 # =============================================================================
 def create_planet(planet_type, size=200):
     img    = Image.new("RGBA",(size,size),(0,0,0,0))
@@ -395,7 +433,7 @@ def create_planet(planet_type, size=200):
     return np.array(img, dtype=np.uint8)
 
 # =============================================================================
-# TEXT & ANIMATION  (original — unchanged)
+# TEXT & ANIMATION
 # =============================================================================
 def get_fontsize(text_size):
     return {"large":76,"medium":58,"small":46}.get(text_size,58)
@@ -449,19 +487,14 @@ def create_animated_text_clip(text, duration, fontsize, position="center",
         return None
 
 # =============================================================================
-# NEW: HOOK FRAME
+# HOOK FRAME
 # =============================================================================
 def create_hook_clip(hook_text, sub_text=""):
-    """
-    3-second hook/thumbnail title card.
-    hook_text  — big white text, zoom-in animation
-    sub_text   — optional smaller line below
-    """
+    """3-second hook / thumbnail title card."""
     duration = HOOK_DURATION
     bg       = create_moving_starfield_clip(duration=duration, seed=99)
     layers   = [bg]
 
-    # "SPACE FACT" badge
     try:
         badge = TextClip(
             "SPACE FACT", fontsize=34,
@@ -473,7 +506,6 @@ def create_hook_clip(hook_text, sub_text=""):
     except Exception as e:
         print(f"⚠️ Hook badge: {e}")
 
-    # Main hook text — zoom-in, anchored above centre
     hook_clip = create_animated_text_clip(
         hook_text.upper(), duration,
         fontsize=80, position="center",
@@ -483,7 +515,6 @@ def create_hook_clip(hook_text, sub_text=""):
         hook_clip = hook_clip.set_position(("center", VIDEO_HEIGHT//2 - 220))
         layers.append(hook_clip)
 
-    # Thin accent divider
     try:
         div_arr = np.full((4, VIDEO_WIDTH-240, 4), [139,92,246,200], dtype=np.uint8)
         div_img = Image.fromarray(div_arr, "RGBA")
@@ -497,7 +528,6 @@ def create_hook_clip(hook_text, sub_text=""):
     except Exception as e:
         print(f"⚠️ Hook divider: {e}")
 
-    # Optional sub-text
     if sub_text:
         sub = create_animated_text_clip(
             sub_text, duration,
@@ -512,7 +542,83 @@ def create_hook_clip(hook_text, sub_text=""):
     return scene.crossfadeout(SCENE_CROSSFADE)
 
 # =============================================================================
-# SCENE CREATION  (original — unchanged)
+# OUTRO FRAME  ← NEW
+# =============================================================================
+def create_outro_clip(channel_name="SpacePulse"):
+    """
+    4-second outro end card with:
+      - Subscribe / Like CTA
+      - Channel name
+      - Pulsing star accent
+    Design mirrors the hook but uses a gold/orange palette.
+    """
+    duration = OUTRO_DURATION
+    bg       = create_moving_starfield_clip(duration=duration, seed=77)
+    layers   = [bg]
+
+    # ── Top label ──────────────────────────────────────────────────────────
+    try:
+        label = TextClip(
+            "MORE SPACE FACTS DAILY", fontsize=30,
+            color="#F97316", font="DejaVu-Sans-Bold",
+            stroke_color="black", stroke_width=2,
+            method="label",
+        ).set_duration(duration).set_position(("center", 155)).crossfadein(0.30)
+        layers.append(label)
+    except Exception as e:
+        print(f"⚠️ Outro label: {e}")
+
+    # ── CTA line 1: "👍 LIKE if this blew your mind!" ──────────────────────
+    cta1 = create_animated_text_clip(
+        "👍  LIKE if this blew\nyour mind!",
+        duration, fontsize=68,
+        position="center", animation="zoom_in", color="yellow",
+    )
+    if cta1:
+        cta1 = cta1.set_position(("center", VIDEO_HEIGHT//2 - 340))
+        layers.append(cta1)
+
+    # ── Accent divider (orange) ─────────────────────────────────────────────
+    try:
+        div_arr = np.full((4, VIDEO_WIDTH-240, 4), [249,115,22,200], dtype=np.uint8)
+        div_img = Image.fromarray(div_arr, "RGBA")
+        div_clip = (
+            ImageClip(np.array(div_img))
+            .set_duration(duration)
+            .set_position(((VIDEO_WIDTH-(VIDEO_WIDTH-240))//2, VIDEO_HEIGHT//2 - 100))
+            .crossfadein(0.45)
+        )
+        layers.append(div_clip)
+    except Exception as e:
+        print(f"⚠️ Outro divider: {e}")
+
+    # ── CTA line 2: "🔔 SUBSCRIBE for daily shorts" ────────────────────────
+    cta2 = create_animated_text_clip(
+        "🔔  SUBSCRIBE for\ndaily space shorts",
+        duration, fontsize=62,
+        position="center", animation="fade_in", color="white",
+    )
+    if cta2:
+        cta2 = cta2.set_position(("center", VIDEO_HEIGHT//2 - 20))
+        layers.append(cta2)
+
+    # ── Channel name at bottom ─────────────────────────────────────────────
+    try:
+        ch = TextClip(
+            f"@{channel_name}", fontsize=40,
+            color="#8B5CF6", font="DejaVu-Sans-Bold",
+            stroke_color="black", stroke_width=2,
+            method="label",
+        ).set_duration(duration).set_position(("center", VIDEO_HEIGHT - 300)).crossfadein(0.50)
+        layers.append(ch)
+    except Exception as e:
+        print(f"⚠️ Outro channel name: {e}")
+
+    scene = CompositeVideoClip(layers, size=(VIDEO_WIDTH,VIDEO_HEIGHT)).set_duration(duration)
+    return scene.crossfadein(SCENE_CROSSFADE).fadeout(0.40)
+
+# =============================================================================
+# SCENE CREATION
 # =============================================================================
 def get_planet_for_topic(topic, visual_hint=""):
     tl = (topic+" "+visual_hint).lower()
@@ -562,7 +668,9 @@ def create_scene_clip(scene, idea_topic="", bg_seed=42):
 # =============================================================================
 # MAIN RENDER
 # =============================================================================
-def render_video(script_data, output_path, tts_enabled=False, voice=TTS_VOICE_DEFAULT):
+def render_video(script_data, output_path,
+                 tts_enabled=False, voice=TTS_VOICE_DEFAULT,
+                 outro_tts=False):
     if not MOVIEPY_AVAILABLE or not PIL_AVAILABLE:
         print("❌ Required libraries not available"); return None
 
@@ -572,25 +680,38 @@ def render_video(script_data, output_path, tts_enabled=False, voice=TTS_VOICE_DE
     if not scenes:
         print("❌ No scenes found in script"); return None
 
-    topic = idea.get("topic","Space")
-    print(f"🎬 Rendering {len(scenes)} scenes  |  topic: {topic}")
-    print(f"🎙️  TTS: {'ON — '+voice if tts_enabled else 'OFF'}")
+    topic        = idea.get("topic","Space")
+    channel_name = os.environ.get("CHANNEL_NAME","SpacePulse")
+    outro_text   = os.environ.get("OUTRO_TTS_TEXT", OUTRO_TTS_TEXT_DEFAULT)
 
-    # ── TTS pre-generation ────────────────────────────────────────────────
+    print(f"🎬 Rendering {len(scenes)} scenes  |  topic: {topic}")
+    print(f"🎙️  Scene TTS : {'ON — '+voice if tts_enabled else 'OFF'}")
+    print(f"🎙️  Outro TTS : {'ON' if outro_tts else 'OFF'}")
+
+    # ── TTS pre-generation ─────────────────────────────────────────────────
     tts_tmpdir     = None
     tts_audio_path = None
-    tts_segments   = []          # (start_sec, end_sec) per scene in final timeline
+    tts_segments   = []
     adjusted_scenes = []
 
-    if tts_enabled:
+    if tts_enabled or outro_tts:
         tts_tmpdir    = tempfile.mkdtemp(prefix="spacepulse_tts_")
-        cursor        = HOOK_DURATION   # narration begins after the hook
+        cursor        = HOOK_DURATION
         section_files = []
 
+        # Hook silence
+        hook_sil = os.path.join(tts_tmpdir, "hook_sil.mp3")
+        make_silence_mp3(hook_sil, HOOK_DURATION)
+
+        # Per-scene TTS
         for i, scene in enumerate(scenes):
             text       = scene.get("text","")
             audio_path = os.path.join(tts_tmpdir, f"scene_{i}.mp3")
-            dur        = generate_tts_audio(text, audio_path, voice)
+
+            if tts_enabled:
+                dur = generate_tts_audio(text, audio_path, voice)
+            else:
+                dur = 0.0
 
             if dur > 0:
                 scene_dur = dur + TTS_TAIL_DELAY
@@ -607,17 +728,31 @@ def render_video(script_data, output_path, tts_enabled=False, voice=TTS_VOICE_DE
             adjusted_scenes.append(adj)
             cursor += scene_dur
 
-        # Combine: hook-silence + per-scene audio
-        hook_sil = os.path.join(tts_tmpdir, "hook_sil.mp3")
-        make_silence_mp3(hook_sil, HOOK_DURATION)
+        # Outro TTS
+        outro_audio_path = None
+        if outro_tts:
+            outro_audio_path = os.path.join(tts_tmpdir, "outro.mp3")
+            outro_dur = generate_tts_audio(outro_text, outro_audio_path, voice)
+            if outro_dur > 0:
+                tts_segments.append((cursor, cursor + outro_dur))
+            else:
+                outro_audio_path = None
+        # Outro silence pad (always needed for concat)
+        outro_sil = os.path.join(tts_tmpdir, "outro_sil.mp3")
+        make_silence_mp3(outro_sil, OUTRO_DURATION)
+        if outro_audio_path:
+            section_files.append(outro_audio_path)
+        else:
+            section_files.append(outro_sil)
+
         combined = os.path.join(tts_tmpdir, "narration.mp3")
-        concat_audio_files([hook_sil]+section_files, combined)
+        concat_audio_files([hook_sil] + section_files, combined)
         tts_audio_path = combined
         print(f"✅ TTS ready ({get_audio_duration(combined):.1f}s total)")
     else:
         adjusted_scenes = scenes
 
-    # ── Build scene clips ─────────────────────────────────────────────────
+    # ── Build scene clips ──────────────────────────────────────────────────
     print(f"\n🖼️  Building scene clips...")
     total_duration = HOOK_DURATION
     scene_clips    = []
@@ -631,9 +766,13 @@ def render_video(script_data, output_path, tts_enabled=False, voice=TTS_VOICE_DE
         clip = clip.set_duration(dur)
         scene_clips.append(clip)
 
+    # ── Outro clip ─────────────────────────────────────────────────────────
+    print(f"\n🎬 Building outro ({OUTRO_DURATION}s)...")
+    outro_clip = create_outro_clip(channel_name=channel_name)
+    total_duration += OUTRO_DURATION
     print(f"⏱️  Total: {total_duration:.1f}s")
 
-    # ── Hook clip ─────────────────────────────────────────────────────────
+    # ── Hook clip ──────────────────────────────────────────────────────────
     hook_text = (
         script.get("thumbnail_text")
         or idea.get("hook")
@@ -642,9 +781,9 @@ def render_video(script_data, output_path, tts_enabled=False, voice=TTS_VOICE_DE
     print(f"\n🎬 Hook ({HOOK_DURATION}s): \"{hook_text[:60]}\"")
     hook_clip = create_hook_clip(hook_text)
 
-    # ── Concatenate ───────────────────────────────────────────────────────
-    print("🔗 Combining hook + scenes...")
-    all_clips    = [hook_clip] + scene_clips
+    # ── Concatenate: hook → scenes → outro ────────────────────────────────
+    print("🔗 Combining hook + scenes + outro...")
+    all_clips    = [hook_clip] + scene_clips + [outro_clip]
     transitioned = []
     for i, clip in enumerate(all_clips):
         c = clip
@@ -656,12 +795,12 @@ def render_video(script_data, output_path, tts_enabled=False, voice=TTS_VOICE_DE
                                    padding=-SCENE_CROSSFADE)
     final = final.fadein(0.18).fadeout(0.18)
 
-    # ── Audio ─────────────────────────────────────────────────────────────
+    # ── Audio ──────────────────────────────────────────────────────────────
     print("🎵 Building audio...")
     music_path = select_random_music()
     audio_obj  = None
 
-    if tts_enabled and tts_audio_path:
+    if (tts_enabled or outro_tts) and tts_audio_path:
         ducked = build_ducked_music(music_path, final.duration, tts_segments)
         tts_ac = AudioFileClip(tts_audio_path)
         if tts_ac.duration < final.duration:
@@ -676,7 +815,6 @@ def render_video(script_data, output_path, tts_enabled=False, voice=TTS_VOICE_DE
             audio_obj = mixed
             print("✅ Ducked music + TTS mixed")
         else:
-            # fallback: flat music + TTS on top
             final, audio_obj = add_background_music(final, music_path)
             if final.audio:
                 final = final.set_audio(CompositeAudioClip([final.audio, tts_ac]))
@@ -684,7 +822,7 @@ def render_video(script_data, output_path, tts_enabled=False, voice=TTS_VOICE_DE
         if music_path:
             final, audio_obj = add_background_music(final, music_path)
 
-    # ── Export ────────────────────────────────────────────────────────────
+    # ── Export ─────────────────────────────────────────────────────────────
     print(f"\n💾 Exporting → {output_path}")
     final.write_videofile(
         output_path, fps=FPS,
@@ -693,7 +831,7 @@ def render_video(script_data, output_path, tts_enabled=False, voice=TTS_VOICE_DE
         logger=None, bitrate="5000k",
     )
 
-    # ── Cleanup ───────────────────────────────────────────────────────────
+    # ── Cleanup ────────────────────────────────────────────────────────────
     print("🧹 Cleaning up...")
     for obj in ([audio_obj, final.audio if hasattr(final,"audio") else None, final]
                 + all_clips):
@@ -712,7 +850,7 @@ def render_video(script_data, output_path, tts_enabled=False, voice=TTS_VOICE_DE
     return None
 
 # =============================================================================
-# FILE MANAGEMENT  (original — unchanged)
+# FILE MANAGEMENT
 # =============================================================================
 def get_ready_scripts(scripts_dir="scripts_output"):
     if not os.path.exists(scripts_dir):
@@ -746,13 +884,15 @@ def update_script_status(filepath, new_status, video_path=None):
 # =============================================================================
 def main():
     args = parse_args()
-    no_upload, tts_enabled, voice = resolve_flags(args)
+    no_upload, tts_enabled, voice, outro_tts = resolve_flags(args)
 
     print("="*60)
     print("🎥 ASTRO SHORTS ENGINE - Video Renderer")
     print(f"   Hook frame    : {HOOK_DURATION}s title card  ✓")
-    print(f"   TTS narration : {'ON ('+voice+')' if tts_enabled else 'OFF'}")
-    print(f"   Audio ducking : {'ON' if tts_enabled else 'n/a'}")
+    print(f"   Outro frame   : {OUTRO_DURATION}s end card   ✓")
+    print(f"   Scene TTS     : {'ON ('+voice+')' if tts_enabled else 'OFF'}")
+    print(f"   Outro TTS     : {'ON' if outro_tts else 'OFF'}")
+    print(f"   Audio ducking : {'ON' if (tts_enabled or outro_tts) else 'n/a'}")
     print(f"   Upload        : {'SKIP — test mode' if no_upload else 'ENABLED'}")
     print("="*60)
     print()
@@ -761,9 +901,10 @@ def main():
         print("❌ MoviePy required"); raise SystemExit(1)
     if not PIL_AVAILABLE:
         print("❌ Pillow required"); raise SystemExit(1)
-    if tts_enabled and not EDGE_TTS_AVAILABLE:
+    if (tts_enabled or outro_tts) and not EDGE_TTS_AVAILABLE:
         print("⚠️ edge-tts not installed (pip install edge-tts) — disabling TTS")
         tts_enabled = False
+        outro_tts   = False
 
     print(f"🎵 Found {len(get_available_music())} music tracks")
     os.makedirs("videos_output", exist_ok=True)
@@ -785,7 +926,8 @@ def main():
 
     try:
         result = render_video(script_data, out_path,
-                              tts_enabled=tts_enabled, voice=voice)
+                              tts_enabled=tts_enabled, voice=voice,
+                              outro_tts=outro_tts)
         if result:
             update_script_status(filepath, "rendered", out_path)
             print()
