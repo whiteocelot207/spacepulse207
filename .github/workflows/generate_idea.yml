@@ -1,71 +1,111 @@
-# refresh scheduler
+# SpacePulse207 — Generate + Render + Upload pipeline
 name: Generate Short Idea
-  
+
 on:
   schedule:
-    - cron: '7 12 * * *'  # 08:07 AM EST - morning commute
-    - cron: '7 15 * * *'  # 11:07 AM EST - late morning
-    - cron: '7 18 * * *'  # 02:07 PM EST - lunch break
-    - cron: '7 22 * * *'  # 06:07 PM EST - after work
-    - cron: '7 1 * * *'   # 09:07 PM EST - prime evening scroll
+    - cron: '7 12 * * *'   # 08:07 AM EST - morning commute
+    - cron: '7 15 * * *'   # 11:07 AM EST - late morning
+    - cron: '7 18 * * *'   # 02:07 PM EST - lunch break
+    - cron: '7 22 * * *'   # 06:07 PM EST - after work
+    - cron: '7 1 * * *'    # 09:07 PM EST - prime evening scroll
+
   workflow_dispatch:
+    inputs:
+      no_upload:
+        description: "Skip YouTube upload? (test mode)"
+        required: false
+        default: "false"
+        type: choice
+        options: ["false", "true"]
+      tts_enabled:
+        description: "Enable Edge-TTS narration?"
+        required: false
+        default: "false"
+        type: choice
+        options: ["false", "true"]
+      tts_voice:
+        description: "TTS voice (e.g. en-US-GuyNeural, en-GB-RyanNeural)"
+        required: false
+        default: "en-US-GuyNeural"
 
 jobs:
   generate:
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Debug time
         run: date
-        
+
       - name: Checkout code
         uses: actions/checkout@v4
-      
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      
+
       - name: Install system dependencies
         run: |
           sudo apt-get update
           sudo apt-get install -y ffmpeg imagemagick
           sudo sed -i 's/rights="none" pattern="@\*"/rights="read|write" pattern="@*"/' /etc/ImageMagick-6/policy.xml || true
           sudo sed -i '/<policy domain="path" rights="none" pattern="@\*"/d' /etc/ImageMagick-6/policy.xml || true
-      
+
       - name: Install Python dependencies
         run: |
           pip install --upgrade pip
           pip install requests Pillow numpy
           pip install moviepy==1.0.3
+          pip install edge-tts
           pip install google-auth google-auth-oauthlib google-api-python-client
-      
+
       - name: Generate idea
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python scripts/idea_generator.py
-      
+
       - name: Format script
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python scripts/script_formatter.py
-      
+
+      # ── Render video
+      # Scheduled runs: upload ON, TTS OFF (change TTS_ENABLED to true to enable globally)
+      # Manual runs:    respects the workflow_dispatch inputs above
       - name: Render video
-        run: python scripts/video_renderer.py
-      
+        env:
+          NO_UPLOAD:   ${{ github.event.inputs.no_upload   || 'false' }}
+          TTS_ENABLED: ${{ github.event.inputs.tts_enabled || 'false' }}
+          TTS_VOICE:   ${{ github.event.inputs.tts_voice   || 'en-US-GuyNeural' }}
+        run: |
+          ARGS=""
+          if [ "$NO_UPLOAD" = "true" ]; then
+            ARGS="$ARGS --no-upload"
+          fi
+          if [ "$TTS_ENABLED" = "true" ]; then
+            ARGS="$ARGS --tts --voice $TTS_VOICE"
+          else
+            ARGS="$ARGS --no-tts"
+          fi
+          echo "Running: python scripts/video_renderer.py $ARGS"
+          python scripts/video_renderer.py $ARGS
+
+      # ── YouTube upload (skipped when --no-upload was passed to renderer)
       - name: Upload to YouTube
+        if: ${{ github.event.inputs.no_upload != 'true' }}
         env:
           YOUTUBE_TOKEN: ${{ secrets.YOUTUBE_TOKEN }}
           YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
         run: python scripts/youtube_uploader.py
-      
+
       - name: Save to repository
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add -A
-          git diff --quiet && git diff --staged --quiet || (git commit -m "🚀 Generated + uploaded new Short" && git push)
-      
+          git diff --quiet && git diff --staged --quiet || \
+            (git commit -m "🚀 Generated + uploaded new Short" && git push)
+
       - name: Upload video artifact
         uses: actions/upload-artifact@v4
         with:
