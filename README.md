@@ -1,119 +1,314 @@
-# PabrikShort
+# 🚀 PabrikShort
 
-# 📋 Setup Astro Shorts Engine — Panduan Lengkap & Akurat
-Pipeline yang Sebenarnya
+Automated **YouTube Shorts generator** menggunakan **Gemini AI + MoviePy + YouTube API**.
+
+Pipeline:
+
+```
 idea_generator.py → script_formatter.py → video_renderer.py → youtube_uploader.py
    (Gemini API)        (Gemini API)          (MoviePy lokal)      (YouTube API)
-Video dibuat fully local — pakai MoviePy dengan animasi starfield, text, planet grafik. Tidak perlu Pexels atau ElevenLabs. Background music sudah ada di folder assets/audio/.
+```
 
-# 🔐 Secrets yang Dibutuhkan — Hanya 3
-Pergi ke repo → Settings → Secrets and variables → Actions → New repository secret   \
-Secret Name Isi :   \
-GEMINI_API_KEYAPI -> key Google Gemini (gratis)   \
-YOUTUBE_TOKENJSON -> token OAuth (lihat cara buat di bawah)   \
-YOUTUBE_CLIENT_SECRETJSON -> isi file client_secret.json dari Google Cloud   
+Video dibuat **fully local** menggunakan **MoviePy** dengan animasi starfield, text, dan planet grafik.
+
+Tidak perlu:
+
+* Pexels
+* ElevenLabs
+
+Background music sudah tersedia di:
+
+```
+assets/audio/
+```
+
+---
+
+# 🔐 Secrets yang Dibutuhkan (Hanya 3)
+
+Pergi ke:
+
+```
+Repository → Settings → Secrets and variables → Actions → New repository secret
+```
+
+| Secret Name             | Isi                                             |
+| ----------------------- | ----------------------------------------------- |
+| `GEMINI_API_KEY`        | API key Google Gemini                           |
+| `YOUTUBE_TOKEN`         | OAuth token JSON                                |
+| `YOUTUBE_CLIENT_SECRET` | Isi file `client_secret.json` dari Google Cloud |
+
+---
 
 # 🎫 Step 1 — Dapatkan GEMINI_API_KEY
 
-Buka aistudio.google.com/apikey
-Klik Create API Key
-Copy key-nya → paste sebagai secret GEMINI_API_KEY
+Buka:
+
+```
+https://aistudio.google.com/apikey
+```
+
+1. Klik **Create API Key**
+2. Copy key
+3. Simpan sebagai secret `GEMINI_API_KEY`
 
 Gratis, tidak perlu kartu kredit.
 
-# 🎬 Step 2 — Setup YouTube OAuth (bagian terpenting)
-A. Buat Google Cloud Project & Credentials:
+---
 
-Buka console.cloud.google.com
-Buat project baru (atau pakai yang ada)
-Pergi ke APIs & Services → Enable APIs → cari dan enable YouTube Data API v3
-Pergi ke APIs & Services → OAuth consent screen → pilih External → isi nama app → Save
-Pergi ke APIs & Services → Credentials → Create Credentials → OAuth client ID
-Application type: Desktop app → beri nama → Create
-Download file JSON-nya (namanya client_secret_xxx.json)
+# 🎬 Step 2 — Setup YouTube OAuth
 
-Isi file itu akan dipakai sebagai secret YOUTUBE_CLIENT_SECRET.
+## A. Buat Google Cloud Project
 
-B. Generate Refresh Token (jalankan lokal sekali):
-bashpip install google-auth-oauthlib google-auth google-api-python-client
-Buat file get_token.py:
-pythonfrom google_auth_oauthlib.flow import InstalledAppFlow
+1. Buka
+
+```
+https://console.cloud.google.com
+```
+
+2. Buat project baru
+3. Enable API:
+
+```
+YouTube Data API v3
+```
+
+4. Setup OAuth consent screen
+
+```
+APIs & Services → OAuth consent screen
+```
+
+* pilih **External**
+* isi nama app
+* Save
+
+5. Buat credentials
+
+```
+APIs & Services → Credentials → Create Credentials → OAuth client ID
+```
+
+Pilih:
+
+```
+Application type: Desktop app
+```
+
+Download file JSON lalu rename menjadi:
+
+```
+client_secret.json
+```
+
+File ini akan digunakan sebagai secret:
+
+```
+YOUTUBE_CLIENT_SECRET
+```
+
+---
+
+# 🔑 Generate Refresh Token (Jalankan Lokal Sekali)
+
+Buat file (dan simpan di lokasi yang sama dengan file client_secret.json):
+
+```
+get_token.py
+```
+
+Contoh isi file:
+
+```python
+from google_auth_oauthlib.flow import InstalledAppFlow
 import json
 
-flow = InstalledAppFlow.from_client_secrets_file(
-    'client_secret_xxx.json',  # ganti nama file
-    scopes=['https://www.googleapis.com/auth/youtube.upload']
-)
-creds = flow.run_local_server(port=0)
+CLIENT_SECRET_FILE = "client_secret.json"
 
- Print YOUTUBE_TOKEN (format yang dibutuhkan script)
-token_data = {
-    "token": creds.token,
-    "refresh_token": creds.refresh_token,
-    "token_uri": creds.token_uri,
-    "client_id": creds.client_id,
-    "client_secret": creds.client_secret,
-    "scopes": list(creds.scopes)
-}
-print("=== YOUTUBE_TOKEN ===")
-print(json.dumps(token_data, indent=2))
-bashpython get_token.py
-Browser akan terbuka, login dengan akun YouTube channel kamu, authorize. Terminal akan print JSON — copy seluruh JSON itu sebagai secret YOUTUBE_TOKEN.
+SCOPES = ["https://www.googleapis.com/auth/youtube.upload"]
 
-Jadi untuk 
-YOUTUBE_TOKEN → paste seluruh JSON dari { "token": ..., "refresh_token": ... }
+def main():
+    flow = InstalledAppFlow.from_client_secrets_file(
+        CLIENT_SECRET_FILE,
+        scopes=SCOPES
+    )
 
-C. Isi secret YOUTUBE_CLIENT_SECRET:
-Buka file client_secret_xxx.json yang tadi di-download, copy seluruh isinya sebagai secret YOUTUBE_CLIENT_SECRET.
+    # membuka browser untuk login
+    creds = flow.run_local_server(port=0)
+
+    token_data = {
+        "token": creds.token,
+        "refresh_token": creds.refresh_token,
+        "token_uri": creds.token_uri,
+        "client_id": creds.client_id,
+        "client_secret": creds.client_secret,
+        "scopes": list(creds.scopes)
+    }
+
+    print("\n=== YOUTUBE_TOKEN ===\n")
+    print(json.dumps(token_data, indent=2))
+
+
+if __name__ == "__main__":
+    main()
+```
+
+Jalankan:
+
+```bash
+python get_token.py
+```
+
+Browser akan terbuka.
+
+Login dengan akun **YouTube channel** kamu dan klik **Authorize**.
+
+Terminal akan menampilkan JSON.
+
+Copy seluruh JSON tersebut dan simpan sebagai secret:
+
+```
+YOUTUBE_TOKEN
+```
+
+---
+
+# 📄 Isi Secret YOUTUBE_CLIENT_SECRET
+
+Buka file:
+
+```
+client_secret.json
+```
+
+Copy seluruh isi file lalu simpan sebagai secret:
+
+```
+YOUTUBE_CLIENT_SECRET
+```
+
+---
 
 # ⚙️ Step 3 — Enable Repository Permissions
-Workflow ini melakukan git push (commit ideas.json yang diupdate). Perlu di-enable:
 
-Pergi ke repo → Settings → Actions → General
-Scroll ke Workflow permissions
-Pilih "Read and write permissions"
-Centang "Allow GitHub Actions to create and approve pull requests"
-Klik Save
+Workflow perlu permission untuk commit ke repo.
 
+Buka:
+
+```
+Repository → Settings → Actions → General
+```
+
+Scroll ke **Workflow permissions**
+
+Pilih:
+
+```
+Read and write permissions
+```
+
+Centang:
+
+```
+Allow GitHub Actions to create and approve pull requests
+```
+
+Klik **Save**.
+
+---
 
 # 🚀 Step 4 — Jalankan Manual untuk Test
 
-Pergi ke tab Actions di repo
-Pilih workflow "Generate Short Idea"
-Klik "Run workflow" → "Run workflow"
-Pantau log tiap step
+Pergi ke tab:
 
-Kalau berhasil, akan ada:
+```
+Actions
+```
 
-File baru di scripts_output/
-File MP4 di videos_output/
-Commit otomatis ke repo
-Video terupload ke YouTube channel
+Pilih workflow:
 
+```
+Generate Short Idea
+```
 
-⏰ Jadwal Otomatis
-Dari workflow yang ada:
-WorkflowJadwalFungsiGenerate Short Ideal (dan sudah dibuat 5x setiap harinya).
+Klik:
 
-Jadwal (target US)    
-   - cron: '7 11 * * *'  # 08:00 AM EST (18:07 WIB) - morning commute
-   - cron: '7 16 * * *'  # 11:00 AM EST (23:07 WIB) - late morning
-   - cron: '7 21 * * *'  # 02:00 PM EST (04:07 WIB) - lunch break
-   - cron: '7 0 * * *'  # 06:00 PM EST (07:07 WIB) - after work
-   - cron: '37 2 * * *'   # 09:00 PM EST (09:37 WIB) - prime evening scroll
+```
+Run workflow
+```
 
-dan upload 1 videoAnalytics & LearningSetiap hari jam 06 UTC (13.00 WIB)Analisa performa, update strategi
-Jadi 3 video/hari otomatis, dan sistem belajar sendiri dari analytics YouTube untuk pilih topik yang perform bagus.
+Jika berhasil, akan muncul:
 
-⚠️ Hal Penting
-Ganti branch protection jika ada — workflow butuh push langsung ke main.
-YouTube quota limit — YouTube Data API v3 punya default 10.000 unit/hari. Upload 1 video = ~1600 unit. Jadi aman untuk 5 video/hari (total ~8000 unit).
-Refresh token tidak kedaluwarsa selama aplikasi Google Cloud kamu masih aktif dan token tidak di-revoke.
+* file baru di `scripts_output/`
+* video MP4 di `videos_output/`
+* commit otomatis
+* video terupload ke YouTube
 
+---
 
+# ⏰ Jadwal Otomatis Upload
 
+Workflow berjalan **5x sehari**.
 
+| Cron (UTC)   | ET (EDT)    | WIB       |
+| ------------ | ----------- | --------- |
+| `7 11 * * *` | 07:07 AM ET | 18:07 WIB |
+| `7 16 * * *` | 12:07 PM ET | 23:07 WIB |
+| `7 21 * * *` | 05:07 PM ET | 04:07 WIB |
+| `7 0 * * *`  | 08:07 PM ET | 07:07 WIB |
+| `37 2 * * *` | 10:37 PM ET | 09:37 WIB |
 
+Target audience: **United States timezone engagement**.
 
+---
 
+# 📊 Analytics & Learning
 
+Setiap hari:
+
+```
+06:07 UTC (13:07 WIB)
+```
+
+Sistem akan:
+
+* membaca performa video
+* menganalisa analytics
+* memperbaiki strategi topik
+
+---
+
+# ⚠️ Hal Penting
+
+### Branch Protection
+
+Jika repo menggunakan branch protection, workflow tidak bisa push.
+
+Pastikan workflow bisa commit ke branch `main`.
+
+---
+
+### YouTube API Quota
+
+Default quota:
+
+```
+10,000 unit / hari
+```
+
+Upload 1 video ≈ **1600 unit**
+
+Jadi aman untuk:
+
+```
+5 video per hari
+```
+
+---
+
+### Refresh Token
+
+Refresh token **tidak kedaluwarsa** selama:
+
+* project Google Cloud aktif
+* token tidak di-revoke
