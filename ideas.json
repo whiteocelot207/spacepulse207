@@ -1747,5 +1747,28 @@
     "status": "formatted",
     "strategy_based": true,
     "formatted_at": "2026-04-09T23:58:01.013699"
+  },
+  {
+    "topic": "Human cosmic speed",
+    "topic_family": "planetary_facts",
+    "hook": "You feel completely still right now, don't you?",
+    "facts": [
+      "Earth's rotation makes you spin at ~1,670 km/h (~1,037 mph) at the equator.",
+      "Our planet then orbits the Sun at an astonishing ~107,000 km/h (~67,000 mph).",
+      "And the entire Solar System hurtles through the Milky Way at ~828,000 km/h (~514,000 mph)!"
+    ],
+    "payoff": "You're a cosmic speed demon, constantly traveling billions of miles through space without even feeling it!",
+    "title": "You're Moving How FAST?! \ud83e\udd2f\ud83d\ude80",
+    "hashtags": [
+      "SpaceFacts",
+      "Astrophysics",
+      "Earth",
+      "CosmicSpeed",
+      "Science"
+    ],
+    "generated_at": "2026-04-10T04:37:57.321146",
+    "status": "formatted",
+    "strategy_based": true,
+    "formatted_at": "2026-04-10T04:38:05.378196"
   }
 ]
