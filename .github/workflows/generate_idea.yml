@@ -34,9 +34,9 @@ on:
         type: choice
         options: ["false", "true"]
       channel_name:
-        description: "Channel name shown on outro (e.g. SpacePulse)"
+        description: "Channel name shown on outro (e.g. spacepulse207)"
         required: false
-        default: "SpacePulse207"
+        default: "spacepulse207"
 
 jobs:
   generate:
@@ -88,7 +88,7 @@ jobs:
           TTS_ENABLED:         ${{ github.event.inputs.tts_enabled         || 'false' }}
           TTS_VOICE:           ${{ github.event.inputs.tts_voice           || 'en-US-GuyNeural' }}
           OUTRO_TTS_ENABLED:   ${{ github.event.inputs.outro_tts_enabled   || 'false' }}
-          CHANNEL_NAME: ${{ secrets.CHANNEL_NAME || github.event.inputs.channel_name || 'SpacePulse207' }}
+          CHANNEL_NAME: ${{ secrets.CHANNEL_NAME || github.event.inputs.channel_name || 'spacepulse207' }}
         run: |
           ARGS=""
           if [ "$NO_UPLOAD" = "true" ]; then
