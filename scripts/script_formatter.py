@@ -333,6 +333,5 @@ def main():
         save_ideas(ideas)
         # No exit(1) — let the workflow continue naturally
 
-
 if __name__ == "__main__":
     main()
