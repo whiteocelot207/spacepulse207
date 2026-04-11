@@ -594,7 +594,7 @@ def create_outro_clip(channel_name="SpacePulse"):
 
     # ── CTA line 2: "🔔 SUBSCRIBE for daily shorts" ────────────────────────
     cta2 = create_animated_text_clip(
-        "🔔  SUBSCRIBE\nfordaily space shorts",
+        "🔔  SUBSCRIBE\nfor daily space shorts",
         duration, fontsize=62,
         position="center", animation="fade_in", color="white",
     )
