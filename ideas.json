@@ -1977,5 +1977,28 @@
     "status": "formatted",
     "strategy_based": true,
     "formatted_at": "2026-04-11T16:51:56.232554"
+  },
+  {
+    "topic": "Black Hole Scale Comparison",
+    "topic_family": "scale_comparison",
+    "hook": "Black holes: Their scale will blow your mind!",
+    "facts": [
+      "A typical stellar black hole is ~20 times the Sun's mass, yet its event horizon is only about 37 miles wide \u2013 roughly the distance across a major US city like Dallas.",
+      "Sagittarius A* at our galaxy's center is 4 million times the Sun's mass, but its event horizon is smaller than Mercury's orbit \u2013 about 11 million miles, or 450 trips from NYC to LA.",
+      "TON 618, one of the largest known, is 66 BILLION times the Sun's mass. Its event horizon is so vast, it would swallow our entire solar system, extending 11 times further than Pluto's orbit."
+    ],
+    "payoff": "And we're still trying to understand how these titans grow so large!",
+    "title": "Black Hole Sizes: From City to Solar System! \ud83e\udd2f\ud83c\udf0c",
+    "hashtags": [
+      "#Space",
+      "#BlackHole",
+      "#Astrophysics",
+      "#CosmicScale",
+      "#UniverseFacts"
+    ],
+    "generated_at": "2026-04-11T21:45:39.319707",
+    "status": "formatted",
+    "strategy_based": true,
+    "formatted_at": "2026-04-11T21:45:55.463189"
   }
 ]
