@@ -1931,5 +1931,28 @@
     "status": "formatted",
     "strategy_based": true,
     "formatted_at": "2026-04-11T04:36:51.944300"
+  },
+  {
+    "topic": "Dark Energy mystery",
+    "topic_family": "cosmic_mystery",
+    "hook": "The universe isn't just expanding, it's speeding up! What force is behind this cosmic acceleration?",
+    "facts": [
+      "Dark Energy makes up ~68% of the ENTIRE universe's energy density. Imagine 68 out of every 100 cosmic components are a complete mystery.",
+      "This invisible force stretches the fabric of space itself, pushing galaxies apart. Its cumulative power is immense: without it, the universe might have collapsed long ago.",
+      "Its influence causes the universe to accelerate outwards faster than ever. This shocking discovery in 1998 earned a Nobel Prize, yet left scientists stumped on its origin."
+    ],
+    "payoff": "This invisible, unknown force dictates the universe's ultimate fate, yet we have no idea what it actually is! What are *your* theories?",
+    "title": "Dark Energy: The Universe's Secret Engine?! \ud83e\udd2f\ud83c\udf0c",
+    "hashtags": [
+      "#DarkEnergy",
+      "#CosmicMystery",
+      "#Astrophysics",
+      "#Universe",
+      "#SpaceFacts"
+    ],
+    "generated_at": "2026-04-11T11:40:53.979888",
+    "status": "formatted",
+    "strategy_based": true,
+    "formatted_at": "2026-04-11T11:41:01.460076"
   }
 ]
