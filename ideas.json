@@ -1885,5 +1885,28 @@
     "status": "formatted",
     "strategy_based": true,
     "formatted_at": "2026-04-10T21:53:57.483912"
+  },
+  {
+    "topic": "Mars travel speed comparison",
+    "topic_family": "travel_time",
+    "hook": "Mars Trip: Years at rocket speed, but what about LIGHT speed?",
+    "facts": [
+      "A current rocket trip to Mars takes roughly 8 months.",
+      "Even at a hypothetical 1% light speed, Mars is only 5 hours away \u2013 about the flight time from NYC to LA!",
+      "At the actual speed of light, you'd reach Mars in just 3 minutes."
+    ],
+    "payoff": "The universe is vast. Our current tech makes Mars feel like another galaxy. What speed will humanity truly master?",
+    "title": "Mars Trip: Light Speed vs. Rocket Speed?! \ud83e\udd2f\ud83d\ude80",
+    "hashtags": [
+      "#space",
+      "#science",
+      "#mars",
+      "#traveltime",
+      "#astrophysics"
+    ],
+    "generated_at": "2026-04-11T03:17:19.628970",
+    "status": "formatted",
+    "strategy_based": true,
+    "formatted_at": "2026-04-11T03:17:28.665789"
   }
 ]
