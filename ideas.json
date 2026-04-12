@@ -2023,5 +2023,28 @@
     "status": "formatted",
     "strategy_based": true,
     "formatted_at": "2026-04-12T03:43:36.990795"
+  },
+  {
+    "topic": "Milky Way Galaxy Scale",
+    "topic_family": "scale_comparison",
+    "hook": "Prepare to feel tiny. The Milky Way's TRUE scale is staggering.",
+    "facts": [
+      "Our Milky Way galaxy contains over 200 BILLION stars. That's more than 25 stars for every person on Earth!",
+      "If you shrunk the entire Milky Way to the size of a football field, our Solar System would be smaller than a single grain of sand.",
+      "The Local Group of galaxies, including the Milky Way, spans 10 MILLION light-years \u2013 large enough to fit 100 Milky Ways end-to-end!"
+    ],
+    "payoff": "And that's just our galactic neighborhood. What's the biggest thing YOU can imagine?",
+    "title": "Milky Way: How BIG is Our Galaxy, REALLY?! \ud83e\udd2f\ud83c\udf0c",
+    "hashtags": [
+      "#space",
+      "#science",
+      "#astrophysics",
+      "#milkyway",
+      "#cosmicscale"
+    ],
+    "generated_at": "2026-04-12T05:13:16.870817",
+    "status": "formatted",
+    "strategy_based": true,
+    "formatted_at": "2026-04-12T05:13:35.495387"
   }
 ]
