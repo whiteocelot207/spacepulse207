@@ -1607,12 +1607,12 @@
     "published_at": "2026-04-10T07:42:58Z",
     "topic_family": "scale_comparison",
     "metrics": {
-      "views": 215,
+      "views": 216,
       "likes": 0,
       "comments": 0
     },
-    "performance_score": 0.537,
-    "analyzed_at": "2026-04-11T07:09:31.525578"
+    "performance_score": 0.54,
+    "analyzed_at": "2026-04-12T07:23:48.963713"
   },
   {
     "video_id": "auGB9qmHuxc",
@@ -1620,12 +1620,14 @@
     "published_at": "2026-04-10T11:03:19Z",
     "topic_family": "planetary_facts",
     "metrics": {
-      "views": 5,
+      "views": 4,
       "likes": 0,
-      "comments": 0
+      "comments": 0,
+      "watch_time_minutes": 1,
+      "avg_view_duration_seconds": 15
     },
-    "performance_score": 0.013,
-    "analyzed_at": "2026-04-11T07:09:31.432673"
+    "performance_score": 0.335,
+    "analyzed_at": "2026-04-12T07:23:48.836499"
   },
   {
     "video_id": "cx6ofBbqC0I",
@@ -1633,12 +1635,14 @@
     "published_at": "2026-04-09T19:31:38Z",
     "topic_family": "planetary_facts",
     "metrics": {
-      "views": 11,
+      "views": 10,
       "likes": 0,
-      "comments": 0
+      "comments": 0,
+      "watch_time_minutes": 86,
+      "avg_view_duration_seconds": 520
     },
-    "performance_score": 0.028,
-    "analyzed_at": "2026-04-11T07:09:31.623911"
+    "performance_score": 1.675,
+    "analyzed_at": "2026-04-12T07:23:49.100068"
   },
   {
     "video_id": "kfDgi6kgqy8",
@@ -1646,14 +1650,14 @@
     "published_at": "2026-04-09T01:57:22Z",
     "topic_family": "planetary_facts",
     "metrics": {
-      "views": 9,
+      "views": 10,
       "likes": 1,
       "comments": 0,
-      "watch_time_minutes": 44,
-      "avg_view_duration_seconds": 298
+      "watch_time_minutes": 46,
+      "avg_view_duration_seconds": 276
     },
-    "performance_score": 1.692,
-    "analyzed_at": "2026-04-11T07:09:31.734564"
+    "performance_score": 1.695,
+    "analyzed_at": "2026-04-12T07:23:49.237534"
   },
   {
     "video_id": "saUy32r_ddA",
@@ -1666,7 +1670,7 @@
       "comments": 0
     },
     "performance_score": 0.0,
-    "analyzed_at": "2026-04-11T07:09:31.849722"
+    "analyzed_at": "2026-04-12T07:23:49.369297"
   },
   {
     "video_id": "s3ogUXU4xXs",
@@ -1674,14 +1678,14 @@
     "published_at": "2026-04-08T11:07:04Z",
     "topic_family": "planetary_facts",
     "metrics": {
-      "views": 11,
+      "views": 12,
       "likes": 1,
       "comments": 0,
-      "watch_time_minutes": 173,
-      "avg_view_duration_seconds": 946
+      "watch_time_minutes": 174,
+      "avg_view_duration_seconds": 872
     },
-    "performance_score": 1.697,
-    "analyzed_at": "2026-04-11T07:09:31.957300"
+    "performance_score": 1.7,
+    "analyzed_at": "2026-04-12T07:23:49.517813"
   },
   {
     "video_id": "fAmxGRM6Twk",
@@ -1689,14 +1693,14 @@
     "published_at": "2026-04-07T22:58:34Z",
     "topic_family": "planetary_facts",
     "metrics": {
-      "views": 101,
+      "views": 102,
       "likes": 1,
       "comments": 0,
       "watch_time_minutes": 82,
       "avg_view_duration_seconds": 48
     },
-    "performance_score": 1.922,
-    "analyzed_at": "2026-04-11T07:09:32.065973"
+    "performance_score": 1.925,
+    "analyzed_at": "2026-04-12T07:23:49.662974"
   },
   {
     "video_id": "gel9OXKLkl0",
@@ -1711,7 +1715,7 @@
       "avg_view_duration_seconds": 26
     },
     "performance_score": 0.552,
-    "analyzed_at": "2026-04-11T07:09:32.165996"
+    "analyzed_at": "2026-04-12T07:23:49.795292"
   },
   {
     "video_id": "oQzfNMG6Opw",
@@ -1899,12 +1903,12 @@
     "published_at": "2026-04-11T06:12:46Z",
     "topic_family": "general",
     "metrics": {
-      "views": 16,
+      "views": 28,
       "likes": 2,
       "comments": 0
     },
-    "performance_score": 0.08,
-    "analyzed_at": "2026-04-11T07:09:30.904963"
+    "performance_score": 0.11,
+    "analyzed_at": "2026-04-12T07:23:48.164869"
   },
   {
     "video_id": "HGHmmaBEqZo",
@@ -1912,12 +1916,12 @@
     "published_at": "2026-04-11T04:39:27Z",
     "topic_family": "travel_time",
     "metrics": {
-      "views": 344,
-      "likes": 13,
-      "comments": 1
+      "views": 911,
+      "likes": 19,
+      "comments": 2
     },
-    "performance_score": 1.11,
-    "analyzed_at": "2026-04-11T07:09:30.999267"
+    "performance_score": 1.25,
+    "analyzed_at": "2026-04-12T07:23:48.300662"
   },
   {
     "video_id": "MjMOl2p7GuM",
@@ -1925,12 +1929,12 @@
     "published_at": "2026-04-11T03:19:15Z",
     "topic_family": "travel_time",
     "metrics": {
-      "views": 814,
-      "likes": 12,
+      "views": 1317,
+      "likes": 15,
       "comments": 0
     },
-    "performance_score": 0.99,
-    "analyzed_at": "2026-04-11T07:09:31.112576"
+    "performance_score": 1.05,
+    "analyzed_at": "2026-04-12T07:23:48.421525"
   },
   {
     "video_id": "NiWcAvW49kY",
@@ -1938,12 +1942,12 @@
     "published_at": "2026-04-10T21:56:09Z",
     "topic_family": "travel_time",
     "metrics": {
-      "views": 344,
-      "likes": 8,
+      "views": 386,
+      "likes": 9,
       "comments": 0
     },
-    "performance_score": 0.91,
-    "analyzed_at": "2026-04-11T07:09:31.233838"
+    "performance_score": 0.93,
+    "analyzed_at": "2026-04-12T07:23:48.549458"
   },
   {
     "video_id": "SDtR44kOM_g",
@@ -1951,11 +1955,102 @@
     "published_at": "2026-04-10T12:00:38Z",
     "topic_family": "travel_time",
     "metrics": {
-      "views": 283,
+      "views": 343,
+      "likes": 7,
+      "comments": 0
+    },
+    "performance_score": 0.89,
+    "analyzed_at": "2026-04-12T07:23:48.690281"
+  },
+  {
+    "video_id": "jjz4E2OgQVM",
+    "title": "Milky Way: How BIG is Our Galaxy, REALLY?! \ud83e\udd2f\ud83c\udf0c",
+    "published_at": "2026-04-12T05:15:32Z",
+    "topic_family": "scale_comparison",
+    "metrics": {
+      "views": 3,
+      "likes": 1,
+      "comments": 0
+    },
+    "performance_score": 0.028,
+    "analyzed_at": "2026-04-12T07:23:47.253522"
+  },
+  {
+    "video_id": "1TOYipZZ80k",
+    "title": "ISS Live \ud83c\udf0d NASA Real-Time Tracker | Earth View from Space + Space Facts + Relaxing Ambient Music (2",
+    "published_at": "2026-04-12T04:12:04Z",
+    "topic_family": "planetary_facts",
+    "metrics": {
+      "views": 4,
+      "likes": 0,
+      "comments": 0
+    },
+    "performance_score": 0.01,
+    "analyzed_at": "2026-04-12T07:23:47.387127"
+  },
+  {
+    "video_id": "MGDGSydI-Xc",
+    "title": "Moon's Secret Power: Earth's Day Changer! \ud83e\udd2f\ud83c\udf19",
+    "published_at": "2026-04-12T03:45:40Z",
+    "topic_family": "hypothetical",
+    "metrics": {
+      "views": 979,
+      "likes": 28,
+      "comments": 1
+    },
+    "performance_score": 1.15,
+    "analyzed_at": "2026-04-12T07:23:47.522490"
+  },
+  {
+    "video_id": "EkDm1xMJCFs",
+    "title": "ISS Live \ud83c\udf0d NASA Real-Time Tracker | Earth View from Space + Space Facts + Relaxing Ambient Music (2",
+    "published_at": "2026-04-11T22:33:52Z",
+    "topic_family": "planetary_facts",
+    "metrics": {
+      "views": 17,
+      "likes": 0,
+      "comments": 0
+    },
+    "performance_score": 0.043,
+    "analyzed_at": "2026-04-12T07:23:47.654326"
+  },
+  {
+    "video_id": "WL0IiexAzDY",
+    "title": "Black Hole Sizes: From City to Solar System! \ud83e\udd2f\ud83c\udf0c",
+    "published_at": "2026-04-11T21:48:10Z",
+    "topic_family": "scale_comparison",
+    "metrics": {
+      "views": 982,
+      "likes": 30,
+      "comments": 0
+    },
+    "performance_score": 1.05,
+    "analyzed_at": "2026-04-12T07:23:47.784359"
+  },
+  {
+    "video_id": "UJPJ0S38X_A",
+    "title": "The Universe's Largest Structure Will Break Your Brain! \ud83e\udd2f\ud83c\udf0c",
+    "published_at": "2026-04-11T16:54:03Z",
+    "topic_family": "scale_comparison",
+    "metrics": {
+      "views": 562,
+      "likes": 20,
+      "comments": 2
+    },
+    "performance_score": 1.25,
+    "analyzed_at": "2026-04-12T07:23:47.918902"
+  },
+  {
+    "video_id": "w_YGgCpuok0",
+    "title": "Dark Energy: The Universe's Secret Engine?! \ud83e\udd2f\ud83c\udf0c",
+    "published_at": "2026-04-11T11:45:02Z",
+    "topic_family": "travel_time",
+    "metrics": {
+      "views": 165,
       "likes": 4,
       "comments": 0
     },
-    "performance_score": 0.788,
-    "analyzed_at": "2026-04-11T07:09:31.327443"
+    "performance_score": 0.492,
+    "analyzed_at": "2026-04-12T07:23:48.039317"
   }
 ]
