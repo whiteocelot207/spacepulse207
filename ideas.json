@@ -2092,5 +2092,28 @@
     "status": "formatted",
     "strategy_based": true,
     "formatted_at": "2026-04-12T16:56:02.002049"
+  },
+  {
+    "topic": "Walking to the Moon",
+    "topic_family": "travel_time",
+    "hook": "Ever wonder how long it would take to WALK to the Moon?",
+    "facts": [
+      "The Moon is approximately 240,000 miles from Earth.",
+      "An average human walks at about 3 miles per hour.",
+      "At this speed, it would take over 80,000 hours of non-stop walking \u2013 that's more than 9 years!"
+    ],
+    "payoff": "This insane journey shows how truly vast even our closest neighbor is. Mind blown?",
+    "title": "WALKING to the Moon?! \ud83d\udeb6\u200d\u2640\ufe0f\ud83c\udf19 The INSANE travel time revealed!",
+    "hashtags": [
+      "#space",
+      "#moon",
+      "#traveltime",
+      "#astrophysics",
+      "#sciencedaily"
+    ],
+    "generated_at": "2026-04-12T21:49:29.501782",
+    "status": "formatted",
+    "strategy_based": true,
+    "formatted_at": "2026-04-12T21:49:37.712579"
   }
 ]
