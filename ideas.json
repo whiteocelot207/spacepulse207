@@ -2069,5 +2069,28 @@
     "status": "formatted",
     "strategy_based": true,
     "formatted_at": "2026-04-12T11:40:33.014009"
+  },
+  {
+    "topic": "Journey to the Sun Speeds",
+    "topic_family": "travel_time",
+    "hook": "How long to reach the Sun? Prepare to rethink 'fast'!",
+    "facts": [
+      "The fastest human-made object, Parker Solar Probe (430,000 mph), would take ~9 days to reach the Sun.",
+      "Even a theoretical craft at 1% light speed (6.7 million mph) would still need over 13 hours to make the trip.",
+      "Light itself covers that same 93 million-mile distance in just 8 minutes and 20 seconds. Yep, light is fast."
+    ],
+    "payoff": "Our universe is so immense, even light speed isn't 'fast' enough for interstellar travel. What speed would YOU want?",
+    "title": "Reach the Sun: Speed Challenge! \u2600\ufe0f\ud83d\ude80",
+    "hashtags": [
+      "#space",
+      "#traveltime",
+      "#astrophysics",
+      "#solarsystem",
+      "#speedoflight"
+    ],
+    "generated_at": "2026-04-12T16:55:48.830398",
+    "status": "formatted",
+    "strategy_based": true,
+    "formatted_at": "2026-04-12T16:56:02.002049"
   }
 ]
