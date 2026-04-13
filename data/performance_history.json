@@ -1620,14 +1620,14 @@
     "published_at": "2026-04-10T11:03:19Z",
     "topic_family": "planetary_facts",
     "metrics": {
-      "views": 4,
+      "views": 5,
       "likes": 0,
       "comments": 0,
       "watch_time_minutes": 1,
-      "avg_view_duration_seconds": 15
+      "avg_view_duration_seconds": 13
     },
-    "performance_score": 0.335,
-    "analyzed_at": "2026-04-12T07:23:48.836499"
+    "performance_score": 0.297,
+    "analyzed_at": "2026-04-13T08:14:11.153642"
   },
   {
     "video_id": "cx6ofBbqC0I",
@@ -1903,12 +1903,14 @@
     "published_at": "2026-04-11T06:12:46Z",
     "topic_family": "general",
     "metrics": {
-      "views": 28,
+      "views": 21,
       "likes": 2,
-      "comments": 0
+      "comments": 0,
+      "watch_time_minutes": 710,
+      "avg_view_duration_seconds": 2028
     },
-    "performance_score": 0.11,
-    "analyzed_at": "2026-04-12T07:23:48.164869"
+    "performance_score": 1.742,
+    "analyzed_at": "2026-04-13T08:14:10.295404"
   },
   {
     "video_id": "HGHmmaBEqZo",
@@ -1916,12 +1918,14 @@
     "published_at": "2026-04-11T04:39:27Z",
     "topic_family": "travel_time",
     "metrics": {
-      "views": 911,
-      "likes": 19,
-      "comments": 2
+      "views": 435,
+      "likes": 13,
+      "comments": 1,
+      "watch_time_minutes": 116,
+      "avg_view_duration_seconds": 26
     },
-    "performance_score": 1.25,
-    "analyzed_at": "2026-04-12T07:23:48.300662"
+    "performance_score": 2.38,
+    "analyzed_at": "2026-04-13T08:14:10.462130"
   },
   {
     "video_id": "MjMOl2p7GuM",
@@ -1929,12 +1933,14 @@
     "published_at": "2026-04-11T03:19:15Z",
     "topic_family": "travel_time",
     "metrics": {
-      "views": 1317,
-      "likes": 15,
-      "comments": 0
+      "views": 1069,
+      "likes": 12,
+      "comments": 0,
+      "watch_time_minutes": 103,
+      "avg_view_duration_seconds": 14
     },
-    "performance_score": 1.05,
-    "analyzed_at": "2026-04-12T07:23:48.421525"
+    "performance_score": 2.02,
+    "analyzed_at": "2026-04-13T08:14:10.631390"
   },
   {
     "video_id": "NiWcAvW49kY",
@@ -1942,12 +1948,14 @@
     "published_at": "2026-04-10T21:56:09Z",
     "topic_family": "travel_time",
     "metrics": {
-      "views": 386,
-      "likes": 9,
-      "comments": 0
+      "views": 360,
+      "likes": 8,
+      "comments": 0,
+      "watch_time_minutes": 48,
+      "avg_view_duration_seconds": 23
     },
-    "performance_score": 0.93,
-    "analyzed_at": "2026-04-12T07:23:48.549458"
+    "performance_score": 2.12,
+    "analyzed_at": "2026-04-13T08:14:10.785953"
   },
   {
     "video_id": "SDtR44kOM_g",
@@ -1955,12 +1963,14 @@
     "published_at": "2026-04-10T12:00:38Z",
     "topic_family": "travel_time",
     "metrics": {
-      "views": 343,
-      "likes": 7,
-      "comments": 0
+      "views": 286,
+      "likes": 4,
+      "comments": 0,
+      "watch_time_minutes": 32,
+      "avg_view_duration_seconds": 23
     },
-    "performance_score": 0.89,
-    "analyzed_at": "2026-04-12T07:23:48.690281"
+    "performance_score": 2.005,
+    "analyzed_at": "2026-04-13T08:14:10.976035"
   },
   {
     "video_id": "jjz4E2OgQVM",
@@ -1968,25 +1978,25 @@
     "published_at": "2026-04-12T05:15:32Z",
     "topic_family": "scale_comparison",
     "metrics": {
-      "views": 3,
-      "likes": 1,
+      "views": 173,
+      "likes": 7,
       "comments": 0
     },
-    "performance_score": 0.028,
-    "analyzed_at": "2026-04-12T07:23:47.253522"
+    "performance_score": 0.573,
+    "analyzed_at": "2026-04-13T08:14:09.477462"
   },
   {
     "video_id": "1TOYipZZ80k",
     "title": "ISS Live \ud83c\udf0d NASA Real-Time Tracker | Earth View from Space + Space Facts + Relaxing Ambient Music (2",
-    "published_at": "2026-04-12T04:12:04Z",
+    "published_at": "2026-04-12T16:40:47Z",
     "topic_family": "planetary_facts",
     "metrics": {
-      "views": 4,
+      "views": 19,
       "likes": 0,
       "comments": 0
     },
-    "performance_score": 0.01,
-    "analyzed_at": "2026-04-12T07:23:47.387127"
+    "performance_score": 0.048,
+    "analyzed_at": "2026-04-13T08:14:09.190588"
   },
   {
     "video_id": "MGDGSydI-Xc",
@@ -1994,12 +2004,12 @@
     "published_at": "2026-04-12T03:45:40Z",
     "topic_family": "hypothetical",
     "metrics": {
-      "views": 979,
-      "likes": 28,
+      "views": 1253,
+      "likes": 27,
       "comments": 1
     },
     "performance_score": 1.15,
-    "analyzed_at": "2026-04-12T07:23:47.522490"
+    "analyzed_at": "2026-04-13T08:14:09.614473"
   },
   {
     "video_id": "EkDm1xMJCFs",
@@ -2007,12 +2017,12 @@
     "published_at": "2026-04-11T22:33:52Z",
     "topic_family": "planetary_facts",
     "metrics": {
-      "views": 17,
+      "views": 22,
       "likes": 0,
       "comments": 0
     },
-    "performance_score": 0.043,
-    "analyzed_at": "2026-04-12T07:23:47.654326"
+    "performance_score": 0.055,
+    "analyzed_at": "2026-04-13T08:14:09.749314"
   },
   {
     "video_id": "WL0IiexAzDY",
@@ -2020,12 +2030,12 @@
     "published_at": "2026-04-11T21:48:10Z",
     "topic_family": "scale_comparison",
     "metrics": {
-      "views": 982,
-      "likes": 30,
+      "views": 1044,
+      "likes": 29,
       "comments": 0
     },
     "performance_score": 1.05,
-    "analyzed_at": "2026-04-12T07:23:47.784359"
+    "analyzed_at": "2026-04-13T08:14:09.871487"
   },
   {
     "video_id": "UJPJ0S38X_A",
@@ -2033,12 +2043,12 @@
     "published_at": "2026-04-11T16:54:03Z",
     "topic_family": "scale_comparison",
     "metrics": {
-      "views": 562,
-      "likes": 20,
+      "views": 780,
+      "likes": 32,
       "comments": 2
     },
     "performance_score": 1.25,
-    "analyzed_at": "2026-04-12T07:23:47.918902"
+    "analyzed_at": "2026-04-13T08:14:10.009222"
   },
   {
     "video_id": "w_YGgCpuok0",
@@ -2046,11 +2056,102 @@
     "published_at": "2026-04-11T11:45:02Z",
     "topic_family": "travel_time",
     "metrics": {
-      "views": 165,
-      "likes": 4,
+      "views": 177,
+      "likes": 5,
       "comments": 0
     },
-    "performance_score": 0.492,
-    "analyzed_at": "2026-04-12T07:23:48.039317"
+    "performance_score": 0.542,
+    "analyzed_at": "2026-04-13T08:14:10.141734"
+  },
+  {
+    "video_id": "_l0iVnvHh7U",
+    "title": "ISS Live \ud83c\udf0d NASA Real-Time Tracker | Earth View from Space + Space Facts + Relaxing Ambient Music",
+    "published_at": "2026-04-13T05:14:31Z",
+    "topic_family": "planetary_facts",
+    "metrics": {
+      "views": 4,
+      "likes": 0,
+      "comments": 0
+    },
+    "performance_score": 0.01,
+    "analyzed_at": "2026-04-13T08:14:08.312818"
+  },
+  {
+    "video_id": "K3neP-xCNYI",
+    "title": "Great Attractor: What's Pulling Our Galaxy?! \ud83e\udd2f\ud83c\udf0c",
+    "published_at": "2026-04-13T05:32:41Z",
+    "topic_family": "travel_time",
+    "metrics": {
+      "views": 1121,
+      "likes": 21,
+      "comments": 2
+    },
+    "performance_score": 1.25,
+    "analyzed_at": "2026-04-13T08:14:08.455690"
+  },
+  {
+    "video_id": "fnal15Qtzso",
+    "title": "ISS Live \ud83c\udf0d NASA Real-Time Tracker | Earth View from Space + Space Facts + Relaxing Ambient Music",
+    "published_at": "2026-04-13T05:02:08Z",
+    "topic_family": "planetary_facts",
+    "metrics": {
+      "views": 8,
+      "likes": 1,
+      "comments": 0
+    },
+    "performance_score": 0.04,
+    "analyzed_at": "2026-04-13T08:14:08.595731"
+  },
+  {
+    "video_id": "7Q0Wq0kLmc4",
+    "title": "[RELAY] Live High-Definition Views from the International Space Station (Official NASAStream)",
+    "published_at": "2026-04-13T02:21:51Z",
+    "topic_family": "planetary_facts",
+    "metrics": {
+      "views": 0,
+      "likes": 0,
+      "comments": 0
+    },
+    "performance_score": 0.0,
+    "analyzed_at": "2026-04-13T08:14:08.735580"
+  },
+  {
+    "video_id": "pDaZiiR3SWo",
+    "title": "WALKING to the Moon?! \ud83d\udeb6\u200d\u2640\ufe0f\ud83c\udf19 The INSANE travel time revealed!",
+    "published_at": "2026-04-12T21:51:46Z",
+    "topic_family": "travel_time",
+    "metrics": {
+      "views": 574,
+      "likes": 11,
+      "comments": 1
+    },
+    "performance_score": 1.07,
+    "analyzed_at": "2026-04-13T08:14:08.895786"
+  },
+  {
+    "video_id": "DocJt0Cz9SI",
+    "title": "Reach the Sun: Speed Challenge! \u2600\ufe0f\ud83d\ude80",
+    "published_at": "2026-04-12T16:59:12Z",
+    "topic_family": "travel_time",
+    "metrics": {
+      "views": 567,
+      "likes": 3,
+      "comments": 1
+    },
+    "performance_score": 0.91,
+    "analyzed_at": "2026-04-13T08:14:09.040969"
+  },
+  {
+    "video_id": "lJW9SJiVjtQ",
+    "title": "Interstellar Travel: Light Speed vs. Reality! \ud83e\udd2f\ud83d\ude80",
+    "published_at": "2026-04-12T11:43:31Z",
+    "topic_family": "travel_time",
+    "metrics": {
+      "views": 634,
+      "likes": 9,
+      "comments": 1
+    },
+    "performance_score": 1.03,
+    "analyzed_at": "2026-04-13T08:14:09.336452"
   }
 ]
