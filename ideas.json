@@ -2115,5 +2115,28 @@
     "status": "formatted",
     "strategy_based": true,
     "formatted_at": "2026-04-12T21:49:37.712579"
+  },
+  {
+    "topic": "The Great Attractor",
+    "topic_family": "cosmic_mystery",
+    "hook": "Something HUGE is pulling our galaxy across the universe!",
+    "facts": [
+      "Our Milky Way is being pulled towards a mysterious region at an incredible 1.3 million miles per hour.",
+      "This speed is like driving from New York to Los Angeles (over 2,400 miles) in under 2 seconds!",
+      "Scientists estimate the 'Great Attractor's' gravitational pull comes from an unseen mass equal to ONE MILLION Milky Ways."
+    ],
+    "payoff": "We're speeding towards a cosmic enigma we can't fully explain... yet! What do YOU think it is?",
+    "title": "Great Attractor: What's Pulling Our Galaxy?! \ud83e\udd2f\ud83c\udf0c",
+    "hashtags": [
+      "#GreatAttractor",
+      "#CosmicMystery",
+      "#SpaceFacts",
+      "#Astrophysics",
+      "#Universe"
+    ],
+    "generated_at": "2026-04-13T05:30:40.935206",
+    "status": "formatted",
+    "strategy_based": true,
+    "formatted_at": "2026-04-13T05:30:51.081950"
   }
 ]
