@@ -2138,5 +2138,28 @@
     "status": "formatted",
     "strategy_based": true,
     "formatted_at": "2026-04-13T05:30:51.081950"
+  },
+  {
+    "topic": "Instant Sun Disappearance",
+    "topic_family": "hypothetical",
+    "hook": "What if our Sun vanished instantly? The chaotic aftermath would shock you!",
+    "facts": [
+      "For a full 8 minutes, Earth would remain bathed in sunlight, unaware of the Sun's disappearance.",
+      "Then, Earth would become a rogue planet, hurtling into interstellar space at 67,000 mph \u2013 faster than driving cross-country from NYC to LA every hour.",
+      "Within just one week, Earth's surface temperature would plunge to -100\u00b0F, freezing oceans solid and ending most surface life."
+    ],
+    "payoff": "Imagine Earth as a frozen, dark wanderer \u2013 a chilling reminder of our cosmic dependence. Could humanity adapt?",
+    "title": "Sun VANISHES! \u2600\ufe0f\ud83e\udd2f Earth's Shocking Fate in Space!",
+    "hashtags": [
+      "#space",
+      "#astrophysics",
+      "#whatif",
+      "#solarsystem",
+      "#sciencefacts"
+    ],
+    "generated_at": "2026-04-13T17:17:51.462798",
+    "status": "formatted",
+    "strategy_based": true,
+    "formatted_at": "2026-04-13T17:18:00.049670"
   }
 ]
