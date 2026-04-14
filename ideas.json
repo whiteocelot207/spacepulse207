@@ -2253,5 +2253,28 @@
     "status": "formatted",
     "strategy_based": true,
     "formatted_at": "2026-04-14T12:03:28.407340"
+  },
+  {
+    "topic": "Diamond Rain on Gas Giants",
+    "topic_family": "planetary_facts",
+    "hook": "Raining DIAMONDS? On an alien planet?!",
+    "facts": [
+      "Deep within Uranus & Neptune, atmospheric pressure reaches 6 million times Earth's surface pressure.",
+      "This extreme force crushes methane into pure carbon, forming diamonds potentially weighing millions of carats.",
+      "These colossal diamonds may be as large as small cars, sinking through a liquid ocean of superheated water, ammonia, & methane."
+    ],
+    "payoff": "Forget Earth's gold rush. Space mining just got a LOT shinier!",
+    "title": "Diamond Rain on Space Giants?! \ud83d\udc8e\ud83e\udd2f The Ultimate Treasure!",
+    "hashtags": [
+      "#space",
+      "#science",
+      "#diamonds",
+      "#planets",
+      "#astronomy"
+    ],
+    "generated_at": "2026-04-14T22:03:17.145594",
+    "status": "formatted",
+    "strategy_based": true,
+    "formatted_at": "2026-04-14T22:03:26.634430"
   }
 ]
