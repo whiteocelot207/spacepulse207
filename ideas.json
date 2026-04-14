@@ -2207,5 +2207,28 @@
     "status": "formatted",
     "strategy_based": true,
     "formatted_at": "2026-04-14T03:38:46.639100"
+  },
+  {
+    "topic": "Earth Without Moon",
+    "topic_family": "hypothetical",
+    "hook": "What if the Moon vanished tonight? Our world would be unrecognizable!",
+    "facts": [
+      "The Moon creates 75% of Earth's tides. Without it, ocean tides would shrink from typical 6-foot swings to barely 1-2 feet, impacting coastal ecosystems.",
+      "The Moon's gravity gradually slows Earth's spin. Without it, our days would eventually shorten from 24 hours to a rapid 6-8 hours, making everything faster.",
+      "Our Moon stabilizes Earth's 23.5-degree axial tilt. Without it, Earth could wobble wildly between 0 and 85 degrees, causing unimaginable climate chaos."
+    ],
+    "payoff": "Earth's stable climate and predictable cycles? Gone! We owe our habitable planet to our celestial neighbor.",
+    "title": "What if the Moon Disappeared? \ud83e\udd2f Our World's Weird Future!",
+    "hashtags": [
+      "#space",
+      "#moon",
+      "#whatif",
+      "#astrophysics",
+      "#earth"
+    ],
+    "generated_at": "2026-04-14T05:12:54.262195",
+    "status": "formatted",
+    "strategy_based": true,
+    "formatted_at": "2026-04-14T05:13:10.428860"
   }
 ]
