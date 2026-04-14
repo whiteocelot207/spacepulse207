@@ -2184,5 +2184,28 @@
     "status": "error",
     "strategy_based": true,
     "error_at": "2026-04-13T22:05:31.280554"
+  },
+  {
+    "topic": "Neutron Star Gravity",
+    "topic_family": "hypothetical",
+    "hook": "Could you jump on a neutron star? The insane truth about gravity!",
+    "facts": [
+      "Gravity on a neutron star is 200 billion times Earth's \u2013 instantly stretching you to pancake thinness.",
+      "To lift off, you'd need to jump at half the speed of light \u2013 over 335 million mph!",
+      "This star, heavier than our Sun, is only 12 miles wide \u2013 smaller than Manhattan Island!"
+    ],
+    "payoff": "So, could you jump? Impossible! The universe holds forces that redefine what 'heavy' truly means.",
+    "title": "Could You JUMP on a Neutron Star?! \ud83d\ude31 Ultimate Gravity!",
+    "hashtags": [
+      "#Space",
+      "#Science",
+      "#Astrophysics",
+      "#NeutronStar",
+      "#ExtremeGravity"
+    ],
+    "generated_at": "2026-04-14T03:38:31.515009",
+    "status": "formatted",
+    "strategy_based": true,
+    "formatted_at": "2026-04-14T03:38:46.639100"
   }
 ]
