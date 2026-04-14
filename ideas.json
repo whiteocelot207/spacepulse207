@@ -2230,5 +2230,28 @@
     "status": "formatted",
     "strategy_based": true,
     "formatted_at": "2026-04-14T05:13:10.428860"
+  },
+  {
+    "topic": "Uranus's extreme tilt",
+    "topic_family": "planetary_facts",
+    "hook": "Uranus spins completely on its SIDE! \ud83e\udd2f What happened?",
+    "facts": [
+      "Its axis of rotation is tilted by about 98 degrees, making it roll around the Sun like a bowling ball.",
+      "This extreme tilt causes half the planet to experience 42 Earth years of continuous daylight, then 42 years of darkness.",
+      "Scientists believe a colossal impact \u2013 perhaps a planet-sized object \u2013 early in its history caused this bizarre orientation."
+    ],
+    "payoff": "Imagine seasons that last for DECADES! What would life be like there?",
+    "title": "Uranus: The Tilted Planet! \ud83e\ude90 Extreme Seasons! \ud83e\udd2f",
+    "hashtags": [
+      "#Uranus",
+      "#PlanetaryFacts",
+      "#SpaceExplained",
+      "#ScienceTok",
+      "#Astrophysics"
+    ],
+    "generated_at": "2026-04-14T12:03:18.678361",
+    "status": "formatted",
+    "strategy_based": true,
+    "formatted_at": "2026-04-14T12:03:28.407340"
   }
 ]
