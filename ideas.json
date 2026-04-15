@@ -2276,5 +2276,28 @@
     "status": "formatted",
     "strategy_based": true,
     "formatted_at": "2026-04-14T22:03:26.634430"
+  },
+  {
+    "topic": "Universe's Extreme Temperatures",
+    "topic_family": "extreme_conditions",
+    "hook": "\ud83e\udd2f What's the hottest AND coldest place in the entire Universe?",
+    "facts": [
+      "The momentary core of a collapsing star during a supernova reaches over 100 billion Kelvin! That's almost 180 BILLION degrees Fahrenheit.",
+      "The Boomerang Nebula is the coldest natural place at just 1 Kelvin (-458\u00b0F), chilling below the cosmic background radiation.",
+      "Black hole accretion disks can blaze at millions of degrees\u2014hotter than our Sun's core, creating X-rays across the galaxy!"
+    ],
+    "payoff": "These cosmic extremes highlight just how bizarre and diverse the Universe truly is. What other insane places are out there?",
+    "title": "\ud83e\udd2f Universe's Hottest & Coldest Spots REVEALED! \ud83d\udd25\u2744\ufe0f",
+    "hashtags": [
+      "#Space",
+      "#Astrophysics",
+      "#ExtremeConditions",
+      "#CosmicFacts",
+      "#Universe"
+    ],
+    "generated_at": "2026-04-15T03:37:18.254177",
+    "status": "formatted",
+    "strategy_based": true,
+    "formatted_at": "2026-04-15T03:37:27.188876"
   }
 ]
