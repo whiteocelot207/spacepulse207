@@ -1978,14 +1978,14 @@
     "published_at": "2026-04-12T05:15:32Z",
     "topic_family": "scale_comparison",
     "metrics": {
-      "views": 3,
-      "likes": 1,
+      "views": 173,
+      "likes": 7,
       "comments": 0,
-      "watch_time_minutes": 0,
-      "avg_view_duration_seconds": 29
+      "watch_time_minutes": 19,
+      "avg_view_duration_seconds": 14
     },
-    "performance_score": 0.607,
-    "analyzed_at": "2026-04-14T07:57:45.958755"
+    "performance_score": 1.327,
+    "analyzed_at": "2026-04-15T07:58:41.238684"
   },
   {
     "video_id": "1TOYipZZ80k",
@@ -1993,14 +1993,14 @@
     "published_at": "2026-04-12T16:40:47Z",
     "topic_family": "planetary_facts",
     "metrics": {
-      "views": 6,
+      "views": 19,
       "likes": 0,
       "comments": 0,
-      "watch_time_minutes": 3,
-      "avg_view_duration_seconds": 32
+      "watch_time_minutes": 8,
+      "avg_view_duration_seconds": 27
     },
-    "performance_score": 0.73,
-    "analyzed_at": "2026-04-14T07:57:45.668795"
+    "performance_score": 0.788,
+    "analyzed_at": "2026-04-15T07:58:41.034262"
   },
   {
     "video_id": "MGDGSydI-Xc",
@@ -2008,14 +2008,14 @@
     "published_at": "2026-04-12T03:45:40Z",
     "topic_family": "hypothetical",
     "metrics": {
-      "views": 1230,
-      "likes": 29,
+      "views": 1260,
+      "likes": 27,
       "comments": 1,
-      "watch_time_minutes": 206,
-      "avg_view_duration_seconds": 21
+      "watch_time_minutes": 211,
+      "avg_view_duration_seconds": 22
     },
-    "performance_score": 2.32,
-    "analyzed_at": "2026-04-14T07:57:46.120716"
+    "performance_score": 2.34,
+    "analyzed_at": "2026-04-15T07:58:41.341869"
   },
   {
     "video_id": "EkDm1xMJCFs",
@@ -2023,14 +2023,14 @@
     "published_at": "2026-04-11T22:33:52Z",
     "topic_family": "planetary_facts",
     "metrics": {
-      "views": 17,
+      "views": 23,
       "likes": 0,
       "comments": 0,
-      "watch_time_minutes": 47,
-      "avg_view_duration_seconds": 166
+      "watch_time_minutes": 49,
+      "avg_view_duration_seconds": 128
     },
-    "performance_score": 1.692,
-    "analyzed_at": "2026-04-14T07:57:46.287773"
+    "performance_score": 1.708,
+    "analyzed_at": "2026-04-15T07:58:41.444932"
   },
   {
     "video_id": "WL0IiexAzDY",
@@ -2038,14 +2038,14 @@
     "published_at": "2026-04-11T21:48:10Z",
     "topic_family": "scale_comparison",
     "metrics": {
-      "views": 1006,
-      "likes": 30,
+      "views": 1048,
+      "likes": 29,
       "comments": 0,
-      "watch_time_minutes": 167,
+      "watch_time_minutes": 174,
       "avg_view_duration_seconds": 19
     },
     "performance_score": 2.18,
-    "analyzed_at": "2026-04-14T07:57:46.547473"
+    "analyzed_at": "2026-04-15T07:58:41.547518"
   },
   {
     "video_id": "UJPJ0S38X_A",
@@ -2083,12 +2083,14 @@
     "published_at": "2026-04-13T12:57:15Z",
     "topic_family": "planetary_facts",
     "metrics": {
-      "views": 12,
+      "views": 4,
       "likes": 0,
-      "comments": 0
+      "comments": 0,
+      "watch_time_minutes": 11,
+      "avg_view_duration_seconds": 177
     },
-    "performance_score": 0.03,
-    "analyzed_at": "2026-04-14T07:57:44.478536"
+    "performance_score": 1.185,
+    "analyzed_at": "2026-04-15T07:58:40.433895"
   },
   {
     "video_id": "K3neP-xCNYI",
@@ -2096,12 +2098,14 @@
     "published_at": "2026-04-13T05:32:41Z",
     "topic_family": "travel_time",
     "metrics": {
-      "views": 1628,
-      "likes": 26,
-      "comments": 3
+      "views": 1301,
+      "likes": 18,
+      "comments": 1,
+      "watch_time_minutes": 205,
+      "avg_view_duration_seconds": 33
     },
-    "performance_score": 1.35,
-    "analyzed_at": "2026-04-14T07:57:44.612675"
+    "performance_score": 2.56,
+    "analyzed_at": "2026-04-15T07:58:40.526621"
   },
   {
     "video_id": "fnal15Qtzso",
@@ -2111,10 +2115,12 @@
     "metrics": {
       "views": 9,
       "likes": 1,
-      "comments": 0
+      "comments": 0,
+      "watch_time_minutes": 5,
+      "avg_view_duration_seconds": 35
     },
-    "performance_score": 0.043,
-    "analyzed_at": "2026-04-14T07:57:44.744093"
+    "performance_score": 0.868,
+    "analyzed_at": "2026-04-15T07:58:40.626264"
   },
   {
     "video_id": "7Q0Wq0kLmc4",
@@ -2127,7 +2133,7 @@
       "comments": 0
     },
     "performance_score": 0.0,
-    "analyzed_at": "2026-04-14T07:57:44.872452"
+    "analyzed_at": "2026-04-15T07:58:40.737561"
   },
   {
     "video_id": "pDaZiiR3SWo",
@@ -2135,12 +2141,14 @@
     "published_at": "2026-04-12T21:51:46Z",
     "topic_family": "travel_time",
     "metrics": {
-      "views": 592,
+      "views": 582,
       "likes": 11,
-      "comments": 1
+      "comments": 1,
+      "watch_time_minutes": 74,
+      "avg_view_duration_seconds": 17
     },
-    "performance_score": 1.07,
-    "analyzed_at": "2026-04-14T07:57:45.179417"
+    "performance_score": 2.16,
+    "analyzed_at": "2026-04-15T07:58:40.840036"
   },
   {
     "video_id": "DocJt0Cz9SI",
@@ -2148,12 +2156,14 @@
     "published_at": "2026-04-12T16:59:12Z",
     "topic_family": "travel_time",
     "metrics": {
-      "views": 569,
-      "likes": 3,
-      "comments": 1
+      "views": 567,
+      "likes": 2,
+      "comments": 1,
+      "watch_time_minutes": 62,
+      "avg_view_duration_seconds": 15
     },
-    "performance_score": 0.91,
-    "analyzed_at": "2026-04-14T07:57:45.521873"
+    "performance_score": 1.94,
+    "analyzed_at": "2026-04-15T07:58:40.927909"
   },
   {
     "video_id": "lJW9SJiVjtQ",
@@ -2161,12 +2171,14 @@
     "published_at": "2026-04-12T11:43:31Z",
     "topic_family": "travel_time",
     "metrics": {
-      "views": 636,
+      "views": 635,
       "likes": 9,
-      "comments": 1
+      "comments": 1,
+      "watch_time_minutes": 89,
+      "avg_view_duration_seconds": 21
     },
-    "performance_score": 1.03,
-    "analyzed_at": "2026-04-14T07:57:45.813929"
+    "performance_score": 2.2,
+    "analyzed_at": "2026-04-15T07:58:41.132681"
   },
   {
     "video_id": "x4jbZ4dwmCI",
@@ -2174,12 +2186,12 @@
     "published_at": "2026-04-14T05:17:27Z",
     "topic_family": "hypothetical",
     "metrics": {
-      "views": 409,
-      "likes": 9,
+      "views": 509,
+      "likes": 11,
       "comments": 0
     },
-    "performance_score": 0.93,
-    "analyzed_at": "2026-04-14T07:57:43.868049"
+    "performance_score": 0.97,
+    "analyzed_at": "2026-04-15T07:58:40.141024"
   },
   {
     "video_id": "M3h8zxdhtQI",
@@ -2187,12 +2199,12 @@
     "published_at": "2026-04-14T03:42:51Z",
     "topic_family": "hypothetical",
     "metrics": {
-      "views": 449,
-      "likes": 25,
+      "views": 1028,
+      "likes": 34,
       "comments": 2
     },
     "performance_score": 1.25,
-    "analyzed_at": "2026-04-14T07:57:44.203685"
+    "analyzed_at": "2026-04-15T07:58:40.231202"
   },
   {
     "video_id": "dKxXg-8aBSs",
@@ -2200,11 +2212,76 @@
     "published_at": "2026-04-13T17:20:01Z",
     "topic_family": "hypothetical",
     "metrics": {
-      "views": 364,
-      "likes": 4,
+      "views": 380,
+      "likes": 3,
       "comments": 0
     },
-    "performance_score": 0.83,
-    "analyzed_at": "2026-04-14T07:57:44.339310"
+    "performance_score": 0.81,
+    "analyzed_at": "2026-04-15T07:58:40.327893"
+  },
+  {
+    "video_id": "ICXePtPEXxc",
+    "title": "Saturn's Rings: Disappearing Act?! \ud83e\ude90\u23f3",
+    "published_at": "2026-04-15T05:17:12Z",
+    "topic_family": "planetary_facts",
+    "metrics": {
+      "views": 2,
+      "likes": 0,
+      "comments": 0
+    },
+    "performance_score": 0.005,
+    "analyzed_at": "2026-04-15T07:58:39.671265"
+  },
+  {
+    "video_id": "0XxMgT_h5Fs",
+    "title": "ISS Live \ud83c\udf0d Real-Time Earth View from Space | NASA Tracker + Ambient Space Music 24/7",
+    "published_at": "2026-04-15T03:45:30Z",
+    "topic_family": "general",
+    "metrics": {
+      "views": 4,
+      "likes": 0,
+      "comments": 0
+    },
+    "performance_score": 0.01,
+    "analyzed_at": "2026-04-15T07:58:39.764876"
+  },
+  {
+    "video_id": "MUgNoyW2frg",
+    "title": "\ud83e\udd2f Universe's Hottest & Coldest Spots REVEALED! \ud83d\udd25\u2744\ufe0f",
+    "published_at": "2026-04-15T03:39:23Z",
+    "topic_family": "general",
+    "metrics": {
+      "views": 0,
+      "likes": 0,
+      "comments": 0
+    },
+    "performance_score": 0.0,
+    "analyzed_at": "2026-04-15T07:58:39.852572"
+  },
+  {
+    "video_id": "PG8Nm4TaVWE",
+    "title": "Diamond Rain on Space Giants?! \ud83d\udc8e\ud83e\udd2f The Ultimate Treasure!",
+    "published_at": "2026-04-14T22:05:34Z",
+    "topic_family": "planetary_facts",
+    "metrics": {
+      "views": 1,
+      "likes": 0,
+      "comments": 0
+    },
+    "performance_score": 0.003,
+    "analyzed_at": "2026-04-15T07:58:39.953442"
+  },
+  {
+    "video_id": "JD1sXPNGSOo",
+    "title": "Uranus: The Tilted Planet! \ud83e\ude90 Extreme Seasons! \ud83e\udd2f",
+    "published_at": "2026-04-14T12:05:34Z",
+    "topic_family": "hypothetical",
+    "metrics": {
+      "views": 14,
+      "likes": 0,
+      "comments": 0
+    },
+    "performance_score": 0.035,
+    "analyzed_at": "2026-04-15T07:58:40.039520"
   }
 ]
