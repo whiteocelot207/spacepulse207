@@ -5,10 +5,16 @@ Sends the rendered video and full metadata to a Telegram chat/channel.
 Required secrets (GitHub Secrets):
   TELEGRAM_BOT_TOKEN  — bot token from @BotFather
   TELEGRAM_CHAT_ID    — numeric chat/channel ID (e.g. -100xxxxxxxxxx)
+
+Fix v2:
+  - Migrated from legacy Markdown → MarkdownV2
+  - Full escape of all MarkdownV2 special chars in dynamic content
+  - Bold/italic formatting preserved via pre-escaped wrappers
 """
 
 import json
 import os
+import re
 import sys
 from datetime import datetime
 
@@ -20,9 +26,6 @@ except ImportError:
     print("'requests' library not available")
 
 
-TELEGRAM_API = "https://api.telegram.org/bot{token}"
-
-
 # ── helpers ───────────────────────────────────────────────────────────────────
 
 def get_env(name: str) -> str | None:
@@ -30,80 +33,104 @@ def get_env(name: str) -> str | None:
     return val if val else None
 
 
+def _esc(text: str) -> str:
+    """
+    Escape ALL MarkdownV2 special characters in plain-text content.
+
+    MarkdownV2 special chars: _ * [ ] ( ) ~ ` > # + - = | { } . ! \\
+    These MUST be escaped with a preceding backslash when they appear
+    in content (not as formatting markers).
+    """
+    return re.sub(r'([_*\[\]()~`>#+\-=|{}.!\\])', r'\\\1', str(text))
+
+
+def _bold(text: str) -> str:
+    """Return MarkdownV2 bold — content is escaped before wrapping."""
+    return f"*{_esc(text)}*"
+
+
+def _code(text: str) -> str:
+    """Return MarkdownV2 inline code block — backticks escaped inside."""
+    # In MarkdownV2 code spans, only ` and \ need escaping
+    safe = text.replace("\\", "\\\\").replace("`", "\\`")
+    return f"`{safe}`"
+
+
+def _pre(text: str) -> str:
+    """Return MarkdownV2 pre-formatted block."""
+    safe = text.replace("\\", "\\\\").replace("`", "\\`")
+    return f"```\n{safe}\n```"
+
+
 def build_caption(script_data: dict) -> str:
-    """Build a rich Telegram caption from script metadata."""
+    """Build a rich Telegram caption from script metadata (MarkdownV2)."""
     idea = script_data.get("idea", {})
 
-    title       = idea.get("title", "Untitled")
-    hook        = idea.get("hook", "")
-    payoff      = idea.get("payoff", "")
-    facts       = idea.get("facts", [])
-    hashtags    = idea.get("hashtags", [])
-    topic       = idea.get("topic", "")
+    title        = idea.get("title", "Untitled")
+    hook         = idea.get("hook", "")
+    payoff       = idea.get("payoff", "")
+    facts        = idea.get("facts", [])
+    hashtags     = idea.get("hashtags", [])
+    topic        = idea.get("topic", "")
     topic_family = idea.get("topic_family", "")
     generated_at = idea.get("generated_at", "")
     rendered_at  = script_data.get("rendered_at", "")
 
-    # tags line
-    tags_raw   = [tag.replace("#", "") for tag in hashtags]
-    tags_raw  += ["Shorts", "Space", "Astrophysics", "Science", "SpaceFacts", "Astronomy"]
-    tags_str   = ", ".join(dict.fromkeys(tags_raw))  # deduplicate while preserving order
+    # ── tags line ─────────────────────────────────────────────────────────
+    tags_raw  = [tag.replace("#", "") for tag in hashtags]
+    tags_raw += ["Shorts", "Space", "Astrophysics", "Science", "SpaceFacts", "Astronomy"]
+    tags_str  = ", ".join(dict.fromkeys(tags_raw))
 
-    # facts block
-    facts_block = ""
-    if facts:
-        facts_block = "\n".join(f"  • {f}" for f in facts)
-
-    # timestamps
-    gen_fmt = ""
-    if generated_at:
+    # ── timestamps ────────────────────────────────────────────────────────
+    def fmt_ts(ts: str) -> str:
+        if not ts:
+            return ""
         try:
-            gen_fmt = datetime.fromisoformat(generated_at).strftime("%Y-%m-%d %H:%M UTC")
+            return datetime.fromisoformat(ts).strftime("%Y-%m-%d %H:%M UTC")
         except ValueError:
-            gen_fmt = generated_at
+            return ts
 
-    ren_fmt = ""
-    if rendered_at:
-        try:
-            ren_fmt = datetime.fromisoformat(rendered_at).strftime("%Y-%m-%d %H:%M UTC")
-        except ValueError:
-            ren_fmt = rendered_at
+    gen_fmt = fmt_ts(generated_at)
+    ren_fmt = fmt_ts(rendered_at)
 
-    lines = []
-    lines.append(f"🚀 *{_esc(title)}*")
+    # ── assemble lines ────────────────────────────────────────────────────
+    lines: list[str] = []
+
+    lines.append(f"🚀 {_bold(title)}")
     lines.append("")
 
     if hook:
-        lines.append(f"🪝 *Hook:* {_esc(hook)}")
+        lines.append(f"🪝 {_bold('Hook:')} {_esc(hook)}")
 
-    if facts_block:
+    if facts:
         lines.append("")
-        lines.append("📌 *Facts:*")
-        lines.append(_esc(facts_block))
+        lines.append(f"📌 {_bold('Facts:')}")
+        for f in facts:
+            lines.append(f"  • {_esc(f)}")
 
     if payoff:
         lines.append("")
-        lines.append(f"💡 *Payoff:* {_esc(payoff)}")
+        lines.append(f"💡 {_bold('Payoff:')} {_esc(payoff)}")
 
     lines.append("")
-    lines.append("─" * 30)
+    lines.append(_esc("─" * 30))
     lines.append("")
 
     if topic:
-        lines.append(f"🏷 *Topic:* {_esc(topic)}")
+        lines.append(f"🏷 {_bold('Topic:')} {_esc(topic)}")
     if topic_family:
-        lines.append(f"📂 *Family:* {_esc(topic_family)}")
+        lines.append(f"📂 {_bold('Family:')} {_esc(topic_family)}")
     if gen_fmt:
-        lines.append(f"🕐 *Generated:* {gen_fmt}")
+        lines.append(f"🕐 {_bold('Generated:')} {_esc(gen_fmt)}")
     if ren_fmt:
-        lines.append(f"🎬 *Rendered:*  {ren_fmt}")
+        lines.append(f"🎬 {_bold('Rendered:')}  {_esc(ren_fmt)}")
 
     lines.append("")
-    lines.append("─" * 30)
+    lines.append(_esc("─" * 30))
     lines.append("")
 
-    # description block (same format as YouTube)
-    description_lines = []
+    # ── YouTube description block (copy-paste ready) ───────────────────────
+    description_lines: list[str] = []
     if hook:
         description_lines.append(hook)
     if payoff:
@@ -115,29 +142,19 @@ def build_caption(script_data: dict) -> str:
     description_lines.append("")
     description_lines.append("#Shorts #Space #Astrophysics #Science #SpaceFacts")
 
-    lines.append("📝 *YouTube Description (copy-paste ready):*")
-    lines.append("```")
-    lines.append("\n".join(description_lines))
-    lines.append("```")
+    lines.append(f"📝 {_bold('YouTube Description (copy\\-paste ready):')}")
+    lines.append(_pre("\n".join(description_lines)))
 
     lines.append("")
-    lines.append(f"🏷 *Tags:* `{_esc(tags_str)}`")
+    lines.append(f"🏷 {_bold('Tags:')} {_code(tags_str)}")
 
     caption = "\n".join(lines)
 
-    # Telegram captions have a 1024-char limit for sendVideo
-    # If over limit, trim the description block
+    # Telegram captions: 1024 chars max for sendVideo
     if len(caption) > 1024:
         caption = caption[:1020] + "…"
 
     return caption
-
-
-def _esc(text: str) -> str:
-    """Escape MarkdownV2 special chars for Telegram."""
-    # We're using legacy Markdown (parse_mode=Markdown) so only * ` _ [ ] need care.
-    # We keep * and ` intentional; escape _ to avoid accidental italics.
-    return text.replace("_", "\\_")
 
 
 # ── API calls ─────────────────────────────────────────────────────────────────
@@ -153,13 +170,13 @@ def send_video(token: str, chat_id: str, video_path: str, caption: str) -> dict 
             resp = requests.post(
                 url,
                 data={
-                    "chat_id": chat_id,
-                    "caption": caption,
-                    "parse_mode": "Markdown",
+                    "chat_id":           chat_id,
+                    "caption":           caption,
+                    "parse_mode":        "MarkdownV2",
                     "supports_streaming": "true",
                 },
                 files={"video": vf},
-                timeout=300,  # 5 min for large files
+                timeout=300,   # 5 min for large files
             )
 
         result = resp.json()
@@ -168,8 +185,8 @@ def send_video(token: str, chat_id: str, video_path: str, caption: str) -> dict 
             print(f"✅ Sent! message_id={msg['message_id']}")
             return {
                 "message_id": msg["message_id"],
-                "chat_id": chat_id,
-                "sent_at": datetime.now().isoformat(),
+                "chat_id":    chat_id,
+                "sent_at":    datetime.now().isoformat(),
             }
         else:
             print(f"❌ Telegram API error: {result.get('description', 'unknown')}")
@@ -183,17 +200,18 @@ def send_video(token: str, chat_id: str, video_path: str, caption: str) -> dict 
 def send_message(token: str, chat_id: str, text: str) -> None:
     """Fallback: send a plain text message (e.g. error notice)."""
     url = f"https://api.telegram.org/bot{token}/sendMessage"
+    # Plain text fallback — no parse_mode to avoid any escaping issues
     try:
         requests.post(
             url,
-            data={"chat_id": chat_id, "text": text, "parse_mode": "Markdown"},
+            data={"chat_id": chat_id, "text": text},
             timeout=30,
         )
     except Exception:
         pass
 
 
-# ── candidate picker (mirrors youtube_uploader logic) ─────────────────────────
+# ── candidate picker ──────────────────────────────────────────────────────────
 
 def get_upload_candidates(scripts_dir: str = "scripts_output") -> list[dict]:
     if not os.path.exists(scripts_dir):
@@ -222,7 +240,7 @@ def get_upload_candidates(scripts_dir: str = "scripts_output") -> list[dict]:
         candidates.append({
             "script_path": filepath,
             "script_data": data,
-            "video_path": video_path,
+            "video_path":  video_path,
             "rendered_at": data.get("rendered_at", ""),
         })
 
@@ -230,11 +248,15 @@ def get_upload_candidates(scripts_dir: str = "scripts_output") -> list[dict]:
     return candidates
 
 
-def update_script_status(filepath: str, new_status: str, send_info: dict | None = None) -> None:
+def update_script_status(
+    filepath: str,
+    new_status: str,
+    send_info: dict | None = None,
+) -> None:
     with open(filepath, "r", encoding="utf-8") as f:
         data = json.load(f)
 
-    data["status"] = new_status
+    data["status"]  = new_status
     data["sent_at"] = datetime.now().isoformat()
     if send_info:
         data["telegram"] = send_info
@@ -296,7 +318,7 @@ def main() -> None:
     else:
         send_message(
             token, chat_id,
-            f"⚠️ SpacePulse207: Failed to send video `{os.path.basename(video_path)}`"
+            f"⚠️ SpacePulse207: Failed to send video '{os.path.basename(video_path)}'"
         )
         print("Send failed.")
         sys.exit(1)
