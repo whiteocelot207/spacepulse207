@@ -1,4 +1,4 @@
-# SpacePulse207 — Generate + Render + Upload pipeline
+# SpacePulse207 — Generate + Render + Deliver pipeline
 name: Generate Short Idea
 
 on:
@@ -11,8 +11,17 @@ on:
 
   workflow_dispatch:
     inputs:
+      delivery_mode:
+        description: "Delivery mode — where to send the rendered video"
+        required: false
+        default: "youtube"
+        type: choice
+        options:
+          - youtube       # upload ke YouTube saja
+          - telegram      # kirim ke Telegram saja
+          - both          # upload YouTube DAN kirim ke Telegram
       no_upload:
-        description: "Skip YouTube upload? (test mode)"
+        description: "Skip all delivery? (test/dry-run mode)"
         required: false
         default: "false"
         type: choice
@@ -103,21 +112,60 @@ jobs:
           echo "Running: python scripts/video_renderer.py $ARGS"
           python scripts/video_renderer.py $ARGS
 
+      # ─────────────────────────────────────────────────────────────────────────
+      # DELIVERY — baca DELIVERY_MODE dari secret (default) atau workflow input
+      # Priority: workflow_dispatch input > secret DELIVERY_MODE > fallback "youtube"
+      # ─────────────────────────────────────────────────────────────────────────
+
+      - name: Resolve delivery mode
+        id: delivery
+        run: |
+          INPUT_MODE="${{ github.event.inputs.delivery_mode }}"
+          SECRET_MODE="${{ secrets.DELIVERY_MODE }}"
+          NO_UPLOAD="${{ github.event.inputs.no_upload || 'false' }}"
+
+          if [ "$NO_UPLOAD" = "true" ]; then
+            MODE="none"
+          elif [ -n "$INPUT_MODE" ]; then
+            MODE="$INPUT_MODE"
+          elif [ -n "$SECRET_MODE" ]; then
+            MODE="$SECRET_MODE"
+          else
+            MODE="youtube"
+          fi
+
+          echo "📦 Delivery mode resolved: $MODE"
+          echo "mode=$MODE" >> "$GITHUB_OUTPUT"
+
+      # ── YouTube ──────────────────────────────────────────────────────────────
       - name: Upload to YouTube
-        if: ${{ github.event.inputs.no_upload != 'true' }}
+        if: |
+          steps.delivery.outputs.mode == 'youtube' ||
+          steps.delivery.outputs.mode == 'both'
         env:
+          DELIVERY_MODE:         ${{ steps.delivery.outputs.mode }}
           YOUTUBE_TOKEN:         ${{ secrets.YOUTUBE_TOKEN }}
           YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
         run: python scripts/youtube_uploader.py
+
+      # ── Telegram ─────────────────────────────────────────────────────────────
+      - name: Send to Telegram
+        if: |
+          steps.delivery.outputs.mode == 'telegram' ||
+          steps.delivery.outputs.mode == 'both'
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID:   ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python scripts/telegram_sender.py
 
       # ── Simpan hanya file data, BUKAN video
       - name: Save data to repository
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add ideas.json data/ || true
+          git add ideas.json data/ scripts_output/ || true
           git diff --quiet && git diff --staged --quiet || \
-            git commit -m "🚀 New Short uploaded [$(date +'%Y-%m-%d %H:%M UTC')]" && git push
+            git commit -m "🚀 Short delivered [$(date +'%Y-%m-%d %H:%M UTC')] mode=${{ steps.delivery.outputs.mode }}" && git push
 
       - name: Upload video artifact
         uses: actions/upload-artifact@v4
