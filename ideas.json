@@ -2345,5 +2345,28 @@
     "status": "error",
     "strategy_based": true,
     "error_at": "2026-04-17T09:05:00.991399"
+  },
+  {
+    "topic": "Rogue Black Hole Encounter",
+    "topic_family": "hypothetical",
+    "hook": "What if a rogue black hole visited our solar system?",
+    "facts": [
+      "A stellar black hole, just 10 miles wide, could warp the orbit of Jupiter if it passed within 500 million miles (like 5 trips from NY to LA) of the Sun.",
+      "If it came within 1 million miles of Earth (4x the distance to the Moon), its gravity could trigger tides strong enough to rip apart continents.",
+      "Even a 'safe' flyby, say 100 AU out (roughly 9.3 billion miles), could eject Earth from the solar system, plunging us into eternal darkness and -400\u00b0F."
+    ],
+    "payoff": "Our cosmic neighborhood is vast, but such a visitor could mean absolute doom for Earth. Just imagine...",
+    "title": "Rogue Black Hole Flyby?! \ud83d\ude31 Earth's DOOM Scenario!",
+    "hashtags": [
+      "#Space",
+      "#Astrophysics",
+      "#BlackHole",
+      "#WhatIf",
+      "#CosmicDoom"
+    ],
+    "generated_at": "2026-04-17T11:21:31.094664",
+    "status": "error",
+    "strategy_based": true,
+    "error_at": "2026-04-17T11:27:03.407934"
   }
 ]
