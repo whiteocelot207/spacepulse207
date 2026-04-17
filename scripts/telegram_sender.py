@@ -142,7 +142,8 @@ def build_caption(script_data: dict) -> str:
     description_lines.append("")
     description_lines.append("#Shorts #Space #Astrophysics #Science #SpaceFacts")
 
-    lines.append(f"📝 {_bold('YouTube Description (copy\\-paste ready):')}")
+    #lines.append(f"📝 {_bold('YouTube Description (copy\\-paste ready):')}")
+    lines.append(f"📝 {_bold('YouTube Description (copy-paste ready):')}")
     lines.append(_pre("\n".join(description_lines)))
 
     lines.append("")
