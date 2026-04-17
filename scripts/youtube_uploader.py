@@ -193,9 +193,14 @@ def update_script_status(filepath, new_status, upload_info=None):
 
 def main():
     print("=" * 60)
-    print("ASTRO SHORTS ENGINE - YouTube Uploader")
+    print("SPACEPULSE207 — YouTube Uploader")
     print("=" * 60)
     print()
+
+    delivery_mode = os.environ.get("DELIVERY_MODE", "youtube").strip().lower()
+    if delivery_mode not in ("youtube", "both"):
+        print(f"DELIVERY_MODE='{delivery_mode}' → YouTube upload skipped.")
+        return
 
     if not GOOGLE_API_AVAILABLE:
         print("Google API libraries not installed")
@@ -267,3 +272,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+ 
