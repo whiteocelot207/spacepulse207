@@ -14,7 +14,7 @@ on:
       delivery_mode:
         description: "Delivery mode — where to send the rendered video"
         required: false
-        default: "youtube"
+        default: "telegram"
         type: choice
         options:
           - youtube       # upload ke YouTube saja
