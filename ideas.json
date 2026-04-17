@@ -2368,5 +2368,28 @@
     "status": "error",
     "strategy_based": true,
     "error_at": "2026-04-17T11:27:03.407934"
+  },
+  {
+    "topic": "Rogue Earth",
+    "topic_family": "hypothetical",
+    "hook": "What if Earth were ripped from the Sun's embrace?",
+    "facts": [
+      "Within weeks, surface temperatures would plunge to -240\u00b0F, turning oceans into solid ice 3,000 feet deep \u2013 like stacking 6 Empire State Buildings end-to-end.",
+      "Photosynthesis would halt immediately; most plant life would perish in months, leading to ecosystem collapse across every continent.",
+      "Our planet would drift through interstellar space at roughly 67,000 miles per hour, making a cross-country trip from New York to LA feel incredibly slow."
+    ],
+    "payoff": "Could underground geothermal vents or nuclear power save humanity from this lonely cosmic voyage? Or is a starless Earth doomed?",
+    "title": "Earth Adrift! \ud83e\udd76 What If We Lost Our Sun? \u2600\ufe0f",
+    "hashtags": [
+      "#Space",
+      "#Science",
+      "#Astrophysics",
+      "#WhatIf",
+      "#RoguePlanet"
+    ],
+    "generated_at": "2026-04-17T21:59:28.216604",
+    "status": "error",
+    "strategy_based": true,
+    "error_at": "2026-04-17T22:05:00.219324"
   }
 ]
