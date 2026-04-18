@@ -2415,5 +2415,29 @@
     "status": "formatted",
     "strategy_based": true,
     "formatted_at": "2026-04-18T20:30:00.260753"
+  },
+  {
+    "topic": "Falling into a Quasar",
+    "topic_family": "hypothetical",
+    "hook": "What if you fell into a quasar?",
+    "facts": [
+      "A quasar's event horizon is 4 million miles wide, roughly the distance from NYC to LA and back",
+      "Quasars emit 10^40 photons per second, enough to power 100 billion Suns",
+      "The accretion disk of a quasar spins at 3,000 km/s, faster than a football field-sized object orbiting the Earth"
+    ],
+    "payoff": "and we still don't know what's at their centers",
+    "title": "Quasar Fall \ud83c\udf00",
+    "hashtags": [
+      "space",
+      "astrophysics",
+      "quasars",
+      "blackholes",
+      "science"
+    ],
+    "generated_by": "groq",
+    "generated_at": "2026-04-18T20:41:10.973734",
+    "status": "formatted",
+    "strategy_based": true,
+    "formatted_at": "2026-04-18T20:41:22.490037"
   }
 ]
