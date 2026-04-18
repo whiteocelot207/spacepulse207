@@ -67,77 +67,35 @@ def build_caption(script_data: dict) -> str:
     idea = script_data.get("idea", {})
 
     title        = idea.get("title", "Untitled")
-    hook         = idea.get("hook", "")
-    payoff       = idea.get("payoff", "")
-    facts        = idea.get("facts", [])
+    description  = idea.get("description", "")
     hashtags     = idea.get("hashtags", [])
-    topic        = idea.get("topic", "")
-    topic_family = idea.get("topic_family", "")
-    generated_at = idea.get("generated_at", "")
-    rendered_at  = script_data.get("rendered_at", "")
 
-    # ── timestamps ────────────────────────────────────────────────────────
-    def fmt_ts(ts: str) -> str:
-        if not ts:
-            return ""
-        try:
-            return datetime.fromisoformat(ts).strftime("%Y-%m-%d %H:%M UTC")
-        except ValueError:
-            return ts
-
-    gen_fmt = fmt_ts(generated_at)
-    ren_fmt = fmt_ts(rendered_at)
-
-    # ── hashtag line (inline, no pre block) ───────────────────────────────
+    # ── hashtag line ──────────────────────────────────────────────────────
     base_tags   = [tag if tag.startswith("#") else f"#{tag}" for tag in hashtags]
     extra_tags  = ["#Shorts", "#Space", "#Astrophysics", "#Science", "#SpaceFacts"]
     all_tags    = list(dict.fromkeys(base_tags + extra_tags))
     hashtag_line = _esc(" ".join(all_tags))
 
-    # ── tags for copy-paste (inline code, safe) ───────────────────────────
+    # ── tags plain text (no code block) ──────────────────────────────────
     tags_raw = [tag.lstrip("#") for tag in all_tags]
     tags_str = ", ".join(tags_raw)
 
-    # ── assemble lines ────────────────────────────────────────────────────
+    # ── assemble caption ──────────────────────────────────────────────────
     lines: list[str] = []
 
-    lines.append(f"🚀 {_bold(title)}")
+    lines.append(f"{_bold('Title:')}")
+    lines.append(_esc(title))
     lines.append("")
 
-    if hook:
-        lines.append(f"🪝 {_bold('Hook:')} {_esc(hook)}")
-
-    if facts:
-        lines.append("")
-        lines.append(f"📌 {_bold('Facts:')}")
-        for f in facts:
-            lines.append(f"  • {_esc(f)}")
-
-    if payoff:
-        lines.append("")
-        lines.append(f"💡 {_bold('Payoff:')} {_esc(payoff)}")
-
-    lines.append("")
-    lines.append(_esc("─" * 30))
+    lines.append(f"{_bold('Description:')}")
+    if description:
+        lines.append(_esc(description))
     lines.append("")
 
-    if topic:
-        lines.append(f"🏷 {_bold('Topic:')} {_esc(topic)}")
-    if topic_family:
-        lines.append(f"📂 {_bold('Family:')} {_esc(topic_family)}")
-    if gen_fmt:
-        lines.append(f"🕐 {_bold('Generated:')} {_esc(gen_fmt)}")
-    if ren_fmt:
-        lines.append(f"🎬 {_bold('Rendered:')}  {_esc(ren_fmt)}")
-
-    lines.append("")
-    lines.append(_esc("─" * 30))
-    lines.append("")
-
-    # Hashtags inline (no ``` pre block — avoids MarkdownV2 entity errors)
     lines.append(hashtag_line)
     lines.append("")
-    lines.append(f"🏷 {_bold('Tags:')} {_code(tags_str)}")
+    lines.append(f"{_bold('Tags')}")
+    lines.append(_esc(tags_str))
 
     caption = "\n".join(lines)
 
