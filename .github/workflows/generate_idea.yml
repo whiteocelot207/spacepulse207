@@ -89,11 +89,13 @@ jobs:
 
       - name: Generate idea
         env:
+          GROQ_API_KEY:   ${{ secrets.GROQ_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python scripts/idea_generator.py
 
       - name: Format script
         env:
+          GROQ_API_KEY:   ${{ secrets.GROQ_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python scripts/script_formatter.py
 
