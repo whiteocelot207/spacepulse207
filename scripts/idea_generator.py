@@ -1,6 +1,8 @@
 """
 Idea Generator Agent - SMART VERSION with Robust Retry Logic
-Generates astrophysics YouTube Shorts ideas using Gemini API.
+Generates astrophysics YouTube Shorts ideas.
+Primary: Groq API (fast, free-tier friendly)
+Fallback: Gemini API (if Groq fails or key missing)
 Uses analytics data to prioritize winning topic types,
 with exponential backoff to handle 429/503 gracefully.
 Target: US Audience 18-34
@@ -42,9 +44,14 @@ TOPIC_DESCRIPTIONS = {
 RECENT_FAMILY_BLOCK = 3
 MAX_GENERATION_ATTEMPTS = 3
 
-# Gemini config
-GEMINI_MAX_RETRIES = 4
-GEMINI_BASE_DELAY  = 20   # seconds — doubles each retry: 20 → 40 → 80 → 160
+# Groq config (primary)
+GROQ_MODEL        = "llama-3.3-70b-versatile"
+GROQ_MAX_RETRIES  = 3
+GROQ_BASE_DELAY   = 5   # seconds
+
+# Gemini config (fallback)
+GEMINI_MAX_RETRIES = 3
+GEMINI_BASE_DELAY  = 20   # seconds — doubles each retry: 20 → 40 → 80
 GEMINI_MODEL       = "gemini-2.5-flash"
 
 
@@ -234,12 +241,80 @@ def is_too_similar(new_idea, used_entries, threshold=0.65):
 
 
 # =============================================================================
-# GEMINI API — EXPONENTIAL BACKOFF
+# GROQ API — PRIMARY (fast, free-tier friendly)
+# =============================================================================
+def call_groq(prompt, api_key):
+    """
+    Call Groq API with retry logic.
+    Uses llama-3.3-70b-versatile — fast and accurate.
+    Handles 429 (rate limit) and 503 (overload).
+    """
+    url = "https://api.groq.com/openai/v1/chat/completions"
+    headers = {
+        "Content-Type": "application/json",
+        "Authorization": f"Bearer {api_key}",
+    }
+    payload = {
+        "model": GROQ_MODEL,
+        "messages": [{"role": "user", "content": prompt}],
+        "temperature": 0.9,
+        "max_tokens": 512,
+    }
+
+    for attempt in range(GROQ_MAX_RETRIES):
+        wait = GROQ_BASE_DELAY * (2 ** attempt) + random.uniform(1, 3)
+
+        try:
+            print(f"  ⚡ Groq attempt {attempt + 1}/{GROQ_MAX_RETRIES}...")
+            response = requests.post(url, json=payload, headers=headers, timeout=30)
+
+            if response.status_code in (429, 503):
+                if attempt < GROQ_MAX_RETRIES - 1:
+                    print(f"  ⏳ HTTP {response.status_code} — backing off {wait:.0f}s...")
+                    time.sleep(wait)
+                    continue
+                else:
+                    print(f"  ❌ HTTP {response.status_code} — Groq retries exhausted")
+                    return None
+
+            response.raise_for_status()
+
+            data  = response.json()
+            text  = data["choices"][0]["message"]["content"]
+            clean = text.replace("```json", "").replace("```", "").strip()
+            return json.loads(clean)
+
+        except requests.exceptions.Timeout:
+            print(f"  ⚠️  Groq timeout on attempt {attempt + 1}")
+            if attempt < GROQ_MAX_RETRIES - 1:
+                print(f"  ⏳ Waiting {wait:.0f}s...")
+                time.sleep(wait)
+
+        except requests.exceptions.RequestException as e:
+            print(f"  ⚠️  Groq request error: {e}")
+            if attempt < GROQ_MAX_RETRIES - 1:
+                print(f"  ⏳ Waiting {wait:.0f}s...")
+                time.sleep(wait)
+
+        except json.JSONDecodeError as e:
+            print(f"  ❌ Groq JSON parse error: {e}")
+            return None
+
+        except Exception as e:
+            print(f"  ❌ Groq unexpected error: {e}")
+            return None
+
+    print("  ❌ All Groq retries failed")
+    return None
+
+
+# =============================================================================
+# GEMINI API — FALLBACK with EXPONENTIAL BACKOFF
 # =============================================================================
 def call_gemini(prompt, api_key):
     """
     Call Gemini with exponential backoff.
-    Wait times: 20s → 40s → 80s → 160s
+    Wait times: 20s → 40s → 80s
     Handles 429 (rate limit) and 503 (overload).
     """
     url = (
@@ -296,6 +371,37 @@ def call_gemini(prompt, api_key):
 
     print("  ❌ All Gemini retries failed")
     return None
+
+
+# =============================================================================
+# UNIFIED AI CALLER — Groq first, Gemini fallback
+# =============================================================================
+def call_ai(prompt):
+    """
+    Try Groq first (fast, reliable), fall back to Gemini if unavailable.
+    """
+    groq_key   = os.environ.get("GROQ_API_KEY")
+    gemini_key = os.environ.get("GEMINI_API_KEY")
+
+    if groq_key:
+        print("  🔵 Using Groq (primary)...")
+        result = call_groq(prompt, groq_key)
+        if result:
+            return result, "groq"
+        print("  ⚠️  Groq failed — falling back to Gemini...")
+    else:
+        print("  ⚠️  GROQ_API_KEY not set — skipping Groq")
+
+    if gemini_key:
+        print("  🟡 Using Gemini (fallback)...")
+        result = call_gemini(prompt, gemini_key)
+        if result:
+            return result, "gemini"
+        print("  ❌ Gemini also failed")
+    else:
+        print("  ❌ GEMINI_API_KEY not set — no fallback available")
+
+    return None, None
 
 
 # =============================================================================
@@ -357,9 +463,10 @@ Return ONLY valid JSON with no markdown fences, no extra text:
 # MAIN GENERATION LOOP
 # =============================================================================
 def generate_idea():
-    api_key = os.environ.get("GEMINI_API_KEY")
-    if not api_key:
-        print("❌ GEMINI_API_KEY environment variable not set")
+    groq_key   = os.environ.get("GROQ_API_KEY")
+    gemini_key = os.environ.get("GEMINI_API_KEY")
+    if not groq_key and not gemini_key:
+        print("❌ Neither GROQ_API_KEY nor GEMINI_API_KEY is set")
         return None
 
     strategy       = load_strategy()
@@ -382,11 +489,13 @@ def generate_idea():
         print(f"🎯 Topic family: {topic_family}")
 
         prompt = build_prompt(topic_family, topic_guidance, history, existing_ideas)
-        idea   = call_gemini(prompt, api_key)
+        idea, provider = call_ai(prompt)
 
         if not idea:
             print("⚠️  No idea returned — moving to next attempt")
             continue
+
+        idea["generated_by"] = provider  # track which API was used
 
         # Force correct topic family
         idea["topic_family"]   = topic_family
