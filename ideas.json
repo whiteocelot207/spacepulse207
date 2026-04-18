@@ -2391,5 +2391,29 @@
     "status": "error",
     "strategy_based": true,
     "error_at": "2026-04-17T22:05:00.219324"
+  },
+  {
+    "topic": "Black Hole Free Fall",
+    "topic_family": "hypothetical",
+    "hook": "You'd survive 200 seconds",
+    "facts": [
+      "A black hole's event horizon is about the size of a football field if its mass is 12 million times the Sun's",
+      "The gravitational pull would stretch you like spaghetti over a distance of 100,000 football fields",
+      "The curvature of space-time would make time pass 1.4 times slower for you compared to Earth during the last 10 seconds of free fall"
+    ],
+    "payoff": "and still we don't know what happens next",
+    "title": "Falling into a Black Hole \ud83c\udf00",
+    "hashtags": [
+      "space",
+      "blackholes",
+      "astrophysics",
+      "science",
+      "cosmology"
+    ],
+    "generated_by": "groq",
+    "generated_at": "2026-04-18T20:29:52.251418",
+    "status": "formatted",
+    "strategy_based": true,
+    "formatted_at": "2026-04-18T20:30:00.260753"
   }
 ]
