@@ -145,8 +145,8 @@ def build_caption(script_data: dict) -> str:
     #lines.append(f"📝 {_bold('YouTube Description (copy\\-paste ready):')}")
     lines.append(f"📝 {_bold('YouTube Description (copy-paste ready):')}")
 
-    safe_desc = "\n".join(_esc(line) for line in description_lines)
-    lines.append(_pre(safe_desc))
+    raw_desc = "\n".join(description_lines)
+    lines.append(_pre(raw_desc))
 
     lines.append("")
     lines.append(f"🏷 {_bold('Tags:')} {_code(tags_str)}")
