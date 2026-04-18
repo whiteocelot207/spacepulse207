@@ -154,8 +154,15 @@ def build_caption(script_data: dict) -> str:
     caption = "\n".join(lines)
 
     # Telegram captions: 1024 chars max for sendVideo
+    # Smart truncation: never cut inside a ``` block
     if len(caption) > 1024:
-        caption = caption[:1020] + "…"
+        # Find the opening ``` — if truncation would land inside the block, drop the block entirely
+        pre_start = caption.find("```")
+        if pre_start != -1 and pre_start < 1020:
+            # Truncate before the pre block, then close cleanly
+            caption = caption[:pre_start].rstrip() + "\n…"
+        else:
+            caption = caption[:1020] + "…"
 
     return caption
 
@@ -268,6 +275,55 @@ def update_script_status(
         json.dump(data, f, indent=2)
 
 
+# ── artifact saver ────────────────────────────────────────────────────────────
+
+def _save_artifact(script_data: dict, video_path: str, script_path: str) -> None:
+    """
+    Even when Telegram send fails, copy the video + write a metadata .json
+    to videos_output/ so the GitHub Actions upload-artifact step can capture it.
+    This also updates the script status to 'send_failed' so it won't be retried
+    as 'rendered' next run.
+    """
+    import shutil
+
+    out_dir = "videos_output"
+    os.makedirs(out_dir, exist_ok=True)
+
+    # Video is already in videos_output (rendered there), so nothing to copy.
+    # Just write a sidecar metadata file.
+    base = os.path.splitext(os.path.basename(video_path))[0]
+    meta_path = os.path.join(out_dir, f"{base}_meta.json")
+
+    idea = script_data.get("idea", {})
+    meta = {
+        "status":       "send_failed",
+        "video_file":   os.path.basename(video_path),
+        "topic":        idea.get("topic", ""),
+        "title":        idea.get("title", ""),
+        "hook":         idea.get("hook", ""),
+        "payoff":       idea.get("payoff", ""),
+        "facts":        idea.get("facts", []),
+        "hashtags":     idea.get("hashtags", []),
+        "rendered_at":  script_data.get("rendered_at", ""),
+        "failed_at":    datetime.now().isoformat(),
+    }
+
+    with open(meta_path, "w", encoding="utf-8") as f:
+        json.dump(meta, f, indent=2, ensure_ascii=False)
+
+    print(f"📁 Artifact metadata saved → {meta_path}")
+    print(f"📹 Video still at          → {video_path}")
+
+    # Mark script as send_failed so next run won't retry
+    with open(script_path, "r", encoding="utf-8") as f:
+        data = json.load(f)
+    data["status"] = "send_failed"
+    data["failed_at"] = datetime.now().isoformat()
+    with open(script_path, "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=2)
+    print(f"🔖 Script status → send_failed")
+
+
 # ── main ──────────────────────────────────────────────────────────────────────
 
 def main() -> None:
@@ -323,6 +379,8 @@ def main() -> None:
             token, chat_id,
             f"⚠️ SpacePulse207: Failed to send video '{os.path.basename(video_path)}'"
         )
+        # ── Save artifact metadata so the video is still accessible ──────────
+        _save_artifact(script_data, video_path, script_path)
         print("Send failed.")
         sys.exit(1)
 
