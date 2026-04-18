@@ -258,7 +258,7 @@ def call_groq(prompt, api_key):
         "model": GROQ_MODEL,
         "messages": [{"role": "user", "content": prompt}],
         "temperature": 0.9,
-        "max_tokens": 512,
+        "max_tokens": 700,
     }
 
     for attempt in range(GROQ_MAX_RETRIES):
@@ -441,6 +441,7 @@ REQUIREMENTS:
 - Payoff: conclusion that drives shares or comments
 - Title: SEO-friendly with emoji, max 60 chars
 - Hashtags: 5 tags — mix broad (#space #science) and niche (#astrophysics)
+- Description: 2-3 sentence YouTube video description. Write as a narrative teaser — engaging, informative, with emojis used naturally. Do NOT just list the facts. It should feel like something that makes people curious to watch. Example style: "Saturn's rings: Massive, yet almost invisible?! 🤯 You're living in a special cosmic window to witness this fleeting masterpiece. Will humanity be around to see them go?"
 - Scientifically accurate, fresh angle only
 
 Return ONLY valid JSON with no markdown fences, no extra text:
@@ -455,7 +456,8 @@ Return ONLY valid JSON with no markdown fences, no extra text:
     ],
     "payoff": "surprising conclusion that drives shares or comments",
     "title": "YouTube title with emoji (max 60 chars)",
-    "hashtags": ["tag1", "tag2", "tag3", "tag4", "tag5"]
+    "hashtags": ["tag1", "tag2", "tag3", "tag4", "tag5"],
+    "description": "2-3 sentence engaging narrative description with emojis"
 }}"""
 
 
