@@ -160,6 +160,7 @@ jobs:
 
       # ── Simpan hanya file data, BUKAN video
       - name: Save data to repository
+        if: always()
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
@@ -168,8 +169,12 @@ jobs:
             git commit -m "🚀 Short delivered [$(date +'%Y-%m-%d %H:%M UTC')] mode=${{ steps.delivery.outputs.mode }}" && git push
 
       - name: Upload video artifact
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: rendered-video-${{ github.run_number }}
-          path: videos_output/*.mp4
+          path: |
+            videos_output/*.mp4
+            videos_output/*_meta.json
           retention-days: 30
+          if-no-files-found: warn
