@@ -76,11 +76,6 @@ def build_caption(script_data: dict) -> str:
     generated_at = idea.get("generated_at", "")
     rendered_at  = script_data.get("rendered_at", "")
 
-    # ── tags line ─────────────────────────────────────────────────────────
-    tags_raw  = [tag.replace("#", "") for tag in hashtags]
-    tags_raw += ["Shorts", "Space", "Astrophysics", "Science", "SpaceFacts", "Astronomy"]
-    tags_str  = ", ".join(dict.fromkeys(tags_raw))
-
     # ── timestamps ────────────────────────────────────────────────────────
     def fmt_ts(ts: str) -> str:
         if not ts:
@@ -92,6 +87,16 @@ def build_caption(script_data: dict) -> str:
 
     gen_fmt = fmt_ts(generated_at)
     ren_fmt = fmt_ts(rendered_at)
+
+    # ── hashtag line (inline, no pre block) ───────────────────────────────
+    base_tags   = [tag if tag.startswith("#") else f"#{tag}" for tag in hashtags]
+    extra_tags  = ["#Shorts", "#Space", "#Astrophysics", "#Science", "#SpaceFacts"]
+    all_tags    = list(dict.fromkeys(base_tags + extra_tags))
+    hashtag_line = _esc(" ".join(all_tags))
+
+    # ── tags for copy-paste (inline code, safe) ───────────────────────────
+    tags_raw = [tag.lstrip("#") for tag in all_tags]
+    tags_str = ", ".join(tags_raw)
 
     # ── assemble lines ────────────────────────────────────────────────────
     lines: list[str] = []
@@ -129,43 +134,19 @@ def build_caption(script_data: dict) -> str:
     lines.append(_esc("─" * 30))
     lines.append("")
 
-    # ── YouTube description block (copy-paste ready) ───────────────────────
-    description_lines: list[str] = []
-    if hook:
-        description_lines.append(hook)
-    if payoff:
-        description_lines.append("")
-        description_lines.append(payoff)
-    if hashtags:
-        description_lines.append("")
-        description_lines.append(" ".join(hashtags))
-    description_lines.append("")
-    description_lines.append("#Shorts #Space #Astrophysics #Science #SpaceFacts")
-
-    #lines.append(f"📝 {_bold('YouTube Description (copy\\-paste ready):')}")
-    lines.append(f"📝 {_bold('YouTube Description (copy-paste ready):')}")
-
-    raw_desc = "\n".join(description_lines)
-    lines.append(_pre(raw_desc))
-
+    # Hashtags inline (no ``` pre block — avoids MarkdownV2 entity errors)
+    lines.append(hashtag_line)
     lines.append("")
     lines.append(f"🏷 {_bold('Tags:')} {_code(tags_str)}")
 
     caption = "\n".join(lines)
 
     # Telegram captions: 1024 chars max for sendVideo
-    # Smart truncation: never cut inside a ``` block
+    # Simple safe truncation — no ``` blocks to worry about anymore
     if len(caption) > 1024:
-        # Find the opening ``` — if truncation would land inside the block, drop the block entirely
-        pre_start = caption.find("```")
-        if pre_start != -1 and pre_start < 1020:
-            # Truncate before the pre block, then close cleanly
-            caption = caption[:pre_start].rstrip() + "\n…"
-        else:
-            caption = caption[:1020] + "…"
+        caption = caption[:1020] + "…"
 
     return caption
-
 
 # ── API calls ─────────────────────────────────────────────────────────────────
 
