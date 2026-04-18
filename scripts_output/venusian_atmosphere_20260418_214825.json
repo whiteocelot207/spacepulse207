@@ -1,0 +1,93 @@
+{
+  "idea": {
+    "topic": "Venusian Atmosphere",
+    "topic_family": "hypothetical",
+    "hook": "Could you breathe on Venus?",
+    "facts": [
+      "The atmosphere on Venus is 92 times thicker than Earth's, with pressures similar to being 1 mile underwater",
+      "The surface temperature on Venus reaches 870\u00b0F, hot enough to melt lead, which is equivalent to the heat of 6,000 football fields filled with burning cars",
+      "A day on Venus is 243 Earth days long, which is even longer than its year, at 225 Earth days, making it a very slow rotator, with a rotation period comparable to the distance from New York to Los Angeles"
+    ],
+    "payoff": "and we still don't know why its rotation is so slow",
+    "title": "Venus: Toxic Paradise \ud83c\udf0b",
+    "hashtags": [
+      "#space",
+      "#astrophysics",
+      "#venus",
+      "#atmosphere",
+      "#science"
+    ],
+    "description": "Imagine a world where the atmosphere is crushingly thick, and the heat is so intense it could melt metal \ud83c\udf21\ufe0f. That's Venus, our neighboring planet, with conditions so extreme, it's hard to wrap your head around them \ud83e\udd2f. But what's even more fascinating is its bizarre rotation - and the mystery behind it is still unsolved \ud83c\udf0c",
+    "generated_by": "groq",
+    "generated_at": "2026-04-18T21:48:16.894223",
+    "status": "pending",
+    "strategy_based": true
+  },
+  "script": {
+    "total_duration": 20,
+    "scenes": [
+      {
+        "scene_number": 1,
+        "start_time": 0,
+        "duration": 3,
+        "text": "Could you breathe on Venus?",
+        "text_position": "center",
+        "text_size": "large",
+        "visual": "Ominous, cloudy orange/yellow Venus filling the screen, slowly rotating.",
+        "animation": "fade_in"
+      },
+      {
+        "scene_number": 2,
+        "start_time": 3,
+        "duration": 4,
+        "text": "Atmosphere 92x thicker than Earth's. Pressures like 1 mile underwater!",
+        "text_position": "center",
+        "text_size": "medium",
+        "visual": "Venus with layers of atmosphere visible, a pressure gauge icon appears and spikes, then fades into an underwater visual effect.",
+        "animation": "zoom_in"
+      },
+      {
+        "scene_number": 3,
+        "start_time": 7,
+        "duration": 4,
+        "text": "Surface: 870\u00b0F! Hot enough to melt lead. (Heat of 6,000 burning car fields)",
+        "text_position": "center",
+        "text_size": "medium",
+        "visual": "Fiery, volcanic landscape of Venus. Molten lead visual effect pouring across the screen. A thermometer icon spikes to extreme heat.",
+        "animation": "slide_left"
+      },
+      {
+        "scene_number": 4,
+        "start_time": 11,
+        "duration": 4,
+        "text": "A Venusian day is 243 Earth days. Longer than its 225-day year!",
+        "text_position": "center",
+        "text_size": "medium",
+        "visual": "Venus slowly rotating against a starfield. A smaller Earth next to it rotates rapidly in comparison. A clock icon animates a slow rotation.",
+        "animation": "slide_right"
+      },
+      {
+        "scene_number": 5,
+        "start_time": 15,
+        "duration": 5,
+        "text": "We STILL don't know why its rotation is so slow!",
+        "text_position": "center",
+        "text_size": "large",
+        "animation": "pulse",
+        "visual": "Venus slowly spinning, a large, stylized question mark appears and pulses over the planet's surface."
+      }
+    ],
+    "thumbnail_text": "Venus: The Unbreathable Planet",
+    "background_style": "space_dark"
+  },
+  "formatted_at": "2026-04-18T21:48:25.686584",
+  "status": "sent_telegram",
+  "rendered_at": "2026-04-18T21:50:19.720604",
+  "video_path": "videos_output/venusian_atmosphere_20260418_214826.mp4",
+  "sent_at": "2026-04-18T21:50:23.030026",
+  "telegram": {
+    "message_id": 14,
+    "chat_id": "7804359202",
+    "sent_at": "2026-04-18T21:50:23.028807"
+  }
+}
