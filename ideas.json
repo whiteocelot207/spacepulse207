@@ -2489,5 +2489,30 @@
     "status": "formatted",
     "strategy_based": true,
     "formatted_at": "2026-04-18T21:48:25.686813"
+  },
+  {
+    "topic": "Black Hole Survival",
+    "topic_family": "hypothetical",
+    "hook": "Falling into a black hole?",
+    "facts": [
+      "It would take 0.00003 seconds to cross the event horizon of a small black hole, about the size of a football field",
+      "The gravitational pull near a supermassive black hole is so strong that it would stretch you like spaghetti over a distance of 100,000 km, roughly the distance from New York to Los Angeles and back",
+      "If you were to survive the fall, the curvature of space-time would cause time to slow down by a factor of 10,000 near a massive black hole, making 1 minute on Earth feel like 7 years near the black hole"
+    ],
+    "payoff": "and we still don't know what happens next",
+    "title": "\ud83c\udf0c Black Hole Free Fall?",
+    "hashtags": [
+      "#space",
+      "#astrophysics",
+      "#blackholes",
+      "#science",
+      "#universe"
+    ],
+    "description": "Imagine being pulled into the void of a black hole \ud83c\udf0c, where the laws of physics as we know them start to break down. You're about to experience the most extreme environment in the universe, where time and space are warped beyond recognition \ud83d\udd2e. But what happens when you cross the point of no return?",
+    "generated_by": "groq",
+    "generated_at": "2026-04-19T05:17:36.785410",
+    "status": "formatted",
+    "strategy_based": true,
+    "formatted_at": "2026-04-19T05:17:47.461505"
   }
 ]

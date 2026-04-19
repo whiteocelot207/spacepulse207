@@ -1,0 +1,93 @@
+{
+  "idea": {
+    "topic": "Black Hole Survival",
+    "topic_family": "hypothetical",
+    "hook": "Falling into a black hole?",
+    "facts": [
+      "It would take 0.00003 seconds to cross the event horizon of a small black hole, about the size of a football field",
+      "The gravitational pull near a supermassive black hole is so strong that it would stretch you like spaghetti over a distance of 100,000 km, roughly the distance from New York to Los Angeles and back",
+      "If you were to survive the fall, the curvature of space-time would cause time to slow down by a factor of 10,000 near a massive black hole, making 1 minute on Earth feel like 7 years near the black hole"
+    ],
+    "payoff": "and we still don't know what happens next",
+    "title": "\ud83c\udf0c Black Hole Free Fall?",
+    "hashtags": [
+      "#space",
+      "#astrophysics",
+      "#blackholes",
+      "#science",
+      "#universe"
+    ],
+    "description": "Imagine being pulled into the void of a black hole \ud83c\udf0c, where the laws of physics as we know them start to break down. You're about to experience the most extreme environment in the universe, where time and space are warped beyond recognition \ud83d\udd2e. But what happens when you cross the point of no return?",
+    "generated_by": "groq",
+    "generated_at": "2026-04-19T05:17:36.785410",
+    "status": "pending",
+    "strategy_based": true
+  },
+  "script": {
+    "total_duration": 20,
+    "scenes": [
+      {
+        "scene_number": 1,
+        "start_time": 0,
+        "duration": 3,
+        "text": "Falling into a black hole?",
+        "text_position": "center",
+        "text_size": "large",
+        "visual": "Abstract representation of a swirling accretion disk, dark center. Subtle cosmic dust.",
+        "animation": "fade_in"
+      },
+      {
+        "scene_number": 2,
+        "start_time": 3,
+        "duration": 4,
+        "text": "Small BH: Cross event horizon in 0.00003s. (Size of a Football Field)",
+        "text_position": "center",
+        "text_size": "medium",
+        "visual": "A small black hole icon, with a football field graphic appearing next to it for scale. Fast lines converging into the black hole.",
+        "animation": "zoom_in"
+      },
+      {
+        "scene_number": 3,
+        "start_time": 7,
+        "duration": 4,
+        "text": "Supermassive BH: Gravity stretches you like spaghetti. Over 100,000 km.",
+        "text_position": "center",
+        "text_size": "medium",
+        "visual": "A stick figure person visually stretching and elongating into a thin line as it approaches a massive black hole. A distance marker appears.",
+        "animation": "slide_left"
+      },
+      {
+        "scene_number": 4,
+        "start_time": 11,
+        "duration": 4,
+        "text": "Massive BH: Time slows x10,000. 1 Earth min = 7 inside years.",
+        "text_position": "center",
+        "text_size": "medium",
+        "visual": "A clock with slowing hands near a black hole. Numbers '1' and '7 years' appear, contrasting Earth time vs. inside time.",
+        "animation": "slide_right"
+      },
+      {
+        "scene_number": 5,
+        "start_time": 15,
+        "duration": 5,
+        "text": "What happens next? We still don't know.",
+        "text_position": "center",
+        "text_size": "large",
+        "animation": "pulse",
+        "visual": "A large, imposing black hole dominating the screen. Subtle question mark graphic fades in and out over the black hole's event horizon, emphasizing mystery."
+      }
+    ],
+    "thumbnail_text": "Black Hole Survival Guide",
+    "background_style": "space_dark"
+  },
+  "formatted_at": "2026-04-19T05:17:47.461291",
+  "status": "sent_telegram",
+  "rendered_at": "2026-04-19T05:19:45.541039",
+  "video_path": "videos_output/black_hole_survival_20260419_051748.mp4",
+  "sent_at": "2026-04-19T05:19:49.468944",
+  "telegram": {
+    "message_id": 15,
+    "chat_id": "7804359202",
+    "sent_at": "2026-04-19T05:19:49.467623"
+  }
+}
