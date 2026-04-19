@@ -2514,5 +2514,30 @@
     "status": "formatted",
     "strategy_based": true,
     "formatted_at": "2026-04-19T05:17:47.461505"
+  },
+  {
+    "topic": "Space Vacuum",
+    "topic_family": "hypothetical",
+    "hook": "You'd boil in space",
+    "facts": [
+      "It would take 8.5 minutes to boil in space's vacuum at 200\u00b0F",
+      "Space is 100 times more empty than the emptiest football field",
+      "A human body would expand 2.5 times its size in space's zero pressure"
+    ],
+    "payoff": "and we still don't know how our bodies would react long-term",
+    "title": "Boil in Space? \ud83d\ude80",
+    "hashtags": [
+      "space",
+      "science",
+      "astrophysics",
+      "spacevacuum",
+      "survivalscience"
+    ],
+    "description": "Imagine being in the vastness of space, where the emptiness is so extreme it's like nothing on Earth \ud83c\udf0c. If you were to be exposed to space without protection, your body would undergo some astonishing and terrifying changes \ud83e\udd2f. Will humans ever be able to survive the harsh conditions of space?",
+    "generated_by": "groq",
+    "generated_at": "2026-04-19T11:51:04.071853",
+    "status": "formatted",
+    "strategy_based": true,
+    "formatted_at": "2026-04-19T11:51:14.484220"
   }
 ]
