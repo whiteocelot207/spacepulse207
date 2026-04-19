@@ -2564,5 +2564,30 @@
     "status": "formatted",
     "strategy_based": true,
     "formatted_at": "2026-04-19T16:52:25.015098"
+  },
+  {
+    "topic": "Hypothetical Space Scenarios",
+    "topic_family": "hypothetical",
+    "hook": "What if Earth doubled in size?",
+    "facts": [
+      "It would be 1.2 times larger than Jupiter's moon Ganymede, with a surface area equivalent to 240 million football fields",
+      "The increased gravity would be 2.5 times stronger than Earth's, equivalent to the weight of 5.5 NY-to-LA flights stacked on top of you",
+      "The enlarged planet would have an atmosphere 3.7 times thicker than our current one, with air pressure similar to being 1,000 feet underwater"
+    ],
+    "payoff": "and we still don't know how life would evolve on a super-sized Earth",
+    "title": "Earth 2x \ud83c\udf0e",
+    "hashtags": [
+      "#space",
+      "#science",
+      "#astrophysics",
+      "#hypotheticalscenarios",
+      "#planetaryscience"
+    ],
+    "description": "Imagine waking up to a world where Earth has doubled in size \ud83c\udf0e! The consequences would be mind-boggling, with gravity, atmosphere, and life as we know it drastically altered \ud83e\udd2f. Could humanity survive on a super-sized planet, and what would be the implications for our daily lives? \ud83e\udd14",
+    "generated_by": "groq",
+    "generated_at": "2026-04-19T21:49:08.643616",
+    "status": "formatted",
+    "strategy_based": true,
+    "formatted_at": "2026-04-19T21:49:17.328780"
   }
 ]
