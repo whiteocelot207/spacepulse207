@@ -2614,5 +2614,30 @@
     "status": "formatted",
     "strategy_based": true,
     "formatted_at": "2026-04-20T05:29:39.217888"
+  },
+  {
+    "topic": "Habitable Exoplanet",
+    "topic_family": "hypothetical",
+    "hook": "Could you live on Kepler-452b?",
+    "facts": [
+      "Kepler-452b is 60% larger in diameter than Earth, roughly the size of 5.5 Texas-sized lands",
+      "It orbits a G-type star, similar to the Sun, at a distance of about 385 million miles, comparable to the distance between Earth and the Sun",
+      "The surface temperature of Kepler-452b could be around 265\u00b0F, with a possible 30% chance of being a rocky planet with liquid water"
+    ],
+    "payoff": "and we still don't know if it's truly habitable",
+    "title": "Life on Kepler-452b? \ud83c\udf0c",
+    "hashtags": [
+      "#space",
+      "#exoplanets",
+      "#astrophysics",
+      "#kepler452b",
+      "#nasa"
+    ],
+    "description": "Imagine a planet 60% larger than Earth, orbiting a star similar to the Sun \ud83c\udf1e. Kepler-452b is like a cosmic cousin, but could it support life? \ud83e\udd14 You're about to enter a mysterious world that's both familiar and yet, utterly alien. Will humanity one day call Kepler-452b home? \ud83d\ude80",
+    "generated_by": "groq",
+    "generated_at": "2026-04-20T12:12:20.265251",
+    "status": "error",
+    "strategy_based": true,
+    "error_at": "2026-04-20T12:18:00.194261"
   }
 ]
