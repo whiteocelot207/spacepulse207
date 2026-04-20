@@ -2589,5 +2589,30 @@
     "status": "formatted",
     "strategy_based": true,
     "formatted_at": "2026-04-19T21:49:17.328780"
+  },
+  {
+    "topic": "Galactic Cannibalism",
+    "topic_family": "hypothetical",
+    "hook": "What if galaxies collided?",
+    "facts": [
+      "The Andromeda galaxy is approaching us at 250,000 miles per hour",
+      "A collision would affect 1 in 100,000 stars, roughly 200 billion stars",
+      "The merged galaxy would be 5 times larger than the state of Texas"
+    ],
+    "payoff": "and we still don't know the exact outcome",
+    "title": "Galaxy Collision \ud83d\ude80",
+    "hashtags": [
+      "space",
+      "science",
+      "astrophysics",
+      "galaxy",
+      "cosmology"
+    ],
+    "description": "Imagine two galaxies, each containing billions of stars, colliding in a cosmic crash \ud83c\udf20. The Andromeda galaxy is hurtling towards us at an alarming speed, but what would happen if they actually merged? \ud83e\udd14 Watch to explore the mind-boggling consequences of such an event and ponder the uncertain fate of our universe \ud83c\udf0c",
+    "generated_by": "groq",
+    "generated_at": "2026-04-20T05:29:29.383191",
+    "status": "formatted",
+    "strategy_based": true,
+    "formatted_at": "2026-04-20T05:29:39.217888"
   }
 ]

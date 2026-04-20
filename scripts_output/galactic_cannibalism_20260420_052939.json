@@ -1,0 +1,94 @@
+{
+  "idea": {
+    "topic": "Galactic Cannibalism",
+    "topic_family": "hypothetical",
+    "hook": "What if galaxies collided?",
+    "facts": [
+      "The Andromeda galaxy is approaching us at 250,000 miles per hour",
+      "A collision would affect 1 in 100,000 stars, roughly 200 billion stars",
+      "The merged galaxy would be 5 times larger than the state of Texas"
+    ],
+    "payoff": "and we still don't know the exact outcome",
+    "title": "Galaxy Collision \ud83d\ude80",
+    "hashtags": [
+      "space",
+      "science",
+      "astrophysics",
+      "galaxy",
+      "cosmology"
+    ],
+    "description": "Imagine two galaxies, each containing billions of stars, colliding in a cosmic crash \ud83c\udf20. The Andromeda galaxy is hurtling towards us at an alarming speed, but what would happen if they actually merged? \ud83e\udd14 Watch to explore the mind-boggling consequences of such an event and ponder the uncertain fate of our universe \ud83c\udf0c",
+    "generated_by": "groq",
+    "generated_at": "2026-04-20T05:29:29.383191",
+    "status": "pending",
+    "strategy_based": true
+  },
+  "script": {
+    "total_duration": 20,
+    "scenes": [
+      {
+        "scene_number": 1,
+        "start_time": 0,
+        "duration": 3,
+        "text": "What if galaxies collided?",
+        "text_position": "center",
+        "text_size": "large",
+        "visual": "Two spiral galaxies (Milky Way and Andromeda-like) slowly approaching each other in a dark, star-filled void.",
+        "animation": "fade_in"
+      },
+      {
+        "scene_number": 2,
+        "start_time": 3,
+        "duration": 4,
+        "text": "Andromeda is hurtling towards us at 250,000 mph!",
+        "text_position": "center",
+        "text_size": "medium",
+        "visual": "The two galaxies accelerate towards the viewer, showing their intricate arms and central bulges. A speed indicator graphic briefly flashes.",
+        "animation": "zoom_in"
+      },
+      {
+        "scene_number": 3,
+        "start_time": 7,
+        "duration": 4,
+        "text": "Only 1 in 100,000 stars affected... roughly 200 BILLION stars!",
+        "text_position": "center",
+        "text_size": "medium",
+        "visual": "A dense field of stars, representing a galaxy. A few individual stars briefly pulse or glow brightly, emphasizing the 'affected' ones while the vast majority remain stable.",
+        "animation": "slide_left"
+      },
+      {
+        "scene_number": 4,
+        "start_time": 11,
+        "duration": 4,
+        "text": "The merged galaxy would be 5 times larger than Texas!",
+        "text_position": "center",
+        "text_size": "medium",
+        "visual": "An outline map of Texas briefly appears, then rapidly shrinks and is dwarfed by an immense, newly formed elliptical galaxy, showing its gargantuan scale.",
+        "animation": "slide_right"
+      },
+      {
+        "scene_number": 5,
+        "start_time": 15,
+        "duration": 5,
+        "text": "The exact outcome remains a cosmic mystery!",
+        "text_position": "center",
+        "text_size": "large",
+        "animation": "pulse",
+        "visual": "A mesmerizing, chaotic but beautiful visual of a merged galaxy, swirling with nebulae, new star formation, and gravitational arcs, emphasizing the unknown future.",
+        "background_music": "ethereal_space_synth"
+      }
+    ],
+    "thumbnail_text": "GALACTIC CANNIBALISM",
+    "background_style": "space_dark"
+  },
+  "formatted_at": "2026-04-20T05:29:39.217677",
+  "status": "sent_telegram",
+  "rendered_at": "2026-04-20T05:31:11.792577",
+  "video_path": "videos_output/galactic_cannibalism_20260420_052939.mp4",
+  "sent_at": "2026-04-20T05:31:17.351147",
+  "telegram": {
+    "message_id": 19,
+    "chat_id": "7804359202",
+    "sent_at": "2026-04-20T05:31:17.349903"
+  }
+}
