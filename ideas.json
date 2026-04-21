@@ -2689,5 +2689,30 @@
     "status": "formatted",
     "strategy_based": true,
     "formatted_at": "2026-04-21T03:45:43.641254"
+  },
+  {
+    "topic": "What if the Milky Way Collided",
+    "topic_family": "hypothetical",
+    "hook": "4 billion years to impact",
+    "facts": [
+      "The Andromeda galaxy is approaching us at 250,000 miles per hour",
+      "The collision would release energy equal to 100 billion Suns",
+      "The merged galaxy would contain over 1 trillion stars, spanning 200,000 light-years, roughly 1,000 times the distance from New York to LA"
+    ],
+    "payoff": "and we still don't know what the new galaxy would look like",
+    "title": "Galactic Crash \ud83c\udf0c",
+    "hashtags": [
+      "#space",
+      "#astrophysics",
+      "#galaxy",
+      "#science",
+      "#universe"
+    ],
+    "description": "Imagine the Milky Way, our home galaxy, colliding with Andromeda in a cosmic crash \ud83c\udf0c. The universe has been setting up this collision for eons, with the two galaxies hurtling towards each other at breakneck speeds \ud83d\ude80. Will we be around to witness this transformative event that will reshape the very fabric of our cosmic neighborhood \ud83c\udf20?",
+    "generated_by": "groq",
+    "generated_at": "2026-04-21T05:15:48.725479",
+    "status": "formatted",
+    "strategy_based": true,
+    "formatted_at": "2026-04-21T05:16:02.862796"
   }
 ]

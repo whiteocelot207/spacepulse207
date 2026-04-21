@@ -1,0 +1,93 @@
+{
+  "idea": {
+    "topic": "What if the Milky Way Collided",
+    "topic_family": "hypothetical",
+    "hook": "4 billion years to impact",
+    "facts": [
+      "The Andromeda galaxy is approaching us at 250,000 miles per hour",
+      "The collision would release energy equal to 100 billion Suns",
+      "The merged galaxy would contain over 1 trillion stars, spanning 200,000 light-years, roughly 1,000 times the distance from New York to LA"
+    ],
+    "payoff": "and we still don't know what the new galaxy would look like",
+    "title": "Galactic Crash \ud83c\udf0c",
+    "hashtags": [
+      "#space",
+      "#astrophysics",
+      "#galaxy",
+      "#science",
+      "#universe"
+    ],
+    "description": "Imagine the Milky Way, our home galaxy, colliding with Andromeda in a cosmic crash \ud83c\udf0c. The universe has been setting up this collision for eons, with the two galaxies hurtling towards each other at breakneck speeds \ud83d\ude80. Will we be around to witness this transformative event that will reshape the very fabric of our cosmic neighborhood \ud83c\udf20?",
+    "generated_by": "groq",
+    "generated_at": "2026-04-21T05:15:48.725479",
+    "status": "pending",
+    "strategy_based": true
+  },
+  "script": {
+    "total_duration": 20,
+    "scenes": [
+      {
+        "scene_number": 1,
+        "start_time": 0,
+        "duration": 3,
+        "text": "WHAT IF THE MILKY WAY COLLIDED?",
+        "text_position": "center",
+        "text_size": "large",
+        "visual": "Two distinct spiral galaxies (representing Milky Way and Andromeda) slowly appearing and subtly moving towards each other in deep space.",
+        "animation": "fade_in"
+      },
+      {
+        "scene_number": 2,
+        "start_time": 3,
+        "duration": 4,
+        "text": "Andromeda approaches at 250,000 mph. Impact in 4 BILLION years!",
+        "text_position": "center",
+        "text_size": "medium",
+        "visual": "A detailed render of the Andromeda galaxy, slowly zooming in with a subtle indicator of speed and direction.",
+        "animation": "zoom_in"
+      },
+      {
+        "scene_number": 3,
+        "start_time": 7,
+        "duration": 4,
+        "text": "Collision energy = 100 BILLION Suns.",
+        "text_position": "center",
+        "text_size": "medium",
+        "visual": "A stylized visualization of two galaxies merging, releasing a massive burst of bright, fiery energy outwards.",
+        "animation": "slide_left"
+      },
+      {
+        "scene_number": 4,
+        "start_time": 11,
+        "duration": 4,
+        "text": "New galaxy: 1 TRILLION+ stars, 200,000 light-years wide.",
+        "text_position": "center",
+        "text_size": "medium",
+        "visual": "A vast, majestic rendering of a newly formed elliptical galaxy (Milkomeda), slowly rotating, emphasizing its immense scale.",
+        "animation": "slide_right"
+      },
+      {
+        "scene_number": 5,
+        "start_time": 15,
+        "duration": 5,
+        "text": "But we still don't know what it will look like.",
+        "text_position": "center",
+        "text_size": "large",
+        "animation": "pulse",
+        "visual": "A captivating, slightly ambiguous image of a potential merged galaxy, slowly morphing and swirling, with a subtle question mark overlay fading in and out."
+      }
+    ],
+    "thumbnail_text": "Galaxies Collide: What If?",
+    "background_style": "space_nebula"
+  },
+  "formatted_at": "2026-04-21T05:16:02.862604",
+  "status": "sent_telegram",
+  "rendered_at": "2026-04-21T05:18:30.479139",
+  "video_path": "videos_output/what_if_the_milky_way_collided_20260421_051603.mp4",
+  "sent_at": "2026-04-21T05:18:34.405192",
+  "telegram": {
+    "message_id": 22,
+    "chat_id": "7804359202",
+    "sent_at": "2026-04-21T05:18:34.403808"
+  }
+}
