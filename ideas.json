@@ -2664,5 +2664,30 @@
     "status": "formatted",
     "strategy_based": true,
     "formatted_at": "2026-04-20T21:58:53.007520"
+  },
+  {
+    "topic": "What if the Sun became a Red Giant?",
+    "topic_family": "hypothetical",
+    "hook": "Sun engulfs Earth?",
+    "facts": [
+      "The Sun will expand to 100 times its current size, engulfing Mercury and Venus",
+      "Its surface temperature will drop to 4,000\u00b0C, about 2,000\u00b0C less than its current temperature, affecting Earth's climate",
+      "This transformation will occur in approximately 5 billion years, a timescale equivalent to 100,000,000,000 football fields lined up end to end"
+    ],
+    "payoff": "and we still don't know if humanity will survive to witness it",
+    "title": "Sun Engulfs Earth? \ud83c\udf1e",
+    "hashtags": [
+      "#space",
+      "#science",
+      "#astrophysics",
+      "#redgiant",
+      "#solar-system"
+    ],
+    "description": "Imagine a future where the Sun, our star, balloons into a red giant, altering the solar system forever \ud83c\udf20. The Sun's expansion will have catastrophic effects on our planet, but will humanity be around to see it? \ud83e\udd14 Watch to uncover the shocking truth about the Sun's transformation and its impact on Earth \ud83c\udf0e",
+    "generated_by": "groq",
+    "generated_at": "2026-04-21T03:45:28.969387",
+    "status": "formatted",
+    "strategy_based": true,
+    "formatted_at": "2026-04-21T03:45:43.641254"
   }
 ]

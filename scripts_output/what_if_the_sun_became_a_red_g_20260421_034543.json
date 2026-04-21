@@ -1,0 +1,93 @@
+{
+  "idea": {
+    "topic": "What if the Sun became a Red Giant?",
+    "topic_family": "hypothetical",
+    "hook": "Sun engulfs Earth?",
+    "facts": [
+      "The Sun will expand to 100 times its current size, engulfing Mercury and Venus",
+      "Its surface temperature will drop to 4,000\u00b0C, about 2,000\u00b0C less than its current temperature, affecting Earth's climate",
+      "This transformation will occur in approximately 5 billion years, a timescale equivalent to 100,000,000,000 football fields lined up end to end"
+    ],
+    "payoff": "and we still don't know if humanity will survive to witness it",
+    "title": "Sun Engulfs Earth? \ud83c\udf1e",
+    "hashtags": [
+      "#space",
+      "#science",
+      "#astrophysics",
+      "#redgiant",
+      "#solar-system"
+    ],
+    "description": "Imagine a future where the Sun, our star, balloons into a red giant, altering the solar system forever \ud83c\udf20. The Sun's expansion will have catastrophic effects on our planet, but will humanity be around to see it? \ud83e\udd14 Watch to uncover the shocking truth about the Sun's transformation and its impact on Earth \ud83c\udf0e",
+    "generated_by": "groq",
+    "generated_at": "2026-04-21T03:45:28.969387",
+    "status": "pending",
+    "strategy_based": true
+  },
+  "script": {
+    "total_duration": 20,
+    "scenes": [
+      {
+        "scene_number": 1,
+        "start_time": 0,
+        "duration": 3,
+        "text": "WHAT IF THE SUN BECAME A RED GIANT?",
+        "text_position": "center",
+        "text_size": "large",
+        "visual": "A serene shot of the current Sun with Earth orbiting. The Sun then slowly begins to swell, turning slightly red.",
+        "animation": "fade_in"
+      },
+      {
+        "scene_number": 2,
+        "start_time": 3,
+        "duration": 4,
+        "text": "It expands 100x. Engulfs Mercury & Venus.",
+        "text_position": "top",
+        "text_size": "medium",
+        "visual": "The Sun rapidly grows, its fiery edge consuming Mercury, then Venus. Earth is shown orbiting precariously close, scorched.",
+        "animation": "zoom_in"
+      },
+      {
+        "scene_number": 3,
+        "start_time": 7,
+        "duration": 4,
+        "text": "Surface Temp: 4,000\u00b0C. Earth's Climate Destroyed.",
+        "text_position": "center",
+        "text_size": "medium",
+        "visual": "Close-up of the Red Giant Sun's surface, appearing deep red/orange. Earth is shown as a barren, volcanic wasteland.",
+        "animation": "slide_left"
+      },
+      {
+        "scene_number": 4,
+        "start_time": 11,
+        "duration": 4,
+        "text": "This is 5 BILLION YEARS away. (100 Billion Football Fields)",
+        "text_position": "center",
+        "text_size": "medium",
+        "visual": "A numerical countdown or timeline graphic reaching 5 billion years, then a quick, abstract visual showing an impossible number of football fields stretching into infinity.",
+        "animation": "slide_right"
+      },
+      {
+        "scene_number": 5,
+        "start_time": 15,
+        "duration": 5,
+        "text": "Will humanity survive to witness it?",
+        "text_position": "center",
+        "text_size": "large",
+        "animation": "pulse",
+        "visual": "A poignant shot of a tiny Earth in the foreground, with the enormous, ominous Red Giant Sun in the background. A faint silhouette of a future human looks out."
+      }
+    ],
+    "thumbnail_text": "Sun's Red Giant Future",
+    "background_style": "space_dark"
+  },
+  "formatted_at": "2026-04-21T03:45:43.641044",
+  "status": "sent_telegram",
+  "rendered_at": "2026-04-21T03:47:17.531280",
+  "video_path": "videos_output/what_if_the_sun_became_a_red_g_20260421_034544.mp4",
+  "sent_at": "2026-04-21T03:47:21.952549",
+  "telegram": {
+    "message_id": 21,
+    "chat_id": "7804359202",
+    "sent_at": "2026-04-21T03:47:21.951265"
+  }
+}
