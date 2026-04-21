@@ -1,0 +1,93 @@
+{
+  "idea": {
+    "topic": "What if a Rogue Planet entered our Solar System?",
+    "topic_family": "hypothetical",
+    "hook": "A 5-Earth mass rogue planet",
+    "facts": [
+      "It would be about 1.5 times the size of Jupiter, roughly 89,000 miles in diameter, or around 140,000 football fields lined up",
+      "With a mass 5 times that of Earth, its gravity would affect our oceans, causing tides 20 times higher than normal, flooding coastal areas from New York to Miami",
+      "If it entered our solar system, it would take about 10 years to reach the Sun from the outer reaches of the solar system, traveling at 30,000 miles per hour, or the distance from LA to NY in just 2 minutes"
+    ],
+    "payoff": "and we still don't know if one is heading our way",
+    "title": "Rogue Planet Invasion? \ud83c\udf0c",
+    "hashtags": [
+      "#space",
+      "#astrophysics",
+      "#rogueplanets",
+      "#solarsystem",
+      "#science"
+    ],
+    "description": "Imagine a mysterious, 5-Earth mass rogue planet entering our solar system \ud83c\udf0c, disrupting the delicate balance of our celestial neighborhood. With its enormous size and mass, the effects on our planet would be catastrophic \ud83c\udf0a. Will we be ready if it happens? \ud83e\udd14",
+    "generated_by": "groq",
+    "generated_at": "2026-04-21T12:10:40.741345",
+    "status": "pending",
+    "strategy_based": true
+  },
+  "script": {
+    "total_duration": 20,
+    "scenes": [
+      {
+        "scene_number": 1,
+        "start_time": 0,
+        "duration": 3,
+        "text": "WHAT IF A ROGUE PLANET...",
+        "text_position": "center",
+        "text_size": "large",
+        "visual": "A dark, mysterious rogue planet slowly emerges from the absolute void of deep space.",
+        "animation": "fade_in"
+      },
+      {
+        "scene_number": 2,
+        "start_time": 3,
+        "duration": 4,
+        "text": "5X EARTH'S MASS. 1.5X JUPITER (89K MILES WIDE).",
+        "text_position": "center",
+        "text_size": "medium",
+        "visual": "The rogue planet rotates slowly, with Earth and Jupiter appearing next to it for scale, showing its immense size.",
+        "animation": "zoom_in"
+      },
+      {
+        "scene_number": 3,
+        "start_time": 7,
+        "duration": 4,
+        "text": "20X HIGHER TIDES. COASTAL CITIES FLOODED.",
+        "text_position": "center",
+        "text_size": "medium",
+        "visual": "An animated map of coastal areas (e.g., New York, Miami) rapidly being submerged by massive, rising waves.",
+        "animation": "slide_left"
+      },
+      {
+        "scene_number": 4,
+        "start_time": 11,
+        "duration": 4,
+        "text": "10 YRS TO SUN (30,000 MPH). LA TO NY IN 2 MINS!",
+        "text_position": "center",
+        "text_size": "medium",
+        "visual": "An animated trajectory line shows the rogue planet speeding through a simplified solar system model towards the Sun.",
+        "animation": "slide_right"
+      },
+      {
+        "scene_number": 5,
+        "start_time": 15,
+        "duration": 5,
+        "text": "AND WE DON'T KNOW IF ONE IS HEADING OUR WAY.",
+        "text_position": "center",
+        "text_size": "large",
+        "animation": "pulse",
+        "visual": "Zoom out from Earth, which appears vulnerable and small in the vast, star-filled darkness of space."
+      }
+    ],
+    "thumbnail_text": "ROGUE PLANET INCOMING?",
+    "background_style": "space_dark"
+  },
+  "formatted_at": "2026-04-21T12:10:53.534807",
+  "status": "sent_telegram",
+  "rendered_at": "2026-04-21T12:13:24.438330",
+  "video_path": "videos_output/what_if_a_rogue_planet_entered_20260421_121054.mp4",
+  "sent_at": "2026-04-21T12:13:28.978463",
+  "telegram": {
+    "message_id": 23,
+    "chat_id": "7804359202",
+    "sent_at": "2026-04-21T12:13:28.977332"
+  }
+}
