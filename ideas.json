@@ -2739,5 +2739,30 @@
     "status": "formatted",
     "strategy_based": true,
     "formatted_at": "2026-04-21T12:10:53.535009"
+  },
+  {
+    "topic": "What if Mars had rings",
+    "topic_family": "hypothetical",
+    "hook": "Mars with rings?",
+    "facts": [
+      "Mars' potential ring system could be 1/3 the size of Texas",
+      "It would take 100 million basketball courts to cover the surface area",
+      "A Martian ring system could contain 1.2 billion tons of debris"
+    ],
+    "payoff": "and we still don't know why Mars lost its rings",
+    "title": "Mars' Lost Rings? \ud83d\ude80",
+    "hashtags": [
+      "space",
+      "science",
+      "astrophysics",
+      "MarsExploration",
+      "planetaryscience"
+    ],
+    "description": "Imagine Mars with rings as stunning as Saturn's \ud83c\udf0c. But what if Mars actually had a ring system that rivaled our favorite gas giant? \ud83e\udd2f You're about to enter a cosmic world where Mars is the new ringmaster, with a potential ring system that's 1/3 the size of Texas \ud83c\udf04. Will we uncover the truth behind Mars' lost rings?",
+    "generated_by": "groq",
+    "generated_at": "2026-04-22T03:40:16.595152",
+    "status": "formatted",
+    "strategy_based": true,
+    "formatted_at": "2026-04-22T03:40:28.243955"
   }
 ]
