@@ -2764,5 +2764,30 @@
     "status": "formatted",
     "strategy_based": true,
     "formatted_at": "2026-04-22T03:40:28.243955"
+  },
+  {
+    "topic": "Sun vs Earth",
+    "topic_family": "scale_comparison",
+    "hook": "109 Earths fit across the Sun",
+    "facts": [
+      "The Sun is about 109 times wider than the Earth",
+      "It would take 332,000 Earths to fill the Sun's volume, roughly the size of 244 billion football fields",
+      "The distance from New York to Los Angeles is about 2,470 miles, but the Sun is about 400 times farther from the Earth, at 93 million miles"
+    ],
+    "payoff": "and we still don't know what makes up 99.8% of our solar system",
+    "title": "Sun vs Earth \ud83c\udf1e",
+    "hashtags": [
+      "space",
+      "science",
+      "astrophysics",
+      "solarsystem",
+      "cosmology"
+    ],
+    "description": "The Sun is our star, but how massive is it really? \ud83c\udf1e Imagine a sphere so large that 109 Earths could fit side by side across it. Yet, despite its enormity, there's still so much we don't understand about our solar system \ud83e\udd14. Watch to discover the jaw-dropping scale of the Sun and the mysteries that remain.",
+    "generated_by": "groq",
+    "generated_at": "2026-04-22T12:07:35.717829",
+    "status": "formatted",
+    "strategy_based": true,
+    "formatted_at": "2026-04-22T12:07:55.773525"
   }
 ]
