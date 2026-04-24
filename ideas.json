@@ -2814,5 +2814,30 @@
     "status": "formatted",
     "strategy_based": true,
     "formatted_at": "2026-04-23T17:28:16.398993"
+  },
+  {
+    "topic": "Interstellar Travel",
+    "topic_family": "travel_time",
+    "hook": "6 months to Mars?",
+    "facts": [
+      "At light speed, it would take 3.8 minutes to reach the Moon, 8.3 minutes to reach the Sun, and 4.2 years to reach the nearest star, Proxima Centauri",
+      "Traveling to Mars at 20% of light speed would take about 6 months, comparable to driving from New York to Los Angeles over 11,000 times",
+      "At current spacecraft speeds, like Voyager 1, it would take over 70,000 years to reach Proxima Centauri, a distance of about 272,000 astronomical units or 4.24 light-years"
+    ],
+    "payoff": "and we still don't know if humans will ever reach another star system",
+    "title": "Mars in 6 Months? \ud83d\ude80",
+    "hashtags": [
+      "#space",
+      "#astrophysics",
+      "#interstellartavel",
+      "#spaceexploration",
+      "#nasa"
+    ],
+    "description": "Imagine embarking on a journey to Mars in just 6 months \ud83d\ude80, a trip that's comparable to driving across the US over 11,000 times \ud83d\ude97. But what if we told you that's only possible at a fraction of light speed \ud83c\udf20? The reality of interstellar travel is mind-boggling, and the numbers are staggering \ud83e\udd2f. Can humans ever reach another star system? \ud83c\udf1f",
+    "generated_by": "groq",
+    "generated_at": "2026-04-24T12:05:52.039756",
+    "status": "error",
+    "strategy_based": true,
+    "error_at": "2026-04-24T12:11:26.854015"
   }
 ]
