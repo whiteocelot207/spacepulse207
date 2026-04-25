@@ -2864,5 +2864,30 @@
     "status": "formatted",
     "strategy_based": true,
     "formatted_at": "2026-04-24T21:57:39.732050"
+  },
+  {
+    "topic": "Extreme Gravity",
+    "topic_family": "extreme_conditions",
+    "hook": "Gravity 200 billion times stronger?",
+    "facts": [
+      "A sugar-cube-sized amount of neutron star material weighs about 1 billion tons",
+      "The gravitational pull near a neutron star is so strong it warps space within 1 mile",
+      "If you got too close, gravity would stretch you like putty over a distance of just 100 football fields"
+    ],
+    "payoff": "and we still don't know what's at their core",
+    "title": "Neutron Stars: Cosmic Crushers \ud83c\udf00",
+    "hashtags": [
+      "space",
+      "astrophysics",
+      "neutronstars",
+      "gravity",
+      "science"
+    ],
+    "description": "Imagine a force so strong it warps the very fabric of space \ud83c\udf00. Neutron stars are the cosmic crushers that defy our understanding of gravity. But what secrets lie at their mysterious cores? \ud83e\udd14 Watch to unravel the enigma of these extreme objects in our universe \ud83d\udd0d",
+    "generated_by": "groq",
+    "generated_at": "2026-04-25T03:31:06.879858",
+    "status": "formatted",
+    "strategy_based": true,
+    "formatted_at": "2026-04-25T03:31:14.601153"
   }
 ]
