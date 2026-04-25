@@ -1,0 +1,93 @@
+{
+  "idea": {
+    "topic": "Surviving a Black Hole",
+    "topic_family": "hypothetical",
+    "hook": "You'd stretch 1 million km",
+    "facts": [
+      "If you fell into a black hole, you'd experience gravitational forces 1 billion times stronger than Earth's, stretching you like putty over a distance of about 1 million kilometers, roughly the length of 200,000 NYC marathons",
+      "The point of no return, called the event horizon, would be around 12 miles from a stellar-mass black hole, which is roughly the size of Texas",
+      "As you approached the singularity, time would slow down relative to Earth time, and 1 minute for you would equal about 700 years on our planet"
+    ],
+    "payoff": "and we still don't know what happens next",
+    "title": "Black Hole Survival \ud83d\ude80",
+    "hashtags": [
+      "#space",
+      "#astrophysics",
+      "#blackhole",
+      "#science",
+      "#universe"
+    ],
+    "description": "Imagine being pulled into a cosmic abyss \ud83c\udf0c, where gravity is so strong it warps time and space. You're about to experience the most extreme environment in the universe \ud83c\udf1f. But what really happens when you cross the point of no return \ud83e\udd14?",
+    "generated_by": "groq",
+    "generated_at": "2026-04-25T16:56:48.971084",
+    "status": "pending",
+    "strategy_based": true
+  },
+  "script": {
+    "total_duration": 20,
+    "scenes": [
+      {
+        "scene_number": 1,
+        "start_time": 0,
+        "duration": 3,
+        "text": "FALLING INTO A BLACK HOLE?",
+        "text_position": "center",
+        "text_size": "large",
+        "visual": "Abstract, swirling dark vortex representing a black hole, with subtle gravitational lensing effects. Stars visible in the distant background.",
+        "animation": "fade_in"
+      },
+      {
+        "scene_number": 2,
+        "start_time": 3,
+        "duration": 4,
+        "text": "Gravitational force: 1 BILLION x Earth's! You'd stretch 1 Million KM",
+        "text_position": "center",
+        "text_size": "medium",
+        "visual": "Stylized human silhouette being pulled towards the black hole, visibly elongating into a spaghetti-like strand. Numbers (1 Billion, 1 Million) subtly appearing and emphasizing.",
+        "animation": "zoom_in"
+      },
+      {
+        "scene_number": 3,
+        "start_time": 7,
+        "duration": 4,
+        "text": "The Event Horizon: Point of NO return. ~12 Miles (Size of Texas)",
+        "text_position": "center",
+        "text_size": "medium",
+        "visual": "Close-up of a black hole's event horizon, depicted as a sharp, glowing ring. A stylized map outline of Texas appears and briefly pulses within the ring to show scale.",
+        "animation": "slide_left"
+      },
+      {
+        "scene_number": 4,
+        "start_time": 11,
+        "duration": 4,
+        "text": "Time Dilation: 1 Minute for you = 700 Years on Earth!",
+        "text_position": "center",
+        "text_size": "medium",
+        "visual": "Two clocks side-by-side; one rapidly spinning its hands, the other barely moving. The background subtly distorts and warps around the 'fast' clock.",
+        "animation": "slide_right"
+      },
+      {
+        "scene_number": 5,
+        "start_time": 15,
+        "duration": 5,
+        "text": "AND WE STILL DON'T KNOW WHAT HAPPENS NEXT.",
+        "text_position": "center",
+        "text_size": "large",
+        "animation": "pulse",
+        "visual": "The black hole visual slowly fades or transforms into a vast, nebulous, and mysterious cosmic expanse, with a subtle, shimmering question mark appearing in the distance."
+      }
+    ],
+    "thumbnail_text": "Black Hole Survival?",
+    "background_style": "space_dark"
+  },
+  "formatted_at": "2026-04-25T16:57:01.580606",
+  "status": "sent_telegram",
+  "rendered_at": "2026-04-25T16:58:36.727627",
+  "video_path": "videos_output/surviving_a_black_hole_20260425_165702.mp4",
+  "sent_at": "2026-04-25T16:58:40.521554",
+  "telegram": {
+    "message_id": 30,
+    "chat_id": "7804359202",
+    "sent_at": "2026-04-25T16:58:40.520363"
+  }
+}

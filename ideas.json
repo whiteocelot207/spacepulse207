@@ -2914,5 +2914,30 @@
     "status": "formatted",
     "strategy_based": true,
     "formatted_at": "2026-04-25T11:50:32.765081"
+  },
+  {
+    "topic": "Surviving a Black Hole",
+    "topic_family": "hypothetical",
+    "hook": "You'd stretch 1 million km",
+    "facts": [
+      "If you fell into a black hole, you'd experience gravitational forces 1 billion times stronger than Earth's, stretching you like putty over a distance of about 1 million kilometers, roughly the length of 200,000 NYC marathons",
+      "The point of no return, called the event horizon, would be around 12 miles from a stellar-mass black hole, which is roughly the size of Texas",
+      "As you approached the singularity, time would slow down relative to Earth time, and 1 minute for you would equal about 700 years on our planet"
+    ],
+    "payoff": "and we still don't know what happens next",
+    "title": "Black Hole Survival \ud83d\ude80",
+    "hashtags": [
+      "#space",
+      "#astrophysics",
+      "#blackhole",
+      "#science",
+      "#universe"
+    ],
+    "description": "Imagine being pulled into a cosmic abyss \ud83c\udf0c, where gravity is so strong it warps time and space. You're about to experience the most extreme environment in the universe \ud83c\udf1f. But what really happens when you cross the point of no return \ud83e\udd14?",
+    "generated_by": "groq",
+    "generated_at": "2026-04-25T16:56:48.971084",
+    "status": "formatted",
+    "strategy_based": true,
+    "formatted_at": "2026-04-25T16:57:01.580819"
   }
 ]
