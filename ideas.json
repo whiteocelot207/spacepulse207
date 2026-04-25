@@ -2889,5 +2889,30 @@
     "status": "formatted",
     "strategy_based": true,
     "formatted_at": "2026-04-25T03:31:14.601153"
+  },
+  {
+    "topic": "Hottest Planet",
+    "topic_family": "extreme_conditions",
+    "hook": "400\u00b0C surface temperature?",
+    "facts": [
+      "Venus reaches temperatures of 462\u00b0C, hot enough to melt lead",
+      "Its surface pressure is 92 times that of Earth, comparable to being almost a mile underwater",
+      "The planet's atmosphere is dense enough to trap heat, making it hotter than Mercury despite being farther from the Sun"
+    ],
+    "payoff": "and we still don't know why it's so much hotter than Mercury",
+    "title": "Venus: Scorching Hot \ud83c\udf21",
+    "hashtags": [
+      "space",
+      "science",
+      "astrophysics",
+      "planetaryscience",
+      "solarSystem"
+    ],
+    "description": "Imagine a place where the surface temperature can melt lead \ud83c\udf21\ufe0f. Welcome to Venus, the hottest planet in our solar system, with a scorching atmosphere that's still shrouded in mystery \ud83e\udd14. Will we ever uncover the secrets behind its extreme heat?",
+    "generated_by": "groq",
+    "generated_at": "2026-04-25T11:50:21.697776",
+    "status": "formatted",
+    "strategy_based": true,
+    "formatted_at": "2026-04-25T11:50:32.765081"
   }
 ]

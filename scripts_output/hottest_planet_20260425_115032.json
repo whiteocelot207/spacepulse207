@@ -1,0 +1,93 @@
+{
+  "idea": {
+    "topic": "Hottest Planet",
+    "topic_family": "extreme_conditions",
+    "hook": "400\u00b0C surface temperature?",
+    "facts": [
+      "Venus reaches temperatures of 462\u00b0C, hot enough to melt lead",
+      "Its surface pressure is 92 times that of Earth, comparable to being almost a mile underwater",
+      "The planet's atmosphere is dense enough to trap heat, making it hotter than Mercury despite being farther from the Sun"
+    ],
+    "payoff": "and we still don't know why it's so much hotter than Mercury",
+    "title": "Venus: Scorching Hot \ud83c\udf21",
+    "hashtags": [
+      "space",
+      "science",
+      "astrophysics",
+      "planetaryscience",
+      "solarSystem"
+    ],
+    "description": "Imagine a place where the surface temperature can melt lead \ud83c\udf21\ufe0f. Welcome to Venus, the hottest planet in our solar system, with a scorching atmosphere that's still shrouded in mystery \ud83e\udd14. Will we ever uncover the secrets behind its extreme heat?",
+    "generated_by": "groq",
+    "generated_at": "2026-04-25T11:50:21.697776",
+    "status": "pending",
+    "strategy_based": true
+  },
+  "script": {
+    "total_duration": 20,
+    "scenes": [
+      {
+        "scene_number": 1,
+        "start_time": 0,
+        "duration": 3,
+        "text": "400\u00b0C Surface Temp?",
+        "text_position": "center",
+        "text_size": "large",
+        "visual": "A dark space background with a fiery red planet outline (Venus), a large question mark appears and slightly pulsates.",
+        "animation": "fade_in"
+      },
+      {
+        "scene_number": 2,
+        "start_time": 3,
+        "duration": 4,
+        "text": "VENUS: 462\u00b0C",
+        "text_position": "center",
+        "text_size": "medium",
+        "visual": "Zoom into a vivid orange/red depiction of Venus's surface. A small icon of a melting lead bar appears next to the text.",
+        "animation": "zoom_in"
+      },
+      {
+        "scene_number": 3,
+        "start_time": 7,
+        "duration": 4,
+        "text": "92x Earth Pressure",
+        "text_position": "center",
+        "text_size": "medium",
+        "visual": "Venus appears, then a visual overlay representing immense pressure, like deep ocean depths. Text updates with a small graphic illustrating '1 Mile Underwater'.",
+        "animation": "slide_left"
+      },
+      {
+        "scene_number": 4,
+        "start_time": 11,
+        "duration": 4,
+        "text": "Dense Atmosphere = Heat Trap",
+        "text_position": "center",
+        "text_size": "medium",
+        "visual": "Venus with thick, swirling atmospheric layers. A simplified graphic appears comparing Venus and Mercury's positions relative to the Sun, highlighting Venus is hotter despite being farther.",
+        "animation": "slide_right"
+      },
+      {
+        "scene_number": 5,
+        "start_time": 15,
+        "duration": 5,
+        "text": "Hottest Planet... But WHY?",
+        "text_position": "center",
+        "text_size": "large",
+        "animation": "pulse",
+        "visual": "Venus is shown shrouded in mystery, perhaps with faint question marks or a swirling nebula effect around it, text pulsates slowly to emphasize the unknown."
+      }
+    ],
+    "thumbnail_text": "VENUS: The Hottest Planet?",
+    "background_style": "space_dark"
+  },
+  "formatted_at": "2026-04-25T11:50:32.764846",
+  "status": "sent_telegram",
+  "rendered_at": "2026-04-25T11:51:42.186003",
+  "video_path": "videos_output/hottest_planet_20260425_115033.mp4",
+  "sent_at": "2026-04-25T11:51:45.768449",
+  "telegram": {
+    "message_id": 29,
+    "chat_id": "7804359202",
+    "sent_at": "2026-04-25T11:51:45.767066"
+  }
+}
