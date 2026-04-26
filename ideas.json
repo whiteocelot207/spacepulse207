@@ -2939,5 +2939,30 @@
     "status": "formatted",
     "strategy_based": true,
     "formatted_at": "2026-04-25T16:57:01.580819"
+  },
+  {
+    "topic": "What if you fell into a neutron star?",
+    "topic_family": "hypothetical",
+    "hook": "You'd be 1 inch tall",
+    "facts": [
+      "A neutron star's gravity is so strong, it would shrink you to about 1 inch tall due to spaghettification, a process that occurs when tidal forces overcome the internal bonds of an object",
+      "The surface temperature of a neutron star can reach up to 500,000 degrees Celsius, which is about 100 times hotter than the surface of the Sun",
+      "The density of a neutron star is roughly equivalent to the mass of 1.4 million football fields stacked on top of each other"
+    ],
+    "payoff": "and we still don't know what happens to the information contained in matter that falls into a neutron star",
+    "title": "Neutron Star Fall \ud83e\udd2f",
+    "hashtags": [
+      "#space",
+      "#astrophysics",
+      "#neutronstar",
+      "#blackholealternative",
+      "#cosmicscience"
+    ],
+    "description": "Imagine being shrunk to the size of a paper clip and then incinerated by temperatures hotter than the Sun's surface \ud83c\udf1e. The gravity of a neutron star is so extreme, it warps space and time in ways we're still trying to understand \ud83e\udd2f. Could you survive the impossible forces of a neutron star?",
+    "generated_by": "groq",
+    "generated_at": "2026-04-26T16:54:52.719727",
+    "status": "formatted",
+    "strategy_based": true,
+    "formatted_at": "2026-04-26T16:55:05.367726"
   }
 ]
