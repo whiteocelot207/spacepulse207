@@ -2964,5 +2964,30 @@
     "status": "formatted",
     "strategy_based": true,
     "formatted_at": "2026-04-26T16:55:05.367726"
+  },
+  {
+    "topic": "what if you lived on a tidally locked planet",
+    "topic_family": "hypothetical",
+    "hook": "One side always faces the Sun?",
+    "facts": [
+      "a tidally locked planet's sunny side can reach 3000\u00b0F, hotter than a football field of flames",
+      "the dark side can be -200\u00b0F, colder than 1000 miles of Antarctic winter",
+      "such a planet's habitable zone, if it exists, would be a thin ring around the middle, about the width of Texas"
+    ],
+    "payoff": "and we still don't know if life can thrive in this eternal twilight zone",
+    "title": "Tidal Lock \ud83c\udf0e",
+    "hashtags": [
+      "#space",
+      "#astrophysics",
+      "#exoplanets",
+      "#science",
+      "#tidallylocked"
+    ],
+    "description": "Imagine a world where one side always faces the Sun, and the other side is forever dark \ud83c\udf11. This is the reality of a tidally locked planet, where extreme temperatures create a thin, habitable zone \ud83c\udf21\ufe0f. Can life survive in this eternal twilight zone? \ud83e\udd14",
+    "generated_by": "groq",
+    "generated_at": "2026-04-26T21:53:38.449167",
+    "status": "formatted",
+    "strategy_based": true,
+    "formatted_at": "2026-04-26T21:53:46.924184"
   }
 ]

@@ -1,0 +1,93 @@
+{
+  "idea": {
+    "topic": "what if you lived on a tidally locked planet",
+    "topic_family": "hypothetical",
+    "hook": "One side always faces the Sun?",
+    "facts": [
+      "a tidally locked planet's sunny side can reach 3000\u00b0F, hotter than a football field of flames",
+      "the dark side can be -200\u00b0F, colder than 1000 miles of Antarctic winter",
+      "such a planet's habitable zone, if it exists, would be a thin ring around the middle, about the width of Texas"
+    ],
+    "payoff": "and we still don't know if life can thrive in this eternal twilight zone",
+    "title": "Tidal Lock \ud83c\udf0e",
+    "hashtags": [
+      "#space",
+      "#astrophysics",
+      "#exoplanets",
+      "#science",
+      "#tidallylocked"
+    ],
+    "description": "Imagine a world where one side always faces the Sun, and the other side is forever dark \ud83c\udf11. This is the reality of a tidally locked planet, where extreme temperatures create a thin, habitable zone \ud83c\udf21\ufe0f. Can life survive in this eternal twilight zone? \ud83e\udd14",
+    "generated_by": "groq",
+    "generated_at": "2026-04-26T21:53:38.449167",
+    "status": "pending",
+    "strategy_based": true
+  },
+  "script": {
+    "total_duration": 20,
+    "scenes": [
+      {
+        "scene_number": 1,
+        "start_time": 0,
+        "duration": 3,
+        "text": "One side always faces the Sun?",
+        "text_position": "center",
+        "text_size": "large",
+        "visual": "A tidally locked planet slowly rotates, clearly showing a bright, sun-facing hemisphere and a dark, cold-facing hemisphere. A stark terminator line divides them.",
+        "animation": "fade_in"
+      },
+      {
+        "scene_number": 2,
+        "start_time": 3,
+        "duration": 4,
+        "text": "SUNNY SIDE: 3000\u00b0F. Hotter than a football field of flames!",
+        "text_position": "center",
+        "text_size": "medium",
+        "visual": "Extreme close-up on the fiery, cracked surface of the sunny side. Heat shimmer effects and subtle, stylized flames lick across the surface. A distant, scorching sun glows.",
+        "animation": "zoom_in"
+      },
+      {
+        "scene_number": 3,
+        "start_time": 7,
+        "duration": 4,
+        "text": "DARK SIDE: -200\u00b0F. Colder than 1000 miles of Antarctic winter!",
+        "text_position": "center",
+        "text_size": "medium",
+        "visual": "Transition to an extreme close-up of the dark, icy hemisphere. Jagged, snow-covered mountains and frozen plains. Frost glitters, and a few icy meteors streak past in the background.",
+        "animation": "slide_left"
+      },
+      {
+        "scene_number": 4,
+        "start_time": 11,
+        "duration": 4,
+        "text": "HABITABLE ZONE: A thin ring, width of Texas, in eternal twilight.",
+        "text_position": "center",
+        "text_size": "medium",
+        "visual": "A full view of the tidally locked planet. A glowing, thin green ring appears around the middle, highlighting the terminator line where the twilight zone exists. The planet slowly spins.",
+        "animation": "slide_right"
+      },
+      {
+        "scene_number": 5,
+        "start_time": 15,
+        "duration": 5,
+        "text": "Can life thrive in this eternal twilight? We still don't know.",
+        "text_position": "center",
+        "text_size": "large",
+        "animation": "pulse",
+        "visual": "Zoom into the green twilight ring. The light is dim, with a perpetual sunset/sunrise glow. Subtle, ambiguous silhouettes of speculative flora or fauna might be hinted at, then fade to a question mark."
+      }
+    ],
+    "thumbnail_text": "Eternal Twilight Zone",
+    "background_style": "space_dark"
+  },
+  "formatted_at": "2026-04-26T21:53:46.923961",
+  "status": "sent_telegram",
+  "rendered_at": "2026-04-26T21:55:30.942581",
+  "video_path": "videos_output/what_if_you_lived_on_a_tidally_20260426_215347.mp4",
+  "sent_at": "2026-04-26T21:55:35.058580",
+  "telegram": {
+    "message_id": 32,
+    "chat_id": "7804359202",
+    "sent_at": "2026-04-26T21:55:35.057314"
+  }
+}
