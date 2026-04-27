@@ -1,0 +1,93 @@
+{
+  "idea": {
+    "topic": "Giant Void",
+    "topic_family": "hypothetical",
+    "hook": "What if Earth was in a giant void?",
+    "facts": [
+      "The observable universe has a giant void spanning 1.3 billion light-years, roughly 8,000 times the distance from New York to Los Angeles",
+      "This void is nearly the size of 250,000,000,000 Texas-sized areas",
+      "If Earth were at its center, the nearest galaxy would be 200 million light-years away, or 1,500 times the distance to Andromeda"
+    ],
+    "payoff": "and we still don't know why it exists",
+    "title": "Earth in a Void? \ud83c\udf0c",
+    "hashtags": [
+      "#space",
+      "#astrophysics",
+      "#cosmology",
+      "#universe",
+      "#science"
+    ],
+    "description": "Imagine being in a vast, seemingly endless space with no stars or galaxies nearby \ud83c\udf0c. The giant void in our universe is a mysterious region that's left scientists puzzled. Dive into the mind-blowing facts about this enormous expanse and its potential implications for our understanding of the cosmos \ud83d\ude80",
+    "generated_by": "groq",
+    "generated_at": "2026-04-27T03:58:17.994686",
+    "status": "pending",
+    "strategy_based": true
+  },
+  "script": {
+    "total_duration": 20,
+    "scenes": [
+      {
+        "scene_number": 1,
+        "start_time": 0,
+        "duration": 3,
+        "text": "What if Earth was in a GIANT VOID?",
+        "text_position": "center",
+        "text_size": "large",
+        "visual": "A small Earth graphic slowly shrinks and zooms out, revealing vast, dark, empty space around it.",
+        "animation": "zoom_out"
+      },
+      {
+        "scene_number": 2,
+        "start_time": 3,
+        "duration": 4,
+        "text": "The void spans 1.3 BILLION light-years.",
+        "text_position": "top",
+        "text_size": "medium",
+        "visual": "An expanding dark void with faint, barely visible galaxies at its extreme edges. Text fades in over this visual.",
+        "animation": "fade_in"
+      },
+      {
+        "scene_number": 3,
+        "start_time": 7,
+        "duration": 4,
+        "text": "That's 250 BILLION Texas-sized areas!",
+        "text_position": "center",
+        "text_size": "medium",
+        "visual": "A stylized 'Texas' shape appears, then rapidly multiplies and fills the screen, shrinking to represent the massive scale, then transitions back to a void.",
+        "animation": "zoom_in"
+      },
+      {
+        "scene_number": 4,
+        "start_time": 11,
+        "duration": 4,
+        "text": "Nearest galaxy: 200 MILLION light-years away (1500x Andromeda!)",
+        "text_position": "bottom",
+        "text_size": "medium",
+        "visual": "A tiny Earth dot at the center of an immense, empty expanse. A faint, distant spiral galaxy twinkles at the absolute edge of the screen, emphasizing isolation.",
+        "animation": "slide_left"
+      },
+      {
+        "scene_number": 5,
+        "start_time": 15,
+        "duration": 5,
+        "text": "And WE STILL DON'T KNOW WHY IT EXISTS.",
+        "text_position": "center",
+        "text_size": "large",
+        "animation": "pulse",
+        "visual": "The dark, featureless void slowly spins, appearing infinite and mysterious. The emptiness is profound and unsettling."
+      }
+    ],
+    "thumbnail_text": "THE GIANT COSMIC VOID",
+    "background_style": "space_dark"
+  },
+  "formatted_at": "2026-04-27T03:58:26.720200",
+  "status": "sent_telegram",
+  "rendered_at": "2026-04-27T03:59:54.324721",
+  "video_path": "videos_output/giant_void_20260427_035827.mp4",
+  "sent_at": "2026-04-27T03:59:58.830852",
+  "telegram": {
+    "message_id": 33,
+    "chat_id": "7804359202",
+    "sent_at": "2026-04-27T03:59:58.829421"
+  }
+}
