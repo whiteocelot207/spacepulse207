@@ -1,0 +1,93 @@
+{
+  "idea": {
+    "topic": "Space Station Orbit",
+    "topic_family": "hypothetical",
+    "hook": "What if a space station crashed?",
+    "facts": [
+      "It would take 175 school buses lined up to equal the length of the International Space Station's orbit",
+      "The ISS orbits Earth at 17,500 mph, or about 25 times faster than a commercial airliner",
+      "If it were to crash, debris would spread over an area roughly the size of Texas"
+    ],
+    "payoff": "and we still don't know how we'd clean it up",
+    "title": "Space Crash! \ud83d\ude80",
+    "hashtags": [
+      "space",
+      "science",
+      "astrophysics",
+      "spacestation",
+      "nasa"
+    ],
+    "description": "Imagine a space station the size of a football field crashing to Earth \ud83c\udf0e! You're living in a time where space debris is a growing concern. Will humanity be able to prevent a catastrophic space crash, or will we be faced with a massive cleanup effort? \ud83e\udd14",
+    "generated_by": "groq",
+    "generated_at": "2026-04-27T05:43:06.159326",
+    "status": "pending",
+    "strategy_based": true
+  },
+  "script": {
+    "total_duration": 20,
+    "scenes": [
+      {
+        "scene_number": 1,
+        "start_time": 0,
+        "duration": 3,
+        "text": "WHAT IF A SPACE STATION CRASHED?",
+        "text_position": "center",
+        "text_size": "large",
+        "visual": "A futuristic space station, initially whole, then fragments appearing as if breaking apart, against a dark space background.",
+        "animation": "fade_in"
+      },
+      {
+        "scene_number": 2,
+        "start_time": 3,
+        "duration": 4,
+        "text": "Orbit length: 175 school buses long.",
+        "text_position": "center",
+        "text_size": "medium",
+        "visual": "An animation showing the ISS orbiting Earth, then a visual representation of 175 school buses lining up to form the circumference of its orbit path.",
+        "animation": "zoom_in"
+      },
+      {
+        "scene_number": 3,
+        "start_time": 7,
+        "duration": 4,
+        "text": "It orbits at 17,500 mph (25x an airliner).",
+        "text_position": "center",
+        "text_size": "medium",
+        "visual": "The ISS zipping across the screen with a speed trail, then a smaller, slower commercial airliner icon appearing next to it for comparison.",
+        "animation": "slide_left"
+      },
+      {
+        "scene_number": 4,
+        "start_time": 11,
+        "duration": 4,
+        "text": "Debris would cover an area the size of TEXAS.",
+        "text_position": "center",
+        "text_size": "medium",
+        "visual": "An overhead view of Earth with the state of Texas highlighted. Space debris particles are animated to spread over and beyond this highlighted area.",
+        "animation": "slide_right"
+      },
+      {
+        "scene_number": 5,
+        "start_time": 15,
+        "duration": 5,
+        "text": "And we don't know how to clean it up.",
+        "text_position": "center",
+        "text_size": "large",
+        "animation": "pulse",
+        "visual": "A dense, overwhelming field of space debris orbiting Earth, looking chaotic and impossible to manage. The debris slowly spins, emphasizing the vastness of the problem."
+      }
+    ],
+    "thumbnail_text": "ISS Crash: The Unthinkable",
+    "background_style": "earth_orbit"
+  },
+  "formatted_at": "2026-04-27T05:43:13.304941",
+  "status": "sent_telegram",
+  "rendered_at": "2026-04-27T05:44:35.890750",
+  "video_path": "videos_output/space_station_orbit_20260427_054313.mp4",
+  "sent_at": "2026-04-27T05:44:39.756576",
+  "telegram": {
+    "message_id": 34,
+    "chat_id": "7804359202",
+    "sent_at": "2026-04-27T05:44:39.755242"
+  }
+}

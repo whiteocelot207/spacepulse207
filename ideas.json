@@ -3014,5 +3014,30 @@
     "status": "formatted",
     "strategy_based": true,
     "formatted_at": "2026-04-27T03:58:26.720417"
+  },
+  {
+    "topic": "Space Station Orbit",
+    "topic_family": "hypothetical",
+    "hook": "What if a space station crashed?",
+    "facts": [
+      "It would take 175 school buses lined up to equal the length of the International Space Station's orbit",
+      "The ISS orbits Earth at 17,500 mph, or about 25 times faster than a commercial airliner",
+      "If it were to crash, debris would spread over an area roughly the size of Texas"
+    ],
+    "payoff": "and we still don't know how we'd clean it up",
+    "title": "Space Crash! \ud83d\ude80",
+    "hashtags": [
+      "space",
+      "science",
+      "astrophysics",
+      "spacestation",
+      "nasa"
+    ],
+    "description": "Imagine a space station the size of a football field crashing to Earth \ud83c\udf0e! You're living in a time where space debris is a growing concern. Will humanity be able to prevent a catastrophic space crash, or will we be faced with a massive cleanup effort? \ud83e\udd14",
+    "generated_by": "groq",
+    "generated_at": "2026-04-27T05:43:06.159326",
+    "status": "formatted",
+    "strategy_based": true,
+    "formatted_at": "2026-04-27T05:43:13.305163"
   }
 ]
