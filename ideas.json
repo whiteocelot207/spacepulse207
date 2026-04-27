@@ -3039,5 +3039,30 @@
     "status": "formatted",
     "strategy_based": true,
     "formatted_at": "2026-04-27T05:43:13.305163"
+  },
+  {
+    "topic": "Cosmic Commute to a Star",
+    "topic_family": "travel_time",
+    "hook": "Road trip to a star? Prepare for a LONG commute!",
+    "facts": [
+      "Driving to Proxima Centauri (our nearest star) at highway speed (70 mph) would take over 40 MILLION years.",
+      "At the speed of our fastest spacecraft (New Horizons, ~36,000 mph), it would still take around 79,000 years.",
+      "Only at light speed (the cosmic limit) would the journey to Proxima Centauri take a 'mere' 4.24 years."
+    ],
+    "payoff": "Makes you wonder if we'll ever meet alien neighbors... or if they've already given up waiting!",
+    "title": "Cosmic Commute: How Long to Reach Another Star? \ud83d\ude80",
+    "hashtags": [
+      "#space",
+      "#astrophysics",
+      "#traveltime",
+      "#proximacentauri",
+      "#interstellar"
+    ],
+    "description": "Ever dreamed of visiting another star? \u2728 Our nearest neighbor, Proxima Centauri, seems close but the travel time will utterly blow your mind! From highway speeds to light speed, prepare to have your perspective on interstellar travel completely reshaped. Will humanity ever make the journey?",
+    "generated_by": "gemini",
+    "generated_at": "2026-04-27T22:03:43.241144",
+    "status": "formatted",
+    "strategy_based": true,
+    "formatted_at": "2026-04-27T22:03:58.902252"
   }
 ]
