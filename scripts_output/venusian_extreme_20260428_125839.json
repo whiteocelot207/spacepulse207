@@ -1,0 +1,93 @@
+{
+  "idea": {
+    "topic": "Venusian Extreme",
+    "topic_family": "extreme_conditions",
+    "hook": "Venus is 900\u00b0F",
+    "facts": [
+      "Venus's surface temperature is 900\u00b0F, hot enough to melt lead",
+      "Its atmosphere is 92 times denser than Earth's, with crushing pressure equivalent to being 1 mile underwater",
+      "The planet's rotation is so slow that its day is 243 Earth days long, making it longer than its year of 225 Earth days"
+    ],
+    "payoff": "and we still don't know why it spins backwards",
+    "title": "Venus: Hellish Planet \ud83c\udf0b",
+    "hashtags": [
+      "#space",
+      "#astrophysics",
+      "#planetaryscience",
+      "#extremeenvironments",
+      "#solarsystem"
+    ],
+    "description": "Imagine a world where the sun doesn't rise for 243 days, and when it does, it's shrouded in a thick toxic haze \ud83c\udf2b\ufe0f. Welcome to Venus, where extreme conditions make it the most inhospitable place in our solar system \ud83c\udf0b. But what's behind its bizarre rotation, and can it teach us more about our own planet's fate?",
+    "generated_by": "groq",
+    "generated_at": "2026-04-28T12:58:11.824179",
+    "status": "pending",
+    "strategy_based": true
+  },
+  "script": {
+    "total_duration": 20,
+    "scenes": [
+      {
+        "scene_number": 1,
+        "start_time": 0,
+        "duration": 3,
+        "text": "Venus is 900\u00b0F",
+        "text_position": "center",
+        "text_size": "large",
+        "visual": "A vibrant, fiery orange Venus against a deep space background, subtly pulsating with heat. Swirling yellow and red atmospheric patterns are visible.",
+        "animation": "fade_in"
+      },
+      {
+        "scene_number": 2,
+        "start_time": 3,
+        "duration": 4,
+        "text": "900\u00b0F: Hot enough to melt LEAD!",
+        "text_position": "top",
+        "text_size": "medium",
+        "visual": "Close-up of Venus's surface with molten rock and streams of glowing liquid lead. A graphic of a lead bar visibly melting.",
+        "animation": "zoom_in"
+      },
+      {
+        "scene_number": 3,
+        "start_time": 7,
+        "duration": 4,
+        "text": "Atmosphere 92x denser than Earth. Like 1 mile UNDERWATER!",
+        "text_position": "center",
+        "text_size": "medium",
+        "visual": "Stylized visual of Venus's dense, crushing atmosphere. A subtle graphic illustrating extreme pressure, perhaps a simplified diagram of depth in water next to a planet.",
+        "animation": "slide_left"
+      },
+      {
+        "scene_number": 4,
+        "start_time": 11,
+        "duration": 4,
+        "text": "Venusian DAY: 243 Earth days. LONGER than its YEAR (225 days!)",
+        "text_position": "bottom",
+        "text_size": "medium",
+        "visual": "Venus slowly rotating with a digital counter showing 'Day: 243' and 'Year: 225' Earth days. An arrow indicates its extremely slow rotation.",
+        "animation": "slide_right"
+      },
+      {
+        "scene_number": 5,
+        "start_time": 15,
+        "duration": 5,
+        "text": "And we still don't know why it spins BACKWARDS!",
+        "text_position": "center",
+        "text_size": "large",
+        "animation": "pulse",
+        "visual": "Venus spinning in a distinct retrograde (clockwise if viewed from top) direction, contrasted with other planets (e.g., Earth) briefly shown spinning prograde. A large, bold question mark appears next to Venus."
+      }
+    ],
+    "thumbnail_text": "Venus: The Extreme Planet",
+    "background_style": "space_nebula"
+  },
+  "formatted_at": "2026-04-28T12:58:39.587698",
+  "status": "sent_telegram",
+  "rendered_at": "2026-04-28T13:01:32.150281",
+  "video_path": "videos_output/venusian_extreme_20260428_125840.mp4",
+  "sent_at": "2026-04-28T13:01:36.227528",
+  "telegram": {
+    "message_id": 37,
+    "chat_id": "7804359202",
+    "sent_at": "2026-04-28T13:01:36.226409"
+  }
+}

@@ -3089,5 +3089,30 @@
     "status": "formatted",
     "strategy_based": true,
     "formatted_at": "2026-04-28T05:47:11.190742"
+  },
+  {
+    "topic": "Venusian Extreme",
+    "topic_family": "extreme_conditions",
+    "hook": "Venus is 900\u00b0F",
+    "facts": [
+      "Venus's surface temperature is 900\u00b0F, hot enough to melt lead",
+      "Its atmosphere is 92 times denser than Earth's, with crushing pressure equivalent to being 1 mile underwater",
+      "The planet's rotation is so slow that its day is 243 Earth days long, making it longer than its year of 225 Earth days"
+    ],
+    "payoff": "and we still don't know why it spins backwards",
+    "title": "Venus: Hellish Planet \ud83c\udf0b",
+    "hashtags": [
+      "#space",
+      "#astrophysics",
+      "#planetaryscience",
+      "#extremeenvironments",
+      "#solarsystem"
+    ],
+    "description": "Imagine a world where the sun doesn't rise for 243 days, and when it does, it's shrouded in a thick toxic haze \ud83c\udf2b\ufe0f. Welcome to Venus, where extreme conditions make it the most inhospitable place in our solar system \ud83c\udf0b. But what's behind its bizarre rotation, and can it teach us more about our own planet's fate?",
+    "generated_by": "groq",
+    "generated_at": "2026-04-28T12:58:11.824179",
+    "status": "formatted",
+    "strategy_based": true,
+    "formatted_at": "2026-04-28T12:58:39.587951"
   }
 ]
