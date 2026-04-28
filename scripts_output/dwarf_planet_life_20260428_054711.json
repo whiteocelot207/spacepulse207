@@ -1,0 +1,93 @@
+{
+  "idea": {
+    "topic": "Dwarf Planet Life",
+    "topic_family": "hypothetical",
+    "hook": "Could you survive on Pluto?",
+    "facts": [
+      "Pluto's surface temperature can drop to -387\u00b0F, colder than -233\u00b0C",
+      "It would take 3,666 football fields lined up to equal Pluto's diameter of 1,475 miles",
+      "A day on Pluto lasts 153.3 hours, or about 6.4 Earth days"
+    ],
+    "payoff": "and we still don't know why it has a heart-shaped region",
+    "title": "Pluto: Survival on Ice? \ud83c\udf0c",
+    "hashtags": [
+      "space",
+      "science",
+      "astrophysics",
+      "dwarfplanets",
+      "pluto"
+    ],
+    "description": "Imagine waking up on Pluto, where the sun rises every 6.4 Earth days \ud83c\udf05. This mysterious dwarf planet has a surface as cold as -387\u00b0F, and a diameter that's equivalent to 3,666 football fields lined up \ud83c\udfc8. Can you survive the harsh conditions on Pluto? \ud83e\udd14 Watch to find out, and uncover the secrets of its heart-shaped region \u2764\ufe0f",
+    "generated_by": "groq",
+    "generated_at": "2026-04-28T05:47:03.019244",
+    "status": "pending",
+    "strategy_based": true
+  },
+  "script": {
+    "total_duration": 20,
+    "scenes": [
+      {
+        "scene_number": 1,
+        "start_time": 0,
+        "duration": 3,
+        "text": "Could you survive on Pluto?",
+        "text_position": "center",
+        "text_size": "large",
+        "visual": "A stylized, dark, icy Pluto slowly rotating into view, filling the frame. Stars in the background.",
+        "animation": "fade_in"
+      },
+      {
+        "scene_number": 2,
+        "start_time": 3,
+        "duration": 4,
+        "text": "-387\u00b0F (-233\u00b0C)",
+        "text_position": "center",
+        "text_size": "medium",
+        "visual": "Extreme close-up on Pluto's frozen surface, showing ice crystals and a subtle thermometer icon appearing, indicating extreme cold.",
+        "animation": "zoom_in"
+      },
+      {
+        "scene_number": 3,
+        "start_time": 7,
+        "duration": 4,
+        "text": "1,475 miles diameter (3,666 football fields!)",
+        "text_position": "center",
+        "text_size": "medium",
+        "visual": "Pluto appearing on one side, with a visual representation of Earth or a long line of football fields for scale comparison sliding in from the opposite side.",
+        "animation": "slide_left"
+      },
+      {
+        "scene_number": 4,
+        "start_time": 11,
+        "duration": 4,
+        "text": "One day = 153.3 hours (6.4 Earth days)",
+        "text_position": "center",
+        "text_size": "medium",
+        "visual": "Pluto rotating very slowly, with a clock icon or a time elapsed graphic appearing next to it, indicating the long day duration.",
+        "animation": "slide_right"
+      },
+      {
+        "scene_number": 5,
+        "start_time": 15,
+        "duration": 5,
+        "text": "And why does it have a HEART?",
+        "text_position": "center",
+        "text_size": "large",
+        "animation": "pulse",
+        "visual": "Pluto rotating to prominently display its iconic 'heart' (Tombaugh Regio), which subtly pulses with a faint glow against the dark space background."
+      }
+    ],
+    "thumbnail_text": "Pluto: Beyond the Ice!",
+    "background_style": "space_dark"
+  },
+  "formatted_at": "2026-04-28T05:47:11.190502",
+  "status": "sent_telegram",
+  "rendered_at": "2026-04-28T05:48:41.155548",
+  "video_path": "videos_output/dwarf_planet_life_20260428_054711.mp4",
+  "sent_at": "2026-04-28T05:48:45.278404",
+  "telegram": {
+    "message_id": 36,
+    "chat_id": "7804359202",
+    "sent_at": "2026-04-28T05:48:45.277163"
+  }
+}
