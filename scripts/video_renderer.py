@@ -609,7 +609,7 @@ def create_outro_clip(channel_name="SpacePulse"):
             color="#8B5CF6", font="DejaVu-Sans-Bold",
             stroke_color="black", stroke_width=2,
             method="label",
-        ).set_duration(duration).set_position(("center", VIDEO_HEIGHT - 300)).crossfadein(0.50)
+        ).set_duration(duration).set_position(("center", VIDEO_HEIGHT - 500)).crossfadein(0.50)
         layers.append(ch)
     except Exception as e:
         print(f"⚠️ Outro channel name: {e}")
