@@ -3114,5 +3114,30 @@
     "status": "formatted",
     "strategy_based": true,
     "formatted_at": "2026-04-28T12:58:39.587951"
+  },
+  {
+    "topic": "Galaxy Size Comparison",
+    "topic_family": "scale_comparison",
+    "hook": "1 billion kilometers across?",
+    "facts": [
+      "The Milky Way is approximately 100,000 light-years in diameter, or about 946 million kilometers across",
+      "That's roughly 4,000 times larger than the distance from New York to Los Angeles",
+      "If our galaxy were the size of the United States, the nearest major galaxy would be about 1,000 miles away"
+    ],
+    "payoff": "and we still don't know what's beyond our cosmic horizon",
+    "title": "Galaxy Size \ud83d\ude80",
+    "hashtags": [
+      "space",
+      "science",
+      "astrophysics",
+      "galaxy",
+      "universe"
+    ],
+    "description": "Imagine a giant stretch of space that's almost too big to wrap your head around \ud83e\udd2f. The Milky Way is just one of many galaxies in the observable universe, but its sheer scale is mind-boggling. Dive into the vastness of our cosmic neighborhood and discover just how small we are in the grand scheme of things \ud83c\udf0c",
+    "generated_by": "groq",
+    "generated_at": "2026-04-29T04:02:00.591531",
+    "status": "formatted",
+    "strategy_based": true,
+    "formatted_at": "2026-04-29T04:02:41.470932"
   }
 ]

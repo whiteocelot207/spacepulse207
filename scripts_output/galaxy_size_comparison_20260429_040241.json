@@ -1,0 +1,93 @@
+{
+  "idea": {
+    "topic": "Galaxy Size Comparison",
+    "topic_family": "scale_comparison",
+    "hook": "1 billion kilometers across?",
+    "facts": [
+      "The Milky Way is approximately 100,000 light-years in diameter, or about 946 million kilometers across",
+      "That's roughly 4,000 times larger than the distance from New York to Los Angeles",
+      "If our galaxy were the size of the United States, the nearest major galaxy would be about 1,000 miles away"
+    ],
+    "payoff": "and we still don't know what's beyond our cosmic horizon",
+    "title": "Galaxy Size \ud83d\ude80",
+    "hashtags": [
+      "space",
+      "science",
+      "astrophysics",
+      "galaxy",
+      "universe"
+    ],
+    "description": "Imagine a giant stretch of space that's almost too big to wrap your head around \ud83e\udd2f. The Milky Way is just one of many galaxies in the observable universe, but its sheer scale is mind-boggling. Dive into the vastness of our cosmic neighborhood and discover just how small we are in the grand scheme of things \ud83c\udf0c",
+    "generated_by": "groq",
+    "generated_at": "2026-04-29T04:02:00.591531",
+    "status": "pending",
+    "strategy_based": true
+  },
+  "script": {
+    "total_duration": 20,
+    "scenes": [
+      {
+        "scene_number": 1,
+        "start_time": 0,
+        "duration": 3,
+        "text": "1 Billion Kilometers Across?",
+        "text_position": "center",
+        "text_size": "large",
+        "visual": "A single star (our Sun) surrounded by its solar system, slowly zooming out into an empty cosmic void.",
+        "animation": "fade_in"
+      },
+      {
+        "scene_number": 2,
+        "start_time": 3,
+        "duration": 4,
+        "text": "The Milky Way: 100,000 Light-Years Wide!",
+        "text_position": "center",
+        "text_size": "medium",
+        "visual": "A stunning, detailed render of a spiral galaxy (representing the Milky Way) slowly rotating and expanding slightly.",
+        "animation": "zoom_in"
+      },
+      {
+        "scene_number": 3,
+        "start_time": 7,
+        "duration": 4,
+        "text": "That's 4,000x NY to LA!",
+        "text_position": "center",
+        "text_size": "medium",
+        "visual": "An animated map of the USA. A line draws from New York to Los Angeles, then duplicates 4,000 times, filling the screen with parallel lines, emphasizing vastness.",
+        "animation": "slide_left"
+      },
+      {
+        "scene_number": 4,
+        "start_time": 11,
+        "duration": 4,
+        "text": "MW = USA? Nearest Galaxy 1000 Miles Away!",
+        "text_position": "center",
+        "text_size": "medium",
+        "visual": "A stylized, glowing outline of the USA appears. Another similar outline (representing a neighboring galaxy) appears a 'distance' away with a '1000 miles' label between them.",
+        "animation": "slide_right"
+      },
+      {
+        "scene_number": 5,
+        "start_time": 15,
+        "duration": 5,
+        "text": "And we still don't know what's beyond our cosmic horizon...",
+        "text_position": "center",
+        "text_size": "large",
+        "animation": "pulse",
+        "visual": "A slow, deep zoom out into a vast, dark cosmic field, showing countless faint, distant galaxies fading into an endless, mysterious void."
+      }
+    ],
+    "thumbnail_text": "How Big Is Our Galaxy?",
+    "background_style": "space_nebula"
+  },
+  "formatted_at": "2026-04-29T04:02:41.470728",
+  "status": "sent_telegram",
+  "rendered_at": "2026-04-29T04:04:08.374809",
+  "video_path": "videos_output/galaxy_size_comparison_20260429_040242.mp4",
+  "sent_at": "2026-04-29T04:04:12.220546",
+  "telegram": {
+    "message_id": 38,
+    "chat_id": "7804359202",
+    "sent_at": "2026-04-29T04:04:12.219243"
+  }
+}
