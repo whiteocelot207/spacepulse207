@@ -3164,5 +3164,30 @@
     "status": "error",
     "strategy_based": true,
     "error_at": "2026-04-29T12:28:27.385237"
+  },
+  {
+    "topic": "Moonless Earth",
+    "topic_family": "hypothetical",
+    "hook": "No Moon, 1/3 Less Tides",
+    "facts": [
+      "The Moon's gravity stabilizes Earth's axis, which is tilted at 23.5 degrees, roughly the length of 4,700 football fields",
+      "Without the Moon, Earth's rotation would slow by 1.8 seconds per century, resulting in 12.5% longer days",
+      "The increased distance between the Earth and the Sun would be about 370,000 kilometers, roughly the distance from New York to Los Angeles and back"
+    ],
+    "payoff": "and we still don't know how this would impact our planet's ability to support life",
+    "title": "\ud83c\udf15 No Moon?! \ud83c\udf0e",
+    "hashtags": [
+      "#space",
+      "#astrophysics",
+      "#science",
+      "#hypotheticalscenarios",
+      "#earth"
+    ],
+    "description": "Imagine a world without the Moon's gentle glow \ud83c\udf15. The consequences would be staggering, from drastically altered tides to a slower rotation period \ud83c\udf0e. Would our planet still be able to support life as we know it? \ud83e\udd14 Watch to find out what a Moonless Earth would look like and how it would change our world forever \ud83c\udf1f",
+    "generated_by": "groq",
+    "generated_at": "2026-04-29T17:45:03.180714",
+    "status": "formatted",
+    "strategy_based": true,
+    "formatted_at": "2026-04-29T17:45:17.526802"
   }
 ]
