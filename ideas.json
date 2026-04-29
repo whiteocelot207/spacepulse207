@@ -3139,5 +3139,30 @@
     "status": "formatted",
     "strategy_based": true,
     "formatted_at": "2026-04-29T04:02:41.470932"
+  },
+  {
+    "topic": "Cosmic Commutes",
+    "topic_family": "travel_time",
+    "hook": "How Long to Mars?",
+    "facts": [
+      "At light speed, it would take 3.5 minutes to reach Mars",
+      "Traveling at the speed of the fastest spacecraft, Voyager 1, it would take 70,000 years to reach Mars",
+      "The distance to Mars is about 140 million miles, or 280,000,000 football fields lined up end to end"
+    ],
+    "payoff": "and we still haven't sent humans to the Red Planet",
+    "title": "Mars in 3.5 Minutes? \ud83d\ude80",
+    "hashtags": [
+      "space",
+      "science",
+      "astrophysics",
+      "mars",
+      "space travel"
+    ],
+    "description": "Imagine commuting to Mars in just 3.5 minutes \ud83d\ude80, or taking a road trip that's equivalent to driving 280,000,000 football fields \ud83c\udfc8. The reality of space travel is mind-boggling, and it's hard to believe we still haven't sent humans to the Red Planet \ud83e\udd14. What's holding us back from making this cosmic journey a reality?",
+    "generated_by": "groq",
+    "generated_at": "2026-04-29T12:22:43.269027",
+    "status": "error",
+    "strategy_based": true,
+    "error_at": "2026-04-29T12:28:27.385237"
   }
 ]
