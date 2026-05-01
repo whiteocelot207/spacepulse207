@@ -1,0 +1,93 @@
+{
+  "idea": {
+    "topic": "Coldest Place",
+    "topic_family": "extreme_conditions",
+    "hook": "What's colder than -459\u00b0F?",
+    "facts": [
+      "The Boomerang Nebula is -458\u00b0F, making it the coldest known place in the universe",
+      "It's about 5,000 light-years away, or roughly 30,000,000,000,000 miles from New York to LA and back 150,000 times",
+      "This extreme cold is due to a star that's expanding and cooling at a rate of 1,500 miles per second"
+    ],
+    "payoff": "and we still don't know what's causing this cosmic freezer",
+    "title": "Space's Coldest Spot \ud83d\ude80",
+    "hashtags": [
+      "space",
+      "astrophysics",
+      "cosmology",
+      "science",
+      "universe"
+    ],
+    "description": "Imagine a place where temperatures drop to mind-boggling lows \ud83e\udd76. The Boomerang Nebula takes the title of the coldest known spot in the universe, but what's behind this extreme chill? \ud83e\udd14 Watch to uncover the secrets of space's icy outlier \ud83d\ude80",
+    "generated_by": "groq",
+    "generated_at": "2026-05-01T05:56:26.864127",
+    "status": "pending",
+    "strategy_based": true
+  },
+  "script": {
+    "total_duration": 20,
+    "scenes": [
+      {
+        "scene_number": 1,
+        "start_time": 0,
+        "duration": 3,
+        "text": "What's colder than -459\u00b0F?",
+        "text_position": "center",
+        "text_size": "large",
+        "visual": "Dark space background with subtle, shimmering ice crystals forming and glowing faintly blue.",
+        "animation": "fade_in"
+      },
+      {
+        "scene_number": 2,
+        "start_time": 3,
+        "duration": 4,
+        "text": "The Boomerang Nebula: -458\u00b0F",
+        "text_position": "center",
+        "text_size": "medium",
+        "visual": "Stylized, frosty image of the Boomerang Nebula (bipolar outflow) with a faint blue glow. Text 'COLDEST KNOWN PLACE!' quickly appears below the main text.",
+        "animation": "zoom_in"
+      },
+      {
+        "scene_number": 3,
+        "start_time": 7,
+        "duration": 4,
+        "text": "5,000 light-years away!",
+        "text_position": "center",
+        "text_size": "medium",
+        "visual": "An animated conceptual line extending from a tiny Earth icon (left) towards a stylized Boomerang Nebula icon (right). Numbers '5,000 LY' appear, then '30 Quadrillion Miles!' flashes briefly.",
+        "animation": "slide_left"
+      },
+      {
+        "scene_number": 4,
+        "start_time": 11,
+        "duration": 4,
+        "text": "Star expanding at 1,500 miles/sec!",
+        "text_position": "center",
+        "text_size": "medium",
+        "visual": "Animation of a central star rapidly expanding outwards, creating a cold blue-white energy wave effect. Frost forms around the screen's edges.",
+        "animation": "slide_right"
+      },
+      {
+        "scene_number": 5,
+        "start_time": 15,
+        "duration": 5,
+        "text": "...and we still don't know WHY!",
+        "text_position": "center",
+        "text_size": "large",
+        "animation": "pulse",
+        "visual": "The Boomerang Nebula image, slightly zoomed out, surrounded by pulsing question marks and a mysterious, deep blue aura. Frost continues to spread, intensifying slightly."
+      }
+    ],
+    "thumbnail_text": "Universe's Coldest Mystery",
+    "background_style": "space_nebula"
+  },
+  "formatted_at": "2026-05-01T05:56:38.151973",
+  "status": "sent_telegram",
+  "rendered_at": "2026-05-01T05:58:02.848810",
+  "video_path": "videos_output/coldest_place_20260501_055638.mp4",
+  "sent_at": "2026-05-01T05:58:06.723740",
+  "telegram": {
+    "message_id": 40,
+    "chat_id": "7804359202",
+    "sent_at": "2026-05-01T05:58:06.722606"
+  }
+}
