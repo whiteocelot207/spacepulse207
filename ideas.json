@@ -3239,5 +3239,30 @@
     "status": "formatted",
     "strategy_based": true,
     "formatted_at": "2026-05-02T05:24:56.460293"
+  },
+  {
+    "topic": "Black Hole Gravity",
+    "topic_family": "extreme_conditions",
+    "hook": "What's stronger than 1 billion Earths?",
+    "facts": [
+      "A stellar-mass black hole has a gravity 1.3 million times stronger than Earth's",
+      "If a black hole with the mass of the Sun were placed at the center of our solar system, its event horizon would be about 1.9 million miles across, roughly 3 times the distance from NY to LA",
+      "The point of no return around a supermassive black hole is about 12 million kilometers in diameter, roughly the size of the orbit of Mercury"
+    ],
+    "payoff": "and we still don't know what lies beyond the event horizon",
+    "title": "Black Hole Gravity \ud83c\udf0c",
+    "hashtags": [
+      "#space",
+      "#astrophysics",
+      "#blackholes",
+      "#gravity",
+      "#science"
+    ],
+    "description": "Imagine a force so strong, not even light can escape \ud83c\udf1f. Black holes are the cosmic extremes of gravity, warping space and time in extreme ways. But what secrets lie beyond the point of no return, and will we ever uncover them? \ud83e\udd14",
+    "generated_by": "groq",
+    "generated_at": "2026-05-02T11:58:14.319185",
+    "status": "formatted",
+    "strategy_based": true,
+    "formatted_at": "2026-05-02T11:58:25.810951"
   }
 ]
