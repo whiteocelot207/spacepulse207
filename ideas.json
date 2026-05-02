@@ -3214,5 +3214,30 @@
     "status": "formatted",
     "strategy_based": true,
     "formatted_at": "2026-05-01T05:56:38.152196"
+  },
+  {
+    "topic": "Milky Way vs Andromeda",
+    "topic_family": "scale_comparison",
+    "hook": "4.5 billion years to collide",
+    "facts": [
+      "The Andromeda galaxy is approaching us at 250,000 miles per hour",
+      "It's equivalent to 220,000 football fields lined up side by side in size",
+      "The distance between the two galaxies is about 2.5 million times the distance from New York to Los Angeles"
+    ],
+    "payoff": "and we still don't know what will happen when they merge",
+    "title": "Galaxies on Collision Course \ud83c\udf0c",
+    "hashtags": [
+      "space",
+      "science",
+      "astrophysics",
+      "galaxy_collision",
+      "cosmic_events"
+    ],
+    "description": "The Milky Way and Andromeda galaxies are on a catastrophic collision course \ud83c\udf0c! As they hurtle through space at mind-boggling speeds, the question remains: what will happen when they finally meet? \ud83e\udd14 Will we witness a cosmic explosion or a majestic dance of stars? \ud83c\udf1f Watch to find out more about this intergalactic impending doom \ud83d\udd2d",
+    "generated_by": "groq",
+    "generated_at": "2026-05-02T05:24:46.585089",
+    "status": "formatted",
+    "strategy_based": true,
+    "formatted_at": "2026-05-02T05:24:56.460293"
   }
 ]
