@@ -1,0 +1,93 @@
+{
+  "idea": {
+    "topic": "Earth doubled in size",
+    "topic_family": "hypothetical",
+    "hook": "What if Earth was suddenly TWICE its size?",
+    "facts": [
+      "Gravity would be 2.8 times stronger, making an average 180-pound person weigh over 500 pounds.",
+      "The atmosphere would be 8 times denser, reaching pressures similar to diving over 200 feet deep in the ocean \u2013 like submerging the Statue of Liberty.",
+      "Our day would shorten! A larger planet spins faster to conserve angular momentum, potentially shrinking a 24-hour day to just 6-8 hours. Imagine that!"
+    ],
+    "payoff": "Our world would be unrecognizable, forcing life to adapt or perish. Could humanity survive?",
+    "title": "Earth Grew DOUBLE?! \ud83e\udd2f Our Planet's Wild Fate!",
+    "hashtags": [
+      "#space",
+      "#science",
+      "#astrophysics",
+      "#whatif",
+      "#earth"
+    ],
+    "description": "Imagine Earth suddenly doubled in size! \ud83e\udd2f What would happen to our gravity, our air, and even the length of our day? Dive into a mind-bending hypothetical that reveals the delicate balance keeping our planet just right. Could life as we know it even exist?",
+    "generated_by": "gemini",
+    "generated_at": "2026-05-05T17:48:43.918351",
+    "status": "pending",
+    "strategy_based": true
+  },
+  "script": {
+    "total_duration": 20,
+    "scenes": [
+      {
+        "scene_number": 1,
+        "start_time": 0,
+        "duration": 3,
+        "text": "What if Earth was suddenly TWICE its size?",
+        "text_position": "center",
+        "text_size": "large",
+        "visual": "A vibrant Earth slowly zooms out and a larger, glowing version expands behind it, signifying its new size.",
+        "animation": "fade_in"
+      },
+      {
+        "scene_number": 2,
+        "start_time": 3,
+        "duration": 4,
+        "text": "Gravity: 2.8x STRONGER! An 180lb person would weigh over 500 lbs.",
+        "text_position": "center",
+        "text_size": "medium",
+        "visual": "An animated human figure struggles against an unseen force, numbers like '180lb' changing to '504lb' next to them. Earth in the background.",
+        "animation": "zoom_in"
+      },
+      {
+        "scene_number": 3,
+        "start_time": 7,
+        "duration": 4,
+        "text": "Atmosphere: 8x DENSER! Pressure similar to diving 200ft deep (Statue of Liberty submerged).",
+        "text_position": "center",
+        "text_size": "medium",
+        "visual": "The Statue of Liberty appears, slowly submerging into a dark blue, high-pressure environment, bubbles indicating extreme depth.",
+        "animation": "slide_left"
+      },
+      {
+        "scene_number": 4,
+        "start_time": 11,
+        "duration": 4,
+        "text": "Day Shortens! From 24 hours to just 6-8 hours. A larger planet spins FASTER.",
+        "text_position": "center",
+        "text_size": "medium",
+        "visual": "A rapidly spinning Earth with a digital clock in the corner flashing '24:00' then quickly accelerating to '06:00'.",
+        "animation": "slide_right"
+      },
+      {
+        "scene_number": 5,
+        "start_time": 15,
+        "duration": 5,
+        "text": "Our world would be unrecognizable. Life adapts or perishes. Could humanity survive?",
+        "text_position": "center",
+        "text_size": "large",
+        "animation": "pulse",
+        "visual": "A dramatic, unrecognizable Earth landscape. Perhaps stormy skies, colossal mountains, or dense, fog-shrouded terrain. A sense of awe and danger."
+      }
+    ],
+    "thumbnail_text": "Earth: DOUBLE THE SIZE?!",
+    "background_style": "earth_orbit"
+  },
+  "formatted_at": "2026-05-05T17:48:50.540871",
+  "status": "sent_telegram",
+  "rendered_at": "2026-05-05T17:51:05.234845",
+  "video_path": "videos_output/earth_doubled_in_size_20260505_174851.mp4",
+  "sent_at": "2026-05-05T17:51:10.301191",
+  "telegram": {
+    "message_id": 43,
+    "chat_id": "7804359202",
+    "sent_at": "2026-05-05T17:51:10.299927"
+  }
+}
