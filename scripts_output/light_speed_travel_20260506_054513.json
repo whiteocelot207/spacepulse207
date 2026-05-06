@@ -1,0 +1,93 @@
+{
+  "idea": {
+    "topic": "Light Speed Travel",
+    "topic_family": "hypothetical",
+    "hook": "What if YOU could travel at the speed of light?",
+    "facts": [
+      "The speed of light is a mind-boggling 670,616,629 miles per hour.",
+      "At light speed, you could zip from New York to Los Angeles (around 2,800 miles) in an astonishing 0.000015 seconds.",
+      "Even at this speed, reaching our Sun would still take over 8 minutes, and the nearest star, Proxima Centauri, would be a 4.2-year journey."
+    ],
+    "payoff": "But here's the kicker: even at light speed, crossing our own Milky Way galaxy would take a mind-bending 100,000 years. Makes you ponder cosmic distances, right?",
+    "title": "Light Speed! \ud83d\ude80 How Fast is It REALLY?",
+    "hashtags": [
+      "#LightSpeed",
+      "#Space",
+      "#Astrophysics",
+      "#ScienceFacts",
+      "#CosmicTravel"
+    ],
+    "description": "Imagine zooming across the universe at the ultimate speed! \ud83e\udd2f What would that cosmic commute really look like? From zipping across the US in a blink to a multi-year trip to our nearest star, prepare for some mind-bending numbers. Will humanity ever reach light speed?",
+    "generated_by": "gemini",
+    "generated_at": "2026-05-06T05:45:04.478486",
+    "status": "pending",
+    "strategy_based": true
+  },
+  "script": {
+    "total_duration": 20,
+    "scenes": [
+      {
+        "scene_number": 1,
+        "start_time": 0,
+        "duration": 3,
+        "text": "What if YOU traveled at light speed?",
+        "text_position": "center",
+        "text_size": "large",
+        "visual": "A stylized spaceship or light streak zooming through a starfield, creating a warp effect.",
+        "animation": "fade_in"
+      },
+      {
+        "scene_number": 2,
+        "start_time": 3,
+        "duration": 4,
+        "text": "Light Speed: 670,616,629 MPH!",
+        "text_position": "center",
+        "text_size": "medium",
+        "visual": "A large speedometer graphic with the needle pointing to the maximum speed, superimposed over a fast-moving star background.",
+        "animation": "zoom_in"
+      },
+      {
+        "scene_number": 3,
+        "start_time": 7,
+        "duration": 4,
+        "text": "NYC to LA (2,800 miles) in 0.000015 seconds!",
+        "text_position": "center",
+        "text_size": "medium",
+        "visual": "An animated map of the USA, with a bright line zipping instantly from New York to Los Angeles.",
+        "animation": "slide_left"
+      },
+      {
+        "scene_number": 4,
+        "start_time": 11,
+        "duration": 4,
+        "text": "To Sun: 8 mins. To Nearest Star: 4.2 Years!",
+        "text_position": "center",
+        "text_size": "medium",
+        "visual": "Visual starts with the Sun, then quickly zooms out to show Earth, then zooms further to reveal Proxima Centauri, with time labels appearing next to each destination.",
+        "animation": "slide_right"
+      },
+      {
+        "scene_number": 5,
+        "start_time": 15,
+        "duration": 5,
+        "text": "Milky Way: 100,000 YEARS! Cosmic distances are mind-bending.",
+        "text_position": "center",
+        "text_size": "large",
+        "animation": "pulse",
+        "visual": "A vast, slowly rotating animation of the entire Milky Way galaxy, emphasizing its immense size."
+      }
+    ],
+    "thumbnail_text": "Light Speed: Mind-Bending Travel",
+    "background_style": "space_stars"
+  },
+  "formatted_at": "2026-05-06T05:45:13.796319",
+  "status": "sent_telegram",
+  "rendered_at": "2026-05-06T05:46:55.314628",
+  "video_path": "videos_output/light_speed_travel_20260506_054514.mp4",
+  "sent_at": "2026-05-06T05:46:59.702987",
+  "telegram": {
+    "message_id": 44,
+    "chat_id": "7804359202",
+    "sent_at": "2026-05-06T05:46:59.701797"
+  }
+}
