@@ -3314,5 +3314,30 @@
     "status": "formatted",
     "strategy_based": true,
     "formatted_at": "2026-05-06T05:45:13.796514"
+  },
+  {
+    "topic": "dark energy",
+    "topic_family": "cosmic_mystery",
+    "hook": "68% of universe is what?",
+    "facts": [
+      "The universe is expanding at 70 km/s per megaparsec",
+      "Dark energy makes up 68% of the universe's total energy density",
+      "It would take a cube of space 900 million km wide to fit 1 billion galaxies"
+    ],
+    "payoff": "and we still don't know what's driving it",
+    "title": "Dark Energy \ud83c\udf0c",
+    "hashtags": [
+      "space",
+      "science",
+      "astrophysics",
+      "darkenergy",
+      "cosmology"
+    ],
+    "description": "Imagine a force so powerful, it's pushing galaxies apart at an ever-increasing speed \ud83c\udf0c! This mysterious energy is driving the universe's expansion, but what is it? \ud83e\udd14 As we try to grasp the enormity of the cosmos, we're reminded that there's still so much to uncover about dark energy \ud83c\udf11. Will we crack the code?",
+    "generated_by": "groq",
+    "generated_at": "2026-05-08T17:30:41.929252",
+    "status": "error",
+    "strategy_based": true,
+    "error_at": "2026-05-08T17:36:12.999386"
   }
 ]
