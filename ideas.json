@@ -3339,5 +3339,30 @@
     "status": "error",
     "strategy_based": true,
     "error_at": "2026-05-08T17:36:12.999386"
+  },
+  {
+    "topic": "Dark Matter Mystery",
+    "topic_family": "cosmic_mystery",
+    "hook": "What's 27% of our universe?",
+    "facts": [
+      "It would take 3.8 million football fields to cover the area of a single dark matter galaxy",
+      "The Milky Way's dark matter halo is approximately 1.3 million light-years across, roughly the distance from New York to Los Angeles 650 times",
+      "Scientists estimate that dark matter makes up about 27% of the universe's total mass-energy density, with 68% being dark energy"
+    ],
+    "payoff": "and we still don't know what it's made of",
+    "title": "Dark Matter: 27% \ud83c\udf0c",
+    "hashtags": [
+      "#space",
+      "#astrophysics",
+      "#darkmatter",
+      "#science",
+      "#universe"
+    ],
+    "description": "You're living in a universe where nearly a third of its mass-energy is invisible \ud83c\udf0c. This mysterious substance, known as dark matter, is all around us, yet we can't see it \ud83d\udd75\ufe0f\u200d\u2640\ufe0f. What if uncovering its secrets could change our understanding of the cosmos forever? \ud83e\udd14",
+    "generated_by": "groq",
+    "generated_at": "2026-05-10T05:51:44.827123",
+    "status": "error",
+    "strategy_based": true,
+    "error_at": "2026-05-10T05:57:16.621682"
   }
 ]
