@@ -3414,5 +3414,30 @@
     "status": "error",
     "strategy_based": true,
     "error_at": "2026-05-11T13:59:00.589198"
+  },
+  {
+    "topic": "Fast Radio Bursts",
+    "topic_family": "cosmic_mystery",
+    "hook": "What blasts 100 million Suns?",
+    "facts": [
+      "Fast Radio Bursts release energy equivalent to 100 million Suns in 1 millisecond",
+      "These bursts can originate from galaxies 3 billion football fields away",
+      "Scientists have detected only 80 FRBs in the 8.6 billion square miles of the observable universe"
+    ],
+    "payoff": "and we still don't know what causes them",
+    "title": "Mystery Blasts \ud83d\ude80",
+    "hashtags": [
+      "space",
+      "science",
+      "astrophysics",
+      "cosmology",
+      "mystery"
+    ],
+    "description": "Imagine an explosion so powerful it outshines entire galaxies \ud83c\udf0c! Fast Radio Bursts are the universe's most baffling events, and scientists are still in the dark about their origins \ud83e\udd14. Can we unravel the mystery behind these cosmic blasts? \ud83d\ude80",
+    "generated_by": "groq",
+    "generated_at": "2026-05-11T22:18:36.565165",
+    "status": "error",
+    "strategy_based": true,
+    "error_at": "2026-05-11T22:24:07.589629"
   }
 ]
