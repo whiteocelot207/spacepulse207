@@ -3364,5 +3364,30 @@
     "status": "error",
     "strategy_based": true,
     "error_at": "2026-05-10T05:57:16.621682"
+  },
+  {
+    "topic": "The Great Attractor",
+    "topic_family": "cosmic_mystery",
+    "hook": "What's pulling us at 2 million km/h?",
+    "facts": [
+      "The Milky Way is being pulled by a force equivalent to 10^16 football fields of gravity",
+      "This region of space is 250 million light-years away, or about 1/4th the distance from NY to LA multiplied by 4,000",
+      "It would take a spaceship 4.3 billion years to reach the center of the Great Attractor, traveling at 100,000 km/h"
+    ],
+    "payoff": "and we still don't know what's causing it",
+    "title": "Space: The Great Attractor \ud83d\ude80",
+    "hashtags": [
+      "#space",
+      "#science",
+      "#astrophysics",
+      "#cosmology",
+      "#mystery"
+    ],
+    "description": "Imagine being on a cosmic train, hurtling through space at 2 million km/h \ud83d\ude82\ud83c\udf20, but what's driving this motion? \ud83e\udd14 We're living in a universe where entire galaxies are being pulled by an invisible force, and the truth behind it remains a mystery \ud83d\udd75\ufe0f\u200d\u2640\ufe0f. Will we uncover the secrets of the Great Attractor before it's too late? \ud83d\udd70\ufe0f",
+    "generated_by": "groq",
+    "generated_at": "2026-05-11T04:21:35.041438",
+    "status": "error",
+    "strategy_based": true,
+    "error_at": "2026-05-11T04:27:06.399189"
   }
 ]
