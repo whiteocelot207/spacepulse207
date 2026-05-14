@@ -3464,5 +3464,30 @@
     "status": "error",
     "strategy_based": true,
     "error_at": "2026-05-14T13:09:09.223711"
+  },
+  {
+    "topic": "Sun's Volume",
+    "topic_family": "scale_comparison",
+    "hook": "1.3 million Earths fit inside",
+    "facts": [
+      "The Sun's volume is approximately 1.412 x 10^18 km^3, which is 1.3 million times the volume of Earth",
+      "The Sun is so massive that it makes up about 99.8% of the mass in our solar system, with the remaining 0.2% consisting of the planets, dwarf planets, and other objects",
+      "If the Sun were hollow, it could fit about 109 Earths lined up from the Sun's center to its surface, given the Sun's radius of about 696,000 km"
+    ],
+    "payoff": "and we still don't know what makes up 1% of its core",
+    "title": "Sun's Insane Size \ud83c\udf1e",
+    "hashtags": [
+      "#space",
+      "#science",
+      "#astrophysics",
+      "#solarSystem",
+      "#SunFacts"
+    ],
+    "description": "The Sun is more than just a giant ball of hot, glowing gas - it's a cosmic behemoth that defies comprehension \ud83c\udf1f. With a volume that could fit over a million Earths, the Sun is the true king of our solar system \ud83c\udf1e. But what's really at its core? \ud83e\udd14",
+    "generated_by": "groq",
+    "generated_at": "2026-05-14T18:00:15.188414",
+    "status": "error",
+    "strategy_based": true,
+    "error_at": "2026-05-14T18:05:46.370315"
   }
 ]
