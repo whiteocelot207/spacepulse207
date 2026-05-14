@@ -3439,5 +3439,30 @@
     "status": "error",
     "strategy_based": true,
     "error_at": "2026-05-11T22:24:07.589629"
+  },
+  {
+    "topic": "Surviving a White Dwarf",
+    "topic_family": "hypothetical",
+    "hook": "What if you landed on a White Dwarf?",
+    "facts": [
+      "A White Dwarf is about the size of Earth, but has a mass roughly 200,000 times that of Mount Everest",
+      "The surface gravity of a White Dwarf is 100,000 times stronger than Earth's, or equivalent to stacking 1.7 million football fields on top of each other",
+      "The surface temperature of a newly formed White Dwarf is around 200,000 degrees Fahrenheit, hot enough to melt any object within 20,000 miles (the distance from New York to Los Angeles)"
+    ],
+    "payoff": "and we still don't know how they form in the first place",
+    "title": "White Dwarf \ud83c\udf1f Survival?",
+    "hashtags": [
+      "#space",
+      "#astrophysics",
+      "#whitedwarf",
+      "#science",
+      "#universe"
+    ],
+    "description": "Imagine standing on a star that's roughly the size of our home planet, but packs a gravitational punch that's off the charts \ud83c\udf1f! A White Dwarf is an extreme celestial body that challenges our understanding of space and gravity. Can we unravel its mysteries and explore the uncharted territories of the universe? \ud83d\ude80",
+    "generated_by": "groq",
+    "generated_at": "2026-05-14T13:03:38.191438",
+    "status": "error",
+    "strategy_based": true,
+    "error_at": "2026-05-14T13:09:09.223711"
   }
 ]
