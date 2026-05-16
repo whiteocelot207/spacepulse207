@@ -3514,5 +3514,30 @@
     "status": "error",
     "strategy_based": true,
     "error_at": "2026-05-15T06:26:22.910141"
+  },
+  {
+    "topic": "Milky Way Size",
+    "topic_family": "scale_comparison",
+    "hook": "1 Milky Way = 100 billion Suns",
+    "facts": [
+      "The Milky Way galaxy is approximately 100,000 light-years in diameter, or about 621,371,000,000,000 miles, which is roughly the distance from New York to Los Angeles and back again 4.3 million times",
+      "If the Milky Way were the size of the United States, the Sun would be about the size of a basketball, and the nearest star, Proxima Centauri, would be over 2,500 miles away",
+      "The Milky Way contains between 200-400 billion stars, with some estimates as high as 1 trillion, which is more than the number of grains of sand on all the beaches on Earth"
+    ],
+    "payoff": "and we still don't know what's beyond it",
+    "title": "Milky Way \ud83c\udf0c Scale",
+    "hashtags": [
+      "space",
+      "astronomy",
+      "astrophysics",
+      "galaxy",
+      "cosmos"
+    ],
+    "description": "The Milky Way galaxy is a marvel of cosmic proportions \ud83c\udf0c, with a scale that's almost impossible to wrap your head around \ud83e\udd2f. From its millions of light-years in diameter to its billions of stars, this galaxy is a true wonder of the universe \ud83c\udf20. But what lies beyond its edges, and will we ever find out? \ud83d\udd2e",
+    "generated_by": "groq",
+    "generated_at": "2026-05-16T05:43:40.214911",
+    "status": "error",
+    "strategy_based": true,
+    "error_at": "2026-05-16T05:49:15.415545"
   }
 ]
