@@ -3564,5 +3564,30 @@
     "status": "error",
     "strategy_based": true,
     "error_at": "2026-05-19T06:41:33.353531"
+  },
+  {
+    "topic": "Moon vs Asteroids",
+    "topic_family": "scale_comparison",
+    "hook": "Moon is tiny compared to...",
+    "facts": [
+      "The Moon's diameter is approximately 2,159 miles, roughly the distance from New York to Las Vegas",
+      "Ceres, the largest asteroid, has a diameter of about 590 miles, roughly the size of Texas",
+      "Vesta, another large asteroid, has a volume of around 1.4 million cubic miles, enough to fill 300,000 football fields"
+    ],
+    "payoff": "and there are millions more asteroids waiting to be discovered",
+    "title": "Moon Size \ud83c\udf15 vs Asteroids",
+    "hashtags": [
+      "space",
+      "science",
+      "astrophysics",
+      "asteroids",
+      "solarsystem"
+    ],
+    "description": "The Moon is our closest celestial neighbor, but how does it measure up to the vast array of asteroids in our solar system? \ud83c\udf20 You might be surprised to learn that some asteroids are almost as big as our Moon! \ud83e\udd14 Will we ever discover an asteroid that threatens Earth's orbit? \ud83d\ude80",
+    "generated_by": "groq",
+    "generated_at": "2026-05-22T06:34:43.238021",
+    "status": "error",
+    "strategy_based": true,
+    "error_at": "2026-05-22T06:40:14.319280"
   }
 ]
