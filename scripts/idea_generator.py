@@ -6,6 +6,9 @@ Fallback: Gemini API (if Groq fails or key missing)
 Uses analytics data to prioritize winning topic types,
 with exponential backoff to handle 429/503 gracefully.
 Target: US Audience 18-34
+
+FIX: Rejected ideas (duplicate topic/hook) are now tracked per-run
+and injected back into the prompt so the AI doesn't repeat them.
 """
 
 import os
@@ -19,9 +22,9 @@ from datetime import datetime
 # =============================================================================
 # CONFIGURATION
 # =============================================================================
-STRATEGY_FILE = "data/strategy.json"
+STRATEGY_FILE    = "data/strategy.json"
 PERFORMANCE_FILE = "data/performance_history.json"
-IDEAS_FILE = "ideas.json"
+IDEAS_FILE       = "ideas.json"
 
 DEFAULT_TOPICS = [
     "scale_comparison",
@@ -32,26 +35,26 @@ DEFAULT_TOPICS = [
 ]
 
 TOPIC_DESCRIPTIONS = {
-    "scale_comparison": "comparing sizes of cosmic objects (How many Earths fit in the Sun? How big is the Milky Way compared to...?)",
-    "travel_time": "how long it takes to travel to cosmic destinations at various speeds (How long to reach Mars at light speed?)",
-    "planetary_facts": "surprising facts about planets, moons, or other bodies (A day on Venus is longer than its year)",
-    "hypothetical": "what-if scenarios in space (What if you fell into a black hole? Could you survive on...?)",
-    "myth_busting": "correcting common misconceptions about space (Is the Sun actually yellow? Can you hear explosions in space?)",
-    "cosmic_mystery": "unexplained phenomena and mysteries of the universe (What is dark matter? Why is the universe expanding faster?)",
-    "extreme_conditions": "extreme environments and conditions in space (hottest planet, coldest place, strongest gravity)"
+    "scale_comparison":  "comparing sizes of cosmic objects (How many Earths fit in the Sun? How big is the Milky Way compared to...?)",
+    "travel_time":       "how long it takes to travel to cosmic destinations at various speeds (How long to reach Mars at light speed?)",
+    "planetary_facts":   "surprising facts about planets, moons, or other bodies (A day on Venus is longer than its year)",
+    "hypothetical":      "what-if scenarios in space (What if you fell into a black hole? Could you survive on...?)",
+    "myth_busting":      "correcting common misconceptions about space (Is the Sun actually yellow? Can you hear explosions in space?)",
+    "cosmic_mystery":    "unexplained phenomena and mysteries of the universe (What is dark matter? Why is the universe expanding faster?)",
+    "extreme_conditions":"extreme environments and conditions in space (hottest planet, coldest place, strongest gravity)"
 }
 
-RECENT_FAMILY_BLOCK = 3
+RECENT_FAMILY_BLOCK    = 3
 MAX_GENERATION_ATTEMPTS = 3
 
 # Groq config (primary)
-GROQ_MODEL        = "llama-3.3-70b-versatile"
-GROQ_MAX_RETRIES  = 3
-GROQ_BASE_DELAY   = 5   # seconds
+GROQ_MODEL       = "llama-3.3-70b-versatile"
+GROQ_MAX_RETRIES = 3
+GROQ_BASE_DELAY  = 5   # seconds
 
 # Gemini config (fallback)
 GEMINI_MAX_RETRIES = 3
-GEMINI_BASE_DELAY  = 20   # seconds — doubles each retry: 20 → 40 → 80
+GEMINI_BASE_DELAY  = 20  # seconds — doubles each retry: 20 → 40 → 80
 GEMINI_MODEL       = "gemini-2.5-flash"
 
 
@@ -77,7 +80,7 @@ def jaccard_similarity(a, b):
     if not a_words or not b_words:
         return 0.0
     intersection = len(a_words & b_words)
-    union = len(a_words | b_words)
+    union        = len(a_words | b_words)
     return intersection / union if union else 0.0
 
 
@@ -255,10 +258,10 @@ def call_groq(prompt, api_key):
         "Authorization": f"Bearer {api_key}",
     }
     payload = {
-        "model": GROQ_MODEL,
-        "messages": [{"role": "user", "content": prompt}],
+        "model":       GROQ_MODEL,
+        "messages":    [{"role": "user", "content": prompt}],
         "temperature": 0.9,
-        "max_tokens": 700,
+        "max_tokens":  700,
     }
 
     for attempt in range(GROQ_MAX_RETRIES):
@@ -282,7 +285,21 @@ def call_groq(prompt, api_key):
             data  = response.json()
             text  = data["choices"][0]["message"]["content"]
             clean = text.replace("```json", "").replace("```", "").strip()
-            return json.loads(clean)
+
+            # Primary parse
+            try:
+                return json.loads(clean)
+            except json.JSONDecodeError:
+                # Fallback: extract JSON object via regex
+                match = re.search(r'\{[\s\S]*\}', clean)
+                if match:
+                    try:
+                        return json.loads(match.group())
+                    except json.JSONDecodeError as e:
+                        print(f"  ❌ Groq JSON parse error (after regex): {e}")
+                        return None
+                print("  ❌ Groq: no JSON object found in response")
+                return None
 
         except requests.exceptions.Timeout:
             print(f"  ⚠️  Groq timeout on attempt {attempt + 1}")
@@ -295,10 +312,6 @@ def call_groq(prompt, api_key):
             if attempt < GROQ_MAX_RETRIES - 1:
                 print(f"  ⏳ Waiting {wait:.0f}s...")
                 time.sleep(wait)
-
-        except json.JSONDecodeError as e:
-            print(f"  ❌ Groq JSON parse error: {e}")
-            return None
 
         except Exception as e:
             print(f"  ❌ Groq unexpected error: {e}")
@@ -347,7 +360,21 @@ def call_gemini(prompt, api_key):
             data  = response.json()
             text  = data["candidates"][0]["content"]["parts"][0]["text"]
             clean = text.replace("```json", "").replace("```", "").strip()
-            return json.loads(clean)
+
+            # Primary parse
+            try:
+                return json.loads(clean)
+            except json.JSONDecodeError:
+                # Fallback: extract JSON object via regex
+                match = re.search(r'\{[\s\S]*\}', clean)
+                if match:
+                    try:
+                        return json.loads(match.group())
+                    except json.JSONDecodeError as e:
+                        print(f"  ❌ Gemini JSON parse error (after regex): {e}")
+                        return None
+                print("  ❌ Gemini: no JSON object found in response")
+                return None
 
         except requests.exceptions.Timeout:
             print(f"  ⚠️  Timeout on attempt {attempt + 1}")
@@ -360,10 +387,6 @@ def call_gemini(prompt, api_key):
             if attempt < GEMINI_MAX_RETRIES - 1:
                 print(f"  ⏳ Waiting {wait:.0f}s...")
                 time.sleep(wait)
-
-        except json.JSONDecodeError as e:
-            print(f"  ❌ JSON parse error — skipping retry: {e}")
-            return None
 
         except Exception as e:
             print(f"  ❌ Unexpected error: {e}")
@@ -382,6 +405,8 @@ def call_ai(prompt):
     """
     groq_key   = os.environ.get("GROQ_API_KEY")
     gemini_key = os.environ.get("GEMINI_API_KEY")
+
+    print(f"  🔑 GROQ_API_KEY set: {bool(groq_key)} | GEMINI_API_KEY set: {bool(gemini_key)}")
 
     if groq_key:
         print("  🔵 Using Groq (primary)...")
@@ -407,7 +432,14 @@ def call_ai(prompt):
 # =============================================================================
 # PROMPT BUILDER
 # =============================================================================
-def build_prompt(topic_family, topic_guidance, history, existing_ideas):
+def build_prompt(topic_family, topic_guidance, history, existing_ideas,
+                 rejected_topics=None, rejected_hooks=None):
+    """
+    Build the generation prompt.
+    - rejected_topics / rejected_hooks: ideas already tried and rejected
+      in the current run; injected directly into the prompt so the AI
+      doesn't repeat them on the next attempt.
+    """
     recent_titles      = get_recent_titles(history, limit=10)
     recent_idea_topics = [
         idea.get("topic", "")
@@ -416,7 +448,21 @@ def build_prompt(topic_family, topic_guidance, history, existing_ideas):
     ]
 
     avoid_list = recent_titles + recent_idea_topics
+
+    # Inject rejected-this-run topics so the AI explicitly avoids them
+    if rejected_topics:
+        avoid_list += [f"[JUST TRIED - DO NOT REPEAT] {t}" for t in rejected_topics if t]
+
     avoid_text = "\n".join(f"- {item}" for item in avoid_list if item) or "- None"
+
+    # Separate block for rejected hooks (hooks are more specific than topics)
+    rejected_hooks_block = ""
+    if rejected_hooks:
+        hooks_str = "\n".join(f"- {h}" for h in rejected_hooks if h)
+        rejected_hooks_block = f"""
+THESE EXACT HOOKS WERE JUST REJECTED THIS RUN — do NOT use them or anything similar:
+{hooks_str}
+"""
 
     return f"""You are a viral astrophysics YouTube Shorts strategist targeting US audiences aged 18-34.
 
@@ -427,7 +473,7 @@ DESCRIPTION: {topic_guidance}
 
 AVOID these recently used topics/titles (do NOT rephrase them either):
 {avoid_text}
-
+{rejected_hooks_block}
 WHAT MAKES US AUDIENCES SHARE:
 - Opening with a shocking number ("It would take 1.3 million Earths to fill the Sun")
 - Using US-relatable scale (football fields, distance NY to LA, size of Texas)
@@ -476,9 +522,18 @@ def generate_idea():
     existing_ideas = load_ideas()
     used_entries   = build_used_text_bank(history, existing_ideas)
 
+    # Track rejected ideas within this run so the AI can avoid them
+    rejected_topics = []
+    rejected_hooks  = []
+
     for attempt in range(MAX_GENERATION_ATTEMPTS):
         print(f"\n{'─' * 50}")
         print(f"🧪 Generation attempt {attempt + 1}/{MAX_GENERATION_ATTEMPTS}")
+
+        if rejected_topics:
+            print(f"🚫 Carrying {len(rejected_topics)} rejected topic(s) into prompt: {rejected_topics}")
+        if rejected_hooks:
+            print(f"🚫 Carrying {len(rejected_hooks)} rejected hook(s) into prompt")
 
         # Cooldown between outer attempts — 0s, 35s, 70s
         if attempt > 0:
@@ -486,33 +541,43 @@ def generate_idea():
             print(f"⏳ Cooldown {cooldown:.0f}s before next attempt...")
             time.sleep(cooldown)
 
-        topic_family  = select_topic_family(strategy, history)
+        topic_family   = select_topic_family(strategy, history)
         topic_guidance = get_topic_guidance(topic_family)
         print(f"🎯 Topic family: {topic_family}")
 
-        prompt = build_prompt(topic_family, topic_guidance, history, existing_ideas)
+        prompt = build_prompt(
+            topic_family, topic_guidance, history, existing_ideas,
+            rejected_topics=rejected_topics,
+            rejected_hooks=rejected_hooks,
+        )
         idea, provider = call_ai(prompt)
 
         if not idea:
             print("⚠️  No idea returned — moving to next attempt")
             continue
 
-        idea["generated_by"] = provider  # track which API was used
-
-        # Force correct topic family
+        idea["generated_by"]   = provider
         idea["topic_family"]   = topic_family
         idea["generated_at"]   = datetime.now().isoformat()
         idea["status"]         = "pending"
         idea["strategy_based"] = strategy is not None
 
         if is_too_similar(idea, used_entries):
-            print("🔁 Too similar to existing content — retrying")
+            # Save the rejected topic/hook so the next attempt avoids them
+            rejected_topic = idea.get("topic", "")
+            rejected_hook  = idea.get("hook", "")
+            if rejected_topic:
+                rejected_topics.append(rejected_topic)
+            if rejected_hook:
+                rejected_hooks.append(rejected_hook)
+            print("🔁 Too similar to existing content — added to reject list, retrying")
             continue
 
         print("✅ Fresh idea generated!")
-        print(f"   Topic : {idea.get('topic')}")
-        print(f"   Hook  : {idea.get('hook')}")
-        print(f"   Title : {idea.get('title')}")
+        print(f"   Provider : {provider}")
+        print(f"   Topic    : {idea.get('topic')}")
+        print(f"   Hook     : {idea.get('hook')}")
+        print(f"   Title    : {idea.get('title')}")
         return idea
 
     print("❌ Could not generate a fresh idea after all attempts")
