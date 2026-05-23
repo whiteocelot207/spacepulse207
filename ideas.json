@@ -3589,5 +3589,30 @@
     "status": "error",
     "strategy_based": true,
     "error_at": "2026-05-22T06:40:14.319280"
+  },
+  {
+    "topic": "Galaxy Rotation",
+    "topic_family": "cosmic_mystery",
+    "hook": "Galaxies spin too fast?",
+    "facts": [
+      "It would take 200 million football fields lined up to match the distance stars are from the center of our galaxy",
+      "The Milky Way's rotation curve is off by 30% from what's expected based on visible matter",
+      "There's enough unseen mass to equal 4.5 billion Suns to explain the discrepancy"
+    ],
+    "payoff": "and we still don't know what's causing it",
+    "title": "Galaxies Spin \ud83c\udf00",
+    "hashtags": [
+      "space",
+      "science",
+      "astrophysics",
+      "galaxy",
+      "cosmology"
+    ],
+    "description": "You're living in a universe where galaxies are spinning out of control \ud83c\udf00, with stars and gas moving at incredible speeds. But what's behind this cosmic phenomenon? \ud83e\udd14 The answer might just change our understanding of the universe forever \ud83d\udcab",
+    "generated_by": "groq",
+    "generated_at": "2026-05-23T05:54:45.132334",
+    "status": "error",
+    "strategy_based": true,
+    "error_at": "2026-05-23T06:00:16.804584"
   }
 ]
