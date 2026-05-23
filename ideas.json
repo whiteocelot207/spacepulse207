@@ -3614,5 +3614,30 @@
     "status": "error",
     "strategy_based": true,
     "error_at": "2026-05-23T06:00:16.804584"
+  },
+  {
+    "topic": "Cosmic Speeds",
+    "topic_family": "travel_time",
+    "hook": "4.2 lightyears in 6 months?",
+    "facts": [
+      "Traveling at 10% of light speed, it would take 70 years to reach the nearest star, Proxima Centauri, which is about 268,000 times farther from us than the distance from New York to Los Angeles",
+      "At 50% of light speed, a trip to Mars would take approximately 4.5 days, covering a distance of about 140 million miles, roughly 580,000 times the length of a football field",
+      "If we could travel at 90% of light speed, we could reach the Andromeda Galaxy, our closest galactic neighbor, in about 5.4 million years, which is roughly the same time it would take to drive around the Earth about 120 million times"
+    ],
+    "payoff": "and we still can't crack the code to faster-than-light travel",
+    "title": "Space Travel \ud83d\ude80",
+    "hashtags": [
+      "space",
+      "science",
+      "astrophysics",
+      "cosmology",
+      "astronomy"
+    ],
+    "description": "Imagine being able to travel across the universe in a fraction of the time it takes us now \ud83d\ude80\ud83d\udcab. But what does it really mean to move at incredible speeds through space? Let's explore the mind-boggling numbers behind cosmic travel \ud83e\udd2f. Can we ever hope to reach the stars in a human lifetime?",
+    "generated_by": "groq",
+    "generated_at": "2026-05-23T17:11:50.227956",
+    "status": "error",
+    "strategy_based": true,
+    "error_at": "2026-05-23T17:17:21.719327"
   }
 ]
