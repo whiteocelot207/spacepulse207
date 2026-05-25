@@ -3664,5 +3664,30 @@
     "status": "error",
     "strategy_based": true,
     "error_at": "2026-05-25T04:55:48.957113"
+  },
+  {
+    "topic": "Dark Matter Galaxy",
+    "topic_family": "hypothetical",
+    "hook": "What if you lived in a galaxy made of dark matter?",
+    "facts": [
+      "A dark matter galaxy would be about 1,000 light-years across, roughly the size of a small US state like Delaware",
+      "It would have a mass equivalent to 1 billion suns, yet be nearly invisible to our telescopes",
+      "The gravitational pull would be so strong that stars would orbit the center at speeds of up to 500 miles per second, faster than a jet flying from New York to Los Angeles"
+    ],
+    "payoff": "and we still don't know what makes up this mysterious substance",
+    "title": "Dark Matter Galaxy \ud83c\udf0c",
+    "hashtags": [
+      "space",
+      "science",
+      "astrophysics",
+      "darkmatter",
+      "galaxy"
+    ],
+    "description": "Imagine living in a galaxy that's invisible to our eyes \ud83c\udf0c\ud83d\udc40. A dark matter galaxy would be a strange and mysterious place, with gravity pulling stars at incredible speeds \ud83c\udf20. But what would it be like to call this place home, and how can we unravel the secrets of dark matter? \ud83e\udd14",
+    "generated_by": "groq",
+    "generated_at": "2026-05-25T22:16:35.700705",
+    "status": "error",
+    "strategy_based": true,
+    "error_at": "2026-05-25T22:22:07.266101"
   }
 ]
