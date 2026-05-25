@@ -3639,5 +3639,30 @@
     "status": "error",
     "strategy_based": true,
     "error_at": "2026-05-23T17:17:21.719327"
+  },
+  {
+    "topic": "Cosmic Travel",
+    "topic_family": "travel_time",
+    "hook": "70,000 years to Andromeda?",
+    "facts": [
+      "At 20% of light speed, it would take 241 years to reach Mars",
+      "Traveling at 50,000 mph, it would take 177,000 years to reach the nearest star, Proxima Centauri, a distance of 4.24 light-years or about 268,000 times the distance from NYC to LA",
+      "The fastest spacecraft, Voyager 1, would take 70,000 years to reach the Andromeda Galaxy, a distance of 2.5 million light-years or roughly 1,470,000 times the diameter of the Sun"
+    ],
+    "payoff": "and we're still searching for a way to make interstellar travel possible",
+    "title": "Galactic Road Trip \ud83d\ude80",
+    "hashtags": [
+      "#space",
+      "#science",
+      "#astrophysics",
+      "#interstellarravel",
+      "#cosmicscale"
+    ],
+    "description": "Imagine embarking on a journey to the nearest star or even the Andromeda Galaxy \ud83c\udf20! The sheer scale of space is mind-boggling, and the travel times are even more astonishing \ud83e\udd2f. Can you wrap your head around the numbers behind a galactic road trip? \ud83d\ude80 Watch to find out and join the cosmic conversation!",
+    "generated_by": "groq",
+    "generated_at": "2026-05-25T04:50:17.450229",
+    "status": "error",
+    "strategy_based": true,
+    "error_at": "2026-05-25T04:55:48.957113"
   }
 ]
