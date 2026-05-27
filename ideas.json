@@ -3689,5 +3689,30 @@
     "status": "error",
     "strategy_based": true,
     "error_at": "2026-05-25T22:22:07.266101"
+  },
+  {
+    "topic": "Planetary Atmosphere",
+    "topic_family": "hypothetical",
+    "hook": "What if Venus was habitable?",
+    "facts": [
+      "Venus' atmosphere is 92 times thicker than Earth's, with pressures equivalent to being 1 mile underwater",
+      "If Venus cooled, its atmosphere would condense, covering the planet in a 3,000-foot-deep ocean, roughly the size of the Pacific",
+      "This ocean would be 10 times deeper than the deepest point on Earth, the Mariana Trench, and cover an area equivalent to the contiguous United States"
+    ],
+    "payoff": "and we still don't know what caused its extreme greenhouse effect",
+    "title": "Venus: Earth's Evil Twin? \ud83c\udf0b",
+    "hashtags": [
+      "#space",
+      "#astrophysics",
+      "#planetaryscience",
+      "#venus",
+      "#solarsystem"
+    ],
+    "description": "Imagine a world where Venus, often called Earth's twin, was teeming with life \ud83c\udf3f\ud83c\udf0a. But what if its extreme atmosphere held a secret to its past? \ud83e\udd14 You're about to discover the shocking truth behind Venus' hostile environment, and the mysterious forces that shaped it \ud83c\udf0b. Will we ever unlock its secrets and find a way to make it habitable again?",
+    "generated_by": "groq",
+    "generated_at": "2026-05-27T04:47:47.047867",
+    "status": "error",
+    "strategy_based": true,
+    "error_at": "2026-05-27T04:53:18.583881"
   }
 ]
