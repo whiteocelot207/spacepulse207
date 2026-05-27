@@ -3739,5 +3739,30 @@
     "status": "error",
     "strategy_based": true,
     "error_at": "2026-05-27T06:54:04.565912"
+  },
+  {
+    "topic": "Falling into a Neutron Star",
+    "topic_family": "hypothetical",
+    "hook": "Crushed by 100 billion tons",
+    "facts": [
+      "A sugar-cube-sized amount of neutron star matter weighs about 1 billion tons",
+      "The density of a neutron star is roughly 3.7 billion metric tons per cubic centimeter",
+      "If you fell into a neutron star, you'd reach 1,900,000,000 degrees Fahrenheit in 0.1 seconds"
+    ],
+    "payoff": "and we still don't know what happens to the information stored in the matter that falls in",
+    "title": "Neutron Star: Cosmic Crusher \ud83c\udf00",
+    "hashtags": [
+      "#space",
+      "#neutronstar",
+      "#astrophysics",
+      "#cosmology",
+      "#science"
+    ],
+    "description": "Imagine being crushed by the weight of a mountain range in the space of a sugar cube \ud83c\udf00. What happens when you fall into a neutron star? \ud83e\udd14 The extreme density and gravity will leave you speechless. Will we ever uncover the secrets of these cosmic wonders? \ud83d\ude80",
+    "generated_by": "groq",
+    "generated_at": "2026-05-27T14:35:31.873481",
+    "status": "error",
+    "strategy_based": true,
+    "error_at": "2026-05-27T14:41:03.376850"
   }
 ]
