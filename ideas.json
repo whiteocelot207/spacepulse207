@@ -3714,5 +3714,30 @@
     "status": "error",
     "strategy_based": true,
     "error_at": "2026-05-27T04:53:18.583881"
+  },
+  {
+    "topic": "Supernova Distance",
+    "topic_family": "hypothetical",
+    "hook": "A star explodes 50 light-years away",
+    "facts": [
+      "It would release 10^44 Joules of energy, enough to power the US for 1.3 billion years",
+      "The explosion would be so bright, it would be visible from 300 million football fields away",
+      "A supernova at this distance would bathe the Earth in radiation, increasing cancer risk by 0.5% for 10 years"
+    ],
+    "payoff": "and we still don't know which star is next to go supernova",
+    "title": "Supernova Next Door \ud83c\udf1f",
+    "hashtags": [
+      "#space",
+      "#science",
+      "#astrophysics",
+      "#supernova",
+      "#stargazing"
+    ],
+    "description": "Imagine a star exploding so close to Earth, it would be visible during the day \ud83c\udf1e! This cosmic event would be catastrophic, yet awe-inspiring. Will we be prepared when the next supernova occurs, and how would it change our planet forever? \ud83c\udf0e",
+    "generated_by": "groq",
+    "generated_at": "2026-05-27T06:48:33.326877",
+    "status": "error",
+    "strategy_based": true,
+    "error_at": "2026-05-27T06:54:04.565912"
   }
 ]
