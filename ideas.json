@@ -3814,5 +3814,30 @@
     "status": "error",
     "strategy_based": true,
     "error_at": "2026-05-28T04:41:37.166270"
+  },
+  {
+    "topic": "Venusian Atmosphere",
+    "topic_family": "hypothetical",
+    "hook": "Venus' atmosphere crushes",
+    "facts": [
+      "it would crush a submarine 1 mile beneath the ocean at 482 times Earth's pressure",
+      "the atmosphere is 92 times thicker than Earth's, comparable to a layer 36,000 feet deep",
+      "it traps heat, making Venus the hottest planet with surface temps of 870\u00b0F, hot enough to melt lead"
+    ],
+    "payoff": "and we still don't know why it's so hostile",
+    "title": "Venus: Crushingly Hot \ud83c\udf21\ufe0f",
+    "hashtags": [
+      "space",
+      "science",
+      "astrophysics",
+      "planetaryScience",
+      "atmosphericPhenomena"
+    ],
+    "description": "Imagine a world where the atmosphere is so dense it would crush a submarine \ud83c\udf0a, and the heat is so intense it could melt lead \ud83d\udd25. Welcome to Venus, the hottest planet in our solar system, with surface temperatures of 870\u00b0F \ud83c\udf21\ufe0f. But what makes its atmosphere so hostile, and will we ever uncover its secrets? \ud83e\udd14",
+    "generated_by": "groq",
+    "generated_at": "2026-05-28T14:46:53.476608",
+    "status": "error",
+    "strategy_based": true,
+    "error_at": "2026-05-28T14:52:24.653309"
   }
 ]
