@@ -3839,5 +3839,30 @@
     "status": "error",
     "strategy_based": true,
     "error_at": "2026-05-28T14:52:24.653309"
+  },
+  {
+    "topic": "Solar System Destruction",
+    "topic_family": "hypothetical",
+    "hook": "What if Jupiter vanished?",
+    "facts": [
+      "Jupiter's mass is 318 times that of Earth, roughly the size of 1,321 Earths lined up side by side",
+      "A Jupiter-less Solar System would cause Earth's orbit to shift by about 1,000 miles, or roughly the distance from New York to Miami",
+      "Without Jupiter's gravitational pull, the asteroid belt would increase by 25%, potentially sending 850,000 more asteroids towards Earth"
+    ],
+    "payoff": "and we still don't know how it would affect Earth's chances of supporting life",
+    "title": "Jupiter Vanishes? \ud83c\udf0c",
+    "hashtags": [
+      "space",
+      "science",
+      "astrophysics",
+      "solarsystem",
+      "jupiter"
+    ],
+    "description": "Imagine waking up to a Jupiter-less Solar System \ud83c\udf0c! The effects would be staggering, from a drastically altered asteroid belt to a potentially habitable Earth on the brink of disaster \ud83c\udf0e. Can you handle a universe without the gas giant that keeps us safe? \ud83e\udd14",
+    "generated_by": "groq",
+    "generated_at": "2026-05-29T04:41:37.090614",
+    "status": "error",
+    "strategy_based": true,
+    "error_at": "2026-05-29T04:47:08.405208"
   }
 ]
