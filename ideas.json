@@ -3864,5 +3864,30 @@
     "status": "error",
     "strategy_based": true,
     "error_at": "2026-05-29T04:47:08.405208"
+  },
+  {
+    "topic": "Surviving on a Rogue Planet",
+    "topic_family": "hypothetical",
+    "hook": "Planet with 10x Earth's mass floats alone",
+    "facts": [
+      "A rogue planet has a surface temperature of -200\u00b0C to 200\u00b0C, varying by 400\u00b0C over 10 Earth days",
+      "Its atmosphere could be 1,000 km thick, comparable to the distance from New York to Chicago",
+      "Rogue planets can have magnetic fields 100,000 times stronger than Earth's, affecting nearby space debris"
+    ],
+    "payoff": "and we still don't know how they form or how life could thrive on them",
+    "title": "Rogue Planets: Cosmic Wanderers \ud83d\ude80",
+    "hashtags": [
+      "#space",
+      "#astrophysics",
+      "#rogueplanets",
+      "#exoplanets",
+      "#science"
+    ],
+    "description": "Imagine a planet with 10 times the mass of Earth, drifting through the void without a star to call its own \ud83c\udf20. These cosmic wanderers, known as rogue planets, are a mystery waiting to be unraveled. Can life thrive on a world with temperatures fluctuating wildly and an atmosphere unlike anything we've seen before? \ud83e\udd14",
+    "generated_by": "groq",
+    "generated_at": "2026-05-29T06:41:51.825085",
+    "status": "error",
+    "strategy_based": true,
+    "error_at": "2026-05-29T06:47:22.838007"
   }
 ]
