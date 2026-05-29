@@ -3914,5 +3914,30 @@
     "status": "error",
     "strategy_based": true,
     "error_at": "2026-05-29T14:20:22.191203"
+  },
+  {
+    "topic": "Hypothetical Space Scenario",
+    "topic_family": "hypothetical",
+    "hook": "1,000,000,000 degrees in space?",
+    "facts": [
+      "A supernova explosion can reach 100 billion degrees Fahrenheit, hotter than 10 million Suns",
+      "The energy released in a single supernova is equivalent to 100 octillion nuclear bombs, or 100,000,000,000,000,000,000,000 Joules",
+      "If you were 1 astronomical unit (93 million miles, or the distance from the Earth to the Sun) away from a supernova, you'd still receive 100 times more radiation than the Earth's average yearly dose"
+    ],
+    "payoff": "and we still don't know what triggers these cosmic explosions",
+    "title": "Supernova: 100 Bn Degrees? \ud83c\udf0a",
+    "hashtags": [
+      "#space",
+      "#science",
+      "#astrophysics",
+      "#supernova",
+      "#cosmology"
+    ],
+    "description": "Imagine a temperature so hot it's beyond human comprehension \ud83c\udf21\ufe0f. Supernovae are the most powerful explosions in the universe, but what sparks them? \ud83d\udd25 Dive into the fascinating world of cosmic blasts and unravel the mystery behind these celestial wonders \ud83e\udd14",
+    "generated_by": "groq",
+    "generated_at": "2026-05-29T22:41:45.726594",
+    "status": "error",
+    "strategy_based": true,
+    "error_at": "2026-05-29T22:47:16.895648"
   }
 ]
