@@ -3889,5 +3889,30 @@
     "status": "error",
     "strategy_based": true,
     "error_at": "2026-05-29T06:47:22.838007"
+  },
+  {
+    "topic": "Surviving on a Gas Giant Moon",
+    "topic_family": "hypothetical",
+    "hook": "Could you live on Jupiter's Europa?",
+    "facts": [
+      "Europa's surface is 1,900 miles wide, roughly the distance from New York to Los Angeles",
+      "It has a subsurface ocean with 2-3 times more water than all of Earth's oceans combined",
+      "The moon's icy crust is 10-15 miles thick, which is about 1/4 the height of Mount Everest"
+    ],
+    "payoff": "and we still don't know if life exists beneath its icy surface",
+    "title": "Life on Europa? \ud83d\ude80",
+    "hashtags": [
+      "#space",
+      "#astrophysics",
+      "#jupiter",
+      "#europa",
+      "#science"
+    ],
+    "description": "Imagine living on a moon with a hidden ocean, more water than our entire planet, and a surface as wide as the US \ud83c\udf0a\ud83d\ude80. Jupiter's Europa is a mysterious world that's both familiar and alien. Could life thrive in its icy depths? \ud83e\udd14 Watch to explore the possibilities and unravel the secrets of this enigmatic moon \ud83d\udcab",
+    "generated_by": "groq",
+    "generated_at": "2026-05-29T14:14:50.658589",
+    "status": "error",
+    "strategy_based": true,
+    "error_at": "2026-05-29T14:20:22.191203"
   }
 ]
