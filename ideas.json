@@ -3964,5 +3964,30 @@
     "status": "error",
     "strategy_based": true,
     "error_at": "2026-05-30T04:19:55.011225"
+  },
+  {
+    "topic": "Habitable Exoplanet Moons",
+    "topic_family": "hypothetical",
+    "hook": "Could you survive on a moon of Jupiter?",
+    "facts": [
+      "Jupiter's moon Ganymede has a subsurface ocean with 25 times more water than all of Earth's oceans",
+      "The moon's surface temperature can drop to -153\u00b0C, colder than the state of Alaska in winter",
+      "A day on Ganymede is 7.15 Earth days long, with the sun appearing to rise in the west due to its retrograde rotation"
+    ],
+    "payoff": "and we still don't know if life could thrive in its hidden ocean",
+    "title": "Ganymede Moon \ud83c\udf15",
+    "hashtags": [
+      "space",
+      "science",
+      "astrophysics",
+      "exoplanets",
+      "jupiter"
+    ],
+    "description": "Imagine waking up on a moon of Jupiter, where the sun rises in the west and the temperature drops to -153\u00b0C at night \ud83c\udf15\ud83d\udc7d. Ganymede, the largest moon in our solar system, has a hidden ocean that could potentially support life. But what would it take to survive on this distant world? \ud83e\udd14 Watch to find out and join the conversation about the possibilities of life beyond Earth",
+    "generated_by": "groq",
+    "generated_at": "2026-05-30T22:09:59.913335",
+    "status": "error",
+    "strategy_based": true,
+    "error_at": "2026-05-30T22:15:31.373290"
   }
 ]
