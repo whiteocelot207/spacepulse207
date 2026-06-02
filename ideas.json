@@ -4014,5 +4014,30 @@
     "status": "error",
     "strategy_based": true,
     "error_at": "2026-05-31T12:24:44.170795"
+  },
+  {
+    "topic": "Black Hole Galaxy",
+    "topic_family": "hypothetical",
+    "hook": "Galaxy eaten in 1 second?",
+    "facts": [
+      "A supermassive black hole can consume 1 billion Suns worth of material",
+      "The Milky Way galaxy is about 100,000 light-years across, roughly 600,000,000,000,000 miles, or 10,000,000,000 football fields lined up",
+      "If our galaxy were sucked into a black hole, it would take about 100 million years to be fully consumed, at a rate of 1,000 stars per second"
+    ],
+    "payoff": "and we still don't know what happens to the information inside",
+    "title": "Galaxy Eaten \ud83c\udf0c",
+    "hashtags": [
+      "space",
+      "science",
+      "astrophysics",
+      "blackholes",
+      "galaxy"
+    ],
+    "description": "Imagine a cosmic monster devouring our entire galaxy in a blink of an eye \ud83c\udf0c\ud83d\udcab. The sheer scale of supermassive black holes is mind-boggling, with some spanning millions or even billions of miles across \ud83e\udd2f. Will we ever unravel the mystery of what happens to the stars, planets, and space inside these voids? \ud83d\udd2e",
+    "generated_by": "groq",
+    "generated_at": "2026-06-02T05:01:37.166539",
+    "status": "error",
+    "strategy_based": true,
+    "error_at": "2026-06-02T05:07:08.219269"
   }
 ]
