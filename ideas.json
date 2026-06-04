@@ -4064,5 +4064,30 @@
     "status": "error",
     "strategy_based": true,
     "error_at": "2026-06-02T15:10:47.309986"
+  },
+  {
+    "topic": "Dyson Sphere",
+    "topic_family": "hypothetical",
+    "hook": "A megastructure dwarfs the Sun",
+    "facts": [
+      "It would take 1.3 billion kilometers of material to build a Dyson Sphere around the Sun",
+      "The sphere's surface area would be about 550 million times that of Texas",
+      "If built, it could collect 4 x 10^26 watts of energy, enough to power 100 billion homes"
+    ],
+    "payoff": "and we still don't know if any civilization has already built one",
+    "title": "Dyson Sphere: Megastructure \ud83c\udf1e",
+    "hashtags": [
+      "#space",
+      "#astrophysics",
+      "#megastructure",
+      "#DysonSphere",
+      "#science"
+    ],
+    "description": "Imagine a massive structure that encompasses an entire star \ud83c\udf1f. The concept of a Dyson Sphere has fascinated scientists and science fiction fans alike. But what would it take to build such a megastructure, and could it be the key to unlocking new sources of energy? \ud83e\udd14 Watch to find out more about this mind-boggling idea",
+    "generated_by": "groq",
+    "generated_at": "2026-06-04T05:03:52.283879",
+    "status": "error",
+    "strategy_based": true,
+    "error_at": "2026-06-04T05:09:23.701086"
   }
 ]
