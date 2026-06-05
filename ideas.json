@@ -4089,5 +4089,30 @@
     "status": "error",
     "strategy_based": true,
     "error_at": "2026-06-04T05:09:23.701086"
+  },
+  {
+    "topic": "Supernova Blast",
+    "topic_family": "hypothetical",
+    "hook": "What if a supernova hit Earth?",
+    "facts": [
+      "A supernova explosion can release 10^44 Joules of energy, enough to power the US for 100 billion years",
+      "The blast wave from a nearby supernova could reach Earth in just 170 years, traveling at 10% of the speed of light",
+      "If a supernova occurred 50 light-years away, its radiation would be equivalent to 100,000 years of normal solar activity"
+    ],
+    "payoff": "and we still don't know when the next nearby supernova will occur",
+    "title": "Supernova Blast \ud83c\udf0a",
+    "hashtags": [
+      "#space",
+      "#supernova",
+      "#astrophysics",
+      "#science",
+      "#cosmology"
+    ],
+    "description": "Imagine a blast of energy so powerful it could reset life on Earth \ud83c\udf0e. A nearby supernova explosion would be a catastrophic event, but have you ever wondered what it would really mean for our planet? \ud83e\udd14 Watch to discover the shocking facts about supernovae and their potential impact on our world \ud83d\udca5",
+    "generated_by": "groq",
+    "generated_at": "2026-06-05T06:53:41.249058",
+    "status": "error",
+    "strategy_based": true,
+    "error_at": "2026-06-05T06:59:12.279419"
   }
 ]
