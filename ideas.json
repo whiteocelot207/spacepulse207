@@ -4114,5 +4114,30 @@
     "status": "error",
     "strategy_based": true,
     "error_at": "2026-06-05T06:59:12.279419"
+  },
+  {
+    "topic": "Venus' Extreme Heat",
+    "topic_family": "extreme_conditions",
+    "hook": "Hottest Planet: 870\u00b0F?",
+    "facts": [
+      "Venus' surface temperature reaches 870\u00b0F, hot enough to melt lead",
+      "It's 160 times hotter than the hottest desert on Earth, Death Valley",
+      "The pressure on Venus is 92 times that of Earth, equivalent to being 1 mile underwater"
+    ],
+    "payoff": "and we still don't know why Venus is so much hotter than Mercury",
+    "title": "Venus: Hottest Planet \ud83c\udf21",
+    "hashtags": [
+      "#space",
+      "#astrophysics",
+      "#venus",
+      "#extremeheat",
+      "#science"
+    ],
+    "description": "Imagine a place where the temperature never drops below 870\u00b0F, hot enough to melt lead \ud83c\udf21. Venus, the hottest planet, is a scorching world that's still shrouded in mystery. But what's behind its extreme heat? \ud83e\udd14 Watch to unravel the secrets of our celestial neighbor and discover the surprising reasons why it's so much hotter than Mercury \ud83c\udf0c",
+    "generated_by": "groq",
+    "generated_at": "2026-06-05T14:04:44.190287",
+    "status": "error",
+    "strategy_based": true,
+    "error_at": "2026-06-05T14:10:15.767213"
   }
 ]
