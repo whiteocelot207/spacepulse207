@@ -4164,5 +4164,30 @@
     "status": "error",
     "strategy_based": true,
     "error_at": "2026-06-06T04:24:47.336555"
+  },
+  {
+    "topic": "White Dwarf Collision",
+    "topic_family": "hypothetical",
+    "hook": "What if 2 dead stars collided?",
+    "facts": [
+      "A white dwarf collision would release energy equal to 10 billion trillion football fields worth of nuclear power",
+      "The explosion would be so bright, it could be seen from 1.5 million miles away, or about 6 times the distance from New York to LA",
+      "The resulting supernova would be 5 billion times brighter than our Sun, or roughly the size of Texas in radiant energy"
+    ],
+    "payoff": "and we still don't know what triggers these cosmic catastrophes",
+    "title": "Dead Stars Collide \ud83d\udca5",
+    "hashtags": [
+      "space",
+      "astrophysics",
+      "science",
+      "cosmology",
+      "stellar"
+    ],
+    "description": "Imagine two dead stars, each the size of Earth, slamming into each other at incredible speeds \ud83c\udf20. The outcome would be a catastrophic explosion, outshining our entire galaxy \ud83c\udf0c. But what sparks these collisions, and how often do they occur in the vast universe? \ud83d\ude80",
+    "generated_by": "groq",
+    "generated_at": "2026-06-06T17:23:33.594462",
+    "status": "error",
+    "strategy_based": true,
+    "error_at": "2026-06-06T17:29:04.860085"
   }
 ]
