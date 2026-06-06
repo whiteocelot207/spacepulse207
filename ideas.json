@@ -4139,5 +4139,30 @@
     "status": "error",
     "strategy_based": true,
     "error_at": "2026-06-05T14:10:15.767213"
+  },
+  {
+    "topic": "Interstellar Travel",
+    "topic_family": "travel_time",
+    "hook": "4.2 years to Mars at light speed?",
+    "facts": [
+      "Traveling at 10% of light speed, it would take 42 years to reach Mars",
+      "At 50% of light speed, the journey to Mars would take just 8.4 years, or about 300 million miles per hour",
+      "If we could travel at 99% of light speed, we could reach Mars in just 1.5 years, faster than a round trip from New York to Los Angeles 40 times"
+    ],
+    "payoff": "and we still can't reach even 1% of light speed with current tech",
+    "title": "Mars in 4.2 yrs? \ud83d\ude80",
+    "hashtags": [
+      "#space",
+      "#astrophysics",
+      "#interstellardreams",
+      "#marsmission",
+      "#futurespace"
+    ],
+    "description": "Imagine reaching Mars in just 4.2 years, a journey that's currently measured in decades \ud83d\ude80. But what if we could travel at a fraction of light speed? The numbers are astonishing, and the tech to get us there is still a mystery \ud83e\udd14. Can humanity crack the code to interstellar travel and make Mars a reachable destination? \ud83d\ude80",
+    "generated_by": "groq",
+    "generated_at": "2026-06-06T04:19:16.062382",
+    "status": "error",
+    "strategy_based": true,
+    "error_at": "2026-06-06T04:24:47.336555"
   }
 ]
