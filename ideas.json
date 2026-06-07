@@ -4239,5 +4239,30 @@
     "status": "error",
     "strategy_based": true,
     "error_at": "2026-06-07T06:55:48.786271"
+  },
+  {
+    "topic": "Habitable Exomoon",
+    "topic_family": "hypothetical",
+    "hook": "Moons larger than Earth exist?",
+    "facts": [
+      "1 in 5 gas giants have moons with surfaces over 100,000 sq miles, roughly the size of Texas",
+      "These exomoons can have up to 10 times more water than Earth, with oceans 100 miles deep",
+      "At least 100 billion exomoons in the Milky Way could support life, with some orbiting stars just 20 light-years away"
+    ],
+    "payoff": "and we still don't know why none have been directly detected",
+    "title": "Exomoon Mysteries \ud83c\udf15",
+    "hashtags": [
+      "#space",
+      "#astrophysics",
+      "#exoplanets",
+      "#moons",
+      "#science"
+    ],
+    "description": "Imagine a moon larger than our own, with oceans deeper than any on Earth \ud83c\udf0a! As we explore the galaxy, we're finding more and more of these mysterious exomoons. But what's hiding on their surfaces, and will we ever find out? \ud83e\udd14",
+    "generated_by": "groq",
+    "generated_at": "2026-06-07T12:49:20.924520",
+    "status": "error",
+    "strategy_based": true,
+    "error_at": "2026-06-07T12:54:52.064014"
   }
 ]
