@@ -4264,5 +4264,30 @@
     "status": "error",
     "strategy_based": true,
     "error_at": "2026-06-07T12:54:52.064014"
+  },
+  {
+    "topic": "Hollow Earth",
+    "topic_family": "hypothetical",
+    "hook": "What if Earth was hollow?",
+    "facts": [
+      "It would take a tunnel 6,371 kilometers long to reach the center of the Earth, roughly the distance from New York to London",
+      "The Earth's core is around 5,150 degrees Celsius, hotter than the surface of the Sun",
+      "A hollow Earth would have a volume of approximately 1.08321 billion cubic kilometers, roughly 200 million Grand Canyons"
+    ],
+    "payoff": "and we still don't know what's really at the center",
+    "title": "Hollow Earth? \ud83c\udf0e",
+    "hashtags": [
+      "#space",
+      "#science",
+      "#astrophysics",
+      "#EarthFacts",
+      "#hypothetical"
+    ],
+    "description": "Imagine a world where the Earth is hollow \ud83c\udf10. What would it mean for our planet and its inhabitants? \ud83e\udd14 From the scorching hot core to the vast empty space, let's explore the mind-blowing implications of a hollow Earth \ud83c\udf0e. Will we ever uncover the truth about our planet's center?",
+    "generated_by": "groq",
+    "generated_at": "2026-06-07T17:27:58.132584",
+    "status": "error",
+    "strategy_based": true,
+    "error_at": "2026-06-07T17:33:29.478733"
   }
 ]
