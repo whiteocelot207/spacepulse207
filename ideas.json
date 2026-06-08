@@ -4314,5 +4314,30 @@
     "status": "error",
     "strategy_based": true,
     "error_at": "2026-06-07T22:19:49.950871"
+  },
+  {
+    "topic": "Binary Star Systems",
+    "topic_family": "hypothetical",
+    "hook": "1 in 5 stars are binary",
+    "facts": [
+      "About 20% of binary star systems have stars close enough to exchange material",
+      "The largest binary star system is over 1,000 times larger than our Sun",
+      "Binary star systems can be up to 100,000 astronomical units apart, or about 3,700 times the distance from Earth to the Sun, roughly the size of 4,600 Texas-sized areas"
+    ],
+    "payoff": "and we still don't know why they're so common",
+    "title": "Binary Stars: 1 in 5? \ud83c\udf1f",
+    "hashtags": [
+      "space",
+      "science",
+      "astrophysics",
+      "binarystars",
+      "stargazing"
+    ],
+    "description": "Binary star systems are more common than you think \ud83c\udf1f, with about 1 in 5 stars having a companion \ud83e\udd2f. But what makes these cosmic duos so special? From exchanging material to being thousands of times larger than our Sun, the mysteries of binary star systems are waiting to be unraveled \ud83d\udd0d. Will we finally uncover the secrets behind their surprising frequency?",
+    "generated_by": "groq",
+    "generated_at": "2026-06-08T14:53:09.250023",
+    "status": "error",
+    "strategy_based": true,
+    "error_at": "2026-06-08T14:58:40.410242"
   }
 ]
