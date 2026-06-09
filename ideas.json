@@ -4414,5 +4414,30 @@
     "status": "error",
     "strategy_based": true,
     "error_at": "2026-06-09T13:53:09.487772"
+  },
+  {
+    "topic": "Voyager's Interstellar Journey",
+    "topic_family": "hypothetical",
+    "hook": "40,000 years to nearest star?",
+    "facts": [
+      "Voyager 1 is 14.2 billion miles away from Earth, or about 125 AU",
+      "It would take Voyager 1 over 70,000 years to reach the nearest star, Proxima Centauri, if it was traveling in that direction",
+      "The spacecraft is currently traveling at a speed of about 38,000 miles per hour, or 61,155 kilometers per hour"
+    ],
+    "payoff": "and we still don't know what it will find in interstellar space",
+    "title": "Voyager 1: 14 Billion Miles from Home \ud83d\ude80",
+    "hashtags": [
+      "#space",
+      "#astrophysics",
+      "#interstellartravel",
+      "#Voyager1",
+      "#science"
+    ],
+    "description": "Imagine a tiny spacecraft, launched decades ago, now hurtling through the vast expanse of interstellar space \ud83c\udf20. Voyager 1 has been traveling for over 40 years, and it's just beginning its journey into the unknown \ud83d\ude80. What will it find in the mysterious regions beyond our solar system? \ud83e\udd14",
+    "generated_by": "groq",
+    "generated_at": "2026-06-09T18:15:21.117558",
+    "status": "error",
+    "strategy_based": true,
+    "error_at": "2026-06-09T18:20:52.627820"
   }
 ]
