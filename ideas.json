@@ -4339,5 +4339,30 @@
     "status": "error",
     "strategy_based": true,
     "error_at": "2026-06-08T14:58:40.410242"
+  },
+  {
+    "topic": "What if Earth had a twin sun",
+    "topic_family": "hypothetical",
+    "hook": "2 suns, 1 Earth?",
+    "facts": [
+      "A twin sun would increase Earth's temperature by 30% in 1 year",
+      "The extra sun's energy would melt 20% of the polar ice caps in 5 years, roughly the size of Texas",
+      "With 2 suns, Earth's habitable zone would shift 15 million miles outward, beyond Mars' orbit"
+    ],
+    "payoff": "and we still don't know if a twin sun could support life",
+    "title": "2 Suns? \ud83c\udf1e",
+    "hashtags": [
+      "space",
+      "science",
+      "astrophysics",
+      "solar_system",
+      "exoplanets"
+    ],
+    "description": "Imagine waking up to two suns in the sky \ud83c\udf1e\ud83c\udf1e. Would a twin sun bring life or destruction to Earth? \ud83c\udf0e Let's explore the hypothetical world of a binary sun system and what it would mean for our planet's future \ud83d\ude80",
+    "generated_by": "groq",
+    "generated_at": "2026-06-09T04:23:23.299579",
+    "status": "error",
+    "strategy_based": true,
+    "error_at": "2026-06-09T04:28:54.268697"
   }
 ]
