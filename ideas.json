@@ -4389,5 +4389,30 @@
     "status": "error",
     "strategy_based": true,
     "error_at": "2026-06-09T06:40:13.021268"
+  },
+  {
+    "topic": "Giant Space Storms",
+    "topic_family": "hypothetical",
+    "hook": "Could a space storm destroy Earth?",
+    "facts": [
+      "A coronal mass ejection can release energy equal to 100 billion Hiroshima bombs",
+      "The Carrington Event of 1859, a massive solar storm, caused auroras visible across 1,800 miles, roughly the distance from New York to Miami",
+      "A storm of this magnitude today could cripple the US power grid, affecting over 90 million people, roughly the population of California and Texas combined"
+    ],
+    "payoff": "and we still don't know when the next one will hit",
+    "title": "Space Storms \ud83c\udf2a\ufe0f",
+    "hashtags": [
+      "space",
+      "science",
+      "astrophysics",
+      "solarstorms",
+      "spaceweather"
+    ],
+    "description": "Imagine a storm so powerful it could cripple our entire power grid \ud83c\udf2a\ufe0f. Space storms are a real threat, and the last major one, the Carrington Event, was over 150 years ago \ud83e\udd14. Will we be ready for the next one, or will it catch us off guard? \ud83c\udf0e",
+    "generated_by": "groq",
+    "generated_at": "2026-06-09T13:47:37.935065",
+    "status": "error",
+    "strategy_based": true,
+    "error_at": "2026-06-09T13:53:09.487772"
   }
 ]
