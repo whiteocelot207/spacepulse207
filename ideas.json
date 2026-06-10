@@ -4514,5 +4514,30 @@
     "status": "error",
     "strategy_based": true,
     "error_at": "2026-06-10T06:57:26.134014"
+  },
+  {
+    "topic": "Galactic Collision",
+    "topic_family": "hypothetical",
+    "hook": "What if Andromeda hit us?",
+    "facts": [
+      "The Andromeda galaxy is approaching us at 250,000 miles per hour",
+      "It would take 1,000,000 football fields lined up to equal the 2.5 million light-year distance between us",
+      "The collision would occur in approximately 4.5 billion years, or about the time our Sun exhausts its fuel"
+    ],
+    "payoff": "and we still don't know how it will affect Earth's orbit",
+    "title": "Galaxy Crash \ud83d\ude80",
+    "hashtags": [
+      "#space",
+      "#astrophysics",
+      "#galaxy",
+      "#science",
+      "#cosmology"
+    ],
+    "description": "Imagine a cosmic collision of epic proportions \ud83c\udf0c! The Andromeda galaxy is barreling towards us, but what does that mean for our planet? \ud83c\udf0e Will we be flung into a new orbit or destroyed in the process? \ud83d\ude80 Watch to find out the shocking truth about the future of our galaxy!",
+    "generated_by": "groq",
+    "generated_at": "2026-06-10T14:30:53.295348",
+    "status": "error",
+    "strategy_based": true,
+    "error_at": "2026-06-10T14:36:24.816120"
   }
 ]
