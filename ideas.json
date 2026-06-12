@@ -4564,5 +4564,30 @@
     "status": "error",
     "strategy_based": true,
     "error_at": "2026-06-12T05:06:42.021227"
+  },
+  {
+    "topic": "Cosmic Speed Limits",
+    "topic_family": "travel_time",
+    "hook": "6 months to Alpha Centauri?",
+    "facts": [
+      "At light speed, it would take 4.24 years to reach the nearest star outside our solar system, Proxima Centauri, a distance of about 268,000 astronomical units or 24.8 trillion miles, roughly 390 times the distance from New York to Los Angeles",
+      "Traveling at 20% of the speed of light, like some proposed spacecraft, it would take 21 years to reach Mars, a mere 140 million miles away, or about 570 times the length of a football field",
+      "The fastest spacecraft ever built, Voyager 1, has been traveling for over 44 years at 0.006% of light speed and has only reached a distance of about 14.2 light-hours from Earth, or roughly 1,300 times the distance from the Earth to the Moon"
+    ],
+    "payoff": "and we still can't reach the cosmos in a lifetime",
+    "title": "Cosmic Distances \ud83d\ude80",
+    "hashtags": [
+      "#space",
+      "#astrophysics",
+      "#cosmicspeed",
+      "#traveltime",
+      "#science"
+    ],
+    "description": "The universe is vast, and even at incredible speeds, we're still just a tiny speck in the grand scheme \ud83c\udf0c. As we explore the cosmos, we're reminded of just how small we are, yet how curious we remain about the mysteries that lie beyond our reach \ud83e\udd14. Can we ever hope to traverse the vast expanse of space in a human lifetime? \ud83d\ude80",
+    "generated_by": "groq",
+    "generated_at": "2026-06-12T18:13:48.013405",
+    "status": "error",
+    "strategy_based": true,
+    "error_at": "2026-06-12T18:19:19.341380"
   }
 ]
