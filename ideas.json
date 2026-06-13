@@ -4589,5 +4589,30 @@
     "status": "error",
     "strategy_based": true,
     "error_at": "2026-06-12T18:19:19.341380"
+  },
+  {
+    "topic": "Moonless Earth",
+    "topic_family": "hypothetical",
+    "hook": "No Moon, 1/3 Less Tides?",
+    "facts": [
+      "The Moon's gravity causes 46 cm of tide rise on average US coastlines",
+      "Without the Moon, Earth's rotation would slow by 734 years per million years",
+      "A Moonless Earth would have 10% more frequent earthquakes, about 3,650 extra per year"
+    ],
+    "payoff": "and we still don't know how this would impact global ocean currents",
+    "title": "No Moon? \ud83c\udf15",
+    "hashtags": [
+      "space",
+      "science",
+      "astrophysics",
+      "earthscience",
+      "moon"
+    ],
+    "description": "Imagine Earth without its trusty sidekick, the Moon \ud83c\udf15! The effects would be staggering, from drastically altered tides to a slower rotation rate. But what would this mean for our planet's delicate balance and the oceans that cover 71% of it? \ud83c\udf0a",
+    "generated_by": "groq",
+    "generated_at": "2026-06-13T17:40:53.987156",
+    "status": "error",
+    "strategy_based": true,
+    "error_at": "2026-06-13T17:46:25.518095"
   }
 ]
