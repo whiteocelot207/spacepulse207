@@ -4639,5 +4639,30 @@
     "status": "error",
     "strategy_based": true,
     "error_at": "2026-06-14T07:15:15.838907"
+  },
+  {
+    "topic": "Free Fall on Venus",
+    "topic_family": "hypothetical",
+    "hook": "You'd weigh 92% less on Venus",
+    "facts": [
+      "Venus' surface gravity is about 90% of Earth's, but its atmosphere is 92 times denser",
+      "The free fall from Venus' cloud tops would take 37,000 feet to reach the surface, roughly 7 football fields",
+      "Temperatures on Venus would increase by 470\u00b0F during the 230-second free fall due to atmospheric compression"
+    ],
+    "payoff": "and we still don't know why its rotation is slowing down",
+    "title": "Venus Free Fall \ud83c\udf0c",
+    "hashtags": [
+      "#space",
+      "#astrophysics",
+      "#venus",
+      "#planetaryscience",
+      "#gravity"
+    ],
+    "description": "Imagine falling towards the surface of Venus \ud83c\udf0c, where the atmosphere is thick and crushing, yet the gravity is surprisingly similar to Earth's \ud83e\udd2f. How would you survive this extreme free fall, and what bizarre phenomena would you encounter along the way? \ud83c\udf2a\ufe0f Watch to find out and unravel the mysteries of our neighboring planet \ud83d\ude80",
+    "generated_by": "groq",
+    "generated_at": "2026-06-14T17:28:36.580863",
+    "status": "error",
+    "strategy_based": true,
+    "error_at": "2026-06-14T17:34:08.025829"
   }
 ]
