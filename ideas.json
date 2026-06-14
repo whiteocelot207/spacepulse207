@@ -4614,5 +4614,30 @@
     "status": "error",
     "strategy_based": true,
     "error_at": "2026-06-13T17:46:25.518095"
+  },
+  {
+    "topic": "Dark Energy",
+    "topic_family": "cosmic_mystery",
+    "hook": "68% of universe is invisible",
+    "facts": [
+      "The universe is expanding at 70 km/s per megaparsec",
+      "Dark energy makes up 68% of the universe's total energy",
+      "It would take a cube of space 900 million miles per side to contain 1% of it"
+    ],
+    "payoff": "and we still don't know what it's made of",
+    "title": "Dark Energy: 68% \ud83e\udd2f",
+    "hashtags": [
+      "space",
+      "science",
+      "astrophysics",
+      "cosmology",
+      "darkmatter"
+    ],
+    "description": "Imagine a force that's pushing the universe apart, making galaxies move away from each other at incredible speeds \ud83d\ude80. But what is it? \ud83e\udd14 We're diving into the mysterious world of dark energy, where 68% of the universe is invisible \ud83d\udcab. Will we ever uncover its secrets?",
+    "generated_by": "groq",
+    "generated_at": "2026-06-14T07:09:44.384618",
+    "status": "error",
+    "strategy_based": true,
+    "error_at": "2026-06-14T07:15:15.838907"
   }
 ]
