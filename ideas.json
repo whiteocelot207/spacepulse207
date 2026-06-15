@@ -4689,5 +4689,30 @@
     "status": "error",
     "strategy_based": true,
     "error_at": "2026-06-15T08:46:20.019739"
+  },
+  {
+    "topic": "Gravity Escape",
+    "topic_family": "hypothetical",
+    "hook": "Escape a neutron star?",
+    "facts": [
+      "A neutron star's gravity is 200 billion times stronger than Earth's",
+      "It would take a spacecraft 300,000 km/h to escape the Moon's gravity, but 70% of the speed of light to escape a neutron star",
+      "The intense gravity would squeeze a 1-mile sphere to the size of a football field in just 1 second"
+    ],
+    "payoff": "and we still don't know what happens to the information inside",
+    "title": "Neutron Star Escape \ud83d\ude80",
+    "hashtags": [
+      "#space",
+      "#astrophysics",
+      "#neutronstar",
+      "#gravity",
+      "#science"
+    ],
+    "description": "Imagine being trapped in the intense gravity of a neutron star \ud83e\udd2f, where escape seems impossible. With gravity 200 billion times stronger than Earth's, the rules of physics are pushed to the limit. Can anything survive the crushing force of these cosmic giants? \ud83d\ude80\ud83d\udcab",
+    "generated_by": "groq",
+    "generated_at": "2026-06-15T19:55:00.248865",
+    "status": "error",
+    "strategy_based": true,
+    "error_at": "2026-06-15T20:00:31.633278"
   }
 ]
