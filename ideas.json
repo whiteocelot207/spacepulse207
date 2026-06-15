@@ -4714,5 +4714,30 @@
     "status": "error",
     "strategy_based": true,
     "error_at": "2026-06-15T20:00:31.633278"
+  },
+  {
+    "topic": "White Hole Survival",
+    "topic_family": "hypothetical",
+    "hook": "Could you exit a white hole?",
+    "facts": [
+      "A white hole would spew out 10^22 kilograms of matter per second, equal to 100 billion suns",
+      "Its event horizon could be as wide as 4.8 million football fields lined up",
+      "The energy released would be equivalent to 1 billion nuclear bombs exploding simultaneously, illuminating an area the size of Texas"
+    ],
+    "payoff": "and we still don't know if it's even possible to approach one",
+    "title": "White Hole: Cosmic Mirage? \ud83c\udf0c",
+    "hashtags": [
+      "#space",
+      "#astrophysics",
+      "#whitehole",
+      "#cosmicscience",
+      "#theoreticalphysics"
+    ],
+    "description": "Imagine being sucked out of a cosmic whirlpool, only to find yourself in a realm beyond our understanding \ud83c\udf0c. White holes, the theoretical counterparts of black holes, defy our grasp of space and time. Can we survive the impossible forces at play? \ud83e\udd14 Watch to unravel the mystery of these enigmatic phenomena and decide for yourself \ud83d\udcab",
+    "generated_by": "groq",
+    "generated_at": "2026-06-15T23:09:44.595616",
+    "status": "error",
+    "strategy_based": true,
+    "error_at": "2026-06-15T23:15:16.024203"
   }
 ]
