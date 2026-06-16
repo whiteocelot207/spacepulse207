@@ -4739,5 +4739,30 @@
     "status": "error",
     "strategy_based": true,
     "error_at": "2026-06-15T23:15:16.024203"
+  },
+  {
+    "topic": "Extreme Gravity",
+    "topic_family": "extreme_conditions",
+    "hook": "Gravity 2 billion times stronger?",
+    "facts": [
+      "A neutron star's gravity is so strong, it warps space-time within 10 miles",
+      "If you weighed 150 pounds on Earth, you'd weigh 1.5 million pounds on a neutron star",
+      "The gravitational pull is equivalent to stacking 100 million football fields of lead on top of each other"
+    ],
+    "payoff": "and we still don't know what's at their centers",
+    "title": "Neutron Stars: Cosmic Crushers \ud83d\udca5",
+    "hashtags": [
+      "space",
+      "astrophysics",
+      "neutronstars",
+      "gravity",
+      "science"
+    ],
+    "description": "Imagine a force so strong, it bends the fabric of space and time \ud83d\udd73\ufe0f. Neutron stars are the universe's most extreme objects, with gravity that defies comprehension \ud83c\udf0c. But what secrets lie at their mysterious centers? \ud83d\udd0d",
+    "generated_by": "groq",
+    "generated_at": "2026-06-16T08:34:18.498545",
+    "status": "error",
+    "strategy_based": true,
+    "error_at": "2026-06-16T08:39:50.230422"
   }
 ]
