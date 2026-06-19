@@ -4764,5 +4764,30 @@
     "status": "error",
     "strategy_based": true,
     "error_at": "2026-06-16T08:39:50.230422"
+  },
+  {
+    "topic": "Tidal Locking",
+    "topic_family": "hypothetical",
+    "hook": "1 side always faces the Sun",
+    "facts": [
+      "it would take 1.4 billion years for the Earth to become tidally locked to the Sun",
+      "a tidally locked exoplanet has a permanent day side as large as Texas",
+      "55% of exoplanets with orbital periods under 10 days are tidally locked"
+    ],
+    "payoff": "and we still don't know how it affects life on distant planets",
+    "title": "Stuck in Time \ud83d\udd70\ufe0f",
+    "hashtags": [
+      "space",
+      "astrophysics",
+      "exoplanets",
+      "science",
+      "tidallocking"
+    ],
+    "description": "Imagine a world where one side always faces the scorching Sun, while the other side is forever trapped in darkness \ud83c\udf11. This eerie phenomenon, known as tidal locking, has already been discovered on many exoplanets \ud83d\ude80. But what does it mean for life beyond our Earth? \ud83e\udd14",
+    "generated_by": "groq",
+    "generated_at": "2026-06-19T14:19:49.106705",
+    "status": "error",
+    "strategy_based": true,
+    "error_at": "2026-06-19T14:25:20.525832"
   }
 ]
