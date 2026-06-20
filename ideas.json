@@ -4814,5 +4814,30 @@
     "status": "error",
     "strategy_based": true,
     "error_at": "2026-06-20T06:55:29.028755"
+  },
+  {
+    "topic": "Fast Radio Bursts",
+    "topic_family": "cosmic_mystery",
+    "hook": "1 burst = 100 suns?",
+    "facts": [
+      "Fast Radio Bursts release as much energy as the Sun does in 1 year, in just 1 millisecond",
+      "These bursts can originate from galaxies over 3 billion light-years away, roughly 20 times the distance from NY to LA",
+      "Scientists have detected only about 80 FRBs in the past decade, an incredibly small number considering the vastness of the universe, approximately the size of Texas"
+    ],
+    "payoff": "and we still don't know what's causing them",
+    "title": "FRBs: Cosmic Enigma \ud83d\ude80",
+    "hashtags": [
+      "space",
+      "science",
+      "astrophysics",
+      "cosmology",
+      "mystery"
+    ],
+    "description": "Imagine a burst of energy so powerful, it dwarfs our Sun's entire yearly output \ud83c\udf1e. Fast Radio Bursts are leaving scientists baffled, and you're about to enter the mystery \ud83d\ude80. Will we unravel the enigma behind these cosmic explosions, or will they remain one of the universe's best-kept secrets? \ud83d\udd0d",
+    "generated_by": "groq",
+    "generated_at": "2026-06-20T12:58:44.307250",
+    "status": "error",
+    "strategy_based": true,
+    "error_at": "2026-06-20T13:04:17.230824"
   }
 ]
