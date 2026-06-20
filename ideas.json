@@ -4789,5 +4789,30 @@
     "status": "error",
     "strategy_based": true,
     "error_at": "2026-06-19T14:25:20.525832"
+  },
+  {
+    "topic": "Gravity Slingshots",
+    "topic_family": "hypothetical",
+    "hook": "Escape Earth at 25,000 mph?",
+    "facts": [
+      "A spacecraft can gain 10,000 mph using Jupiter's gravity",
+      "Theoretically, 7 gravity assists from gas giants could reach 200,000 mph",
+      "Using the Sun's gravity, a spacecraft could reach 1/10th the speed of light"
+    ],
+    "payoff": "and we still don't know the limits of gravity-assisted escape velocities",
+    "title": "Escape Earth \ud83d\ude80",
+    "hashtags": [
+      "space",
+      "astrophysics",
+      "gravity",
+      "spacecraft",
+      "science"
+    ],
+    "description": "Imagine using the gravity of massive celestial bodies to slingshot your way out of the solar system \ud83c\udf20! With the right trajectory, you could reach mind-boggling speeds, but what are the limits of this cosmic trickery? \ud83e\udd14 Watch to find out how gravity could be the key to interstellar travel \ud83d\ude80",
+    "generated_by": "groq",
+    "generated_at": "2026-06-20T06:49:57.642327",
+    "status": "error",
+    "strategy_based": true,
+    "error_at": "2026-06-20T06:55:29.028755"
   }
 ]
