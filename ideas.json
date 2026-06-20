@@ -4839,5 +4839,30 @@
     "status": "error",
     "strategy_based": true,
     "error_at": "2026-06-20T13:04:17.230824"
+  },
+  {
+    "topic": "Surviving a Gamma Ray Burst",
+    "topic_family": "hypothetical",
+    "hook": "GRB hits Earth?",
+    "facts": [
+      "A gamma ray burst releases 10^44 Joules of energy, enough to power the US for 1.4 billion years",
+      "The blast radius of a GRB can be up to 50 light-years wide, or about 10 times the distance from the Sun to Pluto",
+      "If a GRB were to occur 1,000 light-years from Earth, its radiation would be equivalent to 200,000 simultaneous nuclear explosions"
+    ],
+    "payoff": "and we still don't know when the next one will occur",
+    "title": "Gamma Ray Burst \ud83c\udf2a\ufe0f",
+    "hashtags": [
+      "space",
+      "science",
+      "astrophysics",
+      "gammaRayBurst",
+      "cosmicDisasters"
+    ],
+    "description": "Imagine a cosmic event so powerful it could wipe out life on Earth \ud83c\udf0e. Gamma ray bursts are the universe's most intense explosions, and we're still searching for answers about these mysterious phenomena \ud83e\udd14. Will we be ready when the next one hits? \ud83c\udf2a\ufe0f",
+    "generated_by": "groq",
+    "generated_at": "2026-06-20T17:43:05.471167",
+    "status": "error",
+    "strategy_based": true,
+    "error_at": "2026-06-20T17:48:38.231339"
   }
 ]
