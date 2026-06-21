@@ -4914,5 +4914,30 @@
     "status": "error",
     "strategy_based": true,
     "error_at": "2026-06-21T13:24:40.428962"
+  },
+  {
+    "topic": "Cosmic Travel",
+    "topic_family": "travel_time",
+    "hook": "How long to Mars?",
+    "facts": [
+      "At light speed, you'd reach Mars in just 3 minutes",
+      "Traveling at the speed of the fastest spacecraft, it would take about 6.5 months to cover the 140 million mile distance, roughly 5,600 times the length of the United States",
+      "If you drove your car to Mars at 60 mph, it would take around 322 years, longer than the United States has existed"
+    ],
+    "payoff": "and we still don't know what we'll find when we get there",
+    "title": "Mars in 3 Min? \ud83d\ude80",
+    "hashtags": [
+      "space",
+      "science",
+      "astrophysics",
+      "space_travel",
+      "mars_exploration"
+    ],
+    "description": "Imagine traveling to Mars in just 3 minutes \ud83d\ude80, or taking a road trip that's longer than the US has been a country \ud83d\ude97! The distance to Mars is mind-boggling, and the time it takes to get there is even more astonishing \ud83e\udd2f. Will humanity finally set foot on the Red Planet and uncover its secrets?",
+    "generated_by": "groq",
+    "generated_at": "2026-06-21T22:21:37.343486",
+    "status": "error",
+    "strategy_based": true,
+    "error_at": "2026-06-21T22:27:08.725535"
   }
 ]
