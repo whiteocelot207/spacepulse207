@@ -4889,5 +4889,30 @@
     "status": "error",
     "strategy_based": true,
     "error_at": "2026-06-21T07:24:54.128085"
+  },
+  {
+    "topic": "Milky Way Size",
+    "topic_family": "scale_comparison",
+    "hook": "100 billion stars fit here",
+    "facts": [
+      "The Milky Way is 100,000 light-years across, roughly 640,000,000,000,000 miles",
+      "It would take a spacecraft 480,000 years to cross the Milky Way at 25,000 mph",
+      "The observable universe has over 100 billion galaxies, each with billions of stars like our Sun"
+    ],
+    "payoff": "and we still don't know what's beyond our cosmic horizon",
+    "title": "Milky Way \ud83c\udf0c Size Revealed",
+    "hashtags": [
+      "space",
+      "science",
+      "astrophysics",
+      "galaxy",
+      "cosmos"
+    ],
+    "description": "Our home galaxy, the Milky Way, is a massive barred spiral \ud83c\udf0c, but just how massive is it? With 100 billion stars and trillions of planets, it's a mind-boggling scale \ud83e\udd2f. Join us as we explore the sheer size of our cosmic neighborhood and wonder what lies beyond \ud83d\ude80",
+    "generated_by": "groq",
+    "generated_at": "2026-06-21T13:19:08.659710",
+    "status": "error",
+    "strategy_based": true,
+    "error_at": "2026-06-21T13:24:40.428962"
   }
 ]
