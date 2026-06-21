@@ -4864,5 +4864,30 @@
     "status": "error",
     "strategy_based": true,
     "error_at": "2026-06-20T17:48:38.231339"
+  },
+  {
+    "topic": "Universe Expansion",
+    "topic_family": "cosmic_mystery",
+    "hook": "Universe expanding faster?",
+    "facts": [
+      "The universe is expanding at 70 km/s per megaparsec",
+      "This expansion would cover the distance from NY to LA in just 2 seconds",
+      "In 100 million years, the Andromeda galaxy will be 1.3 million light-years closer, about the size of 3,300 Texases lined up"
+    ],
+    "payoff": "and we still don't know why",
+    "title": "Universe Expanding \ud83d\ude80",
+    "hashtags": [
+      "#space",
+      "#science",
+      "#astrophysics",
+      "#universe",
+      "#cosmology"
+    ],
+    "description": "The universe is getting bigger, but what's driving this expansion? \ud83d\ude80 We're witnessing a mysterious phenomenon that's still puzzling scientists today. Will we uncover the reason behind this cosmic growth? \ud83e\udd14",
+    "generated_by": "groq",
+    "generated_at": "2026-06-21T07:19:22.465303",
+    "status": "error",
+    "strategy_based": true,
+    "error_at": "2026-06-21T07:24:54.128085"
   }
 ]
