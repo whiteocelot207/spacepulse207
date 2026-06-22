@@ -4989,5 +4989,30 @@
     "status": "error",
     "strategy_based": true,
     "error_at": "2026-06-22T08:50:32.230681"
+  },
+  {
+    "topic": "Cosmic Journey",
+    "topic_family": "travel_time",
+    "hook": "70,000 years to Alpha Centauri?",
+    "facts": [
+      "At 20% of light speed, it would take 200 years to reach Mars",
+      "Traveling at 50,000 mph, it would take 70,000 years to reach Alpha Centauri, a distance of about 4.37 light-years or 268,000 AU, which is roughly 40 million times the distance from New York to Los Angeles",
+      "A spacecraft would need to reach 10% of light speed to reach Pluto in just 3.5 years, considering Pluto is about 3.6 billion miles or 39 AU away from Earth"
+    ],
+    "payoff": "and we still haven't figured out how to achieve even a fraction of light speed",
+    "title": "Space Travel \ud83d\ude80",
+    "hashtags": [
+      "#space",
+      "#astrophysics",
+      "#science",
+      "#spaceexploration",
+      "#cosmology"
+    ],
+    "description": "Imagine embarking on a journey to the stars, but at what cost? \ud83d\ude80 The vast distances between celestial bodies make space travel a significant challenge. As we push the boundaries of space exploration, we're reminded of just how small we are in the grand scheme of things \ud83c\udf0c. Can humanity overcome the obstacles to reach the cosmos?",
+    "generated_by": "groq",
+    "generated_at": "2026-06-22T19:38:39.451069",
+    "status": "error",
+    "strategy_based": true,
+    "error_at": "2026-06-22T19:44:10.928492"
   }
 ]
