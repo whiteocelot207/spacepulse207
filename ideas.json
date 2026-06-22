@@ -4964,5 +4964,30 @@
     "status": "error",
     "strategy_based": true,
     "error_at": "2026-06-22T05:32:25.428727"
+  },
+  {
+    "topic": "Planet X Scenario",
+    "topic_family": "hypothetical",
+    "hook": "A hidden planet crashes into Earth?",
+    "facts": [
+      "A theoretical Planet X is estimated to be 5 times larger than Earth, roughly the size of Texas",
+      "If it existed, Planet X would have an orbit 10 times longer than Pluto, about 360 billion miles from the Sun",
+      "The gravitational impact of such a collision would send 2.5 billion people into space, the equivalent of the entire US population"
+    ],
+    "payoff": "and we still don't know if it's lurking in the dark, waiting to collide",
+    "title": "Planet X: Hidden Menace? \ud83c\udf0c",
+    "hashtags": [
+      "#space",
+      "#astrophysics",
+      "#PlanetX",
+      "#science",
+      "#hypothetical"
+    ],
+    "description": "Imagine a world where a hidden planet crashes into Earth \ud83c\udf0e\ud83d\udca5. Theoretical Planet X is a mysterious, unseen force that could change humanity's fate forever. Will we discover it before it's too late, or will it remain a secret of the universe? \ud83e\udd14",
+    "generated_by": "groq",
+    "generated_at": "2026-06-22T08:45:00.251150",
+    "status": "error",
+    "strategy_based": true,
+    "error_at": "2026-06-22T08:50:32.230681"
   }
 ]
