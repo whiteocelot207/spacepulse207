@@ -4939,5 +4939,30 @@
     "status": "error",
     "strategy_based": true,
     "error_at": "2026-06-21T22:27:08.725535"
+  },
+  {
+    "topic": "What if you were on a planet with 3 suns?",
+    "topic_family": "hypothetical",
+    "hook": "3 suns rising at once?",
+    "facts": [
+      "The planet would experience a 30% increase in temperature due to the tripled solar radiation",
+      "Its orbital period would be approximately 364.5 Earth days, similar to the distance from New York to Los Angeles",
+      "The planet's surface would receive about 3000 times more solar energy than the Earth, equivalent to the size of 500,000 football fields filled with solar panels"
+    ],
+    "payoff": "and we still don't know if life could thrive in such an extreme environment",
+    "title": "3 Suns Rising \ud83c\udf1e",
+    "hashtags": [
+      "space",
+      "astrophysics",
+      "exoplanets",
+      "science",
+      "cosmos"
+    ],
+    "description": "Imagine waking up to not one, not two, but three suns rising in the sky \ud83c\udf05\ud83c\udf1e! This hypothetical planet would be a world like no other, with temperatures soaring and energy abundance like never before \ud83d\udca1. But could life survive, or even thrive, in such an extreme environment? \ud83e\udd14",
+    "generated_by": "groq",
+    "generated_at": "2026-06-22T05:26:54.026077",
+    "status": "error",
+    "strategy_based": true,
+    "error_at": "2026-06-22T05:32:25.428727"
   }
 ]
