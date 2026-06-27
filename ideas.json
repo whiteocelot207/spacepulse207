@@ -5014,5 +5014,30 @@
     "status": "error",
     "strategy_based": true,
     "error_at": "2026-06-22T19:44:10.928492"
+  },
+  {
+    "topic": "What if the Vacuum of Space",
+    "topic_family": "hypothetical",
+    "hook": "Space is 99.9999999% empty?",
+    "facts": [
+      "The average distance between stars is 4 light-years, or about 24 trillion miles, roughly 470,000 times the distance from New York to Los Angeles",
+      "If you were to travel at the speed of a commercial airliner (around 560 mph), it would take approximately 480,000 years to reach the nearest star, Proxima Centauri",
+      "The observable universe contains over 200 billion galaxies, each containing billions of stars, yet the vast majority of space is a nearly perfect vacuum"
+    ],
+    "payoff": "and we still don't know what makes up most of the universe's mass",
+    "title": "Space: 99.9999999% Empty? \ud83d\ude80",
+    "hashtags": [
+      "#space",
+      "#astrophysics",
+      "#universe",
+      "#galaxies",
+      "#science"
+    ],
+    "description": "The void of space: it's almost unimaginable \ud83c\udf0c. With distances so vast that even at high speeds, you'd never reach the nearest star in a lifetime, the emptiness of space is both beautiful and haunting. But what does this emptiness reveal about the nature of the universe? \ud83e\udd14 Watch to find out!",
+    "generated_by": "groq",
+    "generated_at": "2026-06-27T12:18:25.916225",
+    "status": "error",
+    "strategy_based": true,
+    "error_at": "2026-06-27T12:23:57.326468"
   }
 ]
