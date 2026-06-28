@@ -5039,5 +5039,30 @@
     "status": "error",
     "strategy_based": true,
     "error_at": "2026-06-27T12:23:57.326468"
+  },
+  {
+    "topic": "Sun vs Earth",
+    "topic_family": "scale_comparison",
+    "hook": "1.3 million Earths fit inside Sun",
+    "facts": [
+      "The Sun is approximately 109 times bigger than Earth in diameter",
+      "It would take 1.3 million Earths to fill the Sun's volume",
+      "The Sun's surface area is about 12,000 times larger than the Earth's surface area, or roughly 3.8 million times the size of Texas"
+    ],
+    "payoff": "and we still don't know what makes up 99.8% of our solar system's mass",
+    "title": "Sun \ud83c\udf1e: 1.3M Earths Inside?",
+    "hashtags": [
+      "space",
+      "science",
+      "astrophysics",
+      "solar_system",
+      "cosmology"
+    ],
+    "description": "Imagine a ball so massive that 1.3 million Earths could fit inside it \ud83c\udf10. The Sun is not only enormous, but its surface area is also staggering, covering about 3.8 million times the size of Texas \ud83e\udd2f. Watch to explore the mind-blowing scale of our star and the mysteries that still surround it \ud83d\udd0d",
+    "generated_by": "groq",
+    "generated_at": "2026-06-28T17:21:21.049252",
+    "status": "error",
+    "strategy_based": true,
+    "error_at": "2026-06-28T17:26:52.427767"
   }
 ]
