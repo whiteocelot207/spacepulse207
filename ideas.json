@@ -5064,5 +5064,30 @@
     "status": "error",
     "strategy_based": true,
     "error_at": "2026-06-28T17:26:52.427767"
+  },
+  {
+    "topic": "Black Hole Free Fall",
+    "topic_family": "hypothetical",
+    "hook": "You fall into a black hole",
+    "facts": [
+      "It would take 12 minutes to reach the event horizon from a stellar black hole's edge, about 15 miles away",
+      "The gravity would stretch you like spaghetti, increasing by 1 million times Earth's gravity",
+      "The point of no return has a radius roughly 1/4 the size of a football field for a small black hole"
+    ],
+    "payoff": "and we still don't know what happens next",
+    "title": "\ud83d\ude80 Into a Black Hole?",
+    "hashtags": [
+      "#space",
+      "#astrophysics",
+      "#blackhole",
+      "#science",
+      "#universe"
+    ],
+    "description": "Imagine falling into a void so dense, not even light escapes \ud83c\udf0c. As you plunge into the abyss, the gravity stretches and squeezes you in a phenomenon known as spaghettification \ud83e\udd2f. The laws of physics as we know them start to break, and the mystery deepens - will we ever uncover the secrets of the black hole's dark interior? \ud83e\udd14",
+    "generated_by": "groq",
+    "generated_at": "2026-06-29T14:53:16.289617",
+    "status": "error",
+    "strategy_based": true,
+    "error_at": "2026-06-29T14:58:48.631415"
   }
 ]
