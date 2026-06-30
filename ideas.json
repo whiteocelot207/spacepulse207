@@ -5114,5 +5114,30 @@
     "status": "error",
     "strategy_based": true,
     "error_at": "2026-06-29T18:19:48.632061"
+  },
+  {
+    "topic": "Falling into a Neutron Star",
+    "topic_family": "hypothetical",
+    "hook": "You'd be flattened in 0.001s",
+    "facts": [
+      "A neutron star's gravity is 200 billion times stronger than Earth's",
+      "Its surface is about 12 miles (19 km) in diameter, roughly the size of a small city like Manhattan",
+      "The rotation speed at its equator can reach 1000 km/s, or about 621 miles/s, faster than a speeding bullet"
+    ],
+    "payoff": "and we still don't know what happens to matter at these extreme densities",
+    "title": "Neutron Star Crush \ud83c\udf00",
+    "hashtags": [
+      "#space",
+      "#astrophysics",
+      "#neutronstar",
+      "#gravity",
+      "#science"
+    ],
+    "description": "Imagine being pulled into a neutron star, where gravity is so strong it warps space and time \ud83c\udf00. You'd experience an intense gravitational force, unlike anything on Earth, and be flattened in a fraction of a second \ud83e\udd2f. But what happens to the matter that makes up these cosmic monsters? \ud83e\udd14",
+    "generated_by": "groq",
+    "generated_at": "2026-06-30T04:22:24.072593",
+    "status": "error",
+    "strategy_based": true,
+    "error_at": "2026-06-30T04:27:56.033181"
   }
 ]
