@@ -5164,5 +5164,30 @@
     "status": "error",
     "strategy_based": true,
     "error_at": "2026-06-30T06:46:04.714987"
+  },
+  {
+    "topic": "Dark Universe",
+    "topic_family": "cosmic_mystery",
+    "hook": "85% of the universe is missing?",
+    "facts": [
+      "The universe is expanding at 70 km/s per megaparsec",
+      "Dark matter makes up 27% of the universe's mass-energy density",
+      "The universe's accelerating expansion would cover a football field in 1 second"
+    ],
+    "payoff": "and we still don't know what's driving it",
+    "title": "Dark Universe \ud83c\udf0c",
+    "hashtags": [
+      "#space",
+      "#science",
+      "#astrophysics",
+      "#darkmatter",
+      "#cosmology"
+    ],
+    "description": "Imagine a universe where most of what we know is just a small fraction of the whole picture \ud83c\udf0c. The accelerating expansion of the universe is a mystery that has left scientists baffled, with 85% of it still unaccounted for \ud83e\udd2f. Can we uncover the secrets of the dark universe before it's too late? \ud83c\udf03",
+    "generated_by": "groq",
+    "generated_at": "2026-06-30T18:04:22.309134",
+    "status": "error",
+    "strategy_based": true,
+    "error_at": "2026-06-30T18:09:55.140642"
   }
 ]
