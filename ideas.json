@@ -5189,5 +5189,30 @@
     "status": "error",
     "strategy_based": true,
     "error_at": "2026-06-30T18:09:55.140642"
+  },
+  {
+    "topic": "Rogue Planets",
+    "topic_family": "hypothetical",
+    "hook": "2 million rogue planets near us?",
+    "facts": [
+      "There are an estimated 2 million rogue planets in the Milky Way galaxy, each roughly the size of Jupiter",
+      "These planets could be as close as 10 light-years away, or about 59 trillion miles, roughly 900 times the distance from New York to Los Angeles",
+      "If one of these planets were to pass within 1 astronomical unit (AU) of Earth, it could disrupt our orbit and potentially eject us from the solar system, with 1 AU being about 93 million miles, or roughly the distance from the Earth to the Sun"
+    ],
+    "payoff": "and we still don't know where they came from",
+    "title": "Rogue Planets \ud83c\udf0c",
+    "hashtags": [
+      "#space",
+      "#astrophysics",
+      "#rogueplanets",
+      "#galaxy",
+      "#science"
+    ],
+    "description": "Imagine a planet, roughly the size of Jupiter, wandering through space without a star to call its own \ud83c\udf20. There could be millions of these rogue planets in the Milky Way galaxy, and some might be closer than you think \ud83d\ude80. Will we ever encounter one, and what would happen if we did? \ud83e\udd14",
+    "generated_by": "groq",
+    "generated_at": "2026-07-01T06:54:58.553728",
+    "status": "error",
+    "strategy_based": true,
+    "error_at": "2026-07-01T07:00:30.178562"
   }
 ]
