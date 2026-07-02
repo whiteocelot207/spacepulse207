@@ -5239,5 +5239,30 @@
     "status": "error",
     "strategy_based": true,
     "error_at": "2026-07-02T13:10:02.529784"
+  },
+  {
+    "topic": "Hypothetical Space Scenarios",
+    "topic_family": "hypothetical",
+    "hook": "Could you survive on a planet with 2.5x Earth's gravity?",
+    "facts": [
+      "A planet with 2.5 times Earth's gravity would have a radius of approximately 1.2 times that of our own, similar in size to the state of Texas",
+      "The surface temperature would be around 50\u00b0C, due to a runaway greenhouse effect, making it one of the hottest planetary bodies in the Milky Way",
+      "The atmospheric pressure would be equivalent to diving 1,000 feet deep into the ocean, about the length of 3 football fields"
+    ],
+    "payoff": "and we still don't know if life could adapt to such extreme conditions",
+    "title": "Survive 2.5x Gravity? \ud83c\udf0c",
+    "hashtags": [
+      "#space",
+      "#astrophysics",
+      "#science",
+      "#exoplanets",
+      "#gravity"
+    ],
+    "description": "Imagine a planet where the gravity is so strong, it warps your perception of reality \ud83c\udf0c. With surface temperatures scorching at 50\u00b0C and atmospheric pressure crushing like the deep ocean, could life as we know it even exist? \ud83e\udd14 Watch to find out what it would take to survive on such a mysterious world \ud83c\udf1f",
+    "generated_by": "groq",
+    "generated_at": "2026-07-02T22:16:08.923840",
+    "status": "error",
+    "strategy_based": true,
+    "error_at": "2026-07-02T22:21:41.470805"
   }
 ]
