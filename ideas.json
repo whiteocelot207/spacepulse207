@@ -5264,5 +5264,30 @@
     "status": "error",
     "strategy_based": true,
     "error_at": "2026-07-02T22:21:41.470805"
+  },
+  {
+    "topic": "What if a solar flare hit Earth?",
+    "topic_family": "hypothetical",
+    "hook": "A 1-minute solar flare could",
+    "facts": [
+      "release energy equal to 100 billion Hiroshima bombs",
+      "destroy 90% of the US power grid, affecting 300 million people",
+      "cause $2 trillion in economic damage, 10 times the cost of Hurricane Katrina"
+    ],
+    "payoff": "and we still don't know when the next big one will hit",
+    "title": "Solar Flare Apocalypse? \ud83c\udf1e",
+    "hashtags": [
+      "space",
+      "science",
+      "astrophysics",
+      "solarflares",
+      "emergencypreparedness"
+    ],
+    "description": "Imagine a disaster that could cripple our entire power grid \ud83c\udf10, causing widespread blackouts and chaos. A massive solar flare is a real and looming threat \ud83c\udf2a\ufe0f. Find out just how devastating it could be and why we're still not prepared \ud83e\udd14.",
+    "generated_by": "groq",
+    "generated_at": "2026-07-03T17:40:14.011475",
+    "status": "error",
+    "strategy_based": true,
+    "error_at": "2026-07-03T17:45:46.128553"
   }
 ]
