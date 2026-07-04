@@ -5314,5 +5314,30 @@
     "status": "error",
     "strategy_based": true,
     "error_at": "2026-07-03T22:18:52.933845"
+  },
+  {
+    "topic": "Surviving on a Dwarf Planet",
+    "topic_family": "hypothetical",
+    "hook": "Could you live on Pluto?",
+    "facts": [
+      "Pluto's surface temperature can drop to -387\u00b0F, colder than -233\u00b0C",
+      "The dwarf planet is about 1/6 the size of the Moon, or roughly 2/3 the size of Texas",
+      "A day on Pluto lasts 153.3 Earth hours, with the sun appearing as just a bright star"
+    ],
+    "payoff": "and we still don't know if life could thrive in such extreme conditions",
+    "title": "Pluto Survival \ud83d\ude80",
+    "hashtags": [
+      "#space",
+      "#astrophysics",
+      "#pluto",
+      "#dwarfplanets",
+      "#science"
+    ],
+    "description": "Imagine living on a world where the sun is just a distant star \ud83c\udf1f, temperatures are colder than Antarctica \ud83e\udd76, and a day lasts longer than a week \ud83d\udd70\ufe0f. Pluto, the mysterious dwarf planet, raises more questions than answers. Could life survive in such an extreme environment? \ud83e\udd14",
+    "generated_by": "groq",
+    "generated_at": "2026-07-04T12:16:13.031911",
+    "status": "error",
+    "strategy_based": true,
+    "error_at": "2026-07-04T12:21:44.425445"
   }
 ]
