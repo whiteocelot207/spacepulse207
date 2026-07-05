@@ -5364,5 +5364,30 @@
     "status": "error",
     "strategy_based": true,
     "error_at": "2026-07-05T17:27:21.015693"
+  },
+  {
+    "topic": "Black Hole Sun",
+    "topic_family": "hypothetical",
+    "hook": "Sun gets sucked into a black hole",
+    "facts": [
+      "A supermassive black hole has a radius of about 12 million kilometers, roughly 1.8 million miles, or the distance from NYC to LA and back again 3 times",
+      "It would take 1 second for the Sun to reach the event horizon of a black hole with a mass 1 billion times that of our Sun",
+      "The gravitational pull of such a black hole would stretch and heat the Sun into a 100,000-mile-long noodle, hotter than 1 million degrees Fahrenheit, in just 1 minute"
+    ],
+    "payoff": "and we still don't know the fate of the planets",
+    "title": "Sun Eaten by Black Hole? \ud83c\udf1e",
+    "hashtags": [
+      "#space",
+      "#astrophysics",
+      "#blackhole",
+      "#solarsystem",
+      "#science"
+    ],
+    "description": "Imagine the unthinkable: our Sun gets sucked into a monstrous black hole \ud83c\udf2a\ufe0f! What happens next is a mind-bending ride of cosmic proportions \ud83d\ude80. Will our planets survive the encounter, or is it game over for our solar system? \ud83e\udd14",
+    "generated_by": "groq",
+    "generated_at": "2026-07-05T22:10:21.266013",
+    "status": "error",
+    "strategy_based": true,
+    "error_at": "2026-07-05T22:15:54.630335"
   }
 ]
