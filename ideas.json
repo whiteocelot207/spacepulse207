@@ -5339,5 +5339,30 @@
     "status": "error",
     "strategy_based": true,
     "error_at": "2026-07-04T12:21:44.425445"
+  },
+  {
+    "topic": "What if the Sun became a Red Giant?",
+    "topic_family": "hypothetical",
+    "hook": "Sun engulfs Earth?",
+    "facts": [
+      "In 5 billion years, the Sun will expand to 100 times its size",
+      "At its peak, it will engulf everything within 1.3 million miles, or about 200 times the distance from New York to Los Angeles",
+      "The Sun's surface temperature will drop to 5,000 degrees Fahrenheit, about 2,000 degrees cooler than its current temperature"
+    ],
+    "payoff": "and we still don't know how life on Earth will end",
+    "title": "Sun Expands \ud83c\udf1e",
+    "hashtags": [
+      "#space",
+      "#science",
+      "#astrophysics",
+      "#SunExpansion",
+      "#RedGiant"
+    ],
+    "description": "Imagine a future where the Sun, now a massive Red Giant, engulfs our entire planet \ud83c\udf0e! This cosmic transformation is inevitable, but what does it mean for life on Earth? \ud83e\udd14 Watch to explore the shocking facts about the Sun's expansion and the mysterious fate that awaits our world \ud83c\udf1f",
+    "generated_by": "groq",
+    "generated_at": "2026-07-05T17:21:49.407697",
+    "status": "error",
+    "strategy_based": true,
+    "error_at": "2026-07-05T17:27:21.015693"
   }
 ]
