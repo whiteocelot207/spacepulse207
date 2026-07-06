@@ -5389,5 +5389,30 @@
     "status": "error",
     "strategy_based": true,
     "error_at": "2026-07-05T22:15:54.630335"
+  },
+  {
+    "topic": "Gravity of a Supermassive Star",
+    "topic_family": "hypothetical",
+    "hook": "What if you weighed 3000 times more?",
+    "facts": [
+      "If you weighed 150 lbs on Earth, you'd weigh 450,000 lbs on a supermassive star like VY Canis Majoris",
+      "The radius of VY Canis Majoris is about 2,100 times larger than our Sun, roughly the size of 1,420,000,000 football fields lined up",
+      "Its surface gravity is so strong that if you were 36,000 miles away, about the distance from New York to LA, you'd still weigh 3000 times more than on Earth"
+    ],
+    "payoff": "and we still don't know how such massive stars form",
+    "title": "Superstar Gravity \ud83d\ude80",
+    "hashtags": [
+      "space",
+      "astrophysics",
+      "science",
+      "stellargravity",
+      "universe"
+    ],
+    "description": "Imagine being on a star so massive that its gravity would turn you into an immovable object \ud83e\udd2f. The supermassive star VY Canis Majoris is a cosmic wonder that challenges our understanding of the universe. What secrets lie behind its enormous size and crushing gravity? \ud83d\ude80",
+    "generated_by": "groq",
+    "generated_at": "2026-07-06T14:36:05.178472",
+    "status": "error",
+    "strategy_based": true,
+    "error_at": "2026-07-06T14:41:37.151500"
   }
 ]
