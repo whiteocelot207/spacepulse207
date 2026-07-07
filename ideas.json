@@ -5414,5 +5414,30 @@
     "status": "error",
     "strategy_based": true,
     "error_at": "2026-07-06T14:41:37.151500"
+  },
+  {
+    "topic": "Extremes of Venus",
+    "topic_family": "extreme_conditions",
+    "hook": "Venus is scorching hot",
+    "facts": [
+      "Venus's surface temperature reaches 870\u00b0F, hot enough to melt lead",
+      "Its atmosphere is 92 times thicker than Earth's, with a crushing pressure of 1,321 psi, similar to being almost a mile underwater",
+      "The planet's extreme greenhouse effect is due to its atmosphere being 96.5% carbon dioxide, which is roughly the same volume as 387,000,000,000,000 football fields"
+    ],
+    "payoff": "and we still don't know why Venus became so hostile",
+    "title": "Venus: Hellish World \ud83c\udf21",
+    "hashtags": [
+      "space",
+      "astrophysics",
+      "planetary_science",
+      "extreme_weather",
+      "solar_system"
+    ],
+    "description": "Imagine a world where the sun doesn't set, but the heat never stops \ud83c\udf21. Venus, often called Earth's twin, is a scorching hellscape with surface temperatures that can melt metal. But what drove this planet to become so hostile? \ud83e\udd14 Watch to uncover the extreme facts about our neighbor in the solar system, and join the debate about the mysterious forces that shaped Venus into the hellish world we know today \ud83d\ude80",
+    "generated_by": "groq",
+    "generated_at": "2026-07-07T13:26:18.200431",
+    "status": "error",
+    "strategy_based": true,
+    "error_at": "2026-07-07T13:31:50.331293"
   }
 ]
