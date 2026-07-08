@@ -5514,5 +5514,30 @@
     "status": "error",
     "strategy_based": true,
     "error_at": "2026-07-08T17:52:43.334565"
+  },
+  {
+    "topic": "Supernova Explosions",
+    "topic_family": "hypothetical",
+    "hook": "A supernova near Earth?",
+    "facts": [
+      "A supernova explosion can release 100 billion times more energy than the Sun",
+      "If a supernova occurred 50 light-years away, its explosion would be as bright as a full moon",
+      "The blast wave from a supernova could affect Earth's ozone layer, potentially altering the climate"
+    ],
+    "payoff": "and we still don't know when the next nearby supernova will occur",
+    "title": "Supernova Threat \ud83c\udf0a",
+    "hashtags": [
+      "space",
+      "science",
+      "astrophysics",
+      "supernova",
+      "cosmology"
+    ],
+    "description": "Imagine a massive star exploding near our solar system \ud83c\udf0a! A supernova's impact on Earth would be enormous, with potential effects on our climate and daily life \ud83c\udf0e. But how close is too close, and what would happen if a supernova exploded near us? \ud83e\udd14",
+    "generated_by": "groq",
+    "generated_at": "2026-07-08T22:16:56.152177",
+    "status": "error",
+    "strategy_based": true,
+    "error_at": "2026-07-08T22:22:28.332875"
   }
 ]
