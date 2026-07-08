@@ -5439,5 +5439,30 @@
     "status": "error",
     "strategy_based": true,
     "error_at": "2026-07-07T13:31:50.331293"
+  },
+  {
+    "topic": "What if you lived on a exoplanet",
+    "topic_family": "hypothetical",
+    "hook": "Could you survive on Kepler-62f?",
+    "facts": [
+      "Kepler-62f is 40% larger than Earth, with a 290-day orbit",
+      "Its star is 20% less luminous than the Sun, with a surface temperature of 4,591\u00b0C",
+      "The exoplanet's distance from its star is about 300 million miles, roughly the distance from Earth to the Sun"
+    ],
+    "payoff": "and we still don't know if it has an atmosphere to breathe",
+    "title": "Life on Kepler-62f? \ud83c\udf0c",
+    "hashtags": [
+      "#space",
+      "#exoplanets",
+      "#astrophysics",
+      "#kepler62f",
+      "#nasa"
+    ],
+    "description": "Imagine living on a planet 40% larger than Earth, with a year that's just 290 days long \ud83e\udd2f. Kepler-62f is one of the most Earth-like exoplanets discovered, but what would it take to survive on this distant world? \ud83c\udf0c Watch to explore the fascinating facts about this potential new home, and join the debate on whether we'll ever find life beyond our planet \ud83d\ude80",
+    "generated_by": "groq",
+    "generated_at": "2026-07-08T03:39:45.538654",
+    "status": "error",
+    "strategy_based": true,
+    "error_at": "2026-07-08T03:45:16.929750"
   }
 ]
