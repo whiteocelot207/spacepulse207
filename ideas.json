@@ -5664,5 +5664,30 @@
     "status": "error",
     "strategy_based": true,
     "error_at": "2026-07-11T17:10:38.527656"
+  },
+  {
+    "topic": "Dyson Sphere",
+    "topic_family": "hypothetical",
+    "hook": "Alien megastructure?",
+    "facts": [
+      "A Dyson Sphere would require 1.5 billion kilometers of diameter, roughly the distance from Earth to Saturn",
+      "It could be built using 2.5 trillion tons of material, equivalent to 17% of the Earth's mass",
+      "The energy output would be 3.8 x 10^26 watts, enough to power 100 billion US households"
+    ],
+    "payoff": "and we still don't know if one exists in our galaxy",
+    "title": "Dyson Sphere \ud83d\ude80",
+    "hashtags": [
+      "#space",
+      "#science",
+      "#astrophysics",
+      "#aliens",
+      "#megasstructures"
+    ],
+    "description": "Imagine a megastructure built by an advanced civilization to harness the energy of its star \ud83e\udd2f. A Dyson Sphere would be an engineering marvel, but could it be real? \ud83d\ude80 Explore the mind-blowing facts and possibilities in this video!",
+    "generated_by": "groq",
+    "generated_at": "2026-07-11T21:59:54.369141",
+    "status": "error",
+    "strategy_based": true,
+    "error_at": "2026-07-11T22:05:25.728586"
   }
 ]
