@@ -5639,5 +5639,30 @@
     "status": "error",
     "strategy_based": true,
     "error_at": "2026-07-11T12:06:50.029290"
+  },
+  {
+    "topic": "Space Temps",
+    "topic_family": "extreme_conditions",
+    "hook": "What's hotter than 4,000 Suns?",
+    "facts": [
+      "The surface of dwarf star OY Carinae reaches 200,000\u00b0F, hotter than 4,000 Suns",
+      "This heat would vaporize any object within 186,000 miles, or about 300,000 football fields",
+      "In comparison, the hottest fire on Earth, from a volcano, reaches about 2,000\u00b0F"
+    ],
+    "payoff": "and we still don't know what fuels these extreme temperatures",
+    "title": "Suns on Steroids \ud83d\udd25",
+    "hashtags": [
+      "#space",
+      "#astrophysics",
+      "#stars",
+      "#science",
+      "#universe"
+    ],
+    "description": "Imagine a heat so intense it would melt any known material \ud83c\udf0b. Dwarf star OY Carinae is the cosmic equivalent of a giant furnace, with surface temperatures that defy comprehension \ud83e\udd2f. But what's driving this extreme heat, and can we learn from it? \ud83d\udd0d",
+    "generated_by": "groq",
+    "generated_at": "2026-07-11T17:05:06.693347",
+    "status": "error",
+    "strategy_based": true,
+    "error_at": "2026-07-11T17:10:38.527656"
   }
 ]
