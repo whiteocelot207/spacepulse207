@@ -5614,5 +5614,30 @@
     "status": "error",
     "strategy_based": true,
     "error_at": "2026-07-10T13:24:01.135331"
+  },
+  {
+    "topic": "Habitable Trojans",
+    "topic_family": "hypothetical",
+    "hook": "What if asteroids were homes?",
+    "facts": [
+      "Over 7,000 asteroids in Jupiter's orbit are large enough to harbor liquid water, a key ingredient for life",
+      "These asteroids, known as Trojans, are spaced about 300,000 miles apart, roughly the distance from New York to Los Angeles",
+      "The largest Trojan asteroid, 624 Hektor, is about 250 miles long, roughly the size of Texas's Big Bend National Park"
+    ],
+    "payoff": "and we still don't know if they could support human life",
+    "title": "Asteroid Homes? \ud83d\ude80",
+    "hashtags": [
+      "#space",
+      "#astrophysics",
+      "#science",
+      "#hypothetical",
+      "#asteroids"
+    ],
+    "description": "Imagine asteroids as celestial cities, hiding in plain sight \ud83c\udf20. With thousands of potential homes in Jupiter's orbit, the possibility of life beyond Earth is more intriguing than ever. Will we one day find a way to inhabit these space rocks and call them home? \ud83e\udd14",
+    "generated_by": "groq",
+    "generated_at": "2026-07-11T12:01:18.612251",
+    "status": "error",
+    "strategy_based": true,
+    "error_at": "2026-07-11T12:06:50.029290"
   }
 ]
