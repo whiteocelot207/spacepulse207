@@ -5689,5 +5689,30 @@
     "status": "error",
     "strategy_based": true,
     "error_at": "2026-07-11T22:05:25.728586"
+  },
+  {
+    "topic": "What if the Milky Way Collided",
+    "topic_family": "hypothetical",
+    "hook": "Galaxies on a crash course?",
+    "facts": [
+      "The Milky Way is moving towards Andromeda at 250,000 miles per hour",
+      "The collision would release energy equal to 1 billion supernovae explosions",
+      "The resulting galaxy would have a diameter of approximately 200,000 light-years, or about 4 times the size of Texas"
+    ],
+    "payoff": "and we still don't know what would happen to our solar system",
+    "title": "Galaxies Collide! \ud83c\udf0c",
+    "hashtags": [
+      "#space",
+      "#astrophysics",
+      "#galaxy",
+      "#science",
+      "#cosmology"
+    ],
+    "description": "Imagine two galaxies, each containing billions of stars, on a catastrophic collision course \ud83c\udf0c! The Milky Way and Andromeda are hurtling towards each other, but what would happen when they finally meet? \ud83e\udd14 The outcome is both fascinating and unsettling, leaving us wondering about the fate of our own solar system \ud83c\udf1f",
+    "generated_by": "groq",
+    "generated_at": "2026-07-12T22:01:04.699217",
+    "status": "error",
+    "strategy_based": true,
+    "error_at": "2026-07-12T22:06:36.828355"
   }
 ]
