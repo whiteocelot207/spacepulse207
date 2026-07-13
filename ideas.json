@@ -5739,5 +5739,30 @@
     "status": "error",
     "strategy_based": true,
     "error_at": "2026-07-13T18:06:28.421797"
+  },
+  {
+    "topic": "Venusian Atmosphere",
+    "topic_family": "hypothetical",
+    "hook": "Could you breathe on Venus?",
+    "facts": [
+      "Venus's atmosphere is 92 times thicker than Earth's, with pressures similar to being 1 mile underwater",
+      "It would take a column of air 1,000 football fields tall to equal the pressure on Venus's surface",
+      "The atmosphere is composed of 96.5% carbon dioxide, with surface temperatures reaching 870\u00b0F, hot enough to melt lead"
+    ],
+    "payoff": "and we still don't know why Venus became so hostile compared to Earth",
+    "title": "Venus: Earth's Evil Twin? \ud83c\udf0b",
+    "hashtags": [
+      "#space",
+      "#science",
+      "#astrophysics",
+      "#planetaryscience",
+      "#venus"
+    ],
+    "description": "Imagine a world with an atmosphere so thick it would crush anything that tried to land on its surface \ud83c\udf2a\ufe0f. Welcome to Venus, Earth's twin in size but not in hospitality \ud83c\udf0e. What went wrong for our neighboring planet to become so hostile, with surface temperatures hot enough to melt lead and a toxic atmosphere that's 92 times thicker than our own? \ud83e\udd14",
+    "generated_by": "groq",
+    "generated_at": "2026-07-13T22:04:15.601698",
+    "status": "error",
+    "strategy_based": true,
+    "error_at": "2026-07-13T22:09:46.937032"
   }
 ]
