@@ -5714,5 +5714,30 @@
     "status": "error",
     "strategy_based": true,
     "error_at": "2026-07-12T22:06:36.828355"
+  },
+  {
+    "topic": "Giant Planets",
+    "topic_family": "hypothetical",
+    "hook": "What if Jupiter stopped spinning?",
+    "facts": [
+      "Jupiter's spin speed is 28,000 miles per hour, nearly 6 times faster than a commercial airliner",
+      "If Jupiter stopped spinning, its radius would increase by about 1,400 miles, roughly the distance from New York to Miami",
+      "The planet's magnetic field would also weaken by 20%, exposing its moons to harmful solar radiation"
+    ],
+    "payoff": "and we still don't know how this would affect the Great Red Spot",
+    "title": "Jupiter's Spin \ud83d\udcab",
+    "hashtags": [
+      "#space",
+      "#astrophysics",
+      "#jupiter",
+      "#gasgiants",
+      "#science"
+    ],
+    "description": "Imagine a Jupiter that's lost its spin \ud83c\udf2a\ufe0f! This celestial giant would undergo drastic changes, from a massive size increase to a weakened magnetic field \ud83c\udf1f. But what would happen to its iconic Great Red Spot \ud83e\udd14? Watch to explore this mind-blowing hypothetical scenario \ud83d\ude80",
+    "generated_by": "groq",
+    "generated_at": "2026-07-13T18:00:56.629860",
+    "status": "error",
+    "strategy_based": true,
+    "error_at": "2026-07-13T18:06:28.421797"
   }
 ]
